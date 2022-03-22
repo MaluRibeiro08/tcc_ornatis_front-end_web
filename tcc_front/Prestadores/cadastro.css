@@ -7,7 +7,7 @@
 /* DISPLAY NONE DOS CONTAINERS DE INFORMACOES */
 #container_perfil_adm{
     display: none;
-   
+    
 }
 #container_dados_localizacao{
     display: none;
@@ -24,9 +24,13 @@
   
 }
 #container_regras_negocio{
-    /* display: none; */
+    display: none;
     margin-top: 8vh;
 
+}
+#container_funcionamento{
+    /* display: none; */
+    background-color: aquamarine;
 }
 
 
@@ -339,6 +343,66 @@ margin-top: 15vh;
 
 /* FIM CONTAINER REGRAS DE NEGOCIO */
 
+ /* INICIO CONTAINER FUNCIONAMENTO  */
+ #funcionamento{
+     margin-top: 10vh;
+     padding-left: 13vh;
+ }
 
+ #container_dados_funcionamento{
+     margin-left: 5vw;
+     width: 40vw;
+     height: 70vh;
+     background-color: blueviolet;
+ }
+ .dia_semana{
+    background-color: rgb(5, 231, 209);
+    width: 40vw;
+    height: 9.6vh;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   justify-content: center;
+
+
+ }
+
+ .checkbox_nome{
+     background-color: red;
+     flex-grow: 2;
+     height: 100%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+
+ }
+ #check_domingo /*ARRUMAR*/
+ {
+     margin-bottom: 0;
+ }
+
+ #container_horarios{
+     background-color: greenyellow;
+     flex-grow: 1;
+     height: 9.5vh;
+     margin-left: 3vw;
+    
+ }
+
+ #container_horario{
+    width: 23vw;
+    height: 4vh;
+    margin-top: 0.5vh;
+    margin-left: 1vw;
+    background-color: rgb(200, 33, 209);
+
+ }
+
+ /* FIM CONTAINER FUNCIONAMENTO  */
+
+ 
 
    
