@@ -29,8 +29,10 @@
 
 }
 #container_funcionamento{
-    /* display: none; */
-    background-color: aquamarine;
+    display: none;
+}
+#container_login{
+    display: none;
 }
 
 
@@ -61,6 +63,12 @@ font-size: 30px;
 h6{
 font-family: 'Raleway';
 font-size: 20px;
+
+}
+
+h7{
+    font-family: 'Raleway';
+    font-size: 10px;
 
 }
 
@@ -345,21 +353,20 @@ margin-top: 15vh;
 
  /* INICIO CONTAINER FUNCIONAMENTO  */
  #funcionamento{
-     margin-top: 10vh;
+     margin-top: 5vh;
      padding-left: 13vh;
+     color: var(--fonte);
  }
 
  #container_dados_funcionamento{
      margin-left: 5vw;
      width: 40vw;
-     height: 70vh;
-     background-color: blueviolet;
+     height: 60vh;
  }
+
  .dia_semana{
-    background-color: rgb(5, 231, 209);
     width: 40vw;
-    height: 9.6vh;
-    margin-top: 1vh;
+    height: 7.5vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -369,39 +376,91 @@ margin-top: 15vh;
  }
 
  .checkbox_nome{
-     background-color: red;
      flex-grow: 2;
      height: 100%;
      display: flex;
      flex-direction: row;
      align-items: center;
      justify-content: center;
-     gap: 10px;
+    
 
  }
  #check_domingo /*ARRUMAR*/
  {
      margin-bottom: 0;
+     width: 40%;
+     height: 30%;
  }
 
  #container_horarios{
-     background-color: greenyellow;
      flex-grow: 1;
-     height: 9.5vh;
      margin-left: 3vw;
     
  }
 
  #container_horario{
     width: 23vw;
-    height: 4vh;
-    margin-top: 0.5vh;
     margin-left: 1vw;
-    background-color: rgb(200, 33, 209);
+    display: flex;
+    justify-content: space-around ;
 
  }
 
+ #container_horario2{
+    width: 23vw;
+    margin-left: 1vw;
+    display: flex;
+    justify-content: space-around;
+    
+    
+ }
+
+ #borda_time{
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    border-width: 2px;
+    border-style: solid;
+    display: inline-block;
+    color: var(--verde_padrao);
+ }
+
+ #input_horario{
+    width: 4vw;
+    height: 2.5vh;
+    color: white;
+    border-radius: 8px;
+
+    
+ }
+
+ #radio_intervalo{
+     display: flex;
+     width: 10vw;   
+   
+ }
+
+ #radio_horario{
+     height: 2vh;
+ }
+
+
  /* FIM CONTAINER FUNCIONAMENTO  */
+
+ /* INICIO CONTAINER LOGIN */
+
+ #informacoes_login{
+    font-size: 25px;
+    margin-left: 10vw;
+    margin-top: 25vh;
+
+ }
+
+ #icon_login{
+     font-size: 40px;
+     color: var(--cinza_claro);
+ }
+ /* FIM CONTAINER LOGIN */
 
  
 
