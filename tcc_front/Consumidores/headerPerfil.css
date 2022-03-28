@@ -1,0 +1,40 @@
+header{
+    background-image: linear-gradient(to right,  #C9E9E3, #93DCD0);
+}
+#menuPrincipal{
+    position: relative;
+    background-color: white;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    filter: drop-shadow(2px 3px 4px #8a8a92ab);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header li{
+    width: 60px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #imglogo{
+    /* background-color: #5F9F95; */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header #imgElipse{
+    /* background-color: #5F9F95; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a {
+    color: #5F9F95;
+    font-weight: 700;
+}
