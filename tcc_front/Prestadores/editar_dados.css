@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --cinza_claro:#DBD8D8;
+    --verde_padrao:#93DCD0;
+    --verde_escuro:#5F9F95;
+    --verde_claro:#C9E9E3;
+    --fonte:#494343;
+
+}
+
+/* INICIO DO HEADER */
+
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    filter: drop-shadow(2px 3px 4px #494343);
+}
+
+
+#header_ornatis{
+    display: flex;
+}
+
+#logo{
+    margin-left: 45%;
+    margin-top: 2vh;
+}
+
+#menu_hamburguer{
+    margin-left: 50px ;
+
+}
+
+/* FIM DO HEADER */
+
+/* INICIO DO MAIN */
+#container_editar{
+display: flex;
+height: 70vh;
+
+}
+
+h1{
+    font-size: 60px;
+    font-family: 'Megrim';
+    color: var(--verde_padrao);
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Raleway';
+
+}
+h3{
+    font-size: 30px;
+    font-family: 'Raleway';
+}
+
+#user{
+    font-size: 100px;
+    color: var(--fonte);
+}
+#circulo{
+    width: 10vw;
+    height: 18vh;
+    background-color: var(--cinza_claro);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#meu_perfil{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    gap: 5vh;
+    padding-top: 90px;
+}
+
+#dados_perfil{
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15vw;
+    gap: 5vh;
+
+}
+
+#foto_user{
+    
+    
+}
+#editar_perfil{
+    align-items: center;
+    justify-content: center;
+
+}
+
+#borda_editar{
+    border-radius: 10px;
+    width: 8vw;
+    height: 4vh;
+    border-width: 2px;
+    border-color: var(--verde_escuro);
+    border-style: solid;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#linha{
+  transform: rotate(90deg);
+  width: 1px;
+  height: 1px;
+  margin-top: 60px;
+  color: var(--cinza_claro);
+  filter: drop-shadow(2px 3px 4px #494343);
+
+}
+
+#icon_editar{
+    color: var(--fonte);
+    font-size: 30px;
+}
+/* FIM DO MAIN */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+#onda_footer{
+    width: 100%;
+    height: 90%;
+    position: fixed 
+    bottom: 0;
+}
+   /* object-fit:  ;

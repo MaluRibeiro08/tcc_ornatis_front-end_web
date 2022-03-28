@@ -6,7 +6,7 @@
 
 /* DISPLAY NONE DOS CONTAINERS DE INFORMACOES */
 #container_perfil_adm{
-    display: none;
+    /* display: none; */
     
 }
 #container_dados_localizacao{
@@ -194,7 +194,7 @@ input{
  align-items: center;
  justify-content: center;
  margin-left: -15vh;
-
+ 
 }
 
 #tela_anterior{
@@ -278,14 +278,6 @@ input{
     color: var(--cinza_claro);
 }
 
-/* #tela_anterior{
-    display: flex;
-}
-
-#previous{
-    font-size: 30px;
-
-} */
 
 /* FIM DO CONTAINER PERFIL DO SALAO */
 
