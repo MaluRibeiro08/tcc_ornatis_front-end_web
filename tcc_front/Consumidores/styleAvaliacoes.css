@@ -40,8 +40,13 @@ main{
     /* margin-left: 15%; */
     width:50%;
     height:600px;
-    color: #5F9F95;
+    margin-top: 2%;
     text-align: center;
+}
+
+.feedback a{
+
+    color: #5F9F95;
 }
 
 #containerAvaliacao{
@@ -126,6 +131,7 @@ main{
     align-items: center;
     justify-content: center;
   }
+  
 
   /****************** Modal *********************/
   .modal_container{
@@ -180,18 +186,49 @@ main{
     visibility: visible;
 }
 
+.logo{
+    width: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nota{
+    margin-top: 3%;
+}
+
+.estrela{
+    margin-top: 5%;
+}
+
+.estrela img{
+    margin-left: 4%;
+}
+
 textarea{
     margin-top: 10%;
     width: 90%;
     height: 120px;
     border:1px solid #C9E9E3;
     border-radius: 10px;
+    outline: none;
+    padding: 5%;
+    padding-left: 35px;
+    font-size: 1.1em;
+    resize: none;
 }
-
-/* textarea ::placeholder{
+/* 
+textarea:-moz-placeholder{
     size: 2rem;
     font-size: 1.2em;
 } */
+
+::-webkit-input-placeholder{
+    /* size: 2rem; */
+    font-size: 1.1em;
+    color: #7A7777;
+}
 
 .anexoImagem{
     display: flex;
@@ -233,4 +270,37 @@ input[type='file'] {
 #btnCancelar{
     width: 350px;
     margin-top: 5%;
+}
+
+#btnCancelar:hover{
+    cursor: pointer;
+}
+
+
+/******************** AVALIAÇÃO ESTRELA */
+
+.vote label {
+    cursor:pointer;
+}
+.vote label input{
+    display:none;
+}
+.vote label i {
+    font-family:FontAwesome;
+    font-size:18px;
+    -webkit-transition-property:color, text;
+    -webkit-transition-duration: .2s, .2s;
+    -webkit-transition-timing-function: linear, ease-in;
+    -moz-transition-property:color, text;
+    -moz-transition-duration:.2s;
+    -moz-transition-timing-function: linear, ease-in;
+    -o-transition-property:color, text;
+    -o-transition-duration:.2s;
+    -o-transition-timing-function: linear, ease-in;
+}
+.vote label i:before {
+    content:'\f005';
+}
+.vote label i.active {
+    color:gold;
 }
