@@ -33,32 +33,48 @@ header{
 
 #menu_hamburguer{
     margin-left: 50px ;
-
+    color: var(--verde_escuro);
+    margin-top: 20px;
 }
 
 /* FIM DO HEADER */
 
 /* INICIO DO MAIN */
 #container_editar{
-display: flex;
-height: 70vh;
+    justify-content: center;
+    align-items: center;
+    display: ;
+  
 
 }
 
 h1{
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'Megrim';
     color: var(--verde_padrao);
 }
 
 h2{
-    font-size: 40px;
+    font-size: 25px;
     font-family: 'Raleway';
 
 }
 h3{
     font-size: 30px;
     font-family: 'Raleway';
+}
+
+h4{
+    font-size: 30px;
+    font-family: 'Raleway';
+}
+
+main{
+   
+     display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 #user{
@@ -76,49 +92,41 @@ h3{
     justify-content: center;
 
 }
-#meu_perfil{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
-    gap: 5vh;
-    padding-top: 90px;
-}
+
+
 
 #dados_perfil{
-    
-    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+}
+#dados_perfil h3, span{
+    margin-top: 7%;
+  
+
+}
+
+#sessao2{
+    background-color: rebeccapurple;
+    width: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 15vw;
-    gap: 5vh;
-
-}
-
-#foto_user{
-    
-    
-}
-#editar_perfil{
     align-items: center;
-    justify-content: center;
-
+   
 }
-
-#borda_editar{
-    border-radius: 10px;
-    width: 8vw;
-    height: 4vh;
-    border-width: 2px;
-    border-color: var(--verde_escuro);
-    border-style: solid;
-    display: inline-block;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#sessao1{
+   background-color: #5F9F95;
+   width: 100%;
+   height: 90vh;
+   display: flex;
     justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+
 }
 
 #linha{
@@ -126,7 +134,7 @@ h3{
   width: 1px;
   height: 1px;
   margin-top: 60px;
-  color: var(--cinza_claro);
+  color: black;
   filter: drop-shadow(2px 3px 4px #494343);
 
 }
@@ -138,16 +146,7 @@ h3{
 /* FIM DO MAIN */
 
 footer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
 
 }
 
-#onda_footer{
-    width: 100%;
-    height: 90%;
-    position: fixed 
-    bottom: 0;
-}
-   /* object-fit:  ;
+

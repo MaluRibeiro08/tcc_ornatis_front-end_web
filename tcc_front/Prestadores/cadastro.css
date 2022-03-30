@@ -4,6 +4,11 @@
     
 }
 
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} 
+
 /* DISPLAY NONE DOS CONTAINERS DE INFORMACOES */
 #container_perfil_adm{
     /* display: none; */
