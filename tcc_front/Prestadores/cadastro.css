@@ -18,7 +18,7 @@ textarea:focus, input:focus, select:focus {
     display: none;
 
 }
-#container_perfil_salao{
+#container_estabelecimento{
     margin-top: 8vh;
     display: none;
 
@@ -68,12 +68,6 @@ font-size: 30px;
 h6{
 font-family: 'Raleway';
 font-size: 20px;
-
-}
-
-h7{
-    font-family: 'Raleway';
-    font-size: 10px;
 
 }
 
