@@ -12,14 +12,47 @@ function fechar_menu(){
 document.getElementById('item0').addEventListener('click', () => {
     document.getElementById('s1').classList.add('itemSelecionado')
     document.getElementById('s2').classList.remove('itemSelecionado')
+    document.getElementById('s3').classList.remove('itemSelecionado')
+    document.getElementById('s4').classList.remove('itemSelecionado')
 
 })
 
 document.getElementById('item1').addEventListener('click', () => {
     document.getElementById('s2').classList.add('itemSelecionado')
     document.getElementById('s1').classList.remove('itemSelecionado')
+    document.getElementById('s3').classList.remove('itemSelecionado')
+    document.getElementById('s4').classList.remove('itemSelecionado')
 
 })
+
+document.getElementById('item2').addEventListener('click', () => {
+    document.getElementById('s3').classList.add('itemSelecionado')
+    document.getElementById('s1').classList.remove('itemSelecionado')
+    document.getElementById('s4').classList.remove('itemSelecionado')
+    document.getElementById('s2').classList.remove('itemSelecionado')
+
+
+})
+
+document.getElementById('item3').addEventListener('click', () => {
+    document.getElementById('s4').classList.add('itemSelecionado')
+    document.getElementById('s1').classList.remove('itemSelecionado')
+    document.getElementById('s2').classList.remove('itemSelecionado')
+    document.getElementById('s3').classList.remove('itemSelecionado')
+
+})
+
+document.getElementById('item4').addEventListener('click', () => {
+    document.getElementById('s5').classList.add('itemSelecionado')
+    document.getElementById('s1').classList.remove('itemSelecionado')
+    document.getElementById('s2').classList.remove('itemSelecionado')
+    document.getElementById('s3').classList.remove('itemSelecionado')
+    document.getElementById('s4').classList.add('itemSelecionado')
+
+
+})
+
+
 
 
 

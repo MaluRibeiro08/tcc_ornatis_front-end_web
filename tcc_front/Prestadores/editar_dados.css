@@ -12,9 +12,13 @@
 
 }
 
-.container div{
+.container{
     display: none;
 
+}
+
+.add{
+    display: none;
 }
 
 .container > .itemSelecionado{
