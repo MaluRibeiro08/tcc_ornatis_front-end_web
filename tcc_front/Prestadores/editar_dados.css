@@ -48,9 +48,7 @@
     display: none;
 }
 
-#container_dados_regra_funcionamento{
-    display: none;
-}
+
 
 #container_dados_login{
     display: none;
@@ -58,6 +56,39 @@
 
 
 /* INICIO DO HEADER */
+
+#intervalo{
+    gap: 1100px;
+    
+}
+
+#radio_intervalo{
+    display: flex;
+    
+
+}
+
+#container_horario{
+    display: flex;
+}
+
+#container_horario2{
+    display: flex;
+}
+
+.dia_semana{
+    display: flex;
+   
+}
+
+#container_dados_funcionamento{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: grid;
+    gap: 80px;
+}
+
 
 header{
     width: 100%;
@@ -190,6 +221,13 @@ h4{
     font-size: 40px;
     font-family: 'Raleway';
     color: var(--fonte);
+}
+
+h6{
+    font-size: 30px;
+    font-family: 'Raleway';
+    color: var(--fonte);
+
 }
 
 main{

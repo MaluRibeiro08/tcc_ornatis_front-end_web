@@ -9,27 +9,42 @@ function fechar_menu(){
 
 //MUDAR DE DIV
 
+//estabelecimento
+
 document.getElementById('item0').addEventListener('click', () => {
     document.getElementById('s1').classList.add('itemSelecionado')
     document.getElementById('s2').classList.remove('itemSelecionado')
     document.getElementById('s3').classList.remove('itemSelecionado')
     document.getElementById('s4').classList.remove('itemSelecionado')
+    document.getElementById('s5').classList.remove('itemSelecionado')
+    document.getElementById('s6').classList.remove('itemSelecionado')
+    document.getElementById('s7').classList.remove('itemSelecionado')
 
 })
+
+//adm
 
 document.getElementById('item1').addEventListener('click', () => {
     document.getElementById('s2').classList.add('itemSelecionado')
     document.getElementById('s1').classList.remove('itemSelecionado')
     document.getElementById('s3').classList.remove('itemSelecionado')
     document.getElementById('s4').classList.remove('itemSelecionado')
+    document.getElementById('s5').classList.remove('itemSelecionado')
+    document.getElementById('s6').classList.remove('itemSelecionado')
+    document.getElementById('s7').classList.remove('itemSelecionado')
 
 })
+
+//
 
 document.getElementById('item2').addEventListener('click', () => {
     document.getElementById('s3').classList.add('itemSelecionado')
     document.getElementById('s1').classList.remove('itemSelecionado')
     document.getElementById('s4').classList.remove('itemSelecionado')
     document.getElementById('s2').classList.remove('itemSelecionado')
+    document.getElementById('s5').classList.remove('itemSelecionado')
+    document.getElementById('s6').classList.remove('itemSelecionado')
+    document.getElementById('s7').classList.remove('itemSelecionado')
 
 
 })
@@ -39,6 +54,9 @@ document.getElementById('item3').addEventListener('click', () => {
     document.getElementById('s1').classList.remove('itemSelecionado')
     document.getElementById('s2').classList.remove('itemSelecionado')
     document.getElementById('s3').classList.remove('itemSelecionado')
+    document.getElementById('s5').classList.remove('itemSelecionado')
+    document.getElementById('s6').classList.remove('itemSelecionado')
+    document.getElementById('s7').classList.remove('itemSelecionado')
 
 })
 
@@ -47,137 +65,56 @@ document.getElementById('item4').addEventListener('click', () => {
     document.getElementById('s1').classList.remove('itemSelecionado')
     document.getElementById('s2').classList.remove('itemSelecionado')
     document.getElementById('s3').classList.remove('itemSelecionado')
-    document.getElementById('s4').classList.add('itemSelecionado')
+    document.getElementById('s4').classList.remove('itemSelecionado')
+    document.getElementById('s6').classList.remove('itemSelecionado')
+    document.getElementById('s7').classList.remove('itemSelecionado')
 
 
 })
 
+document.getElementById('item5').addEventListener('click', () => {
+    document.getElementById('s6').classList.add('itemSelecionado')
+    document.getElementById('s1').classList.remove('itemSelecionado')
+    document.getElementById('s2').classList.remove('itemSelecionado')
+    document.getElementById('s3').classList.remove('itemSelecionado')
+    document.getElementById('s4').classList.remove('itemSelecionado')
+    document.getElementById('s5').classList.remove('itemSelecionado')
+    document.getElementById('s7').classList.remove('itemSelecionado')
 
 
+})
 
+document.getElementById('item6').addEventListener('click', () => {
+    document.getElementById('s7').classList.add('itemSelecionado')
+    document.getElementById('s1').classList.remove('itemSelecionado')
+    document.getElementById('s2').classList.remove('itemSelecionado')
+    document.getElementById('s3').classList.remove('itemSelecionado')
+    document.getElementById('s4').classList.remove('itemSelecionado')
+    document.getElementById('s5').classList.remove('itemSelecionado')
+    document.getElementById('s6').classList.remove('itemSelecionado')
 
 
+})
 
+//CONSUMO DE API 
 
+'use strict';
 
+const dados_adm = async (adm) => {
+    const url = `http://10.107.144.3/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/`;
+};
 
 
+// dados adm 
 
+const consumo_estabelecimento = async () => {
 
+        const estabelecimento = await dados_adm(adm);
+        document.querySelector('#nome_fantasia').value = estabelecimento.nome;
+        document.querySelector('#cnpj').value = estabelecimento.cnpj;
+        document.querySelector('#telefone').value = estabelecimento.contato;
+        document.querySelector('#biografia').value = estabelecimento.biografia;
+    } 
 
+document.querySelector('#adm')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //MUDAR DE DIV PARA APARECER OS DADOS 
-
-
-// //VARIAVEIS
-
-// const mudar_div_dado = document.getElementById("mudar_div_dado");
-
-
-// let idAuto
-
-// //FUNCOES:
-
-// const setMudar_div_estabelecimento = (evento) =>{
-
-//     if(evento)
-//     { 
-//       mudar_dados()
-
-//     }
-
-//     mudar_div_dado.id = "container_dados_estabelecimento"
-// }
-
-// const setMudar_div_adm = (evento) =>{
-
-//     if(evento)
-//     { 
-//       mudar_dados()
-
-//     }
-
-//     mudar_div_dado.id = "container_dados_adm"
-// }
-
-
-// const verficar_mudar_dados = () =>{
-// let mudar_dados_div = ""
-
-// if (mudar_dados.id.includes("script_estabelecimento"))
-// {
-//     mudar_dados_div = "estabelecimento"
-
-// }
-
-// else if(mudar_dados.id.includes("script_adm"))
-// {
-//     mudar_dados_div = "adm"
-// }
-// return mudar_dados_div
-// }
-
-
-
-// const trocar_mudar_dados_div = () => 
-// {
-//     const mudar_dados_div = verficar_mudar_dados()
-
-//     if(mudar_dados_div == "estabelecimento")
-//     {
-//        setMudar_div_adm()
-//     }
-//     else if (mudar_dados_div == "adm")
-//     {
-//         setMudar_div_estabelecimento()
-//     }
-// }
-
-// //eventos 
-
-// document.getElementById("icon_editar1").addEventListener("click", setMudar_div_estabelecimento)
-// document.getElementById("icon_editar2").addEventListener("click", setMudar_div_adm)
