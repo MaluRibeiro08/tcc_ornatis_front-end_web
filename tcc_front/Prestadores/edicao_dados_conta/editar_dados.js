@@ -1,3 +1,5 @@
+"use strict"
+
 function abrir_menu(){
     document.getElementById('menu').style.width = '500px';
 }
@@ -6,7 +8,18 @@ function fechar_menu(){
     document.getElementById('menu').style.width = '0px'
 }
 
+const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarPerfil`)
 
+const preencherCampos = async (id_empresa) =>
+{
+    const response = await carregarDadosConta(id_empresa);
+    // console.log(response)
+    const informacoes = response.json();
+    console.log(informacoes)
+
+}
+
+preencherCampos(1);
 //MUDAR DE DIV
 
 //estabelecimento
