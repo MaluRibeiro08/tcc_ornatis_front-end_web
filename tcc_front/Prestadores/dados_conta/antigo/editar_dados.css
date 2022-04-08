@@ -26,6 +26,25 @@
 }
 
 
+.container_input
+{
+    width:70%;
+    height: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 20px;
+    background-color: #494343;
+}
+
+.input
+{
+    width: 100%;
+    height: ;
+}
+
 /* DIVS COM DISPLAY NONE */
 
 /* #container_dados_estabelecimento{
@@ -232,7 +251,10 @@ h6{
 
 main{
    
-     display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+    display: flex;
     justify-content: center;
     align-items: center;
     transition: margin-left 0.5s;

@@ -14,8 +14,8 @@ const preencherCampos = async (id_empresa) =>
 {
     const response = await carregarDadosConta(id_empresa);
     // console.log(response)
-    const informacoes = response.json();
-    console.log(informacoes)
+    const informacoes = await response.json();
+    console.log(informacoes.data.dados_empresa[0]["nome_fantasia"])
 
 }
 

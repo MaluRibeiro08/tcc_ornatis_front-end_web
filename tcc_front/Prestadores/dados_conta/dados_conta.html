@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dados_conta.css">
+    <link rel="stylesheet" href="../../global.css">
+    <script src="./dados_conta.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
+    <title>Dados da Conta</title>
+</head>
+<body>
+
+    <header>
+
+    </header>
+    <main>
+
+        <div class="container_navegacao_secoes">
+            <h1 class="titulo_secao_navegacao">Minha Conta</h1>
+            <div id="link_perfil_estabelecimento" class="container_item_nav">
+                <span id="icone" class="material-icons-outlined">store</span>
+                <p>Perfil Estabelecimento</p>
+            </div>
+            <div id="link_perfil_administrador" class="container_item_nav">
+                <span id="icone" class="material-icons-outlined">person_outline</span>
+                <p>Perfil Administrador</p>
+            </div>
+            <div id="link_localizacao" class="container_item_nav">
+                <span id="next"class="material-icons-outlined">room</span>
+                <p>Dados de localização</p>
+            </div>
+            <div id="link_recebimento" class="container_item_nav">
+                <span id="next"class="material-icons-outlined">paid</span>
+                <p>Recebimento</p>
+            </div>
+            <div id="link_regra_negocio" class="container_item_nav">
+                <span id="next"class="material-icons-outlined">request_quote</span>
+                <p>Regras de negócio</p>
+            </div>
+            <div id="link_funcionamento" class="container_item_nav">
+                <span id="next"class="material-icons-outlined">watch_later</span>
+                <p>Funcionamento</p>
+            </div>
+            <div id="link_dados_login" class="container_item_nav">
+                <span id="next"class="material-icons-outlined">login</span>
+                <p>Dados de login</p>
+            </div>
+
+        </div>
+        <div class="container_conteudo_secoes">
+            <div class="container_secao" id="container_secao_perfil_estabelecimento">
+                <div class="container_input">
+                    <label class= "lable_input" for="input_nome_negocio">Nome do negócio:</label>
+                    <input id="input_nome_negocio" class="input" type="text">
+                </div>
+                <div class="container_input">
+                    <label class= "lable_input" for="input_cnpj">CNPJ:</label>
+                    <input id="input_cnpj" class="input" type="text">
+                </div>
+                <div class="container_input">
+                    <label class= "lable_input" for="input_contato">Contato:</label>
+                    <input id="input_contato" class="input" type="text">
+                </div>
+                <div class="container_input">
+                    <label class= "lable_input" for="input_biografia">Biografia:</label>
+                    <input id="input_biografia" class="input" type="text">
+                </div>
+            </div>
+            <div class="container_secao" id="container_secao_perfil_administrador" style="display: none;">
+                <div class="container_input">
+                    <label class= "lable_input" for="input_nome_adm">Nome do administrador:</label>
+                    <input id="input_nome_adm" class="input" type="text">
+                </div>
+                <div class="container_input">
+                    <label class= "lable_input" for="input_data_nascimento">Data de nascimento:</label>
+                    <input id="input_data_nascimento" class="input" type="text">
+                </div>
+                <div class="container_input">
+                    <label class= "lable_input" for="input_cpf">CPF:</label>
+                    <input id="input_cpf" class="input" type="text">
+                </div>
+            </div>
+            <div class="container_secao" id="container_secao_dados_localizacao" style="display: none;">
+                <div class="container_input">
+                    <label class= "lable_input" for="input_cep">CEP</label>
+                    <input id="input_cep" class="input" type="text">
+                </div>
+                <div class="container_input">
+                    <label class= "lable_input" for="input_bairro">Bairro</label>
+                    <input id="input_bairro" class="input" type="text">
+                </div>
+                <div class="container_input container_inputs_multiplos">
+                    <div class="parte1">
+                        <label class= "lable_input" for="input_rua">Rua:</label>
+                        <input id="input_rua" class="input" type="text">
+                    </div> 
+                    <div class="parte2">
+                        <label class= "lable_input" for="input_numero">N°:</label>
+                        <input id="input_numero" class="input" type="text">  
+                    </div>
+                    
+                </div>
+                <div class="container_input">
+                    <label class= "lable_input" for="input_complemento">Complemento</label>
+                    <input id="input_complemento" class="input" type="text">
+                </div>
+                <div class="container_input container_inputs_multiplos">
+                    <div class="parte1">
+                        <label class= "lable_input" for="input_cidade">Cidade:</label>
+                        <input id="input_cidade" class="input" type="text">
+                    </div> 
+                    <div class="parte2">
+                        <label class= "lable_input" for="input_estado">UF:</label>
+                        <input id="input_estado" class="input" type="text">  
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container_secao" id="container_secao_recebimento" style="display: none;">
+                <div class="container_formas_recebimento">
+                    <h2 class="titulo_sesao_formas_recebimento">Formas Recebimento</h2>
+                    <div class="container_input_checkbox">
+                        <div class="container_item_check">
+                            <input id="input_dinheiro" class="input" type="checkbox" name="check_dinheiro" >
+                            <label class= "lable_input" for="input_dinheiro">Dinheiro</label>      
+                        </div>
+                        <div class="container_item_check">
+                            <input id="input_cartao_debito" class="input" type="checkbox" name="check_cartao_debito" >
+                            <label class= "lable_input" for="input_cartao_debito">Cartão de débito</label>      
+                        </div>
+                        <div class="container_item_check">
+                            <input id="input_cartao_credito" class="input" type="checkbox" name="check_cartao_credito" >
+                            <label class= "lable_input" for="input_cartao_credito">Cartão de crédito</label>      
+                        </div>
+                        <div class="container_item_check">
+                            <input id="input_pix" class="input" type="checkbox" name="check_pix" >
+                            <label class= "lable_input" for="input_pix">Pix</label>      
+                        </div>
+                        <div class="container_item_check">
+                            <input id="input_via_app" class="input" type="checkbox" name="check_via_app" checked disabled>
+                            <label class= "lable_input" for="input_via_app">Via app</label>      
+                        </div>
+                    </div>
+                </div>
+                <div class="container_obs_pagamento">
+                    <h2>Observações de pagamento</h2>
+                    <div class="container_input">
+                        <label class= "lable_input" for="input_observacoes_pagamento">Bandeiras aceiras, parcelemento...</label>
+                        <input id="input_observacoes_pagamento" class="input" type="text" >
+                    </div>
+                </div>
+            </div>
+            <div class="container_secao" id="container_secao_dados_login" style="display: none;">
+                <div class="container_input">
+                    <label class= "lable_input" for="input_email">Email:</label>
+                    <input id="input_email" class="input" type="text">
+                </div>
+                <div class="container_input">
+                    <label class= "lable_input" for="input_senha">Senha:</label>
+                    <input id="input_senha" class="input" type="password">
+                </div>
+                <p>Excluir cadastro!</p>
+            </div>
+            
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
