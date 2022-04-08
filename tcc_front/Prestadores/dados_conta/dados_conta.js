@@ -34,7 +34,7 @@
     const input_email = document.querySelector("#input_email");
     const input_senha = document.querySelector("#input_senha");
 
-    const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    const carregarDadosConta =   (id_empresa) => fetch(`http://10.107.144.3/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
 
     const preencherCampos = async (id_empresa) =>
     {
