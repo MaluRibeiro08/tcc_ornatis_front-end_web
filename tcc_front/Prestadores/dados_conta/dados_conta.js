@@ -63,7 +63,10 @@
         
 
     }
-    preencherCampos(2);
+    preencherCampos(1);
+
+
+    
 
     const settarDisplayInvisivel = (elemento) => elemento.style.display = "none"
     

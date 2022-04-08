@@ -10,16 +10,17 @@ textarea:focus, input:focus, select:focus {
 } 
 
 /* DISPLAY NONE DOS CONTAINERS DE INFORMACOES */
-#container_perfil_adm{
-    /* display: none; */
-    
-}
-#container_dados_localizacao{
+
+#container_estabelecimento{
+    margin-top: 8vh;
     display: none;
 
 }
-#container_estabelecimento{
-    margin-top: 8vh;
+#container_perfil_adm{
+    display: none;
+    
+}
+#container_dados_localizacao{
     display: none;
 
 }
@@ -157,6 +158,9 @@ main{
     font-size: 25px;
     margin-left: 10vw;
     margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
 }
 
@@ -187,12 +191,12 @@ input{
 
 #informacoes_continuas{
  display: flex;
- width: 100%;
+ width: 50%;
  height: 200px;
  flex-direction: row;
  align-items: center;
  justify-content: center;
- margin-left: -15vh;
+ position: fixed;
  
 }
 
@@ -289,7 +293,7 @@ input{
     
    
 }
-#radio_pagamento{
+.radio_pagamento{
     width: 20px;
     height: 20px;
 }
@@ -297,6 +301,9 @@ input{
 #bandeiras{
     margin-top: 5vh;
     padding-left: 15vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #creditCar{

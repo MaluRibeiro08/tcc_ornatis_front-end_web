@@ -23,8 +23,8 @@
                 </div>
     
                 <div id="imagens">
-                    <img id="elipse "src="../img/Ellipse 2.svg" alt="" width="500px">
-                    <img id="prestador"src="../img/image 425.svg" alt="">
+                    <img id="elipse" src="../../img/Ellipse 2.svg" alt="" width="500px">
+                    <img id="prestador" src="../../img/image 425.svg" alt="">
                 </div>
             </section>
 
@@ -32,25 +32,25 @@
                 <!-- INICIO CONTAINER  ESTABELECIMENTO -->
                 <div id="container_estabelecimento">
                     <div id="subtitulo">
-                        <h3><span id="icon_salao" class="material-icons-outlined">storefront </span> Perfil do salão</h3>
+                        <h3><span id="icon_salao" class="material-icons-outlined">storefront </span>Perfil estabelecimento</h3>
                     </div>
     
                     <div id="informacoes">
                         <div>
-                            <h4>Nome</h4>
-                            <input type="number">
+                            <label>Nome</label>
+                            <input type="number" id="nome">
                         </div>
                         <div>
-                            <h4>CNPJ</h4> 
-                            <input type="text" name="search" placeholder="" />
+                            <label>CNPJ</label> 
+                            <input type="text" name="search" placeholder="" id="cnpj"/>
                         </div>
                         <div>
-                            <h4>Contato</h4> 
-                            <input type="text" name="search" placeholder="" />
+                            <label>Contato</label> 
+                            <input type="text" name="search" placeholder="" id="Contato"/>
                         </div>
                         <div>
-                            <h4>Biografia</h4> 
-                            <input type="text" name="search" placeholder="" />
+                            <label>Biografia</label> 
+                            <input type="text" name="search" placeholder="" id="biografia"/>
                         </div>
 
                         <div id="foto_perfil_salao">
@@ -58,13 +58,30 @@
                             <div id="circulo2"><span class="material-icons-outlined">add</span></div> 
                         </div>
                     </div>
-                </div>    
-                
-
+                        <div id="informacoes_continuas">
+                            <div id="tela_anterior">
+                                <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
+                                <h5>Voltar</h5>
+                        </div>
+                            <div id="bolinhas">
+                                <div id="radio1"></div> 
+                                <div id="radio2"></div> 
+                                <div id="radio3"></div> 
+                                <div id="radio4"></div> 
+                                <div id="radio5"></div> 
+                                <div id="radio6"></div> 
+                                <div id="radio7"></div>                       
+                            </div>
+                            <div id="proxima_tela">
+                                <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                            </div>
+                        
+                        
+                    </div>    
+                </div>
                 <!-- FIM DO CONTAINER ESTABELECIMENTO -->
 
                 <!-- INICIO CONTAINER PERFIL ADMINISTRADOR -->
-            
                 <div id="container_perfil_adm">
                         <div id="subtitulo">
                             <h3> <span id="user1" class="material-icons-outlined">person</span> Perfil Administrador</h3>
@@ -76,73 +93,125 @@
                         </div>
             
                         <div id="informacoes">
-                            <h4>Nome</h4>
-                            <input type="text">
-                            <h4> Data de nascimento</h4> 
-                            <input type="text" name="search" placeholder="dd/mm/yyyy" /> <span class="material-icons-outlined">calendar_month</span>
-                            <h4>CPF</h4>
-                            <input type="text">
+                            <label>Nome</label>
+                            <input type="text" id="nome">
+                            <label> Data de nascimento</label> 
+                            <input type="text" id="data_nascimento" name="search" placeholder="dd/mm/yyyy" /> 
+                            <label>CPF</label>
+                            <input type="text" id="cpf">
                         </div> 
+                        <div id="informacoes_continuas">
+                            <div id="tela_anterior">
+                                <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
+                                <h5>Voltar</h5>
+                           </div>
+                            <div id="bolinhas">
+                                <div id="radio1"></div> 
+                                <div id="radio2"></div> 
+                                <div id="radio3"></div> 
+                                <div id="radio4"></div> 
+                                <div id="radio5"></div> 
+                                <div id="radio6"></div> 
+                                <div id="radio7"></div>                       
+                            </div>
+                            <div id="proxima_tela">
+                                <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                            </div>
+                        </div>
                 </div>
-
                 <!-- FIM CONTAINER PERFIL ADMINISTRADOR -->
 
                 <!-- INICIO CONTAINER DADOS DE LOCALIZACAO -->
-            <div id="container_dados_localizacao">
-                    <div id="subtitulo">
-                        <h3><span id="place" class="material-icons-outlined">room</span> Dados de localização</h3>
-                    </div>
+                <div id="container_dados_localizacao">
+                        <div id="subtitulo">
+                            <h3><span id="place" class="material-icons-outlined">room</span> Dados de localização</h3>
+                        </div>
 
-                    <div id="informacoes">
-                        <div>
-                            <h4>CEP</h4>
-                            <input type="number">
-                        </div>
-                        <div>
-                            <h4> Bairro</h4> 
-                            <input type="text" name="search" placeholder="" />
-                        </div>
-                        <div>
-                            <h4>Cidade</h4>
-                            <input type="text">  
-                        </div>
-                        <div>
-                            <h4>Estado</h4>
-                            <input type="text"> 
-                        </div>
-                        <div id="rua_numero">
-                            <h4>Rua</h4> 
-                            <input type="text" id="input_rua">
-                            <h4>Número</h4>
-                            <input type="text" id="input_numero">
-                        </div>
-                        <div>
-                            <h4>Complemento</h4>
-                            <input type="text">
-                        </div>
-                    </div> 
-            </div>
+                        <div id="informacoes">
+                            <div>
+                                <label>CEP</label>
+                                <input type="number" id="cep">
+                            </div>
+                            <div>
+                                <label> Bairro</label> 
+                                <input type="text" name="search" placeholder="" id="bairro"/>
+                            </div>
+                            <div>
+                                <label>Cidade</label>
+                                <input type="text" id="cidade">  
+                            </div>
+                            <div>
+                                <label>Estado</label>
+                                <input type="text" id="estado"> 
+                            </div>
+                            <div id="rua_numero">
+                                <label>Rua</label> 
+                                <input type="text" id="input_rua">
+                                <label>Número</label>
+                                <input type="text" id="input_numero">
+                            </div>
+                            <div>
+                                <label>Complemento</label>
+                                <input type="text" id="complemento">
+                            </div>
+                        </div> 
+                        <div id="informacoes_continuas">
+                            <div id="tela_anterior">
+                                <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
+                                <h5>Voltar</h5>
+                           </div>
+                            <div id="bolinhas">
+                                <div id="radio1"></div> 
+                                <div id="radio2"></div> 
+                                <div id="radio3"></div> 
+                                <div id="radio4"></div> 
+                                <div id="radio5"></div> 
+                                <div id="radio6"></div> 
+                                <div id="radio7"></div>                       
+                            </div>
+                            <div id="proxima_tela">
+                                <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                            </div>
+                          </div>
+                    </div>
                 <!-- FIM CONTAINER DADOS DE LOCALIZACAO -->
 
                 <!-- INICIO DO CONTAINER DADOS DE PAGAMENTO-->
-
                 <div id="container_dados_pagamento">
                     <div id="subtitulo">
-                        <h3><span id="pay" class="material-icons-outlined">currency_exchange</span> Regras de negócio</h3>
+                        <h3><span id="pay" class="material-icons-outlined">currency_exchange</span> Regras de pagamento</h3>
                     </div>
                     <div id="forma_pagamento">
                         <h4>Forma de pagamento:</h4><br/>
-                        <input id="radio_pagamento" type="radio" value="sim"/>Dinheiro<br />
-                        <input id="radio_pagamento" type="radio" value="nao"/> Cartão de crédito<br/>
-                        <input id="radio_pagamento" type="radio" value="talvez"/> Cartão de débito<br/>
-                        <input id="radio_pagamento" type="radio" value="quem_sabe"/> Pix<br/>
-                        <input id="radio_pagamento" type="radio" value="quem_sabe"/> Via App<br/>
+                        <input class="radio_pagamento" type="radio" value="sim"/>Dinheiro<br />
+                        <input class="radio_pagamento" type="radio" value="nao"/> Cartão de crédito<br/>
+                        <input class="radio_pagamento" type="radio" value="talvez"/> Cartão de débito<br/>
+                        <input class="radio_pagamento" type="radio" value="quem_sabe"/> Pix<br/>
+                        <input class="radio_pagamento" type="radio" value="quem_sabe"/> Via App<br/>
                     </div>
 
                     <div id="bandeiras">
-                        <h4><span id="creditCar" class="material-icons-outlined">credit_card</span>Bandeiras aceitas:</h4>
+                        <label><span id="creditCar" class="material-icons-outlined">credit_card</span>Bandeiras aceitas:</label>
                         <input type="text" name="search" placeholder="ex: Visa, Mastercard" /> 
                     </div>
+                    <div id="informacoes_continuas">
+                        <div id="tela_anterior">
+                            <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
+                            <h5>Voltar</h5>
+                       </div>
+                        <div id="bolinhas">
+                            <div id="radio1"></div> 
+                            <div id="radio2"></div> 
+                            <div id="radio3"></div> 
+                            <div id="radio4"></div> 
+                            <div id="radio5"></div> 
+                            <div id="radio6"></div> 
+                            <div id="radio7"></div>                       
+                        </div>
+                        <div id="proxima_tela">
+                            <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                        </div>
+                      </div>
     
                 </div> 
                 <!-- FIM DO CONTAINER DADOS DE PAGAMENTO -->
@@ -155,25 +224,43 @@
                     <div id="taxa_cancelamento">
                         <h4>Haverá taxa de cancelamento?</h4>
                         <div id="radio_taxa_cancelamento">
-                            <input id="radio_pagamento" type="radio" name="" value="sim"/>Sim<br />
-                            <input id="radio_pagamento" type="radio" name="webmaster" value="nao"/>Não<br/>
+                            <input class="radio_pagamento" type="radio" name="" value="sim"/>Sim<br />
+                            <input class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Não<br/>
                         </div>
                         <div id="padrao_personalizada">
                             <h4>Padrão ou personalizada?</h4><br>
-                            <input id="radio_pagamento" type="radio" name="" value="sim"/>Padrão<br />
-                            <input id="radio_pagamento" type="radio" name="webmaster" value="nao"/>Personalizada<br/>
+                            <input class="radio_pagamento" type="radio" name="" value="sim"/>Padrão<br />
+                            <input class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Personalizada<br/>
                             <div id="borda">
                                 
                                 <div id="info_borda"><span id="lixo" class="material-icons-outlined">delete</span>
                                 <h6>Valor do serviço:</h6>
-                                <input id="radio_pagamento" type="radio" name="" value="sim"/>Abaixo de R$100,00<br />
-                                <input id="radio_pagamento" type="radio" name="webmaster" value="nao"/>Acima de R$100,00<br/>
+                                <input class="radio_pagamento" type="radio" name="" value="sim"/>Abaixo de R$100,00<br />
+                                <input class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Acima de R$100,00<br/>
                                 <h6>Tolerância:  <input id="input_pagamento" type="text"> de antecedência</h6> 
                                 <h6>Taxa sobre o valor do serviço:  <input id="input_pagamento" type="text"></h6> <div id="adicionar_taxa"><span class="material-icons-outlined">add</span></div> 
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div id="informacoes_continuas">
+                        <div id="tela_anterior">
+                            <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
+                            <h5>Voltar</h5>
+                       </div>
+                        <div id="bolinhas">
+                            <div id="radio1"></div> 
+                            <div id="radio2"></div> 
+                            <div id="radio3"></div> 
+                            <div id="radio4"></div> 
+                            <div id="radio5"></div> 
+                            <div id="radio6"></div> 
+                            <div id="radio7"></div>                       
+                        </div>
+                        <div id="proxima_tela">
+                            <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                        </div>
+                      </div>
                 </div> 
                 <!-- FIM CONTAINER REGRAS DE NEGOCIO -->
 
@@ -269,30 +356,65 @@
                             <input id="radio_horario" type="radio"><h6>Não</h6>
                         </div>
                     </div>
+                    <div id="informacoes_continuas">
+                        <div id="tela_anterior">
+                            <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
+                            <h5>Voltar</h5>
+                       </div>
+                        <div id="bolinhas">
+                            <div id="radio1"></div> 
+                            <div id="radio2"></div> 
+                            <div id="radio3"></div> 
+                            <div id="radio4"></div> 
+                            <div id="radio5"></div> 
+                            <div id="radio6"></div> 
+                            <div id="radio7"></div>                       
+                        </div>
+                        <div id="proxima_tela">
+                            <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                        </div>
+                      </div>
 
                 </div>
                 <!-- FIM CONTAINER FUNCIONAMENTO -->
 
                 <!-- INICIO CONTAINER LOGIN -->
-
                 <div id="container_login">
                     <div id="subtitulo">
                         <h3><span id="icon_login" class="material-icons-outlined">offline_share</span> Dados de login</h3>
                     </div>
         
-                    <div id="informacoes_login">
-                        <h4>Email</h4>
-                        <input type="text">
-                        <h4> Senha</h4> 
-                        <input type="password" name="search" />
-                        <h4>Confirmar senha</h4>
-                        <input type="text">
+                    <div id="informacoes">
+                        <label>Email</label>
+                        <input type="text" id="email">
+                        <label> Senha</label> 
+                        <input type="password" name="search" id="senha" />
+                        <label>Confirmar senha</label>
+                        <input type="text" id="confirmar_senha">
                     </div> 
+                    <div id="informacoes_continuas">
+                            <div id="tela_anterior">
+                                <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
+                                <h5>Voltar</h5>
+                           </div>
+                            <div id="bolinhas">
+                                <div id="radio1"></div> 
+                                <div id="radio2"></div> 
+                                <div id="radio3"></div> 
+                                <div id="radio4"></div> 
+                                <div id="radio5"></div> 
+                                <div id="radio6"></div> 
+                                <div id="radio7"></div>                       
+                            </div>
+                            <div id="proxima_tela">
+                                <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                            </div>
+                          </div>
             </div>
                 <!-- FIM CONTAINER LOGIN -->
 
 
-                <div id="informacoes_continuas">
+                <!-- <div id="informacoes_continuas">
                     <div id="tela_anterior">
                         <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
                         <h5>Voltar</h5>
@@ -311,7 +433,7 @@
                     </div>
                     
                     
-                </div>        
+                </div>         -->
             </section> 
        
     </main>
