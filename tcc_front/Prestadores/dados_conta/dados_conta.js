@@ -17,6 +17,7 @@ import { imagemPreview } from "../../utils/imagem.js";
     const container_localizacao = document.getElementById('container_secao_dados_localizacao');
     const container_recebimento = document.getElementById('container_secao_recebimento');
     const container_regras_negocio = document.getElementById('container_secao_regras_negocio');
+    const container_secao_funcionamento = document.getElementById('container_secao_funcionamento');
     const container_login = document.getElementById('container_secao_dados_login');
 
 
@@ -85,7 +86,7 @@ import { imagemPreview } from "../../utils/imagem.js";
     
     const invisibilizarSecoes = () =>
     {
-        const arrSecoes = [container_perfil_estabelecimento, container_perfil_administrador, container_localizacao, container_recebimento, container_regras_negocio, container_login];
+        const arrSecoes = [container_perfil_estabelecimento, container_perfil_administrador, container_localizacao, container_recebimento, container_regras_negocio, container_secao_funcionamento, container_login];
         const $resultado = arrSecoes.map(settarDisplayInvisivel);
     }
     const descolorirLinks = (target) =>
@@ -207,10 +208,10 @@ import { imagemPreview } from "../../utils/imagem.js";
         const conteinerRegras = document.getElementById("container_regras_cancelamentos")
         numeroDaRegra = conteinerRegras.childElementCount
     });
-    // link_funcionamento.addEventListener("click", ()=>{
-    //     trocarVisualizacaoSecoes(container_funcionamento);
-    //  descolorirLinks(link_funcionamento);
-    // });
+    link_funcionamento.addEventListener("click", ()=>{
+        trocarVisualizacaoSecoes(container_secao_funcionamento);
+        descolorirLinks(link_funcionamento);
+    });
     link_dados_login.addEventListener("click", ()=>{
         trocarVisualizacaoSecoes(container_login);
         descolorirLinks(link_dados_login);
