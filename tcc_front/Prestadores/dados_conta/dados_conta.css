@@ -19,7 +19,7 @@ header
     width: 100%;
     height: 120px;
 
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 main
 {
@@ -60,7 +60,7 @@ main
     padding:15px;
 
     color: var(--fonte);
-    font-size: 2em;
+    font-size: 1.6em;
 
     border-radius: 10px 10px 10px 0px;
 
@@ -86,11 +86,6 @@ main
     background-color: coral;
 }*/
 
-span
-{   
-    
-    /* background-color: chartreuse; */
-}
 .container_conteudo_secoes
 {
     height: auto;
@@ -107,14 +102,96 @@ span
     justify-content: center;
     align-items: center;
 
-    background-color: blue;
+    /* background-color: blue; */
+}
+
+
+.container_dados_foto_perfil
+{
+    width: 80%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* background-color: brown; */
 }
 
 .container_geral_imagem
 {
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 160px;
     height: 160px;
+
+    position: relative;
+    border: solid 1px var(--verde_escuro);
+    border-radius: 80px;
+    clip: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.container_imagem
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 80px;
+    overflow: hidden;
+
+    /* background-color: darkgreen; */
+}
+
+#img_estabelecimento
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#labelInputFile
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#labelInputFile:hover
+{
+    cursor: pointer;
+}
+
+#input_foto_estabelecimento
+{
+    width: 100%;
+    height: 100%;
+
+    /* background-color: darkgoldenrod; */
+    opacity: 0;
+    display: none;
+}
+.container_icone_foto_perfil
+{
+    width: 35px;
+    height: 35px;
+
+    border-radius: 17px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde_padrao);
 }
 
 .container_secao
@@ -127,7 +204,7 @@ span
     align-items: flex-start;
     justify-content: center;
     gap: 35px;
-    background-color: darkgrey;
+    /* background-color: darkgrey; */
 }
 
 .container_input, .container_input_checkbox
@@ -231,6 +308,11 @@ footer
     {
         font-weight: 1200;
         font-size: 20px;
+    }
+    .container_item_nav
+    {
+        color: var(--fonte);
+        font-size: 2em;
     }
     .container_input input
     {

@@ -1,5 +1,7 @@
 "use strict"
 
+import { imagemPreview } from "../../utils/imagem.js";
+
 //CONTAINERS   
     const container_perfil_estabelecimento = document.getElementById('container_secao_perfil_estabelecimento');
     const container_perfil_administrador = document.getElementById('container_secao_perfil_administrador');
@@ -33,6 +35,8 @@
     const input_estado = document.querySelector("#input_estado");
     const input_email = document.querySelector("#input_email");
     const input_senha = document.querySelector("#input_senha");
+    const input_imagem = document.querySelector("#input_foto_estabelecimento")
+    const img_foto_perfil = document.querySelector("#img_estabelecimento")
 
     const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
 
@@ -65,9 +69,6 @@
     }
     preencherCampos(1);
 
-
-    
-
     const settarDisplayInvisivel = (elemento) => elemento.style.display = "none"
     
     const invisibilizarSecoes = () =>
@@ -75,10 +76,16 @@
         const arrSecoes = [container_perfil_estabelecimento, container_perfil_administrador, container_localizacao, container_recebimento, container_login];
         const $resultado = arrSecoes.map(settarDisplayInvisivel);
     }
+
     const trocarVisualizacaoSecoes = (alvo) =>
     {
         invisibilizarSecoes();
-       alvo.style.display = "flex";
+        alvo.style.display = "flex";
+    }
+
+    const tratarUploadImagem = ({target}) =>
+    {
+        imagemPreview(target.id, img_foto_perfil.id);
     }
     
     link_perfil_estabelecimento.addEventListener("click", (alvo)=>{
@@ -102,5 +109,5 @@
     link_dados_login.addEventListener("click", (alvo)=>{
         trocarVisualizacaoSecoes(container_login);
     });
-    
-    
+
+    input_imagem.addEventListener("change", tratarUploadImagem)

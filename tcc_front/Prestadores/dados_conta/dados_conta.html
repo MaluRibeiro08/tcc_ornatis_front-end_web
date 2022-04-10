@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dados_conta.css">
     <link rel="stylesheet" href="../../global.css">
-    <script src="./dados_conta.js" defer></script>
+    <script src="./dados_conta.js" type="module" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
     <title>Dados da Conta</title>
 </head>
 <body>
 
-    <header>
+    <!-- <header>
         <header>
             <div id="menuPrincipal">
                 <div>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </header> -->
 
     </header>
     <main>
@@ -83,16 +83,23 @@
         </div>
         <div class="container_conteudo_secoes">
             <div class="container_secao" id="container_secao_perfil_estabelecimento">
-                <div class="container_geral_imagem">
-                    <div class="container_imagem">
-                        <!-- <img src="./imgs/logo_salao.png" alt=""> -->
-                    </div>
-                    <div class="container_icone_foto_perfil">
-                        <span class="material-icons-outlined">
-                            add_photo_alternate
-                        </span>
+                <div class="container_dados_foto_perfil">
+                    <div class="container_geral_imagem">
+                        <div class="container_imagem">
+                            <img id="img_estabelecimento" src="./imgs/logo_salao.png">
+                        </div>
+                        <div class="container_icone_foto_perfil">
+                            <input id="input_foto_estabelecimento" class="inputFile" type="file" accept="image/*"/>
+                            <label for="input_foto_estabelecimento" id="labelInputFile">
+                                <span class="material-icons-outlined">
+                                    add_photo_alternate
+                                </span>
+                            </label>
+                            
+                        </div>
                     </div>
                 </div>
+               
                 <div class="container_input">
                     <label class= "lable_input" for="input_nome_negocio">Nome do negócio:</label>
                     <input id="input_nome_negocio" class="input" type="text">
