@@ -74,10 +74,16 @@ main
 }
 .container_item_nav:hover
 {
-    background-color: var(--verde_escuro);
-    color: white;
+    background-color: var(--verde_claro);
+    /* color: white; */
 
     transition: cubic-bezier(0.075, 0.82, 0.165, 1), 0.7s;
+}
+
+.aberto_visualizacao
+{
+    background-color: var(--verde_claro);
+    /* color: white; */
 }
 
 /*p{

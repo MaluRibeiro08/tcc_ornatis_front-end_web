@@ -70,11 +70,19 @@ import { imagemPreview } from "../../utils/imagem.js";
     preencherCampos(1);
 
     const settarDisplayInvisivel = (elemento) => elemento.style.display = "none"
+    const tirarClasseElemento = (elemento) => elemento.classList.remove("aberto_visualizacao")
     
     const invisibilizarSecoes = () =>
     {
         const arrSecoes = [container_perfil_estabelecimento, container_perfil_administrador, container_localizacao, container_recebimento, container_login];
         const $resultado = arrSecoes.map(settarDisplayInvisivel);
+    }
+    const descolorirLinks = (target) =>
+    {
+        const arrLinks = [link_perfil_estabelecimento, link_perfil_administrador, link_localizacao, link_recebimento, link_regra_negocio, link_funcionamento, link_dados_login];
+        const $resultado = arrLinks.map(tirarClasseElemento);
+        // console.log(target);
+        target.classList.add("aberto_visualizacao")
     }
 
     const trocarVisualizacaoSecoes = (alvo) =>
@@ -88,26 +96,36 @@ import { imagemPreview } from "../../utils/imagem.js";
         imagemPreview(target.id, img_foto_perfil.id);
     }
     
-    link_perfil_estabelecimento.addEventListener("click", (alvo)=>{
+
+// ***** EVENTOS ******
+
+    link_perfil_estabelecimento.addEventListener("click", ()=>{
         trocarVisualizacaoSecoes(container_perfil_estabelecimento);
+        descolorirLinks(link_perfil_estabelecimento);
     });
-    link_perfil_administrador.addEventListener("click", (alvo)=>{
+    link_perfil_administrador.addEventListener("click", ()=>{
         trocarVisualizacaoSecoes(container_perfil_administrador);
+        descolorirLinks(link_perfil_administrador);
     });
-    link_localizacao.addEventListener("click", (alvo)=>{
+    link_localizacao.addEventListener("click", ()=>{
         trocarVisualizacaoSecoes(container_localizacao);
+        descolorirLinks(link_localizacao);
     });
-    link_recebimento.addEventListener("click", (alvo)=>{
+    link_recebimento.addEventListener("click", ()=>{
         trocarVisualizacaoSecoes(container_recebimento);
+        descolorirLinks(link_recebimento);
     });
-    // link_regra_negocio.addEventListener("click", (alvo)=>{
+    // link_regra_negocio.addEventListener("click", ()=>{
     //     trocarVisualizacaoSecoes(container_regra_negocio);
+    //     descolorirLinks(link_regra_negocio);
     // });
-    // link_funcionamento.addEventListener("click", (alvo)=>{
+    // link_funcionamento.addEventListener("click", ()=>{
     //     trocarVisualizacaoSecoes(container_funcionamento);
+    //  descolorirLinks(link_funcionamento);
     // });
-    link_dados_login.addEventListener("click", (alvo)=>{
+    link_dados_login.addEventListener("click", ()=>{
         trocarVisualizacaoSecoes(container_login);
+        descolorirLinks(link_dados_login);
     });
 
     input_imagem.addEventListener("change", tratarUploadImagem)
