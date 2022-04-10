@@ -1,3 +1,4 @@
+
 const container_perfil_adm = document.getElementById("container_perfil_adm")
 const container_dados_localizacao = document.getElementById("container_dados_localizacao")
 const container_perfil_salao = document.getElementById("container_perfil_salao")
@@ -95,147 +96,83 @@ mudarSecao = () =>
 
 proximo.addEventListener("click", mudarSecao);
 
+//upload de imagem 
+
+//estabelecimento
+
+let photo = document.getElementById('img_photo');
+let file = document.getElementById('fl_image');
+
+photo.addEventListener('click', () => {
+    file.click();
+});
+
+//adm
+
+let file2 = document.getElementById('fl_image_adm');
+
+photo.addEventListener('click', () => {
+    file2.click();
+});
+
 
 //consumo de api
 
-//PERFIL ESTABELECIEMNTO
-
-const add_estabelecimento= (estabelecimento) =>{
+const conta_administradora = (conta_adm) =>{
     const options = {
         method: 'POST',
-        body: JSON.stringify(estabelecimento),
+        body: JSON.stringify(conta_adm),
         headers: {
             'content-type': 'application/json',
         },
     };
     fetch(url, options)
 };
-
-// PERFIL ADM
-
-const add_administrador = (adm) =>{
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(adm),
-        headers: {
-            'content-type': 'application/json',
-        },
-    };
-    fetch(url, options)
-};
-
-//PERFIL LOCALIZACAO
-
-const add_localizacao = (localizacao) =>{
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(localizacao),
-        headers: {
-            'content-type': 'application/json',
-        },
-    };
-    fetch(url, options)
-};
-
-//PERFIL PAGAMENTO
-
-const add_pagamento = (pagamento) =>{
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(pagamento),
-        headers: {
-            'content-type': 'application/json',
-        },
-    };
-    fetch(url, options)
-};
-
-//PERFIL REGRAS DE NEGOCIO
-
-const add_regra_negocio = (regra_negocio) =>{
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(regra_negocio),
-        headers: {
-            'content-type': 'application/json',
-        },
-    };
-    fetch(url, options)
-};
-
-//PERFIL REGRAS DE FUNCIONAMENTO
-
-const add_regra_funcionamento = (regra_funcionamento) =>{
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(regra_funcionamento),
-        headers: {
-            'content-type': 'application/json',
-        },
-    };
-    fetch(url, options)
-};
-
-//PERFIL LOGIN 
-
-const add_login = (login) =>{
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(login),
-        headers: {
-            'content-type': 'application/json',
-        },
-    };
-    fetch(url, options)
-};
-
 
 
 const salvarCadastro = () => {
-    const estabelecimento = {
-        nome: document.getElementById('nome').value,
+    const conta_administradora = {
+        //estabelecimento
+        nome: document.getElementById('nomeEstabelecimento').value,
         cnpj: document.getElementById('cnpj').value,
         contato: document.getElementById('contato').value,
         biografia: document.getElementById('biografia').value,
-        foto: document.getElementById('circulo').value,
-    };
-
-    add_estabelecimento(estabelecimento); 
-
-    const adm = {
-        nome: document.getElementById('nome').value,
+        //adm
+        foto: document.getElementById('fl_image').value,
+        nome: document.getElementById('nomeAdministrador').value,
         data_de_nascimento: document.getElementById('data_nascimento').value,
-        cpf: document.getElementById('cpf').value,
-    };
-
-    add_administrador(adm);
-
-    const localizacao = {
+        cpf: document.getElementById('cpf').value, 
+        //localizacao
         cep: document.getElementById('cep').value,
         bairro: document.getElementById('bairro').value,
         cidade: document.getElementById('cidade').value,
         estado: document.getElementById('estado').value,
         rua: document.getElementById('input_rua').value,
-        numero: document.getAnimations('input_numero').value,
+        numero: document.getElementById('input_numero').value,
         complemento: document.getElementById('complemento').value,
-    };
-
-    add_localizacao(localizacao);
-
-    const pagamento = {
-
-    };
-
-    add_pagamento(pagamento);
-
-
-    const login = {
+        //pagamento
+        dinheiro: document.getElementById('radio_dinheiro'),
+        cartao_credito: document.getElementById('radio_credito'),
+        cartao_debito: document.getElementById('radio_debito'),
+        pix: document.getElementById('radio_pix'),
+        via_app: document.getElementById('radio_app'),
+        bandeira: document.getElementsById('bandeira'),
+        //negocio
+        radio_sim: document.getElementsById('radio_sim'),
+        radio_nao: document.getElementsById('radio_nao'),
+        radio_padrao: document.getElementsById('radio_padrao'),
+        radio_personalizada: document.getElementsById('radio_personalizada'),
+        radio_abaixo100: document.getElementsById('radio_abaixo100'),
+        radio_acima100: document.getElementsById('radio_acima100'),
+        //funcionamento
+        //login
         email: document.getElementById('email').value,
         senha: document.getElementById('senha').value,
         confirmar: document.getElementById('confirmar_senha').value,
     };
 
-    add_login(login);
+
+    conta_administradora(conta_adm);
    
 };
 
@@ -243,6 +180,7 @@ const salvarCadastro = () => {
 //DAR IDS PARA OS RADIOS
 //UNIFICAR A CONST EM CONTA-ADMINISTRADORA
 //DAR VALUES PARA OS RADIOS
+//AJUSTAR AS IMG
 
 
 
