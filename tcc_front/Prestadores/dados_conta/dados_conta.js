@@ -1,13 +1,24 @@
 "use strict"
 
 import { imagemPreview } from "../../utils/imagem.js";
+//RADIOS / INPUTS / OUTROS
+    const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
+    const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
 
-//CONTAINERS   
+    const radio_taxa_unica = document.getElementById('input_radio_taxa_unica')
+    const radio_taxa_variada = document.getElementById('input_radio_variada')
+
+    const icone_adicao_regra = document.getElementById('icone_adicao_regra')
+    let numeroDaRegra = null
+
+//CONTAINERS   GERAIS
     const container_perfil_estabelecimento = document.getElementById('container_secao_perfil_estabelecimento');
     const container_perfil_administrador = document.getElementById('container_secao_perfil_administrador');
     const container_localizacao = document.getElementById('container_secao_dados_localizacao');
     const container_recebimento = document.getElementById('container_secao_recebimento');
+    const container_regras_negocio = document.getElementById('container_secao_regras_negocio');
     const container_login = document.getElementById('container_secao_dados_login');
+
 
 //LINKS
     const link_perfil_estabelecimento = document.getElementById('link_perfil_estabelecimento');
@@ -74,7 +85,7 @@ import { imagemPreview } from "../../utils/imagem.js";
     
     const invisibilizarSecoes = () =>
     {
-        const arrSecoes = [container_perfil_estabelecimento, container_perfil_administrador, container_localizacao, container_recebimento, container_login];
+        const arrSecoes = [container_perfil_estabelecimento, container_perfil_administrador, container_localizacao, container_recebimento, container_regras_negocio, container_login];
         const $resultado = arrSecoes.map(settarDisplayInvisivel);
     }
     const descolorirLinks = (target) =>
@@ -96,6 +107,81 @@ import { imagemPreview } from "../../utils/imagem.js";
         imagemPreview(target.id, img_foto_perfil.id);
     }
     
+    const abrirContainer = (id_container) =>
+    {
+        const container = document.getElementById(`${id_container}`);
+        container.style.display = "flex";
+    }
+    const fecharContainer = (id_container) =>
+    {
+        const container = document.getElementById(`${id_container}`);
+        container.style.display = "none";
+    }
+
+    const criarRegraCancelamento = () =>
+    {
+        const conteinerRegras = document.getElementById("container_regras_cancelamentos")
+        if(numeroDaRegra == null)
+        {
+            numeroDaRegra = conteinerRegras.childElementCount + 1
+        }
+        else
+        {
+            numeroDaRegra = numeroDaRegra+1
+        }
+        const novaRegra = document.createElement("div") /*Cria o elemento A na memória, mas não está no HTML */
+
+        novaRegra.classList.add("container_regra_cancelamento") /*Adiciona a classe */
+        novaRegra.id = `container_regra${numeroDaRegra}`
+        novaRegra.innerHTML = 
+        `
+            <div class="container_acoes">
+            <span id="icone_delecao_regra${numeroDaRegra}" class="material-icons-outlined icone_delecao_regra" onclick="deletarRegraCancelamento('container_regra${numeroDaRegra}')" >
+            delete
+        </span>
+            </div>
+            <div class="informacoes">
+                <div class="container_valor_servico">
+                    <h4>Válida para serviços:</h4>
+                    <div class="container_radios_valor">
+                        <div class="container_radio_valor_servico" id="container_radio_acima_cem">
+                            <input type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}'>
+                            <label class="label_valor_servico" for='input_radio_acima_cem_regra${numeroDaRegra}'>Acima de R$ 100,00</label>
+                        </div>
+                        <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
+                            <input type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}'>
+                            <label class="label_valor_servico" for='input_radio_abaixo_cem_regra${numeroDaRegra}'>Abaixo de R$ 100,00</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_tolerancia">
+                    <h4 class="label_taxa">Tolerância:</h4>
+                    <div class="container_input_tolerancia">
+                        <p >até <input type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}'>h de antecedencia</p>
+                    </div>
+                </div>
+                <div class="container_valor_taxa">
+                    <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
+                    <div class="container_input_valor_taxa">
+                        <p ><input type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}'> %</p>
+                    </div>
+                </div>
+            </div>
+        ` /* Escreve no objeto da memória, mas não no html que já existe */
+
+        conteinerRegras.appendChild(novaRegra) /* Coloca o item criado no objeto que realmente existe no html (conteiner) */
+    }
+
+    // const deletarRegraCancelamento = (idRegraCancelamento) =>
+    // {
+    //    const divDeletar = document.getElementById(`${idRegraCancelamento}`)
+    //    const conteinerRegras = document.getElementById("container_regras_cancelamentos")
+    //    conteinerRegras.removeChild(divDeletar)
+    // }
+
+
+
+
 
 // ***** EVENTOS ******
 
@@ -115,10 +201,12 @@ import { imagemPreview } from "../../utils/imagem.js";
         trocarVisualizacaoSecoes(container_recebimento);
         descolorirLinks(link_recebimento);
     });
-    // link_regra_negocio.addEventListener("click", ()=>{
-    //     trocarVisualizacaoSecoes(container_regra_negocio);
-    //     descolorirLinks(link_regra_negocio);
-    // });
+    link_regra_negocio.addEventListener("click", ()=>{
+        trocarVisualizacaoSecoes(container_regras_negocio);
+        descolorirLinks(link_regra_negocio);
+        const conteinerRegras = document.getElementById("container_regras_cancelamentos")
+        numeroDaRegra = conteinerRegras.childElementCount
+    });
     // link_funcionamento.addEventListener("click", ()=>{
     //     trocarVisualizacaoSecoes(container_funcionamento);
     //  descolorirLinks(link_funcionamento);
@@ -128,4 +216,31 @@ import { imagemPreview } from "../../utils/imagem.js";
         descolorirLinks(link_dados_login);
     });
 
-    input_imagem.addEventListener("change", tratarUploadImagem)
+    radio_sim_regra_cancelmento.addEventListener("click", ()=>{
+        abrirContainer("container_geral_regras");
+    })
+    radio_nao_regra_cancelmento.addEventListener("click", ()=>{
+        fecharContainer("container_geral_regras");
+    })
+
+    radio_taxa_unica.addEventListener("click", () => 
+    {
+        abrirContainer("container_taxa_unica");
+        fecharContainer('container_regras_cancelamentos')
+    })
+    radio_taxa_variada.addEventListener("click", () => 
+    {
+        fecharContainer("container_taxa_unica");
+        abrirContainer("container_regras_cancelamentos");
+        abrirContainer("icone_adicao_regra");
+    })
+
+
+    radio_nao_regra_cancelmento.addEventListener("click", ()=>{
+        fecharContainer("container_geral_regras");
+    })
+
+    input_imagem.addEventListener("change", (tratarUploadImagem))
+
+    icone_adicao_regra.addEventListener("click", criarRegraCancelamento)
+

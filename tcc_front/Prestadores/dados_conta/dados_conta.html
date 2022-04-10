@@ -201,6 +201,87 @@
                     </div>
                 </div>
             </div>
+            <div class="container_secao" id="container_secao_regras_negocio"  style="display: none;">
+                <div class="container_verificacao_taxa_cancelamento">
+                    <h3>Deseja implementar taxa de cancelamento?</h3>
+                    <div class="container_radios_desejo_implementacao_taxa">
+                        <div class="container_radio_desejo" id="container_radio_sim">
+                            <input type="radio" name="desejo_implementar_taxa" id="input_radio_sim_cancelamento">
+                            <label class="label_radio" for="input_radio_sim_cancelamento">Sim!</label>
+                        </div>
+                        <div class="container_radio_desejo" id="container_radio_nao">
+                            <input type="radio" name="desejo_implementar_taxa" id="input_radio_nao_cancelamento">
+                            <label class="label_radio" for="input_radio_nao_cancelamento">Não!</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_geral_regras" id="container_geral_regras" style="display: none;">
+                    <h3>Como deseja cobrar?</h3>
+                    <div class="container_radios_tipos_taxas">
+                        <div  class="container_radio_tipo_taxa" id="container_radio_taxa_unica">
+                            <div class="container_radio">
+                                <input type="radio" name="tipo_taxa" id="input_radio_taxa_unica">
+                                <label for="input_radio_taxa_unica">Taxa única</label>
+                            </div>
+                            <div id ="container_taxa_unica" class="container_taxa_unica" style="display: none;">
+                                <p>Valor da cobrança: R$ </p>
+                                <input type="text" id="input_valor_taxa_unica">
+                            </div>
+                        </div>
+                        
+                        <div class="container_radio_tipo_taxa" id="container_radio_taxa_variada">
+                            <div class="container_radio">
+                                <div class="container_input_radio">
+                                    <input type="radio" name="tipo_taxa" id="input_radio_variada" class="input_tipo_radio">
+                                    <label for="input_radio_variada">Taxas variadas</label>
+                                </div>
+                                <span id="icone_adicao_regra" class="material-icons-outlined" style="display: none;">
+                                    add
+                                </span>
+                            </div>
+                            <div id="container_regras_cancelamentos" class="container_regras_cancelamentos" style="display: none;">
+                                <div class="container_regra_cancelamento" id="container_regra1">
+                                    <div class="container_acoes">
+                                        <span id="icone_delecao_regra1" class="material-icons-outlined icone_delecao_regra" onclick="deletarRegraCancelamento('container_regra1')" >
+                                            delete
+                                        </span>
+                                    </div>
+                                    <div class="informacoes">
+                                        <div class="container_valor_servico">
+                                            <h4>Válida para serviços:</h4>
+                                            <div class="container_radios_valor">
+                                                <div class="'container_radio_valor_servico'" id="container_radio_acima_cem">
+                                                    <input type="radio" name="valor_servico_regra1" id="input_radio_acima_cem_regra1">
+                                                    <label class="label_valor_servico" for="input_radio_acima_cem_regra1">Acima de R$ 100,00</label>
+                                                </div>
+                                                <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
+                                                    <input type="radio" name="valor_servico_regra1" id="input_radio_abaixo_cem_regra1">
+                                                    <label class="label_valor_servico" for="input_radio_abaixo_cem_regra1">Abaixo de R$ 100,00</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container_tolerancia">
+                                            <h4 class="label_taxa">Tolerância:</h4>
+                                            <div class="container_input_tolerancia">
+                                                <p >até <input type="text" class="input_regra" id="input_tempo_tolerancia_regra1">h de antecedencia</p>
+                                            </div>
+                                        </div>
+                                        <div class="container_valor_taxa">
+                                            <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
+                                            <div class="container_input_valor_taxa">
+                                                <p ><input type="text" class="input_regra" id="input_valor_taxa_variada_regra1"> %</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_taxas_cancelamento">
+
+                    </div>
+                </div>
+            </div>
             <div class="container_secao" id="container_secao_dados_login" style="display: none;">
                 <div class="container_input">
                     <label class= "lable_input" for="input_email">Email:</label>
@@ -212,6 +293,7 @@
                 </div>
                 <p>Excluir cadastro!</p>
             </div>
+
             
         </div>
 
@@ -222,3 +304,11 @@
     
 </body>
 </html>
+<script>
+    const deletarRegraCancelamento = (idRegraCancelamento) =>
+    {
+       const divDeletar = document.getElementById(`${idRegraCancelamento}`)
+       const conteinerRegras = document.getElementById("container_regras_cancelamentos")
+       conteinerRegras.removeChild(divDeletar)
+    }
+</script>
