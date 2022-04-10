@@ -36,27 +36,31 @@
                     </div>
     
                     <div id="informacoes">
-                        <div>
+                        <div id="campo">
                             <label>Nome</label>
-                            <input type="number" id="nome">
+                            <input class="input_linha" type="text" id="nomeEstabelecimento">
                         </div>
-                        <div>
+                        <div id="campo">
                             <label>CNPJ</label> 
-                            <input type="text" name="search" placeholder="" id="cnpj"/>
+                            <input class="input_linha" type="text" name="search" placeholder="" id="cnpj"/>
                         </div>
-                        <div>
+                        <div id="campo">
                             <label>Contato</label> 
-                            <input type="text" name="search" placeholder="" id="Contato"/>
+                            <input class="input_linha" type="text" name="search" placeholder="" id="Contato"/>
                         </div>
-                        <div>
+                        <div id="campo">
                             <label>Biografia</label> 
-                            <input type="text" name="search" placeholder="" id="biografia"/>
+                            <input  class="input_linha"type="text" name="search" placeholder="" id="biografia"/>
                         </div>
 
-                        <div id="foto_perfil_salao">
-                            <div id="circulo"> <span id="media" class="material-icons-outlined">perm_media </span></div> 
-                            <div id="circulo2"><span class="material-icons-outlined">add</span></div> 
+                        <div class="max-width">
+                            <div class="image_container">
+                                <img src="../../img/user.png" alt="" id="img_photo">
+                            </div>
+                             <input type="file" id="fl_image" name="fl_image" accept="image/*">          
                         </div>
+
+                           
                     </div>
                         <div id="informacoes_continuas">
                             <div id="tela_anterior">
@@ -87,18 +91,27 @@
                             <h3> <span id="user1" class="material-icons-outlined">person</span> Perfil Administrador</h3>
                         </div>
                     
-                        <div id="foto_user">
-                                <div id="circulo"> <span id="user2" class="material-icons-outlined">person</span></div> 
-                                <div id="circulo2"><span id="camera"class="material-icons-outlined">photo_camera</span></div> 
+                        <div class="max-width-adm">
+                            <div class="image_container">
+                                <img src="../../img/user (2).png" alt="" id="img_photo">
+                            </div>
+                             <input type="file" id="fl_image_adm" name="fl_image_adm" accept="image/*">          
                         </div>
             
                         <div id="informacoes">
-                            <label>Nome</label>
-                            <input type="text" id="nome">
-                            <label> Data de nascimento</label> 
-                            <input type="text" id="data_nascimento" name="search" placeholder="dd/mm/yyyy" /> 
-                            <label>CPF</label>
-                            <input type="text" id="cpf">
+                            <div  id="campo">
+                                <label>Nome</label>
+                                <input  class="input_linha" type="text" id="nomeAdministrador">
+                            </div>
+                            <div  id="campo">
+                                <label> Data de nascimento</label> 
+                                <input  class="input_linha" type="text" id="data_nascimento" name="search" placeholder="dd/mm/yyyy" /> 
+                            </div>
+                            <div  id="campo">
+                                 <label>CPF</label>
+                                 <input  class="input_linha" type="text" id="cpf">
+                            </div>
+                           
                         </div> 
                         <div id="informacoes_continuas">
                             <div id="tela_anterior">
@@ -128,31 +141,31 @@
                         </div>
 
                         <div id="informacoes">
-                            <div>
+                            <div id="campo">
                                 <label>CEP</label>
-                                <input type="number" id="cep">
+                                <input class="input_linha" type="number" id="cep">
                             </div>
-                            <div>
+                            <div id="campo">
                                 <label> Bairro</label> 
-                                <input type="text" name="search" placeholder="" id="bairro"/>
+                                <input class="input_linha" type="text" name="search" placeholder="" id="bairro"/>
                             </div>
-                            <div>
+                            <div id="campo">
                                 <label>Cidade</label>
-                                <input type="text" id="cidade">  
+                                <input class="input_linha" type="text" id="cidade">  
                             </div>
-                            <div>
+                            <div id="campo">
                                 <label>Estado</label>
-                                <input type="text" id="estado"> 
+                                <input class="input_linha" type="text" id="estado"> 
                             </div>
                             <div id="rua_numero">
                                 <label>Rua</label> 
-                                <input type="text" id="input_rua">
+                                <input class="input_linha" type="text" id="input_rua">
                                 <label>Número</label>
-                                <input type="text" id="input_numero">
+                                <input class="input_linha" type="text" id="input_numero">
                             </div>
-                            <div>
+                            <div id="campo">
                                 <label>Complemento</label>
-                                <input type="text" id="complemento">
+                                <input class="input_linha"  type="text" id="complemento">
                             </div>
                         </div> 
                         <div id="informacoes_continuas">
@@ -183,16 +196,16 @@
                     </div>
                     <div id="forma_pagamento">
                         <h4>Forma de pagamento:</h4><br/>
-                        <input class="radio_pagamento" type="radio" value="sim"/>Dinheiro<br />
-                        <input class="radio_pagamento" type="radio" value="nao"/> Cartão de crédito<br/>
-                        <input class="radio_pagamento" type="radio" value="talvez"/> Cartão de débito<br/>
-                        <input class="radio_pagamento" type="radio" value="quem_sabe"/> Pix<br/>
-                        <input class="radio_pagamento" type="radio" value="quem_sabe"/> Via App<br/>
+                        <input id="radio_dinheiro" class="radio_pagamento" type="radio" value="sim"/>Dinheiro<br />
+                        <input id="radio_credito" class="radio_pagamento" type="radio" value="nao"/> Cartão de crédito<br/>
+                        <input id="radio_debito" class="radio_pagamento" type="radio" value="talvez"/> Cartão de débito<br/>
+                        <input id="radio_pix" class="radio_pagamento" type="radio" value="quem_sabe"/> Pix<br/>
+                        <input id="radio_app" class="radio_pagamento" type="radio" value="quem_sabe"/> Via App<br/>
                     </div>
 
                     <div id="bandeiras">
                         <label><span id="creditCar" class="material-icons-outlined">credit_card</span>Bandeiras aceitas:</label>
-                        <input type="text" name="search" placeholder="ex: Visa, Mastercard" /> 
+                        <input class="input_linha" id="bandeira" type="text" name="search" placeholder="ex: Visa, Mastercard" /> 
                     </div>
                     <div id="informacoes_continuas">
                         <div id="tela_anterior">
@@ -224,21 +237,21 @@
                     <div id="taxa_cancelamento">
                         <h4>Haverá taxa de cancelamento?</h4>
                         <div id="radio_taxa_cancelamento">
-                            <input class="radio_pagamento" type="radio" name="" value="sim"/>Sim<br />
-                            <input class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Não<br/>
+                            <input id="radio_sim" class="radio_pagamento" type="radio" name="" value="sim"/>Sim<br />
+                            <input id="radio_nao" class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Não<br/>
                         </div>
                         <div id="padrao_personalizada">
                             <h4>Padrão ou personalizada?</h4><br>
-                            <input class="radio_pagamento" type="radio" name="" value="sim"/>Padrão<br />
-                            <input class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Personalizada<br/>
+                            <input id="radio_padrao" class="radio_pagamento" type="radio" name="" value="sim"/>Padrão<br />
+                            <input id="radio_personalizada" class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Personalizada<br/>
                             <div id="borda">
                                 
                                 <div id="info_borda"><span id="lixo" class="material-icons-outlined">delete</span>
                                 <h6>Valor do serviço:</h6>
-                                <input class="radio_pagamento" type="radio" name="" value="sim"/>Abaixo de R$100,00<br />
-                                <input class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Acima de R$100,00<br/>
-                                <h6>Tolerância:  <input id="input_pagamento" type="text"> de antecedência</h6> 
-                                <h6>Taxa sobre o valor do serviço:  <input id="input_pagamento" type="text"></h6> <div id="adicionar_taxa"><span class="material-icons-outlined">add</span></div> 
+                                <input id="radio_abaixo100" class="radio_pagamento" type="radio" name="" value="sim"/>Abaixo de R$100,00<br />
+                                <input id="radio_acima100" class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Acima de R$100,00<br/>
+                                <h6>Tolerância:  <input id="tolerancia" type="text"> de antecedência</h6> 
+                                <h6>Taxa sobre o valor do serviço: <input id="taxa" type="text"></h6> <div id="adicionar_taxa"><span class="material-icons-outlined">add</span></div> 
                                 </div>
                             </div>
                         </div>
@@ -287,7 +300,7 @@
 
                         <div id="domingo" class="dia_semana">
                             <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_domingo" type="checkbox">
+                                <input id="check_segunda" type="checkbox">
                                 <label for="check_domingo">Segunda</label>
                             </div>
                             <div id="container_horarios">
@@ -297,7 +310,7 @@
 
                         <div id="domingo" class="dia_semana">
                             <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_domingo" type="checkbox">
+                                <input id="check_terca" type="checkbox">
                                 <label for="check_domingo">Terça</label>
                             </div>
                             <div id="container_horarios">
@@ -307,7 +320,7 @@
 
                         <div id="domingo" class="dia_semana">
                             <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_domingo" type="checkbox">
+                                <input id="check_quarta" type="checkbox">
                                 <label for="check_domingo">Quarta</label>
                             </div>
                             <div id="container_horarios">
@@ -317,7 +330,7 @@
 
                         <div id="domingo" class="dia_semana">
                             <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_domingo" type="checkbox">
+                                <input id="check_quinta" type="checkbox">
                                 <label for="check_domingo">Quinta</label>
                             </div>
                             <div id="container_horarios">
@@ -327,7 +340,7 @@
 
                         <div id="domingo" class="dia_semana">
                             <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_domingo" type="checkbox">
+                                <input id="check_sexta" type="checkbox">
                                 <label for="check_domingo">Sexta</label>
                             </div>
                             <div id="container_horarios">
@@ -337,7 +350,7 @@
 
                         <div id="domingo" class="dia_semana">
                             <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_domingo" type="checkbox">
+                                <input id="check_sabado" type="checkbox">
                                 <label for="check_domingo">Sábado</label>
                             </div>
                             <div id="container_horarios">
@@ -352,8 +365,8 @@
                         </div>
                 
                         <div id="radio_intervalo">
-                            <input id="radio_horario" type="radio"><h6>Sim</h6>
-                            <input id="radio_horario" type="radio"><h6>Não</h6>
+                            <input class="radio_horario" type="radio"><h6>Sim</h6>
+                            <input class="radio_horario" type="radio"><h6>Não</h6>
                         </div>
                     </div>
                     <div id="informacoes_continuas">

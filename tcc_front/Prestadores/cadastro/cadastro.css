@@ -4,6 +4,10 @@
     
 }
 
+#imagemAdm input{
+   border-radius: 50px;
+}
+
 textarea:focus, input:focus, select:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
@@ -13,7 +17,7 @@ textarea:focus, input:focus, select:focus {
 
 #container_estabelecimento{
     margin-top: 8vh;
-    display: none;
+    /* display: none; */
 
 }
 #container_perfil_adm{
@@ -151,20 +155,22 @@ main{
     margin-left: 40vh;
 }
 
-
-
-#informacoes{
-    font-family: 'Raleway';
-    font-size: 25px;
-    margin-left: 10vw;
-    margin-top: 10vh;
+#campo{
     display: flex;
     justify-content: center;
     flex-direction: column;
 
 }
 
-input{
+#informacoes{
+    font-family: 'Raleway';
+    font-size: 25px;
+    margin-left: 10vw;
+    margin-top: 10vh;
+
+}
+
+.input_linha{
     width: 50%;
     height: 60px;
     box-shadow: none;
@@ -173,6 +179,46 @@ input{
     font-size: 20px;
     margin-bottom: 40px;
 
+}
+
+input[type='file']{
+    display: none;
+}
+
+.max-width{
+    max-width: 500px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.max-width-adm{
+    max-width: 500px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+}
+
+#img_photo{
+    width: 100%;
+    margin-top: 10%;
+    max-width: 300px;
+    padding: 10px;
+    background-color:rgb(202, 202, 202);
+    border: 5px solid rgb(202, 202, 202);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+#img_photo:hover{
+    border: 5px solid var(--verde_claro);
 }
 
 #prestador{
@@ -207,6 +253,7 @@ input{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
 
 }
 
@@ -217,6 +264,7 @@ input{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 #bolinhas{
@@ -398,16 +446,10 @@ input{
      display: flex;
      flex-direction: row;
      align-items: center;
-     justify-content: center;
+     justify-content: center; 
+ }
     
-
- }
- #check_domingo /*ARRUMAR*/
- {
-     margin-bottom: 0;
-     width: 40%;
-     height: 30%;
- }
+   
 
  #container_horarios{
      flex-grow: 1;
@@ -456,7 +498,7 @@ input{
    
  }
 
- #radio_horario{
+ .radio_horario{
      height: 2vh;
  }
 
