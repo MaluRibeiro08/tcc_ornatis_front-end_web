@@ -81,10 +81,18 @@
                 <span id="next"class="material-icons-outlined">login</span>
                 <p>Dados de login</p>
             </div>
+            <div class="conteiner_butoes">
+                <button class="butao_editar_perfil" id="btn_editar">
+                    <span class="material-icons-outlined">edit</span>
+                    Editar perfil
+                </button>
+                <button class="butao_salvar_alteracoes" id="btn_salvar" style="display: none;">Salvar</button>
+            </div>
+            
 
         </div>
         <div class="container_conteudo_secoes">
-            <div class="container_secao" id="container_secao_perfil_estabelecimento" style="display: none;">
+            <div class="container_secao" id="container_secao_perfil_estabelecimento" >
                 <div class="container_dados_foto_perfil">
                     <div class="container_geral_imagem">
                         <div class="container_imagem">
@@ -174,23 +182,23 @@
                     <h2 class="titulo_sesao_formas_recebimento">Formas Recebimento</h2>
                     <div class="container_input_checkbox">
                         <div class="container_item_check">
-                            <input id="input_dinheiro" class="input" type="checkbox" name="check_dinheiro" >
+                            <input id="input_forma_pagamento3" class="input" type="checkbox" name="check_dinheiro" >
                             <label class= "lable_input" for="input_dinheiro">Dinheiro</label>      
                         </div>
                         <div class="container_item_check">
-                            <input id="input_cartao_debito" class="input" type="checkbox" name="check_cartao_debito" >
+                            <input id="input_forma_pagamento2" class="input" type="checkbox" name="check_cartao_debito" >
                             <label class= "lable_input" for="input_cartao_debito">Cartão de débito</label>      
                         </div>
                         <div class="container_item_check">
-                            <input id="input_cartao_credito" class="input" type="checkbox" name="check_cartao_credito" >
+                            <input id="input_forma_pagamento1" class="input" type="checkbox" name="check_cartao_credito" >
                             <label class= "lable_input" for="input_cartao_credito">Cartão de crédito</label>      
                         </div>
                         <div class="container_item_check">
-                            <input id="input_pix" class="input" type="checkbox" name="check_pix" >
+                            <input id="input_forma_pagamento5" class="input" type="checkbox" name="check_pix" >
                             <label class= "lable_input" for="input_pix">Pix</label>      
                         </div>
                         <div class="container_item_check">
-                            <input id="input_via_app" class="input" type="checkbox" name="check_via_app" checked disabled>
+                            <input id="input_forma_pagamento4" class="input" type="checkbox" name="check_via_app" checked disabled>
                             <label class= "lable_input" for="input_via_app">Via app</label>      
                         </div>
                     </div>
@@ -242,50 +250,14 @@
                                 </span>
                             </div>
                             <div id="container_regras_cancelamentos" class="container_regras_cancelamentos" style="display: none;">
-                                <div class="container_regra_cancelamento" id="container_regra1">
-                                    <div class="container_acoes">
-                                        <span id="icone_delecao_regra1" class="material-icons-outlined icone_delecao_regra" onclick="deletarRegraCancelamento('container_regra1')" >
-                                            delete
-                                        </span>
-                                    </div>
-                                    <div class="informacoes">
-                                        <div class="container_valor_servico">
-                                            <h4>Válida para serviços:</h4>
-                                            <div class="container_radios_valor">
-                                                <div class="'container_radio_valor_servico'" id="container_radio_acima_cem">
-                                                    <input type="radio" name="valor_servico_regra1" id="input_radio_acima_cem_regra1">
-                                                    <label class="label_valor_servico" for="input_radio_acima_cem_regra1">Acima de R$ 100,00</label>
-                                                </div>
-                                                <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
-                                                    <input type="radio" name="valor_servico_regra1" id="input_radio_abaixo_cem_regra1">
-                                                    <label class="label_valor_servico" for="input_radio_abaixo_cem_regra1">Abaixo de R$ 100,00</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="container_tolerancia">
-                                            <h4 class="label_taxa">Tolerância:</h4>
-                                            <div class="container_input_tolerancia">
-                                                <p >até <input type="text" class="input_regra" id="input_tempo_tolerancia_regra1">h de antecedencia</p>
-                                            </div>
-                                        </div>
-                                        <div class="container_valor_taxa">
-                                            <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
-                                            <div class="container_input_valor_taxa">
-                                                <p ><input type="text" class="input_regra" id="input_valor_taxa_variada_regra1"> %</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                                
                             </div>
                         </div>
                     </div>
-                    <div class="container_taxas_cancelamento">
 
-                    </div>
                 </div>
             </div>
 
-            <div class="container_secao" id="container_secao_funcionamento">
+            <div class="container_secao" id="container_secao_funcionamento" style="display: none;">
                 <div class="funcionamento">
                     <h3>Quais dias e em quais horários o estabelecimento funciona?</h3>
                     <div id="container_geral_domingo" class="container_geral_dia_funcionamento" >
@@ -429,7 +401,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container_valor_intervalo">
+                    <div class="container_valor_intervalo" id="container_valor_intervalo" style="display: none;">
                         <h4>Quanto tempo?</h4>
                         <div class="container_input_tempo_intervalo">
                             <input type="text" id="input_intervalo_padrao" class="input_valor_unico">
