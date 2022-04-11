@@ -1,11 +1,10 @@
-
-const container_perfil_adm = document.getElementById("container_perfil_adm")
-const container_dados_localizacao = document.getElementById("container_dados_localizacao")
-const container_perfil_salao = document.getElementById("container_perfil_salao")
-const container_dados_pagamento = document.getElementById("container_dados_pagamento")
-const container_regras_negocio = document.getElementById("container_regras_negocio")
-const container_funcionamento = document.getElementById("container_funcionamento")
-const container_login = document.getElementById("container_login")
+const container_perfil_adm = document.getElementById("container_perfil_adm");
+const container_dados_localizacao = document.getElementById("container_dados_localizacao");
+const container_perfil_salao = document.getElementById("container_perfil_salao");
+const container_dados_pagamento = document.getElementById("container_dados_pagamento");
+const container_regras_negocio = document.getElementById("container_regras_negocio");
+const container_funcionamento = document.getElementById("container_funcionamento");
+const container_login = document.getElementById("container_login");
 
 
 
@@ -99,22 +98,53 @@ proximo.addEventListener("click", mudarSecao);
 //upload de imagem 
 
 //estabelecimento
-
 let photo = document.getElementById('img_photo');
-let file = document.getElementById('fl_image');
+let file = document.getElementById('fl_image_adm');
 
 photo.addEventListener('click', () => {
     file.click();
 });
 
 //adm
+let photo_estabelecimento = document.getElementById('img_photo_estabelecimento');
+let file2 = document.getElementById('fl_image_estabelecimento');
 
-let file2 = document.getElementById('fl_image_adm');
-
-photo.addEventListener('click', () => {
+photo_estabelecimento.addEventListener('click', () => {
     file2.click();
 });
 
+//fazer aparecer a imagem quando fizer upload
+
+  file.addEventListener('change', (event) => {
+    let reader = new FileReader();
+
+    reader.onload = () => {
+        photo.src = reader.result;
+    }
+
+    reader.readAsDataURL(file.files[0]);
+})
+
+file2.addEventListener('change', (event) => {
+    let reader = new FileReader();
+
+    reader.onload = () => {
+        photo_estabelecimento.src = reader.result;
+    }
+
+    reader.readAsDataURL(file.files[0]);
+})
+
+
+
+//verificando checkbox 
+
+let checkbox = document.getElementById('radio_dinheiro');
+if(checkbox.ariaChecked) {
+    console.log("O cliente marcou o checkbox");
+} else {
+    console.log("O cliente não marcou o checkbox");
+}
 
 //consumo de api
 
@@ -128,7 +158,6 @@ const conta_administradora = (conta_adm) =>{
     };
     fetch(url, options)
 };
-
 
 const salvarCadastro = () => {
     const conta_administradora = {
@@ -151,12 +180,12 @@ const salvarCadastro = () => {
         numero: document.getElementById('input_numero').value,
         complemento: document.getElementById('complemento').value,
         //pagamento
-        dinheiro: document.getElementById('radio_dinheiro'),
-        cartao_credito: document.getElementById('radio_credito'),
-        cartao_debito: document.getElementById('radio_debito'),
-        pix: document.getElementById('radio_pix'),
-        via_app: document.getElementById('radio_app'),
-        bandeira: document.getElementsById('bandeira'),
+        // dinheiro: document.getElementById('radio_dinheiro'),
+        // cartao_credito: document.getElementById('radio_credito'),
+        // cartao_debito: document.getElementById('radio_debito'),
+        // pix: document.getElementById('radio_pix'),
+        // via_app: document.getElementById('radio_app'),
+        // bandeira: document.getElementsById('bandeira'),
         //negocio
         radio_sim: document.getElementsById('radio_sim'),
         radio_nao: document.getElementsById('radio_nao'),

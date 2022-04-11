@@ -53,14 +53,13 @@
                             <input  class="input_linha"type="text" name="search" placeholder="" id="biografia"/>
                         </div>
 
-                        <div class="max-width">
+                        <div class="max_width_estabelecimento">
                             <div class="image_container">
-                                <img src="../../img/user.png" alt="" id="img_photo">
+                                <img src="../../img/add-image (2).png" alt="" id="img_photo_estabelecimento">
                             </div>
-                             <input type="file" id="fl_image" name="fl_image" accept="image/*">          
+                             <input type="file" id="fl_image_estabelecimento" name="fl_image_estabelecimento" accept="image/*">          
                         </div>
 
-                           
                     </div>
                         <div id="informacoes_continuas">
                             <div id="tela_anterior">
@@ -91,9 +90,9 @@
                             <h3> <span id="user1" class="material-icons-outlined">person</span> Perfil Administrador</h3>
                         </div>
                     
-                        <div class="max-width-adm">
+                        <div class="max-width_adm">
                             <div class="image_container">
-                                <img src="../../img/user (2).png" alt="" id="img_photo">
+                                <img src="../../img/add-image (2).png" alt="" id="img_photo">
                             </div>
                              <input type="file" id="fl_image_adm" name="fl_image_adm" accept="image/*">          
                         </div>
@@ -194,13 +193,14 @@
                     <div id="subtitulo">
                         <h3><span id="pay" class="material-icons-outlined">currency_exchange</span> Regras de pagamento</h3>
                     </div>
+                    
                     <div id="forma_pagamento">
                         <h4>Forma de pagamento:</h4><br/>
-                        <input id="radio_dinheiro" class="radio_pagamento" type="radio" value="sim"/>Dinheiro<br />
-                        <input id="radio_credito" class="radio_pagamento" type="radio" value="nao"/> Cartão de crédito<br/>
-                        <input id="radio_debito" class="radio_pagamento" type="radio" value="talvez"/> Cartão de débito<br/>
-                        <input id="radio_pix" class="radio_pagamento" type="radio" value="quem_sabe"/> Pix<br/>
-                        <input id="radio_app" class="radio_pagamento" type="radio" value="quem_sabe"/> Via App<br/>
+                        <input id="radio_dinheiro" class="radio_pagamento" type="checkbox" value="sim"/><label for="radio_dinheiro">Dinheiro</label><br />
+                        <input id="radio_credito" class="radio_pagamento" type="checkbox" value="nao"/><label for="">Cartao de crédito</label><br />
+                        <input id="radio_debito" class="radio_pagamento" type="checkbox" value="talvez"/><label for="">Cartão de débito</label><br />
+                        <input id="radio_pix" class="radio_pagamento" type="checkbox" value="quem_sabe"/><label for="">Pix</label><br />
+                        <input id="radio_app" class="radio_pagamento" type="checkbox" value="quem_sabe"/><label for="">Via app</label><br />
                     </div>
 
                     <div id="bandeiras">
@@ -398,12 +398,18 @@
                     </div>
         
                     <div id="informacoes">
-                        <label>Email</label>
-                        <input type="text" id="email">
-                        <label> Senha</label> 
-                        <input type="password" name="search" id="senha" />
-                        <label>Confirmar senha</label>
-                        <input type="text" id="confirmar_senha">
+                        <div id="campo">
+                            <label>Email</label>
+                        <input class="input_linha" type="text" id="email">
+                        </div>
+                        <div id="campo">
+                            <label> Senha</label> 
+                            <input class="input_linha" type="password" name="search" id="senha" />
+                        </div>
+                        <div id="campo">
+                            <label>Confirmar senha</label>
+                            <input class="input_linha" type="text" id="confirmar_senha">
+                        </div>
                     </div> 
                     <div id="informacoes_continuas">
                             <div id="tela_anterior">
@@ -420,7 +426,7 @@
                                 <div id="radio7"></div>                       
                             </div>
                             <div id="proxima_tela">
-                                <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                                <h5 id="botao_proximo">Concluir</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
                             </div>
                           </div>
             </div>
