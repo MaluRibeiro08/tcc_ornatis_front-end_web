@@ -1,0 +1,199 @@
+/* PADRAO CORES E MARGIM */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --cinza_claro:#DBD8D8;
+    --verde_padrao:#93DCD0;
+    --verde_escuro:#5F9F95;
+    --verde_claro:#C9E9E3;
+    --fonte:#494343;
+
+}
+
+/* HEADER E FONTES */
+
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    filter: drop-shadow(2px 3px 4px #494343);
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Megrim';
+    color: var(--verde_padrao);
+    margin-left: 3vw;
+}
+
+h2{
+    font-size: 25px;
+    font-family: 'Raleway';
+
+}
+h3{
+    font-size: 30px;
+    font-family: 'Raleway';
+}
+
+h4{
+    font-size: 40px;
+    font-family: 'Raleway';
+    color: var(--fonte);
+}
+
+h6{
+    font-size: 30px;
+    font-family: 'Raleway';
+    color: var(--fonte);
+
+}
+
+/* MENU HAMBURGUER E ICONES */
+
+#user{
+    font-size: 50px;
+    color: var(--fonte);
+}
+
+#notification{
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+a{
+    text-decoration: none; 
+    font-family: 'Raleway';
+    font-size: 60px;
+    color:black;
+}
+
+nav{
+    height: 100%;
+    width: 0px;
+    background-color: var(--verde_padrao);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    transition: width 0.3s;
+   
+}
+
+nav a{
+    color: white;
+    font-size: 30px;
+    display: inline;
+    display: block;
+    padding: 12px 10px 12px 32px;
+    padding-top: 3vh;
+    padding-left: 3vw;
+   
+}
+
+nav a:hover{
+    background-color: var(--verde_escuro);
+
+}
+
+#linha_menu{
+    color: var(--verde_padrao);
+    padding-left: 30px;
+}
+
+#close_menu{
+    font-size: 50px;
+}
+
+#header_ornatis{
+    display: flex;
+}
+
+#logo{
+    margin-left: 45%;
+    margin-top: -3vh
+}
+
+#menu_hamburguer{
+    margin-left: 50px ;
+    color: var(--verde_escuro);
+    margin-top: 20px;
+    text-decoration:none;
+    
+}
+
+#menu_hamburguer:hover{
+    text-decoration:underline;
+   
+}
+
+#info_menu{
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#notification{
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+#circulo_menu{
+    width: 6vw;
+    height: 12vh;
+    background-color: var(--cinza_claro);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MAIN */
+
+#sessao1{
+    background-color: var(--cinza_claro);
+    width: 100%;
+    height: 20vh;
+
+}
+
+
+
+#sessao2{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 15vh;
+
+}
+
+#acessos{
+   
+  
+}
+
+#sessao3{
+    background-color: greenyellow;
+    width: 100%;
+    height: 35vh;
+
+}
+
+footer{
+    background-color: var(--verde_claro);
+    width: 100%;
+    height: 20vh;
+
+}
