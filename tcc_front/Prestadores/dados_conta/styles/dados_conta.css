@@ -342,6 +342,7 @@ h2
 #container_secao_dados_login > p
 {
     color: red;
+    cursor: pointer;
 }
 
 footer
