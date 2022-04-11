@@ -111,20 +111,6 @@ main
     /* background-color: blue; */
 }
 
-
-.container_dados_foto_perfil
-{
-    width: 80%;
-    height: fit-content;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    /* background-color: brown; */
-}
-
 .container_geral_imagem
 {
     /* background-color: aqua; */
@@ -199,6 +185,18 @@ main
     justify-content: center;
     background-color: var(--verde_padrao);
 }
+.container_dados_foto_perfil
+{
+    width: 80%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* background-color: brown; */
+}
 
 .container_secao
 {
@@ -227,6 +225,7 @@ main
 
 label
 {
+    width: 100%;
     font-weight: 800;
     font-size: 15px;
 }
@@ -284,6 +283,62 @@ h2
     margin-bottom: 10px;
     color: var(--verde_escuro);
 }
+
+.conteiner_butoes
+{
+    width: 70%;
+    height: fit-content;
+    padding:15px;
+    
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+
+    color: var(--fonte);
+    font-size: 1.6em;
+    /* background-color: aqua; */
+}
+
+.conteiner_butoes > button
+{
+    width: 60%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 3px;
+
+    border: none;
+    border-radius: 5px;
+    color: var(--fonte);
+    background-color: white;    
+}
+
+.conteiner_butoes > #btn_salvar
+{
+    background-color: var(--verde_claro);
+}
+
+.conteiner_butoes > #btn_salvar:hover
+{
+    background-color: var(--verde_padrao);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.conteiner_butoes > #btn_editar:hover
+{
+    /* background-color: var(--verde_claro); */
+    transform: scale(1.1);
+    transition: 0.5s;
+    color: var(--fonte);
+}
+
+/* REGRAS CANCELAMENTO */
+
 #container_secao_dados_login > p
 {
     color: red;
@@ -291,7 +346,7 @@ h2
 
 footer
 {
-    background-color: crimson;
+    /* background-color: crimson; */
     width: 100%;
     height: 120px;
 }

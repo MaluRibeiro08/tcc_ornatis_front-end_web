@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dados_conta.css">
+    <link rel="stylesheet" href="./styles/dados_conta.css">
+    <link rel="stylesheet" href="./styles/secao_regras_cancelamento.css">
     <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="./styles/secao_dados_funcionamento.css">
     <script src="./dados_conta.js" type="module" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
@@ -79,10 +81,18 @@
                 <span id="next"class="material-icons-outlined">login</span>
                 <p>Dados de login</p>
             </div>
+            <div class="conteiner_butoes">
+                <button class="butao_editar_perfil" id="btn_editar">
+                    <span class="material-icons-outlined">edit</span>
+                    Editar perfil
+                </button>
+                <button class="butao_salvar_alteracoes" id="btn_salvar" style="display: none;">Salvar</button>
+            </div>
+            
 
         </div>
         <div class="container_conteudo_secoes">
-            <div class="container_secao" id="container_secao_perfil_estabelecimento">
+            <div class="container_secao" id="container_secao_perfil_estabelecimento" >
                 <div class="container_dados_foto_perfil">
                     <div class="container_geral_imagem">
                         <div class="container_imagem">
@@ -172,23 +182,23 @@
                     <h2 class="titulo_sesao_formas_recebimento">Formas Recebimento</h2>
                     <div class="container_input_checkbox">
                         <div class="container_item_check">
-                            <input id="input_dinheiro" class="input" type="checkbox" name="check_dinheiro" >
+                            <input id="input_forma_pagamento3" class="input" type="checkbox" name="check_dinheiro" >
                             <label class= "lable_input" for="input_dinheiro">Dinheiro</label>      
                         </div>
                         <div class="container_item_check">
-                            <input id="input_cartao_debito" class="input" type="checkbox" name="check_cartao_debito" >
+                            <input id="input_forma_pagamento2" class="input" type="checkbox" name="check_cartao_debito" >
                             <label class= "lable_input" for="input_cartao_debito">Cartão de débito</label>      
                         </div>
                         <div class="container_item_check">
-                            <input id="input_cartao_credito" class="input" type="checkbox" name="check_cartao_credito" >
+                            <input id="input_forma_pagamento1" class="input" type="checkbox" name="check_cartao_credito" >
                             <label class= "lable_input" for="input_cartao_credito">Cartão de crédito</label>      
                         </div>
                         <div class="container_item_check">
-                            <input id="input_pix" class="input" type="checkbox" name="check_pix" >
+                            <input id="input_forma_pagamento5" class="input" type="checkbox" name="check_pix" >
                             <label class= "lable_input" for="input_pix">Pix</label>      
                         </div>
                         <div class="container_item_check">
-                            <input id="input_via_app" class="input" type="checkbox" name="check_via_app" checked disabled>
+                            <input id="input_forma_pagamento4" class="input" type="checkbox" name="check_via_app" checked disabled>
                             <label class= "lable_input" for="input_via_app">Via app</label>      
                         </div>
                     </div>
@@ -201,6 +211,207 @@
                     </div>
                 </div>
             </div>
+            <div class="container_secao" id="container_secao_regras_negocio"  style="display: none;">
+                <div class="container_verificacao_taxa_cancelamento">
+                    <h3>Deseja implementar taxa de cancelamento?</h3>
+                    <div class="container_radios_desejo_implementacao_taxa">
+                        <div class="container_radio_desejo" id="container_radio_sim">
+                            <input type="radio" name="desejo_implementar_taxa" id="input_radio_sim_cancelamento">
+                            <label class="label_radio" for="input_radio_sim_cancelamento">Sim!</label>
+                        </div>
+                        <div class="container_radio_desejo" id="container_radio_nao">
+                            <input type="radio" name="desejo_implementar_taxa" id="input_radio_nao_cancelamento">
+                            <label class="label_radio" for="input_radio_nao_cancelamento">Não!</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_geral_regras" id="container_geral_regras" style="display: none;">
+                    <h3>Como deseja cobrar?</h3>
+                    <div class="container_radios_tipos_taxas">
+                        <div  class="container_radio_tipo_taxa" id="container_radio_taxa_unica">
+                            <div class="container_radio">
+                                <input type="radio" name="tipo_taxa" id="input_radio_taxa_unica">
+                                <label for="input_radio_taxa_unica">Taxa única</label>
+                            </div>
+                            <div id ="container_taxa_unica" class="container_taxa_unica" style="display: none;">
+                                <p>Valor da cobrança: R$ </p>
+                                <input type="text" id="input_valor_taxa_unica" class="input_valor_unico">
+                            </div>
+                        </div>
+                        
+                        <div class="container_radio_tipo_taxa" id="container_radio_taxa_variada">
+                            <div class="container_radio">
+                                <div class="container_input_radio">
+                                    <input type="radio" name="tipo_taxa" id="input_radio_variada" class="input_tipo_radio">
+                                    <label for="input_radio_variada">Taxas variadas</label>
+                                </div>
+                                <span id="icone_adicao_regra" class="material-icons-outlined" style="display: none;">
+                                    add
+                                </span>
+                            </div>
+                            <div id="container_regras_cancelamentos" class="container_regras_cancelamentos" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container_secao" id="container_secao_funcionamento" style="display: none;">
+                <div class="funcionamento">
+                    <h3>Quais dias e em quais horários o estabelecimento funciona?</h3>
+                    <div id="container_geral_domingo" class="container_geral_dia_funcionamento" >
+                        <div class="container_item_check">
+                            <input id="input_domingo" class="input" type="checkbox" name="check_domingo">
+                            <label class= "lable_input" for="input_domingo">Domingo</label>      
+                        </div>
+                        <div class="container_geral_horarios_funcionamento">
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="1input_hora_inicio_dom" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="1input_hora_termino_dom" type="text" placeholder="término">
+                            </div>
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="2input_hora_inicio_dom" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="2input_hora_termino_dom" type="text" placeholder="término">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container_geral_segunda-feira" class="container_geral_dia_funcionamento" >
+                        <div class="container_item_check">
+                            <input id="input_segunda-feira" class="input" type="checkbox" name="check_segunda-feira">
+                            <label class= "lable_input" for="input_segunda-feira">Segunda-feira</label>      
+                        </div>
+                        <div class="container_geral_horarios_funcionamento">
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="1input_hora_inicio_seg" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="1input_hora_termino_seg" type="text" placeholder="término">
+                            </div>
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="2input_hora_inicio_seg" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="2input_hora_termino_seg" type="text" placeholder="término">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container_geral_terca-feira" class="container_geral_dia_funcionamento" >
+                        <div class="container_item_check">
+                            <input id="input_terca-feira" class="input" type="checkbox" name="check_terca-feira">
+                            <label class= "lable_input" for="input_terca-feira">Terça-feira</label>      
+                        </div>
+                        <div class="container_geral_horarios_funcionamento">
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="1input_hora_inicio_ter" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="1input_hora_termino_ter" type="text" placeholder="término">
+                            </div>
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="2input_hora_inicio_ter" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="2input_hora_termino_ter" type="text" placeholder="término">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container_geral_quarta-feira" class="container_geral_dia_funcionamento" >
+                        <div class="container_item_check">
+                            <input id="input_quarta-feira" class="input" type="checkbox" name="check_quarta-feira">
+                            <label class= "lable_input" for="input_quarta-feira">Quarta-feira</label>      
+                        </div>
+                        <div class="container_geral_horarios_funcionamento">
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="1input_hora_inicio_qua" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="1input_hora_termino_qua" type="text" placeholder="término">
+                            </div>
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="2input_hora_inicio_qua" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="2input_hora_termino_qua" type="text" placeholder="término">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container_geral_quinta-feira" class="container_geral_dia_funcionamento" >
+                        <div class="container_item_check">
+                            <input id="input_quinta-feira" class="input" type="checkbox" name="check_quinta-feira">
+                            <label class= "lable_input" for="input_quinta-feira">Quinta-feira</label>      
+                        </div>
+                        <div class="container_geral_horarios_funcionamento">
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="1input_hora_inicio_qui" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="1input_hora_termino_qui" type="text" placeholder="término">
+                            </div>
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="2input_hora_inicio_qui" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="2input_hora_termino_qui" type="text" placeholder="término">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container_geral_sexta-feira" class="container_geral_dia_funcionamento" >
+                        <div class="container_item_check">
+                            <input id="input_sexta-feira" class="input" type="checkbox" name="check_sexta-feira">
+                            <label class= "lable_input" for="input_sexta-feira">Sexta-feira</label>      
+                        </div>
+                        <div class="container_geral_horarios_funcionamento">
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="1input_hora_inicio_sex" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="1input_hora_termino_sex" type="text" placeholder="término">
+                            </div>
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="2input_hora_inicio_sex" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="2input_hora_termino_sex" type="text" placeholder="término">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container_geral_sabado" class="container_geral_dia_funcionamento" >
+                        <div class="container_item_check">
+                            <input id="input_sabado" class="input" type="checkbox" name="check_sabado">
+                            <label class= "lable_input" for="input_sabado">Sábado</label>      
+                        </div>
+                        <div class="container_geral_horarios_funcionamento">
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="1input_hora_inicio_sab" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="1input_hora_termino_sab" type="text" placeholder="término">
+                            </div>
+                            <div class="container_horario_funcionamento">
+                                <input class="input_hora_funcionamento" id="2input_hora_inicio_sab" type="text" placeholder="início">
+                                <p>até</p>
+                                <input class="input_hora_funcionamento" id="2input_hora_termino_sab" type="text" placeholder="término">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_intervalo">
+                    <div class="container_confimacao_intervalo">
+                        <h3>Considerar intervalo de tempo entre serviços?</h3>
+                        <div class="container_radios_intervalo">
+                            <div class="container_radio_desejo" id="container_radio_sim">
+                                <input type="radio" name="desejo_implementar_intervalo" id="input_radio_sim_intervalo">
+                                <label class="label_radio" for="input_radio_sim_intervalo">Sim!</label>
+                            </div>
+                            <div class="container_radio_desejo" id="container_radio_nao">
+                                <input type="radio" name="desejo_implementar_intervalo" id="input_radio_nao_intervalo">
+                                <label class="label_radio" for="input_radio_nao_intervalo">Não!</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_valor_intervalo" id="container_valor_intervalo" style="display: none;">
+                        <h4>Quanto tempo?</h4>
+                        <div class="container_input_tempo_intervalo">
+                            <input type="text" id="input_intervalo_padrao" class="input_valor_unico">
+                            <p>minutos</p>
+                        </div>
+                        
+                    </div>
+                </div>                
+            </div>
+
             <div class="container_secao" id="container_secao_dados_login" style="display: none;">
                 <div class="container_input">
                     <label class= "lable_input" for="input_email">Email:</label>
@@ -212,6 +423,7 @@
                 </div>
                 <p>Excluir cadastro!</p>
             </div>
+
             
         </div>
 
@@ -222,3 +434,11 @@
     
 </body>
 </html>
+<script>
+    const deletarRegraCancelamento = (idRegraCancelamento) =>
+    {
+       const divDeletar = document.getElementById(`${idRegraCancelamento}`)
+       const conteinerRegras = document.getElementById("container_regras_cancelamentos")
+       conteinerRegras.removeChild(divDeletar)
+    }
+</script>
