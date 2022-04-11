@@ -62,6 +62,13 @@ import { imagemPreview } from "../../utils/imagem.js";
     const input_check_forma5 = document.getElementById("input_forma_pagamento5")
     const input_observacoes_pagamento = document.getElementById("input_observacoes_pagamento")
     const input_valor_taxa_unica = document.getElementById("input_valor_taxa_unica")
+    const input_dia_semana_1 = document.getElementById("input_dia_semana_1")
+    const input_dia_semana_2 = document.getElementById("input_dia_semana_2")
+    const input_dia_semana_3 = document.getElementById("input_dia_semana_3")
+    const input_dia_semana_4 = document.getElementById("input_dia_semana_4")
+    const input_dia_semana_5 = document.getElementById("input_dia_semana_5")
+    const input_dia_semana_6 = document.getElementById("input_dia_semana_6")
+    const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 
     const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
 
@@ -152,6 +159,198 @@ import { imagemPreview } from "../../utils/imagem.js";
                     
                 }
             }
+
+        //INFORMAÇÕES FUNCIONAMENTO
+        
+        if(informacoes.data.dados_empresa[0]["intervalo_tempo_padrao_entre_servicos"] != null && 
+            informacoes.data.dados_empresa[0]["intervalo_tempo_padrao_entre_servicos"] != 0 )
+        { 
+            radio_sim_intervalo.checked = true;
+            abrirContainer("container_valor_intervalo");
+            const input_intervalo_padrao = document.getElementById("input_intervalo_padrao")
+            input_intervalo_padrao.value = informacoes.data.dados_empresa[0]["intervalo_tempo_padrao_entre_servicos"]
+            // console.log(informacoes.data.dados_empresa[0]["intervalo_tempo_padrao_entre_servicos"])
+        }
+        else
+        {
+            radio_nao_intervalo.checked = true;
+        }
+
+        console.log(informacoes.data.dados_funcionamento);
+        if(informacoes.data.dados_funcionamento[1] != null)
+        {
+            input_dia_semana_1.checked = true
+
+            if(informacoes.data.dados_funcionamento[1][0]!= null)
+            {
+                // console.log(informacoes.data.dados_funcionamento[1][1])
+
+                const primeiro_input_hora_inicio_dom = document.getElementById("1input_hora_inicio_dom")
+                primeiro_input_hora_inicio_dom.value = informacoes.data.dados_funcionamento[1][0].hora_inicio
+                const primeiro_input_hora_termino_dom = document.getElementById("1input_hora_termino_dom")
+                primeiro_input_hora_termino_dom.value = informacoes.data.dados_funcionamento[1][0].hora_termino
+            }
+            if(informacoes.data.dados_funcionamento[1][1]!= null)
+            {
+                console.log("entrou")
+                const segundo_input_hora_inicio_dom = document.getElementById("2input_hora_inicio_dom")
+                segundo_input_hora_inicio_dom.value = informacoes.data.dados_funcionamento[1][1].hora_inicio
+                const segundo_input_hora_termino_dom = document.getElementById("2input_hora_termino_dom")
+                segundo_input_hora_termino_dom.value = informacoes.data.dados_funcionamento[1][1].hora_termino
+            }
+            else
+            {
+                console.log("só um horário nesse dia")
+            }
+
+        }
+        if(informacoes.data.dados_funcionamento[2] != null)
+        {
+            input_dia_semana_2.checked = true
+
+            if(informacoes.data.dados_funcionamento[2][0]!= null)
+            {
+                const primeiro_input_hora_inicio_seg = document.getElementById("1input_hora_inicio_seg")
+                primeiro_input_hora_inicio_seg.value = informacoes.data.dados_funcionamento[2][0].hora_inicio
+                const primeiro_input_hora_termino_seg = document.getElementById("1input_hora_termino_seg")
+                primeiro_input_hora_termino_seg.value = informacoes.data.dados_funcionamento[2][0].hora_termino
+            }
+            if(informacoes.data.dados_funcionamento[2][1]!= null)
+            {
+                console.log("entrou")
+                const segundo_input_hora_inicio_seg = document.getElementById("2input_hora_inicio_seg")
+                segundo_input_hora_inicio_seg.value = informacoes.data.dados_funcionamento[2][1].hora_inicio
+                const segundo_input_hora_termino_seg = document.getElementById("2input_hora_termino_seg")
+                segundo_input_hora_termino_seg.value = informacoes.data.dados_funcionamento[2][1].hora_termino
+            }
+            else
+            {
+                console.log("só um horário nesse dia")
+            }
+
+        }
+        if(informacoes.data.dados_funcionamento[3] != null)
+        {
+            input_dia_semana_3.checked = true
+
+            if(informacoes.data.dados_funcionamento[3][0]!= null)
+            {
+                const primeiro_input_hora_inicio_ter = document.getElementById("1input_hora_inicio_ter")
+                primeiro_input_hora_inicio_ter.value = informacoes.data.dados_funcionamento[3][0].hora_inicio
+                const primeiro_input_hora_termino_ter = document.getElementById("1input_hora_termino_ter")
+                primeiro_input_hora_termino_ter.value = informacoes.data.dados_funcionamento[3][0].hora_termino
+            }
+            if(informacoes.data.dados_funcionamento[3][1]!= null)
+            {
+                console.log("entrou")
+                const segundo_input_hora_inicio_ter = document.getElementById("2input_hora_inicio_ter")
+                segundo_input_hora_inicio_ter.value = informacoes.data.dados_funcionamento[3][1].hora_inicio
+                const segundo_input_hora_termino_ter = document.getElementById("2input_hora_termino_ter")
+                segundo_input_hora_termino_ter.value = informacoes.data.dados_funcionamento[3][1].hora_termino
+            }
+            else
+            {
+                console.log("só um horário nesse dia")
+            }
+        }
+        if(informacoes.data.dados_funcionamento[4] != null)
+        {
+            input_dia_semana_4.checked = true
+
+            if(informacoes.data.dados_funcionamento[4][0]!= null)
+            {
+                const primeiro_input_hora_inicio_qua = document.getElementById("1input_hora_inicio_qua")
+                primeiro_input_hora_inicio_qua.value = informacoes.data.dados_funcionamento[4][0].hora_inicio
+                const primeiro_input_hora_termino_qua = document.getElementById("1input_hora_termino_qua")
+                primeiro_input_hora_termino_qua.value = informacoes.data.dados_funcionamento[4][0].hora_termino
+            }
+            if(informacoes.data.dados_funcionamento[4][1]!= null)
+            {
+                console.log("entrou")
+                const segundo_input_hora_inicio_qua = document.getElementById("2input_hora_inicio_qua")
+                segundo_input_hora_inicio_qua.value = informacoes.data.dados_funcionamento[4][1].hora_inicio
+                const segundo_input_hora_termino_qua = document.getElementById("2input_hora_termino_qua")
+                segundo_input_hora_termino_qua.value = informacoes.data.dados_funcionamento[4][1].hora_termino
+            }
+            else
+            {
+                console.log("só um horário nesse dia")
+            }
+        }
+        if(informacoes.data.dados_funcionamento[5] != null)
+        {
+            input_dia_semana_5.checked = true
+
+            if(informacoes.data.dados_funcionamento[5][0]!= null)
+            {
+                const primeiro_input_hora_inicio_qui = document.getElementById("1input_hora_inicio_qui")
+                primeiro_input_hora_inicio_qui.value = informacoes.data.dados_funcionamento[5][0].hora_inicio
+                const primeiro_input_hora_termino_qui = document.getElementById("1input_hora_termino_qui")
+                primeiro_input_hora_termino_qui.value = informacoes.data.dados_funcionamento[5][0].hora_termino
+            }
+            if(informacoes.data.dados_funcionamento[5][1]!= null)
+            {
+                console.log("entrou")
+                const segundo_input_hora_inicio_qui = document.getElementById("2input_hora_inicio_qui")
+                segundo_input_hora_inicio_qui.value = informacoes.data.dados_funcionamento[5][1].hora_inicio
+                const segundo_input_hora_termino_qui = document.getElementById("2input_hora_termino_qui")
+                segundo_input_hora_termino_qui.value = informacoes.data.dados_funcionamento[5][1].hora_termino
+            }
+            else
+            {
+                console.log("só um horário nesse dia")
+            }
+        }
+        if(informacoes.data.dados_funcionamento[6]!= null)
+        {
+            input_dia_semana_6.checked = true
+
+            if(informacoes.data.dados_funcionamento[6][0]!= null)
+            {
+                const primeiro_input_hora_inicio_sex = document.getElementById("1input_hora_inicio_sex")
+                primeiro_input_hora_inicio_sex.value = informacoes.data.dados_funcionamento[6][0].hora_inicio
+                const primeiro_input_hora_termino_sex = document.getElementById("1input_hora_termino_sex")
+                primeiro_input_hora_termino_sex.value = informacoes.data.dados_funcionamento[6][0].hora_termino
+            }
+            if(informacoes.data.dados_funcionamento[6][1]!= null)
+            {
+                console.log("entrou")
+                const segundo_input_hora_inicio_sex = document.getElementById("2input_hora_inicio_sex")
+                segundo_input_hora_inicio_sex.value = informacoes.data.dados_funcionamento[6][1].hora_inicio
+                const segundo_input_hora_termino_sex = document.getElementById("2input_hora_termino_sex")
+                segundo_input_hora_termino_sex.value = informacoes.data.dados_funcionamento[6][1].hora_termino
+            }
+            else
+            {
+                console.log("só um horário nesse dia")
+            }
+        }
+        if(informacoes.data.dados_funcionamento[7] != null)
+        {
+            input_dia_semana_7.checked = true
+
+            if(informacoes.data.dados_funcionamento[7][0]!= null)
+            {
+                const primeiro_input_hora_inicio_sab = document.getElementById("1input_hora_inicio_sab")
+                primeiro_input_hora_inicio_sab.value = informacoes.data.dados_funcionamento[7][0].hora_inicio
+                const primeiro_input_hora_termino_sab = document.getElementById("1input_hora_termino_sab")
+                primeiro_input_hora_termino_sab.value = informacoes.data.dados_funcionamento[7][0].hora_termino
+            }
+            if(informacoes.data.dados_funcionamento[7][1]!= null)
+            {
+                console.log("entrou")
+                const segundo_input_hora_inicio_sab = document.getElementById("2input_hora_inicio_sab")
+                segundo_input_hora_inicio_sab.value = informacoes.data.dados_funcionamento[7][1].hora_inicio
+                const segundo_input_hora_termino_sab = document.getElementById("2input_hora_termino_sab")
+                segundo_input_hora_termino_sab.value = informacoes.data.dados_funcionamento[7][1].hora_termino
+            }
+            else
+            {
+                console.log("só um horário nesse dia")
+            }
+        }
+        // console.log(informacoes.data.dados_funcionamento.domingo)
+
         
 
     }
