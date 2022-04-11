@@ -1,3 +1,4 @@
+const container_estabelecimento = document.getElementById("container_estabelecimento")
 const container_perfil_adm = document.getElementById("container_perfil_adm");
 const container_dados_localizacao = document.getElementById("container_dados_localizacao");
 const container_perfil_salao = document.getElementById("container_perfil_salao");
@@ -97,7 +98,7 @@ proximo.addEventListener("click", mudarSecao);
 
 //upload de imagem 
 
-//estabelecimento
+//adm
 let photo = document.getElementById('img_photo');
 let file = document.getElementById('fl_image_adm');
 
@@ -105,7 +106,7 @@ photo.addEventListener('click', () => {
     file.click();
 });
 
-//adm
+//estabelecimento
 let photo_estabelecimento = document.getElementById('img_photo_estabelecimento');
 let file2 = document.getElementById('fl_image_estabelecimento');
 
@@ -126,13 +127,13 @@ photo_estabelecimento.addEventListener('click', () => {
 })
 
 file2.addEventListener('change', (event) => {
-    let reader = new FileReader();
+    let reader2 = new FileReader();
 
-    reader.onload = () => {
-        photo_estabelecimento.src = reader.result;
+    reader2.onload = () => {
+        photo_estabelecimento.src = reader2.result;
     }
 
-    reader.readAsDataURL(file.files[0]);
+    reader2.readAsDataURL(file2.files[0]);
 })
 
 

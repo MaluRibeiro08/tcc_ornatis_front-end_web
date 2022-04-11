@@ -159,11 +159,11 @@ input[type='file']{
 button{
     width: 30%;
     height: 8%;
-    border-radius: 20px;
     background-color: var(--verde_claro);
     margin-left: 90px;
     margin-top: 2vh;
     cursor: pointer;
+   
     
 }
 
