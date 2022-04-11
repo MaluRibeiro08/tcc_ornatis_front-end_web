@@ -21,6 +21,7 @@ header{
     height: 10vh;
     background-color: white;
     filter: drop-shadow(2px 3px 4px #494343);
+    border-radius: 5px 5px 5px 5px;
 }
 
 h1{
@@ -169,6 +170,7 @@ nav a:hover{
     align-items: center;
     justify-content: center;
     display: flex;
+    border-radius: 0px 0px 50px 50px;
 
 }
 
