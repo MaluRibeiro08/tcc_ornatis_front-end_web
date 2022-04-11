@@ -1,6 +1,9 @@
 "use strict"
 
 import { imagemPreview } from "../../../utils/imagem.js";
+import { testeUpdate  } from "./update.js";
+
+// testeUpdate()
 //RADIOS / INPUTS / OUTROS
     const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
     const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
@@ -74,15 +77,15 @@ import { imagemPreview } from "../../../utils/imagem.js";
 
     const preencherFormasPagamento = () =>
     {
-        console.log("teste")
+        // console.log("teste")
     }
     const preencherCampos = async (id_empresa) =>
     {
         const response = await carregarDadosConta(id_empresa);
         // console.log(response)
         const informacoes = await response.json();
-        console.log(informacoes)
-        console.log(informacoes.data.dados_empresa[0]["nome_fantasia"])
+        // console.log(informacoes)
+        // console.log(informacoes.data.dados_empresa[0]["nome_fantasia"])
 
         input_nome_estabelecimento.value = informacoes.data.dados_empresa[0]["nome_fantasia"]; 
         input_cnpj.value = informacoes.data.dados_empresa[0]["cnpj"]; 
@@ -103,7 +106,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
 
         //INFORMACOES PAGAMENTO
             const arr_formas_recebidas = informacoes.data.dados_pagamento;
-            console.log(arr_formas_recebidas);
+            // console.log(arr_formas_recebidas);
 
             let contador = 0;
 
@@ -185,7 +188,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             radio_nao_intervalo.checked = true;
         }
 
-        console.log(informacoes.data.dados_funcionamento);
+        // console.log(informacoes.data.dados_funcionamento);
         if(informacoes.data.dados_funcionamento[1] != null)
         {
             input_dia_semana_1.checked = true
@@ -201,7 +204,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             if(informacoes.data.dados_funcionamento[1][1]!= null)
             {
-                console.log("entrou")
+                // console.log("entrou")
                 const segundo_input_hora_inicio_dom = document.getElementById("2input_hora_inicio_dom")
                 segundo_input_hora_inicio_dom.value = informacoes.data.dados_funcionamento[1][1].hora_inicio
                 const segundo_input_hora_termino_dom = document.getElementById("2input_hora_termino_dom")
@@ -209,7 +212,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             else
             {
-                console.log("só um horário nesse dia")
+                // console.log("só um horário nesse dia")
             }
 
         }
@@ -226,7 +229,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             if(informacoes.data.dados_funcionamento[2][1]!= null)
             {
-                console.log("entrou")
+                // console.log("entrou")
                 const segundo_input_hora_inicio_seg = document.getElementById("2input_hora_inicio_seg")
                 segundo_input_hora_inicio_seg.value = informacoes.data.dados_funcionamento[2][1].hora_inicio
                 const segundo_input_hora_termino_seg = document.getElementById("2input_hora_termino_seg")
@@ -234,7 +237,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             else
             {
-                console.log("só um horário nesse dia")
+                // console.log("só um horário nesse dia")
             }
 
         }
@@ -251,7 +254,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             if(informacoes.data.dados_funcionamento[3][1]!= null)
             {
-                console.log("entrou")
+                // console.log("entrou")
                 const segundo_input_hora_inicio_ter = document.getElementById("2input_hora_inicio_ter")
                 segundo_input_hora_inicio_ter.value = informacoes.data.dados_funcionamento[3][1].hora_inicio
                 const segundo_input_hora_termino_ter = document.getElementById("2input_hora_termino_ter")
@@ -259,7 +262,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             else
             {
-                console.log("só um horário nesse dia")
+                // console.log("só um horário nesse dia")
             }
         }
         if(informacoes.data.dados_funcionamento[4] != null)
@@ -275,7 +278,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             if(informacoes.data.dados_funcionamento[4][1]!= null)
             {
-                console.log("entrou")
+                // console.log("entrou")
                 const segundo_input_hora_inicio_qua = document.getElementById("2input_hora_inicio_qua")
                 segundo_input_hora_inicio_qua.value = informacoes.data.dados_funcionamento[4][1].hora_inicio
                 const segundo_input_hora_termino_qua = document.getElementById("2input_hora_termino_qua")
@@ -283,7 +286,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             else
             {
-                console.log("só um horário nesse dia")
+                // console.log("só um horário nesse dia")
             }
         }
         if(informacoes.data.dados_funcionamento[5] != null)
@@ -299,7 +302,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             if(informacoes.data.dados_funcionamento[5][1]!= null)
             {
-                console.log("entrou")
+                // console.log("entrou")
                 const segundo_input_hora_inicio_qui = document.getElementById("2input_hora_inicio_qui")
                 segundo_input_hora_inicio_qui.value = informacoes.data.dados_funcionamento[5][1].hora_inicio
                 const segundo_input_hora_termino_qui = document.getElementById("2input_hora_termino_qui")
@@ -307,7 +310,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             else
             {
-                console.log("só um horário nesse dia")
+                // console.log("só um horário nesse dia")
             }
         }
         if(informacoes.data.dados_funcionamento[6]!= null)
@@ -323,7 +326,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             if(informacoes.data.dados_funcionamento[6][1]!= null)
             {
-                console.log("entrou")
+                // console.log("entrou")
                 const segundo_input_hora_inicio_sex = document.getElementById("2input_hora_inicio_sex")
                 segundo_input_hora_inicio_sex.value = informacoes.data.dados_funcionamento[6][1].hora_inicio
                 const segundo_input_hora_termino_sex = document.getElementById("2input_hora_termino_sex")
@@ -331,7 +334,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             else
             {
-                console.log("só um horário nesse dia")
+                // console.log("só um horário nesse dia")
             }
         }
         if(informacoes.data.dados_funcionamento[7] != null)
@@ -347,7 +350,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             if(informacoes.data.dados_funcionamento[7][1]!= null)
             {
-                console.log("entrou")
+                // console.log("entrou")
                 const segundo_input_hora_inicio_sab = document.getElementById("2input_hora_inicio_sab")
                 segundo_input_hora_inicio_sab.value = informacoes.data.dados_funcionamento[7][1].hora_inicio
                 const segundo_input_hora_termino_sab = document.getElementById("2input_hora_termino_sab")
@@ -355,7 +358,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
             }
             else
             {
-                console.log("só um horário nesse dia")
+                // console.log("só um horário nesse dia")
             }
         }
         // console.log(informacoes.data.dados_funcionamento.domingo)
@@ -363,7 +366,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
         
 
     }
-    preencherCampos(2);
+    preencherCampos(1);
     // const teste = (teste) => console.log(teste) 
 
     const settarDisplayInvisivel = (elemento) => elemento.style.display = "none"
@@ -420,8 +423,14 @@ import { imagemPreview } from "../../../utils/imagem.js";
         novaRegra.classList.add("container_regra_cancelamento")
         novaRegra.id = `container_regra${numeroDaRegra}`
 
-        if(acimaCem == true)
-        {
+        const checkedAcima = acimaCem == null ? '': (acimaCem == true ? 'checked' : '')
+        const checkedAbaixo = acimaCem == null ? '': (acimaCem == true ?  '' : 'checked')
+        const disabled = acimaCem == null ? '': 'disabled'
+
+        // console.log("acimaCem" + acimaCem)
+        // console.log("checkedAcima" + checkedAcima)
+        // console.log("checkedAbaixo  " + checkedAbaixo )
+
             novaRegra.innerHTML = 
             `
                 <div class="container_acoes">
@@ -434,11 +443,11 @@ import { imagemPreview } from "../../../utils/imagem.js";
                         <h4>Válida para serviços:</h4>
                         <div class="container_radios_valor">
                             <div class="container_radio_valor_servico" id="container_radio_acima_cem">
-                                <input disabled type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}'checked>
+                                <input ${disabled} type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}' ${checkedAcima}>
                                 <label class="label_valor_servico" for='input_radio_acima_cem_regra${numeroDaRegra}' >Acima de R$ 100,00</label>
                             </div>
                             <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
-                                <input disabled type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}'>
+                                <input ${disabled} type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}' ${checkedAbaixo}>
                                 <label class="label_valor_servico" for='input_radio_abaixo_cem_regra${numeroDaRegra}'>Abaixo de R$ 100,00</label>
                             </div>
                         </div>
@@ -446,65 +455,42 @@ import { imagemPreview } from "../../../utils/imagem.js";
                     <div class="container_tolerancia">
                         <h4 class="label_taxa">Tolerância:</h4>
                         <div class="container_input_tolerancia">
-                            <p >até <input disabled type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}'>h de antecedencia</p>
+                            <p >até <input ${disabled} type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}'>h de antecedencia</p>
                         </div>
                     </div>
                     <div class="container_valor_taxa">
                         <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
                         <div class="container_input_valor_taxa">
-                            <p ><input disabled type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}'> %</p>
+                            <p ><input ${disabled} type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}'> %</p>
                         </div>
                     </div>
                 </div>
             `
-        }
-        else
-        {
-            novaRegra.innerHTML = 
-            `
-                <div class="container_acoes">
-                <span id="icone_delecao_regra${numeroDaRegra}" class="material-icons-outlined icone_delecao_regra" onclick="deletarRegraCancelamento('container_regra${numeroDaRegra}')" >
-                    delete
-                </span>
-                </div>
-                <div class="informacoes">
-                    <div class="container_valor_servico">
-                        <h4>Válida para serviços:</h4>
-                        <div class="container_radios_valor">
-                            <div class="container_radio_valor_servico" id="container_radio_acima_cem">
-                                <input disabled type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}'>
-                                <label class="label_valor_servico" for='input_radio_acima_cem_regra${numeroDaRegra}'>Acima de R$ 100,00</label>
-                            </div>
-                            <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
-                                <input disabled type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}'checked>
-                                <label class="label_valor_servico" for='input_radio_abaixo_cem_regra${numeroDaRegra}' >Abaixo de R$ 100,00</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container_tolerancia">
-                        <h4 class="label_taxa">Tolerância:</h4>
-                        <div class="container_input_tolerancia">
-                            <p >até <input disabled type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value='${tolerancia}'>h de antecedencia</p>
-                        </div>
-                    </div>
-                    <div class="container_valor_taxa">
-                        <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
-                        <div class="container_input_valor_taxa">
-                            <p ><input disabled type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value ='${taxa}'> %</p>
-                        </div>
-                    </div>
-                </div>
-            `
-        }
         
         conteinerRegras.appendChild(novaRegra)
     }
 
     const habilitarEdicao = () =>
     {
-        alert("você vai editar");
+        ///// FAZER COM QUE OS NOVOS CARDS DE REGRAS FIQUEM DISPIONÍVEIS PARA EDICAO
+        // alert("você vai editar");
         fecharContainer("btn_editar")
         abrirContainer("btn_salvar")
+
+        let inputs = document.getElementsByTagName("input");
+        // console.log(typeof(inputs))
+        
+        const teste = Object.values(inputs)
+
+        let inputsHabilitados = teste.map((elemento)=>{
+            habilitarInput(elemento)
+        })
+
+        // console.log(inputsHabilitados)
+    }
+    const habilitarInput = (input) =>
+    {
+        input.disabled = false
     }
 
     const atualizarDados = () =>
@@ -594,5 +580,5 @@ import { imagemPreview } from "../../../utils/imagem.js";
 
     input_imagem.addEventListener("change", (tratarUploadImagem))
 
-    icone_adicao_regra.addEventListener("click", criarRegraCancelamento)
+    icone_adicao_regra.addEventListener("click", () => {criarRegraCancelamento(null, '', '')})
 
