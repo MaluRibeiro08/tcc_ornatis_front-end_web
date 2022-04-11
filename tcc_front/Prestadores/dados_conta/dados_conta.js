@@ -70,7 +70,7 @@ import { imagemPreview } from "../../utils/imagem.js";
     const input_dia_semana_6 = document.getElementById("input_dia_semana_6")
     const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 
-    const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    const carregarDadosConta =   (id_empresa) => fetch(`http://10.107.144.20/ornatis/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
 
     const preencherFormasPagamento = () =>
     {
@@ -102,20 +102,29 @@ import { imagemPreview } from "../../utils/imagem.js";
         input_senha.value = informacoes.data.dados_login[0]["senha_adm"];
 
         //INFORMACOES PAGAMENTO
-            const arr_formas_recebidas = informacoes.data.dados_pagamento.formas_aceitas;
+            const arr_formas_recebidas = informacoes.data.dados_pagamento;
             console.log(arr_formas_recebidas);
 
             let contador = 0;
 
-            while (contador <=5) 
+            if(arr_formas_recebidas == "Nenhuma forma de pagamento encontrada")
             {
-                if(arr_formas_recebidas[contador] != null)
-                {
-                    const elemento = document.getElementById(`input_forma_pagamento${contador}`)
-                    elemento.checked = true
-                }
-                contador = contador+1
+                alert("Cadastre uma forma de recebimento!")
             }
+            else
+            {
+                while (contador <=5) 
+                {
+                    
+                    if(arr_formas_recebidas[contador] != null)
+                    {
+                        const elemento = document.getElementById(`input_forma_pagamento${contador}`)
+                        elemento.checked = true
+                    }
+                    contador = contador+1
+                }
+            }
+            
 
             input_observacoes_pagamento.value = informacoes.data.dados_pagamento.observacoes_pagamento
 
@@ -354,7 +363,7 @@ import { imagemPreview } from "../../utils/imagem.js";
         
 
     }
-    preencherCampos(1);
+    preencherCampos(2);
     // const teste = (teste) => console.log(teste) 
 
     const settarDisplayInvisivel = (elemento) => elemento.style.display = "none"
@@ -425,11 +434,11 @@ import { imagemPreview } from "../../utils/imagem.js";
                         <h4>Válida para serviços:</h4>
                         <div class="container_radios_valor">
                             <div class="container_radio_valor_servico" id="container_radio_acima_cem">
-                                <input type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}'>
-                                <label class="label_valor_servico" for='input_radio_acima_cem_regra${numeroDaRegra}' checked>Acima de R$ 100,00</label>
+                                <input disabled type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}'checked>
+                                <label class="label_valor_servico" for='input_radio_acima_cem_regra${numeroDaRegra}' >Acima de R$ 100,00</label>
                             </div>
                             <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
-                                <input type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}'>
+                                <input disabled type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}'>
                                 <label class="label_valor_servico" for='input_radio_abaixo_cem_regra${numeroDaRegra}'>Abaixo de R$ 100,00</label>
                             </div>
                         </div>
@@ -437,13 +446,13 @@ import { imagemPreview } from "../../utils/imagem.js";
                     <div class="container_tolerancia">
                         <h4 class="label_taxa">Tolerância:</h4>
                         <div class="container_input_tolerancia">
-                            <p >até <input type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}'>h de antecedencia</p>
+                            <p >até <input disabled type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}'>h de antecedencia</p>
                         </div>
                     </div>
                     <div class="container_valor_taxa">
                         <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
                         <div class="container_input_valor_taxa">
-                            <p ><input type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}'> %</p>
+                            <p ><input disabled type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}'> %</p>
                         </div>
                     </div>
                 </div>
@@ -463,25 +472,25 @@ import { imagemPreview } from "../../utils/imagem.js";
                         <h4>Válida para serviços:</h4>
                         <div class="container_radios_valor">
                             <div class="container_radio_valor_servico" id="container_radio_acima_cem">
-                                <input type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}'>
+                                <input disabled type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}'>
                                 <label class="label_valor_servico" for='input_radio_acima_cem_regra${numeroDaRegra}'>Acima de R$ 100,00</label>
                             </div>
                             <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
-                                <input type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}'>
-                                <label class="label_valor_servico" for='input_radio_abaixo_cem_regra${numeroDaRegra}' checked>Abaixo de R$ 100,00</label>
+                                <input disabled type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}'checked>
+                                <label class="label_valor_servico" for='input_radio_abaixo_cem_regra${numeroDaRegra}' >Abaixo de R$ 100,00</label>
                             </div>
                         </div>
                     </div>
                     <div class="container_tolerancia">
                         <h4 class="label_taxa">Tolerância:</h4>
                         <div class="container_input_tolerancia">
-                            <p >até <input type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value='${tolerancia}'>h de antecedencia</p>
+                            <p >até <input disabled type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value='${tolerancia}'>h de antecedencia</p>
                         </div>
                     </div>
                     <div class="container_valor_taxa">
                         <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
                         <div class="container_input_valor_taxa">
-                            <p ><input type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value ='${taxa}'> %</p>
+                            <p ><input disabled type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value ='${taxa}'> %</p>
                         </div>
                     </div>
                 </div>

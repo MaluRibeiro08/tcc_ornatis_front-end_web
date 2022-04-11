@@ -364,7 +364,7 @@ footer
         align-items: flex-start;
         justify-content: center;
         gap: 35px;
-        background-color: darkgrey;
+        /* background-color: darkgrey; */
     }
     label
     {
