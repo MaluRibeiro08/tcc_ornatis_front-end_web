@@ -1,6 +1,6 @@
 "use strict"
 
-import { imagemPreview } from "../../utils/imagem.js";
+import { imagemPreview } from "../../../utils/imagem.js";
 //RADIOS / INPUTS / OUTROS
     const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
     const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
