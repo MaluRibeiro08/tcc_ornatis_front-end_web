@@ -1,7 +1,7 @@
 "use strict"
 
 import { imagemPreview } from "../../../utils/imagem.js";
-import { testeUpdate  } from "./update.js";
+// import { testeUpdate  } from "./update.js";
 
 // testeUpdate()
 //RADIOS / INPUTS / OUTROS
@@ -40,24 +40,24 @@ import { testeUpdate  } from "./update.js";
     const link_dados_login = document.getElementById('link_dados_login');
 
 //CAMPOS
-    const input_nome_estabelecimento = document.querySelector("#input_nome_negocio");
-    const input_cnpj = document.querySelector("#input_cnpj");
-    const input_contato = document.querySelector("#input_contato");
-    const input_biografia = document.querySelector("#input_biografia");
-    const input_nome_adm = document.querySelector("#input_nome_adm");
-    const input_data_nascimento = document.querySelector("#input_data_nascimento");
-    const input_cpf = document.querySelector("#input_cpf");
-    const input_cep = document.querySelector("#input_cep");
-    const input_bairro = document.querySelector("#input_bairro");
-    const input_cidade = document.querySelector("#input_cidade");
-    const input_rua = document.querySelector("#input_rua");
-    const input_numero = document.querySelector("#input_numero");
-    const input_complemento = document.querySelector("#input_complemento");
-    const input_estado = document.querySelector("#input_estado");
-    const input_email = document.querySelector("#input_email");
-    const input_senha = document.querySelector("#input_senha");
-    const input_imagem = document.querySelector("#input_foto_estabelecimento")
-    const img_foto_perfil = document.querySelector("#img_estabelecimento")
+    const input_nome_estabelecimento = document.getElementById("input_nome_negocio");
+    const input_cnpj = document.getElementById("input_cnpj");
+    const input_contato = document.getElementById("input_contato");
+    const input_biografia = document.getElementById("input_biografia");
+    const input_nome_adm = document.getElementById("input_nome_adm");
+    const input_data_nascimento = document.getElementById("input_data_nascimento");
+    const input_cpf = document.getElementById("input_cpf");
+    const input_cep = document.getElementById("input_cep");
+    const input_bairro = document.getElementById("input_bairro");
+    const input_cidade = document.getElementById("input_cidade");
+    const input_rua = document.getElementById("input_rua");
+    const input_numero = document.getElementById("input_numero");
+    const input_complemento = document.getElementById("input_complemento");
+    const input_estado = document.getElementById("input_estado");
+    const input_email = document.getElementById("input_email");
+    const input_senha = document.getElementById("input_senha");
+    const input_imagem = document.getElementById("input_foto_estabelecimento")
+    const img_foto_perfil = document.getElementById("img_estabelecimento")
     const input_check_forma1 = document.getElementById("input_forma_pagamento1")
     const input_check_forma2 = document.getElementById("input_forma_pagamento2")
     const input_check_forma3_ = document.getElementById("input_forma_pagamento3")
