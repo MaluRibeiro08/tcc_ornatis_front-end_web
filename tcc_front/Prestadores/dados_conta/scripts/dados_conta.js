@@ -493,12 +493,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
         input.disabled = false
     }
 
-    const atualizarDados = () =>
-    {
-        alert("você vai salvar");
-        fecharContainer("btn_salvar")
-        abrirContainer("btn_editar")
-    }
+    
 
     // const deletarRegraCancelamento = (idRegraCancelamento) =>
     // {
