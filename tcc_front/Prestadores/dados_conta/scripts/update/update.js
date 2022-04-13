@@ -1,6 +1,9 @@
 "use strict"
 
 // testeUpdate()
+
+//imports 
+import { getDadosPagamento, getDadosRegrasNegocio } from "./func_info_complexas.js";
 //RADIOS / INPUTS / OUTROS
 const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
 const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
@@ -46,7 +49,6 @@ const input_data_nascimento = document.getElementById("input_data_nascimento");
 const input_cpf = document.getElementById("input_cpf");
 const input_cep = document.getElementById("input_cep");
 const input_bairro = document.getElementById("input_bairro");
-const input_cidade = document.getElementById("input_cidade");
 const input_rua = document.getElementById("input_rua");
 const input_numero = document.getElementById("input_numero");
 const input_complemento = document.getElementById("input_complemento");
@@ -55,11 +57,6 @@ const input_email = document.getElementById("input_email");
 const input_senha = document.getElementById("input_senha");
 const input_imagem = document.getElementById("input_foto_estabelecimento")
 const img_foto_perfil = document.getElementById("img_estabelecimento")
-const input_check_forma1 = document.getElementById("input_forma_pagamento1")
-const input_check_forma2 = document.getElementById("input_forma_pagamento2")
-const input_check_forma3_ = document.getElementById("input_forma_pagamento3")
-const input_check_forma4 = document.getElementById("input_forma_pagamento4")
-const input_check_forma5 = document.getElementById("input_forma_pagamento5")
 const input_observacoes_pagamento = document.getElementById("input_observacoes_pagamento")
 const input_valor_taxa_unica = document.getElementById("input_valor_taxa_unica")
 const input_dia_semana_1 = document.getElementById("input_dia_semana_1")
@@ -71,19 +68,62 @@ const input_dia_semana_6 = document.getElementById("input_dia_semana_6")
 const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 
 
-const testeUpdate = () =>
+
+
+const testeUpdate = (id_empresa, id_cidade) =>
 {
     const data = {};
-    data ["id_empresa"] = 1;
-    data ["biografia"] = input_biografia.value;
+    data['acao'] = 'updateContaAdministradora';
+    data['id_empresa'] = 1; //id_empresa
+
+    //perfil estabelecimento
+    data['nome_fantasia'] = input_nome_estabelecimento.value;
+    data['biografia'] = input_biografia.value;
+    data['imagem_perfil'] = input_imagem.src;
+    data['telefone'] = input_contato.value;
+    data['cnpj'] = input_cnpj.value;
+
+    //perfil administrador
+    data['nome_adm'] = input_nome_adm.value;
+    data['data_nascimento'] = input_data_nascimento.value;
+    data['cpf'] = input_cpf.value;
+
+    //dados de localização
+    data['cep'] = input_cep.value;
+    data['bairro'] = input_bairro.value;
+    data['rua'] = input_rua.value;
+    data['numero_rua'] = input_numero.value;
+    data['complemento'] = input_complemento.value;
+    data['id_cidade'] = id_cidade;
+
+    //dados de recebimento
+    data['dados_formas_pagamento'] = getDadosPagamento();
+    data['observacoes_pagamento'] = input_observacoes_pagamento.value;
+
+    //dados de regas de nogócio - taxa cancelamento
+    if(radio_nao_regra_cancelmento.checked == true)
+    {
+        data['taxa_unica_cancelamento'] = 0;
+    }
+    else
+    {
+        if(radio_taxa_unica.checked == true)
+        {
+            data['taxa_unica_cancelamento'] = document.getElementById("input_valor_taxa_unica").value;
+        }
+        else
+        {
+            data['taxa_unica_cancelamento'] = null;
+            data['dados_taxa_cancelamento'] = getDadosRegrasNegocio();
+        }
+    }
+    // data[''] = input_.value;
+    // data[''] = input_.value;
+    // data[''] = input_.value;
+
+
 
     console.log(data)
-    // data ["id_empresa"] = 1;
-    // data ["id_empresa"] = 1;
-    // data ["id_empresa"] = 1;
-    // data ["id_empresa"] = 1;
-    // data ["id_empresa"] = 1;
-    // data ["id_empresa"] = 1;
 }
 
 export {testeUpdate}

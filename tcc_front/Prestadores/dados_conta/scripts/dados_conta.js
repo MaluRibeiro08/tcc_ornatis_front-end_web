@@ -1,9 +1,9 @@
 "use strict"
 
 import { imagemPreview } from "../../../utils/imagem.js";
-// import { testeUpdate  } from "./update.js";
+import { testeUpdate  } from "./update/update.js";
 
-// testeUpdate()
+
 //RADIOS / INPUTS / OUTROS
     const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
     const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
@@ -19,6 +19,12 @@ import { imagemPreview } from "../../../utils/imagem.js";
 
     const btn_editar = document.getElementById('btn_editar');
     const btn_salvar = document.getElementById('btn_salvar');
+
+    //variavel que guardará o código da cidade
+    let id_cidade = 111;
+    const id_empresa = 2;
+
+    testeUpdate(id_empresa, id_cidade)
 
 //CONTAINERS   GERAIS
     const container_perfil_estabelecimento = document.getElementById('container_secao_perfil_estabelecimento');
@@ -156,7 +162,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
                     radio_taxa_variada.checked = true;
 
                     abrirContainer("container_regras_cancelamentos");
-                    abrirContainer("icone_adicao_regra");
+                    // abrirContainer("icone_adicao_regra");
 
                     informacoes.data.taxa_cancelamento_empresa.map((elemento)=>
                     {
@@ -366,7 +372,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
         
 
     }
-    preencherCampos(1);
+    preencherCampos(id_empresa);
     // const teste = (teste) => console.log(teste) 
 
     const settarDisplayInvisivel = (elemento) => elemento.style.display = "none"
@@ -476,7 +482,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
         // alert("você vai editar");
         fecharContainer("btn_editar")
         abrirContainer("btn_salvar")
-
+        abrirContainer("icone_adicao_regra")
         let inputs = document.getElementsByTagName("input");
         // console.log(typeof(inputs))
         
@@ -555,6 +561,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
     {
         abrirContainer("container_taxa_unica");
         fecharContainer('container_regras_cancelamentos')
+        fecharContainer('icone_adicao_regra')
     })
     radio_taxa_variada.addEventListener("click", () => 
     {
@@ -576,7 +583,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
 
     btn_editar.addEventListener("click", habilitarEdicao)
 
-    btn_salvar.addEventListener("click", atualizarDados)
+    btn_salvar.addEventListener("click", testeUpdate)
 
     input_imagem.addEventListener("change", (tratarUploadImagem))
 
