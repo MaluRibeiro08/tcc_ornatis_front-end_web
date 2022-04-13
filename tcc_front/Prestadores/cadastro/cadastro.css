@@ -86,7 +86,7 @@ textarea:focus, input:focus, select:focus {
     border-radius: 50%;
 }
 #container_login{
-    display: none;
+    /* display: none; */
 }
 
 #radio_login{
@@ -218,6 +218,7 @@ main{
     font-size: 25px;
     margin-left: 10vw;
     margin-top: 10vh;
+
 
 }
 

@@ -30,188 +30,153 @@ const cadastro_funcionario = (conta_funcionario) =>{
     fetch(url, options_funcionario)
 };
 
+//while para testar checkbox
+
+const checkbox_horarios = () => 
+{
+    let id_dia_semana = 1
+    const funcionamento = [];
+
+    while (id_dia_semana <8)
+    {
+        const check_dia_semana = document.getElementById(`input_dia_semana${id_dia_semana}`)
+        if(check_dia_semana.checked == true)
+        {
+            funcionamento =
+            {
+                id_dia_semana: `${id_dia_semana}`,
+                //inicio
+                hora_inicio: document.getElementById('1input_hora_inicio_dom').value,
+                hora_termino: document.getElementById('1input_hora_termino_dom').value,
+               
+            }
+        }
+        id_dia_semana = id_dia_semana+1
+    }
+};
+
+const btn_salvar_funcionario = () =>{
+   salvar_funcionario()
+}
+
 const salvar_funcionario = () => {
-    const conta_funcionario = 
+    const conta_funcionario =
     {
         nome: document.getElementById('nome_funcionario').value,
         email: document.getElementById('email_funcionario').value,
         senha: document.getElementById('senha_funcionario').value,
         foto: document.getElementById('fl_image_funcionario').src,
-        horario: 
+        btn_salvar_funcionario: document.getElementById('btn_salvar_funcionario').value,
+        horario: checkbox_horarios()
         [
             //domingo
             {
                 id_dia_semana: "1",
                 //inicio
-                hora_inicio: document.getElementById('1input_hora_inicio_dom').value,
-                hora_termino: document.getElementById('1input_hora_termino_dom').value,
+                hora_inicio: document.getElementById('1input_hora_inicio_1').value,
+                hora_termino: document.getElementById('1input_hora_termino_1').value,
                
             },
             {
                 id_dia_semana: "1",
                 //termino
-                hora_inicio: document.getElementById('2input_hora_inicio_dom').value,
-                hora_termino: document.getElementById('2input_hora_termino_dom').value,
+                hora_inicio: document.getElementById('2input_hora_inicio_1').value,
+                hora_termino: document.getElementById('2input_hora_termino_1').value,
             },
             //segunda
             {
                 id_dia_semana: "2",
                 //inicio
-                hora_inicio: document.getElementById('1input_hora_inicio_seg').value,
-                hora_termino: document.getElementById('1input_hora_termino_seg').value,
+                hora_inicio: document.getElementById('1input_hora_inicio_2').value,
+                hora_termino: document.getElementById('1input_hora_termino_2').value,
             },
             {
                 id_dia_semana: "2",
                 //termino
-                hora_inicio: document.getElementById('2input_hora_inicio_seg').value,
-                hora_termino: document.getElementById('2input_hora_termino_seg').value,
+                hora_inicio: document.getElementById('2input_hora_inicio_2').value,
+                hora_termino: document.getElementById('2input_hora_termino_2').value,
             },
             //terca
             {
                 id_dia_semana: "3",
                 //inicio
-                hora_inicio: document.getElementById('1input_hora_inicio_ter').value,
-                hora_termino: document.getElementById('1input_hora_termino_ter').value,
+                hora_inicio: document.getElementById('1input_hora_inicio_3').value,
+                hora_termino: document.getElementById('1input_hora_termino_3').value,
             },
             {
                 id_dia_semana: "3",
                 //termino
-                hora_inicio: document.getElementById('2input_hora_inicio_ter').value,
-                hora_termino: document.getElementById('2input_hora_termino_ter').value,
+                hora_inicio: document.getElementById('2input_hora_inicio_3').value,
+                hora_termino: document.getElementById('2input_hora_termino_3').value,
             },
             //quarta
             {
                 id_dia_semana: "4",
                 //inicio
-                hora_inicio: document.getElementById('1input_hora_inicio_qua').value,
-                hora_termino: document.getElementById('1input_hora_termino_qua').value,
+                hora_inicio: document.getElementById('1input_hora_inicio_4').value,
+                hora_termino: document.getElementById('1input_hora_termino_4').value,
             },
             {
                 id_dia_semana: "4",
                 //termino
-                hora_inicio: document.getElementById('2input_hora_inicio_qua').value,
-                hora_termino: document.getElementById('2input_hora_termino_qua').value,
+                hora_inicio: document.getElementById('2input_hora_inicio_4').value,
+                hora_termino: document.getElementById('2input_hora_termino_4').value,
             },
             {
                 id_dia_semana: "5",
                 //inicio
-                hora_inicio: document.getElementById('1input_hora_inicio_qui').value,
-                hora_termino: document.getElementById('1input_hora_termino_qui').value,
+                hora_inicio: document.getElementById('1input_hora_inicio_5').value,
+                hora_termino: document.getElementById('1input_hora_termino_5').value,
                
             },
             {
                 id_dia_semana: "5",
                 //termino
-                hora_inicio: document.getElementById('2input_hora_inicio_qui').value,
-                hora_termino: document.getElementById('2input_hora_termino_qui').value,
+                hora_inicio: document.getElementById('2input_hora_inicio_5').value,
+                hora_termino: document.getElementById('2input_hora_termino_5').value,
             },
             {
                 id_dia_semana: "6",
                 //inicio
-                hora_inicio: document.getElementById('1input_hora_inicio_sex').value,
-                hora_termino: document.getElementById('1input_hora_termino_sex').value,
+                hora_inicio: document.getElementById('1input_hora_inicio_6').value,
+                hora_termino: document.getElementById('1input_hora_termino_6').value,
             
             },
             {
                 id_dia_semana: "6",
                 //termino
-                hora_inicio: document.getElementById('2input_hora_inicio_sex').value,
-                hora_termino: document.getElementById('2input_hora_termino_sex').value,
+                hora_inicio: document.getElementById('2input_hora_inicio_6').value,
+                hora_termino: document.getElementById('2input_hora_termino_6').value,
             },
             {
                 id_dia_semana: "7",
                 //inicio
-                hora_inicio: document.getElementById('1input_hora_inicio_sab').value,
-                hora_termino: document.getElementById('1input_hora_termino_sab').value,
+                hora_inicio: document.getElementById('1input_hora_inicio_7').value,
+                hora_termino: document.getElementById('1input_hora_termino_7').value,
             },
             {
                 id_dia_semana: "7",
                  //termino
-                 hora_inicio: document.getElementById('2input_hora_inicio_sab').value,
-                 hora_termino: document.getElementById('2input_hora_termino_sab').value,
-            },
+                 hora_inicio: document.getElementById('2input_hora_inicio_7').value,
+                 hora_termino: document.getElementById('2input_hora_termino_7').value,
+            }
     
         ]
+    };
+    };
+        
    
-    // }
-    // const horarios = [
-    //     {
-    //         id_dia_semana: "1",
-    //         //inicio
-    //         dom_inicio1: document.getElementById('1input_hora_inicio_dom'),
-    //         dom_termino1: document.getElementById('1input_hora_termino_dom'),
-    //     },
-    //      {
-    //         id_dia_semana: "1",
-    //         //termino
-    //         dom_inicio2: document.getElementById('2input_hora_inicio_dom'),
-    //         dom_termino2: document.getElementById('2input_hora_termino_dom'),
-    //     },
-    //     {
-    //         id_dia_semana: "2",
-    //         //inicio
-    //         seg_inicio1: document.getElementById('1input_hora_inicio_seg'),
-    //         seg_termino1: document.getElementById('1input_hora_termino_seg'),
-    //         //termino
-    //         seg_inicio2: document.getElementById('2input_hora_inicio_seg'),
-    //         seg_termino2: document.getElementById('2input_hora_termino_seg'),
-
-    //     },
-    //     {
-    //         id_dia_semana: "3",
-    //         //inicio
-    //         ter_inicio1: document.getElementById('1input_hora_inicio_ter'),
-    //         ter_termino1: document.getElementById('1input_hora_termino_ter'),
-    //         //termino
-    //         ter_inicio2: document.getElementById('2input_hora_inicio_ter'),
-    //         ter_termino2: document.getElementById('2input_hora_termino_ter'),
-    //     },
-    //     {
-    //         id_dia_semana: "4",
-    //         //inicio
-    //         qua_inicio1: document.getElementById('1input_hora_inicio_qua'),
-    //         qua_termino1: document.getElementById('1input_hora_termino_qua'),
-    //         //termino
-    //         qua_inicio2: document.getElementById('2input_hora_inicio_qua'),
-    //         qua_termino2: document.getElementById('2input_hora_termino_qua'),
-    //     },
-    //     {
-    //         id_dia_semana: "5",
-    //         //inicio
-    //         qui_inicio1: document.getElementById('1input_hora_inicio_qui'),
-    //         qui_termino1: document.getElementById('1input_hora_termino_qui'),
-    //         //termino
-    //         qui_inicio2: document.getElementById('2input_hora_inicio_qui'),
-    //         qui_termino2: document.getElementById('2input_hora_termino_qui'),
-    //     },
-    //     {
-    //         id_dia_semana: "6",
-    //         //inicio
-    //         sex_inicio1: document.getElementById('1input_hora_inicio_sex'),
-    //         sex_termino1: document.getElementById('1input_hora_termino_sex'),
-    //         //termino
-    //         sex_inicio2: document.getElementById('2input_hora_inicio_sex'),
-    //         sex_termino2: document.getElementById('2input_hora_termino_sex'),
-    //     },
-    //     {
-    //         id_dia_semana: "4",
-    //         //inicio
-    //         sab_inicio1: document.getElementById('1input_hora_inicio_sab'),
-    //         sab_termino1: document.getElementById('1input_hora_termino_sab'),
-    //         //termino
-    //         sab_inicio2: document.getElementById('2input_hora_inicio_sab'),
-    //         sab_termino2: document.getElementById('2input_hora_termino_sab'),
-    }
-
-    //     ]
+    
 
         console.log(conta_funcionario)
-    // cadastro_funcionario(conta_funcionario);
+    cadastro_funcionario(conta_funcionario);
+    btn_salvar_funcionario.addEventListener("click", salvar_funcionario )
+    
     // cadastro_funcionario(horarios);
-};
+
 
 const check = () =>
 {
-    const input = document.getElementById("input_dia_semana_2");
+    const input_check_segunda_2 = document.getElementById("input_dia_semana_2");
     console.log(input.checked)
 }

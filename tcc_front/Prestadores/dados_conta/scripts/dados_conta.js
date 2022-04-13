@@ -499,12 +499,7 @@ import { testeUpdate  } from "./update/update.js";
         input.disabled = false
     }
 
-    const atualizarDados = () =>
-    {
-        alert("você vai salvar");
-        fecharContainer("btn_salvar")
-        abrirContainer("btn_editar")
-    }
+    
 
     // const deletarRegraCancelamento = (idRegraCancelamento) =>
     // {

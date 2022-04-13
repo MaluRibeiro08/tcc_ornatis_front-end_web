@@ -57,6 +57,7 @@
     height: 30vh;
     padding-left: 5v;
     
+    
    
 }
 
@@ -71,7 +72,7 @@
     padding: 15px;
     
 
-    /* background-color: seagreen; */
+    /* background-color: seagreen; */ 
 }
 
 .container_horario_funcionamento
@@ -225,15 +226,15 @@ h6{
     margin-bottom: 40px;
 
 }
-#titulo{
-   
+#duvidas_funcionario{
+    font-size: 30px;
+    color: var(--fonte);
 }
 
 #campo{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: ;
 
 }
 
