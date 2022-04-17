@@ -73,7 +73,7 @@ const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 const testeUpdate = (id_empresa, id_cidade) =>
 {
     const data = {};
-    data['acao'] = 'updateContaAdministradora';
+    // data['acao'] = 'updateContaAdministradora';
     data['id_empresa'] = 1; //id_empresa
 
     //perfil estabelecimento
@@ -135,7 +135,7 @@ const testeUpdate = (id_empresa, id_cidade) =>
 
 
 
-    console.log(data)
+    return data
 }
 
 export {testeUpdate}

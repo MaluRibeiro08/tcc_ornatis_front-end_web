@@ -21,8 +21,10 @@ import { testeUpdate  } from "./update/update.js";
     const btn_salvar = document.getElementById('btn_salvar');
 
     //variavel que guardará o código da cidade
+    const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
+
     let id_cidade = 3106200;
-    const id_empresa = 2;
+    const id_empresa = 30;
 
     testeUpdate(id_empresa, id_cidade)
 
@@ -434,7 +436,23 @@ import { testeUpdate  } from "./update/update.js";
 
     btn_editar.addEventListener("click", habilitarEdicao)
 
-    btn_salvar.addEventListener("click", () => {testeUpdate(id_empresa, id_cidade)})
+    btn_salvar.addEventListener("click", async ()  => {
+        const dados = testeUpdate(id_empresa, id_cidade)
+        console.log(dados)
+        const options =
+        {
+            method : 'POST',
+            body: JSON.stringify(dados), //transforma o produto que era JSON em String, serializa
+            headers: 
+            {
+                'content-type' : 'application/json'
+            }
+        }
+
+        console.log(options);
+        // const resultado = await fetch(url, options);
+        // console.log(resultado)
+    })
 
     input_imagem.addEventListener("change", (tratarUploadImagem))
 
