@@ -55,5 +55,55 @@ const getDadosRegrasNegocio = () =>
 
 const verificarCheck = (id_elemento) =>  document.getElementById(`${id_elemento}`).checked
 
+const getFuncionamento = (id_empresa) =>
+{
+    let dia_semana_contador = 1;
+    let arr_dados_funcionamento = [];
 
-export {getDadosPagamento, getDadosRegrasNegocio}
+    while(dia_semana_contador <= 7)
+    {
+        if(verificarCheck(`input_dia_semana${dia_semana_contador}`))
+        {
+            if(document.getElementById(`1input_hora_inicio${dia_semana_contador}`).value != null &&
+                document.getElementById(`1input_hora_inicio${dia_semana_contador}`).value != '')
+            {
+                // console.log(dia_semana_contador + "tem 1° horário")
+                // console.log(document.getElementById(`1input_hora_inicio${dia_semana_contador}`).value)
+                
+
+                const hora_inicio = document.getElementById(`1input_hora_inicio${dia_semana_contador}`).value;
+                const hora_termino = document.getElementById(`1input_hora_termino${dia_semana_contador}`).value;
+                console.log( hora_inicio + '   |   ' + hora_termino)
+                arr_dados_funcionamento.push(
+                    {
+                        "id_dia_semana" : dia_semana_contador,
+                        "hora_inicio" : `${hora_inicio}`,
+                        "hora_termino" : `${hora_termino}`
+                    }
+                )
+            }
+            if(document.getElementById(`2input_hora_inicio${dia_semana_contador}`).value != null &&
+                document.getElementById(`2input_hora_inicio${dia_semana_contador}`).value != '')
+            {
+                const hora_inicio = document.getElementById(`2input_hora_inicio${dia_semana_contador}`).value;
+                const hora_termino = document.getElementById(`2input_hora_termino${dia_semana_contador}`).value;
+                arr_dados_funcionamento.push(
+                    {
+                        "id_dia_semana" : dia_semana_contador,
+                        "hora_inicio" : `${hora_inicio}`,
+                        "hora_termino" : `${hora_termino}`
+                    }
+                )
+            }
+            else
+            {
+                console.log("sem_horario")
+            }
+        }
+        dia_semana_contador = dia_semana_contador+1;
+    } 
+
+    return arr_dados_funcionamento;
+}
+
+export {getDadosPagamento, getDadosRegrasNegocio, getFuncionamento}
