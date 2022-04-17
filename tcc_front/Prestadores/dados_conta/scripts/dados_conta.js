@@ -21,8 +21,10 @@ import { testeUpdate  } from "./update/update.js";
     const btn_salvar = document.getElementById('btn_salvar');
 
     //variavel que guardará o código da cidade
-    let id_cidade = 111;
-    const id_empresa = 2;
+    const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
+
+    let id_cidade = 3106200;
+    const id_empresa = 30;
 
     testeUpdate(id_empresa, id_cidade)
 
@@ -125,7 +127,7 @@ import { testeUpdate  } from "./update/update.js";
                 while (contador <=5) 
                 {
                     
-                    if(arr_formas_recebidas[contador] != null)
+                    if(arr_formas_recebidas["formas_aceitas"][contador] != null)
                     {
                         const elemento = document.getElementById(`input_forma_pagamento${contador}`)
                         elemento.checked = true
@@ -194,182 +196,38 @@ import { testeUpdate  } from "./update/update.js";
             radio_nao_intervalo.checked = true;
         }
 
-        // console.log(informacoes.data.dados_funcionamento);
-        if(informacoes.data.dados_funcionamento[1] != null)
+        let dia_semana_contador = 1;
+        while(dia_semana_contador <= 7)
         {
-            input_dia_semana_1.checked = true
+            if(informacoes.data.dados_funcionamento[dia_semana_contador] != null)
+            {
+                const input_dia_semana = document.getElementById(`input_dia_semana${dia_semana_contador}`)
+                input_dia_semana.checked = true
 
-            if(informacoes.data.dados_funcionamento[1][0]!= null)
-            {
-                // console.log(informacoes.data.dados_funcionamento[1][1])
+                if(informacoes.data.dados_funcionamento[dia_semana_contador][0]!= null)
+                {
+                    // console.log(informacoes.data.dados_funcionamento[1][1])
 
-                const primeiro_input_hora_inicio_dom = document.getElementById("1input_hora_inicio_dom")
-                primeiro_input_hora_inicio_dom.value = informacoes.data.dados_funcionamento[1][0].hora_inicio
-                const primeiro_input_hora_termino_dom = document.getElementById("1input_hora_termino_dom")
-                primeiro_input_hora_termino_dom.value = informacoes.data.dados_funcionamento[1][0].hora_termino
+                    const primeiro_input_hora_inicio = document.getElementById(`1input_hora_inicio${dia_semana_contador}`)
+                    primeiro_input_hora_inicio.value = informacoes.data.dados_funcionamento[dia_semana_contador][0].hora_inicio
+                    const primeiro_input_hora_termino = document.getElementById(`1input_hora_termino${dia_semana_contador}`)
+                    primeiro_input_hora_termino.value = informacoes.data.dados_funcionamento[dia_semana_contador][0].hora_termino
+                }
+                if(informacoes.data.dados_funcionamento[dia_semana_contador][1]!= null)
+                {
+                    // console.log(`entrou`)
+                    const segundo_input_hora_inicio = document.getElementById(`2input_hora_inicio${dia_semana_contador}`)
+                    segundo_input_hora_inicio.value = informacoes.data.dados_funcionamento[dia_semana_contador][1].hora_inicio
+                    const segundo_input_hora_termino = document.getElementById(`2input_hora_termino${dia_semana_contador}`)
+                    segundo_input_hora_termino.value = informacoes.data.dados_funcionamento[dia_semana_contador][1].hora_termino
+                }
+                else
+                {
+                    console.log("só um horário nesse dia")
+                }
             }
-            if(informacoes.data.dados_funcionamento[1][1]!= null)
-            {
-                // console.log("entrou")
-                const segundo_input_hora_inicio_dom = document.getElementById("2input_hora_inicio_dom")
-                segundo_input_hora_inicio_dom.value = informacoes.data.dados_funcionamento[1][1].hora_inicio
-                const segundo_input_hora_termino_dom = document.getElementById("2input_hora_termino_dom")
-                segundo_input_hora_termino_dom.value = informacoes.data.dados_funcionamento[1][1].hora_termino
-            }
-            else
-            {
-                // console.log("só um horário nesse dia")
-            }
-
-        }
-        if(informacoes.data.dados_funcionamento[2] != null)
-        {
-            input_dia_semana_2.checked = true
-
-            if(informacoes.data.dados_funcionamento[2][0]!= null)
-            {
-                const primeiro_input_hora_inicio_seg = document.getElementById("1input_hora_inicio_seg")
-                primeiro_input_hora_inicio_seg.value = informacoes.data.dados_funcionamento[2][0].hora_inicio
-                const primeiro_input_hora_termino_seg = document.getElementById("1input_hora_termino_seg")
-                primeiro_input_hora_termino_seg.value = informacoes.data.dados_funcionamento[2][0].hora_termino
-            }
-            if(informacoes.data.dados_funcionamento[2][1]!= null)
-            {
-                // console.log("entrou")
-                const segundo_input_hora_inicio_seg = document.getElementById("2input_hora_inicio_seg")
-                segundo_input_hora_inicio_seg.value = informacoes.data.dados_funcionamento[2][1].hora_inicio
-                const segundo_input_hora_termino_seg = document.getElementById("2input_hora_termino_seg")
-                segundo_input_hora_termino_seg.value = informacoes.data.dados_funcionamento[2][1].hora_termino
-            }
-            else
-            {
-                // console.log("só um horário nesse dia")
-            }
-
-        }
-        if(informacoes.data.dados_funcionamento[3] != null)
-        {
-            input_dia_semana_3.checked = true
-
-            if(informacoes.data.dados_funcionamento[3][0]!= null)
-            {
-                const primeiro_input_hora_inicio_ter = document.getElementById("1input_hora_inicio_ter")
-                primeiro_input_hora_inicio_ter.value = informacoes.data.dados_funcionamento[3][0].hora_inicio
-                const primeiro_input_hora_termino_ter = document.getElementById("1input_hora_termino_ter")
-                primeiro_input_hora_termino_ter.value = informacoes.data.dados_funcionamento[3][0].hora_termino
-            }
-            if(informacoes.data.dados_funcionamento[3][1]!= null)
-            {
-                // console.log("entrou")
-                const segundo_input_hora_inicio_ter = document.getElementById("2input_hora_inicio_ter")
-                segundo_input_hora_inicio_ter.value = informacoes.data.dados_funcionamento[3][1].hora_inicio
-                const segundo_input_hora_termino_ter = document.getElementById("2input_hora_termino_ter")
-                segundo_input_hora_termino_ter.value = informacoes.data.dados_funcionamento[3][1].hora_termino
-            }
-            else
-            {
-                // console.log("só um horário nesse dia")
-            }
-        }
-        if(informacoes.data.dados_funcionamento[4] != null)
-        {
-            input_dia_semana_4.checked = true
-
-            if(informacoes.data.dados_funcionamento[4][0]!= null)
-            {
-                const primeiro_input_hora_inicio_qua = document.getElementById("1input_hora_inicio_qua")
-                primeiro_input_hora_inicio_qua.value = informacoes.data.dados_funcionamento[4][0].hora_inicio
-                const primeiro_input_hora_termino_qua = document.getElementById("1input_hora_termino_qua")
-                primeiro_input_hora_termino_qua.value = informacoes.data.dados_funcionamento[4][0].hora_termino
-            }
-            if(informacoes.data.dados_funcionamento[4][1]!= null)
-            {
-                // console.log("entrou")
-                const segundo_input_hora_inicio_qua = document.getElementById("2input_hora_inicio_qua")
-                segundo_input_hora_inicio_qua.value = informacoes.data.dados_funcionamento[4][1].hora_inicio
-                const segundo_input_hora_termino_qua = document.getElementById("2input_hora_termino_qua")
-                segundo_input_hora_termino_qua.value = informacoes.data.dados_funcionamento[4][1].hora_termino
-            }
-            else
-            {
-                // console.log("só um horário nesse dia")
-            }
-        }
-        if(informacoes.data.dados_funcionamento[5] != null)
-        {
-            input_dia_semana_5.checked = true
-
-            if(informacoes.data.dados_funcionamento[5][0]!= null)
-            {
-                const primeiro_input_hora_inicio_qui = document.getElementById("1input_hora_inicio_qui")
-                primeiro_input_hora_inicio_qui.value = informacoes.data.dados_funcionamento[5][0].hora_inicio
-                const primeiro_input_hora_termino_qui = document.getElementById("1input_hora_termino_qui")
-                primeiro_input_hora_termino_qui.value = informacoes.data.dados_funcionamento[5][0].hora_termino
-            }
-            if(informacoes.data.dados_funcionamento[5][1]!= null)
-            {
-                // console.log("entrou")
-                const segundo_input_hora_inicio_qui = document.getElementById("2input_hora_inicio_qui")
-                segundo_input_hora_inicio_qui.value = informacoes.data.dados_funcionamento[5][1].hora_inicio
-                const segundo_input_hora_termino_qui = document.getElementById("2input_hora_termino_qui")
-                segundo_input_hora_termino_qui.value = informacoes.data.dados_funcionamento[5][1].hora_termino
-            }
-            else
-            {
-                // console.log("só um horário nesse dia")
-            }
-        }
-        if(informacoes.data.dados_funcionamento[6]!= null)
-        {
-            input_dia_semana_6.checked = true
-
-            if(informacoes.data.dados_funcionamento[6][0]!= null)
-            {
-                const primeiro_input_hora_inicio_sex = document.getElementById("1input_hora_inicio_sex")
-                primeiro_input_hora_inicio_sex.value = informacoes.data.dados_funcionamento[6][0].hora_inicio
-                const primeiro_input_hora_termino_sex = document.getElementById("1input_hora_termino_sex")
-                primeiro_input_hora_termino_sex.value = informacoes.data.dados_funcionamento[6][0].hora_termino
-            }
-            if(informacoes.data.dados_funcionamento[6][1]!= null)
-            {
-                // console.log("entrou")
-                const segundo_input_hora_inicio_sex = document.getElementById("2input_hora_inicio_sex")
-                segundo_input_hora_inicio_sex.value = informacoes.data.dados_funcionamento[6][1].hora_inicio
-                const segundo_input_hora_termino_sex = document.getElementById("2input_hora_termino_sex")
-                segundo_input_hora_termino_sex.value = informacoes.data.dados_funcionamento[6][1].hora_termino
-            }
-            else
-            {
-                // console.log("só um horário nesse dia")
-            }
-        }
-        if(informacoes.data.dados_funcionamento[7] != null)
-        {
-            input_dia_semana_7.checked = true
-
-            if(informacoes.data.dados_funcionamento[7][0]!= null)
-            {
-                const primeiro_input_hora_inicio_sab = document.getElementById("1input_hora_inicio_sab")
-                primeiro_input_hora_inicio_sab.value = informacoes.data.dados_funcionamento[7][0].hora_inicio
-                const primeiro_input_hora_termino_sab = document.getElementById("1input_hora_termino_sab")
-                primeiro_input_hora_termino_sab.value = informacoes.data.dados_funcionamento[7][0].hora_termino
-            }
-            if(informacoes.data.dados_funcionamento[7][1]!= null)
-            {
-                // console.log("entrou")
-                const segundo_input_hora_inicio_sab = document.getElementById("2input_hora_inicio_sab")
-                segundo_input_hora_inicio_sab.value = informacoes.data.dados_funcionamento[7][1].hora_inicio
-                const segundo_input_hora_termino_sab = document.getElementById("2input_hora_termino_sab")
-                segundo_input_hora_termino_sab.value = informacoes.data.dados_funcionamento[7][1].hora_termino
-            }
-            else
-            {
-                // console.log("só um horário nesse dia")
-            }
-        }
-        // console.log(informacoes.data.dados_funcionamento.domingo)
-
-        
+            dia_semana_contador = dia_semana_contador+1;
+        }        
 
     }
     preencherCampos(id_empresa);
@@ -578,7 +436,23 @@ import { testeUpdate  } from "./update/update.js";
 
     btn_editar.addEventListener("click", habilitarEdicao)
 
-    btn_salvar.addEventListener("click", testeUpdate)
+    btn_salvar.addEventListener("click", async ()  => {
+        const dados = testeUpdate(id_empresa, id_cidade)
+        console.log(dados)
+        const options =
+        {
+            method : 'POST',
+            body: JSON.stringify(dados), //transforma o produto que era JSON em String, serializa
+            headers: 
+            {
+                'content-type' : 'application/json'
+            }
+        }
+
+        console.log(options);
+        // const resultado = await fetch(url, options);
+        // console.log(resultado)
+    })
 
     input_imagem.addEventListener("change", (tratarUploadImagem))
 

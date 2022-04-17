@@ -3,7 +3,7 @@
 // testeUpdate()
 
 //imports 
-import { getDadosPagamento, getDadosRegrasNegocio } from "./func_info_complexas.js";
+import { getDadosPagamento, getDadosRegrasNegocio, getFuncionamento } from "./func_info_complexas.js";
 //RADIOS / INPUTS / OUTROS
 const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
 const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
@@ -73,10 +73,11 @@ const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 const testeUpdate = (id_empresa, id_cidade) =>
 {
     const data = {};
-    data['acao'] = 'updateContaAdministradora';
+    // data['acao'] = 'updateContaAdministradora';
     data['id_empresa'] = 1; //id_empresa
 
     //perfil estabelecimento
+    data['id_empresa'] = id_empresa;
     data['nome_fantasia'] = input_nome_estabelecimento.value;
     data['biografia'] = input_biografia.value;
     data['imagem_perfil'] = input_imagem.src;
@@ -117,13 +118,24 @@ const testeUpdate = (id_empresa, id_cidade) =>
             data['dados_taxa_cancelamento'] = getDadosRegrasNegocio();
         }
     }
+
+    //dados de funcionamento
+    if(radio_sim_intervalo.checked == true)
+    {
+        data["intervalo_tempo_padrao_entre_servicos"] = document.getElementById("input_intervalo_padrao").value
+    }
+    else
+    {
+        data["intervalo_tempo_padrao_entre_servicos"] = null
+    }
+    data['dados_funcionamento'] = getFuncionamento();
     // data[''] = input_.value;
     // data[''] = input_.value;
     // data[''] = input_.value;
 
 
 
-    console.log(data)
+    return data
 }
 
 export {testeUpdate}
