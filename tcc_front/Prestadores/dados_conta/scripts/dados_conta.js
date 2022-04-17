@@ -450,8 +450,8 @@ import { testeUpdate  } from "./update/update.js";
         }
 
         console.log(options);
-        // const resultado = await fetch(url, options);
-        // console.log(resultado)
+         fetch(url, options).then(response => response.json()).then(data => {
+            console.log(data)})
     })
 
     input_imagem.addEventListener("change", (tratarUploadImagem))

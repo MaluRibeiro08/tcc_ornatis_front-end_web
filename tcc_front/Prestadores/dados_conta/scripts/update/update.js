@@ -73,8 +73,7 @@ const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 const testeUpdate = (id_empresa, id_cidade) =>
 {
     const data = {};
-    // data['acao'] = 'updateContaAdministradora';
-    data['id_empresa'] = 1; //id_empresa
+    data['acao'] = 'updateContaAdministradora';
 
     //perfil estabelecimento
     data['id_empresa'] = id_empresa;
@@ -126,7 +125,7 @@ const testeUpdate = (id_empresa, id_cidade) =>
     }
     else
     {
-        data["intervalo_tempo_padrao_entre_servicos"] = null
+        data["intervalo_tempo_padrao_entre_servicos"] = 0
     }
     data['dados_funcionamento'] = getFuncionamento();
     // data[''] = input_.value;
