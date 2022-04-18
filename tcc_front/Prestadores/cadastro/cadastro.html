@@ -55,9 +55,9 @@
 
                         <div class="max_width_estabelecimento">
                             <div class="image_container">
-                                <img src="../../img/add-image (2).png" alt="" id="img_photo_estabelecimento">
+                                <img src="../../img/add-photo-icon.jpeg" alt="" id="img_photo_estabelecimento">
                             </div>
-                             <input type="file" id="fl_image_estabelecimento" name="fl_image_estabelecimento" accept="image/*">          
+                             <input type="file2" id="fl_image_estabelecimento" name="fl_image_estabelecimento" accept="image/*">          
                         </div>
 
                     </div>
@@ -76,9 +76,8 @@
                                 <div id="radio7"></div>                       
                             </div>
                             <div id="proxima_tela">
-                                <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
-                            </div>
-                        
+                                <h5 id="botao_proximo">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
+                            </div> 
                         
                     </div>    
                 </div>
@@ -127,7 +126,7 @@
                                 <div id="radio7"></div>                       
                             </div>
                             <div id="proxima_tela">
-                                <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                                <h5 id="botao_proximo">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
                             </div>
                         </div>
                 </div>
@@ -182,7 +181,7 @@
                                 <div id="radio7"></div>                       
                             </div>
                             <div id="proxima_tela">
-                                <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                                <h5 id="botao_proximo">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
                             </div>
                           </div>
                     </div>
@@ -279,89 +278,146 @@
 
                 <!-- INICIO CONTAINER REGRAS DE FUNCIONAMENTO -->
                 <div id="container_funcionamento">
-                    <div id="subtitulo">
-                        <h3><span class= "material-icons-outlined" id="icon_funcionamento">storefront</span>Regras de funcionamento</h3>
+
+                    <div class="container_secao" id="container_secao_funcionamento">
+                        <div id="subtitulo">
+                                <h3><span class="material-icons-outlined">pending_actions</span>Dados funcionamento</h3>
+                            </div>
+                        <div class="funcionamento">
+                            
+                            <h4>Quais dias e em quais horários o estabelecimento funciona?</h4>
+                            <div id="container_geral_domingo" class="container_geral_dia_funcionamento" >
+                                <div class="container_item_check">
+                                    <input disabled id="input_dia_semana1" class="input" type="checkbox" name="check_dia_semana_1">
+                                    <label class= "lable_input" for="input_dia_semana1">Domingo</label>      
+                                </div>
+                                <div class="container_geral_horarios_funcionamento">
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_inicio1" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_termino1" type="text" placeholder="término">
+                                    </div>
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_inicio1" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_termino1" type="text" placeholder="término">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="container_geral_segunda-feira" class="container_geral_dia_funcionamento" >
+                                <div class="container_item_check">
+                                    <input disabled id="input_dia_semana2" class="input" type="checkbox" name="check_dia_semana_2">
+                                    <label class= "lable_input" for="input_dia_semana2">Segunda-feira</label>      
+                                </div>
+                                <div class="container_geral_horarios_funcionamento">
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_inicio2" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_termino2" type="text" placeholder="término">
+                                    </div>
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_inicio2" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_termino2" type="text" placeholder="término">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="container_geral_terca-feira" class="container_geral_dia_funcionamento" >
+                                <div class="container_item_check">
+                                    <input disabled id="input_dia_semana3" class="input" type="checkbox" name="check_dia_semana_3">
+                                    <label class= "lable_input" for="input_dia_semana3">Terça-feira</label>      
+                                </div>
+                                <div class="container_geral_horarios_funcionamento">
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_inicio3" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_termino3" type="text" placeholder="término">
+                                    </div>
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_inicio3" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_termino3" type="text" placeholder="término">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="container_geral_quarta-feira" class="container_geral_dia_funcionamento" >
+                                <div class="container_item_check">
+                                    <input disabled id="input_dia_semana4" class="input" type="checkbox" name="check_dia_semana_4">
+                                    <label class= "lable_input" for="input_dia_semana4">Quarta-feira</label>      
+                                </div>
+                                <div class="container_geral_horarios_funcionamento">
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_inicio4" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_termino4" type="text" placeholder="término">
+                                    </div>
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_inicio4" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_termino4" type="text" placeholder="término">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="container_geral_quinta-feira" class="container_geral_dia_funcionamento" >
+                                <div class="container_item_check">
+                                    <input disabled id="input_dia_semana5" class="input" type="checkbox" name="check_dia_semana_5">
+                                    <label class= "lable_input" for="input_dia_semana5">Quinta-feira</label>      
+                                </div>
+                                <div class="container_geral_horarios_funcionamento">
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_inicio5" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_termino5" type="text" placeholder="término">
+                                    </div>
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_inicio5" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_termino5" type="text" placeholder="término">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="container_geral_sexta-feira" class="container_geral_dia_funcionamento" >
+                                <div class="container_item_check">
+                                    <input disabled id="input_dia_semana6" class="input" type="checkbox" name="check_dia_semana_6">
+                                    <label class= "lable_input" for="input_dia_semana6">Sexta-feira</label>      
+                                </div>
+                                <div class="container_geral_horarios_funcionamento">
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_inicio6" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_termino6" type="text" placeholder="término">
+                                    </div>
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_inicio6" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_termino6" type="text" placeholder="término">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="container_geral_sabado" class="container_geral_dia_funcionamento" >
+                                <div class="container_item_check">
+                                    <input disabled id="input_dia_semana7" class="input" type="checkbox" name="check_dia_semana_7">
+                                    <label class= "lable_input" for="input_dia_semana7">Sábado</label>      
+                                </div>
+                                <div class="container_geral_horarios_funcionamento">
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_inicio7" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="1input_hora_termino7" type="text" placeholder="término">
+                                    </div>
+                                    <div class="container_horario_funcionamento">
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_inicio7" type="text" placeholder="início">
+                                        <h6>Até</h6>
+                                        <input disabled class="input_hora_funcionamento" id="2input_hora_termino7" type="text" placeholder="término">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="funcionamento">
-                        <h4>Quais dias da semana o estabelecimento funciona?</h4><br>
-                    </div>
-                    <div id="container_dados_funcionamento">
-                        <div id="domingo" class="dia_semana">
-                            <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_domingo" type="checkbox">
-                                <label for="check_domingo">Domingo</label>
-                            </div>
-                            <div id="container_horarios">
-                                <div id="container_horario"><div id="borda_time"><input type="time" id="input_horario"></div><h6>Até</h6><div id="borda_time"><input type="time" id="input_horario"></div><span id="add_horario" class="material-icons-outlined">add</span></div>
-                                <div id="container_horario"><div id="borda_time"><input type="time" id="input_horario"></div><h6>Até</h6><div id="borda_time"><input type="time" id="input_horario"></div><span id="add_horario" class="material-icons-outlined">add</span></div>
-                               
-                            </div>
-                        </div>
-
-                        <div id="domingo" class="dia_semana">
-                            <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_segunda" type="checkbox">
-                                <label for="check_domingo">Segunda</label>
-                            </div>
-                            <div id="container_horarios">
-                                <div id="container_horario2"><div id="borda_time"><input type="time" id="input_horario"></div><h6>Até</h6><div id="borda_time"><input type="time" id="input_horario"></div><span id="add_horario" class="material-icons-outlined">add</span></div>
-                            </div>
-                        </div>
-
-                        <div id="domingo" class="dia_semana">
-                            <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_terca" type="checkbox">
-                                <label for="check_domingo">Terça</label>
-                            </div>
-                            <div id="container_horarios">
-                                <div id="container_horario2"><div id="borda_time"><input type="time" id="input_horario"></div><h6>Até</h6><div id="borda_time"><input type="time" id="input_horario"></div><span id="add_horario" class="material-icons-outlined">add</span></div>
-                            </div>
-                        </div>
-
-                        <div id="domingo" class="dia_semana">
-                            <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_quarta" type="checkbox">
-                                <label for="check_domingo">Quarta</label>
-                            </div>
-                            <div id="container_horarios">
-                                <div id="container_horario2"><div id="borda_time"><input type="time" placeholder="" id="input_horario"></div><h6>Até</h6><div id="borda_time"><input type="time" id="input_horario"></div><span id="add_horario" class="material-icons-outlined">add</span></div>
-                            </div>
-                        </div>
-
-                        <div id="domingo" class="dia_semana">
-                            <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_quinta" type="checkbox">
-                                <label for="check_domingo">Quinta</label>
-                            </div>
-                            <div id="container_horarios">
-                                <div id="container_horario2"><div id="borda_time"><input type="time" id="input_horario"></div><h6>Até</h6><div id="borda_time"><input type="time" id="input_horario"></div><span id="add_horario" class="material-icons-outlined">add</span></div>
-                            </div>
-                        </div>
-
-                        <div id="domingo" class="dia_semana">
-                            <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_sexta" type="checkbox">
-                                <label for="check_domingo">Sexta</label>
-                            </div>
-                            <div id="container_horarios">
-                                <div id="container_horario2"><div id="borda_time"><input type="time" id="input_horario"></div><h6>Até</h6><div id="borda_time"><input type="time" id="input_horario"></div><span id="add_horario" class="material-icons-outlined">add</span></div>
-                            </div>
-                        </div>
-
-                        <div id="domingo" class="dia_semana">
-                            <div id="checkbox_domingo" class="checkbox_nome">
-                                <input id="check_sabado" type="checkbox">
-                                <label for="check_domingo">Sábado</label>
-                            </div>
-                            <div id="container_horarios">
-                                <div id="container_horario2"><div id="borda_time"><input type="time" id="input_horario"></div><h6>Até</h6><div id="borda_time"><input type="time" id="input_horario"></div><span id="add_horario" class="material-icons-outlined">add</span></div>
-                            </div>
-                        </div>
-                    </div>
-
+                
                     <div id="intervalo">
                         <div id="intervalo_horario">
-                        <h6>Tempo de intervalo entre os horários?</h6>
+                        <h4>Tempo de intervalo entre os horários?</h4>
                         </div>
                 
                         <div id="radio_intervalo">
@@ -380,7 +436,7 @@
                             <div id="radio3"></div> 
                             <div id="radio4"></div> 
                             <div id="radio5"></div> 
-                            <div id="radio_funcionamneto"></div> 
+                            <div id="radio_funcionamento"></div> 
                             <div id="radio7"></div>                       
                         </div>
                         <div id="proxima_tela">
@@ -389,6 +445,7 @@
                       </div>
 
                 </div>
+            </div>
                 <!-- FIM CONTAINER FUNCIONAMENTO -->
 
                 <!-- INICIO CONTAINER LOGIN -->
@@ -431,28 +488,6 @@
                           </div>
             </div>
                 <!-- FIM CONTAINER LOGIN -->
-
-
-                <!-- <div id="informacoes_continuas">
-                    <div id="tela_anterior">
-                        <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
-                        <h5>Voltar</h5>
-                   </div>
-                    <div id="bolinhas">
-                        <div id="radio1"></div> 
-                        <div id="radio2"></div> 
-                        <div id="radio3"></div> 
-                        <div id="radio4"></div> 
-                        <div id="radio5"></div> 
-                        <div id="radio6"></div> 
-                        <div id="radio7"></div>                       
-                    </div>
-                    <div id="proxima_tela">
-                        <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
-                    </div>
-                    
-                    
-                </div>         -->
             </section> 
        
     </main>
