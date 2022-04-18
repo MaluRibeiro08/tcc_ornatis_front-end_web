@@ -452,6 +452,9 @@ import { testeUpdate  } from "./update/update.js";
         console.log(options);
          fetch(url, options).then(response => response.json()).then(data => {
             console.log(data)})
+
+        alert("Alterações salvar com sucesso!")
+        location.reload();
     })
 
     input_imagem.addEventListener("change", (tratarUploadImagem))
