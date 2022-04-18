@@ -1,0 +1,86 @@
+/* ******************* Seção PESQUISAR ***/
+
+.pesquisar{
+    height: 80px;
+    width: 85vw;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisar input{
+    height: 50px;
+    width: 40%;
+    padding-left: 3%;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background-color: #F1F1F1;
+    color: #494949c3;
+    border-radius: 5px;
+}
+
+.pesquisar input::-webkit-input-placeholder{
+    font-size: 1.1rem;
+    color: #49494983;
+}
+
+.pesquisa_icon{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: darkblue; */
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    margin-right: 32%;
+}
+
+.pesquisa_icon::before{
+    content: '';
+    width: 25%;
+    height: 25%;
+    border: 2px solid #4949499d;
+    border-radius: 50%;
+}
+
+.pesquisa_icon::after{
+    content: '';
+    width: 20%;
+    height: 2px;
+    background-color: #4949499d;
+    border-radius: 0 2px 2px 0;
+}
+
+/* ******************* Seção MENU CATEGORIAS ***/
+
+.menuCategorias{
+    width: 39vw;
+    height: auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+}
+
+.menuCategorias ul{
+    width: inherit;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.menuCategorias li{
+    /* background-color: aquamarine; */
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #93DCD0;
+    border-radius: 10px;
+    /* margin-left: 5%; */
+}
+
+/* ******************* Seção SERVIÇOS A PRESTAR ***/
