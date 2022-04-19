@@ -20,7 +20,7 @@ textarea:focus, input:focus, select:focus {
 
 #container_estabelecimento{
     margin-top: 8vh;
-    /* display: none; */
+    display: none;
 }
 
 #radio_estabelecimento{
@@ -86,7 +86,7 @@ textarea:focus, input:focus, select:focus {
     border-radius: 50%;
 }
 #container_login{
-    display: none;
+    /* display: none; */
 }
 
 #radio_login{
