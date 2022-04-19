@@ -24,7 +24,7 @@ import { testeUpdate  } from "./update/update.js";
     const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
 
     let id_cidade = 3106200;
-    const id_empresa = 30;
+    const id_empresa = 6;
 
     testeUpdate(id_empresa, id_cidade)
 
@@ -453,8 +453,9 @@ import { testeUpdate  } from "./update/update.js";
          fetch(url, options).then(response => response.json()).then(data => {
             console.log(data)})
 
+        // document.formulario_imagem.submit();
         alert("Alterações salvar com sucesso!")
-        location.reload();
+        // location.reload();   
     })
 
     input_imagem.addEventListener("change", (tratarUploadImagem))
