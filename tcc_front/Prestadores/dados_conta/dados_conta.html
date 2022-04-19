@@ -86,7 +86,10 @@
                     <span class="material-icons-outlined">edit</span>
                     Editar perfil
                 </button>
-                <button class="butao_salvar_alteracoes" id="btn_salvar" style="display: none;">Salvar</button>
+                <button class="butao_salvar_alteracoes" id="btn_salvar" style="display: none;" onclick="salvar()">Salvar</button>
+                <script> const salvar = () => {console.log(document.formulario_imagem) 
+                document.formulario_imagem.submit()
+                console.log("enviou!!")}</script>
             </div>
             
 
@@ -99,13 +102,16 @@
                             <img id="img_estabelecimento" src="./imgs/logo_salao.png">
                         </div>
                         <div class="container_icone_foto_perfil">
-                            <input id="input_foto_estabelecimento" class="inputFile" type="file" accept="image/*" disabled/>
-                            <label for="input_foto_estabelecimento" id="labelInputFile">
-                                <span class="material-icons-outlined">
-                                    add_photo_alternate
-                                </span>
-                            </label>
-                            
+                            <form enctype="multipart/form-data" name="formulario_imagem" id ="formulario_imagem" action="http://localhost/ornatis/api-ornatis/rotas/contaAdministradora/" method="POST">
+                                <input type="text" name="acao" hidden value="updateContaAdministradora">
+                                <input type="text" name="envio_form" hidden value="true">
+                                <input name="imagem_perfil" id="input_foto_estabelecimento" class="inputFile" type="file" accept="image/*" disabled/>
+                                <label for="input_foto_estabelecimento" id="labelInputFile">
+                                    <span class="material-icons-outlined">
+                                        add_photo_alternate
+                                    </span>
+                                </label>
+                            </form>
                         </div>
                     </div>
                 </div>

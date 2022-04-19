@@ -42,7 +42,7 @@ const getDadosRegrasNegocio = () =>
 
         const regra_negocio = 
         {
-            "valor_Acima_de_100" : acima_cem,
+            "valor_acima_de_100" : acima_cem,
             "porcentagem_sobre_valor_servico" : porcentagem_cobrada,
             "horas_tolerancia" : tempo_tolerancia
         }
