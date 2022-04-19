@@ -85,6 +85,8 @@ const testeUpdate = (id_empresa, id_cidade) =>
 
     //perfil administrador
     data['nome_adm'] = input_nome_adm.value;
+    data['email_adm'] = input_email.value;
+    data['senha_adm'] = input_senha.value;
     data['data_nascimento'] = input_data_nascimento.value;
     data['cpf'] = input_cpf.value;
 
