@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
-    <script src="cadastro.js" defer></script>
     <title>Cadastro</title>  
 </head>
 <body>
@@ -19,12 +18,12 @@
     <main>
             <section class="sessao1">
                 <div id="titulo">
-                    <h1>CADASTRO</h1><p>|</p>
+                    <h1>CADASTRO</h1><p id="p_est">|</p>
                 </div>
     
                 <div id="imagens">
-                    <img id="elipse" src="../../" alt="" width="500px">
-                    <img id="prestador" src="" alt="">
+                    <img id="elipse" src="../img/Ellipse 2.svg" alt="" >
+                    <img id="prestador" src="../img/image 428.svg" alt="">
                 </div>
             </section>
 
@@ -55,7 +54,7 @@
 
                         <div class="max_width_estabelecimento">
                             <div class="image_container">
-                                <img src="../../img/add-photo-icon.jpeg" alt="" id="img_photo_estabelecimento">
+                                <img src="../img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_estabelecimento">
                             </div>
                              <input type="file2" id="fl_image_estabelecimento" name="fl_image_estabelecimento" accept="image/*">          
                         </div>
@@ -76,7 +75,7 @@
                                 <div id="radio7"></div>                       
                             </div>
                             <div id="proxima_tela">
-                                <h5 id="botao_proximo">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
+                                <h5 id="botao_proximo" onclick="mudarSecao()">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
                             </div> 
                         
                     </div>    
@@ -84,14 +83,14 @@
                 <!-- FIM DO CONTAINER ESTABELECIMENTO --> 
 
                 <!-- INICIO CONTAINER PERFIL ADMINISTRADOR -->
-                <div id="container_perfil_adm">
+                <div id="container_perfil_adm" style="display: none;">
                         <div id="subtitulo">
                             <h3> <span id="user1" class="material-icons-outlined">person</span> Perfil Administrador</h3>
                         </div>
                     
                         <div class="max-width_adm">
                             <div class="image_container">
-                                <img src="../../img/add-photo-icon.jpeg" alt="" id="img_photo">
+                                <img src="../img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo">
                             </div>
                              <input type="file" id="fl_image_adm" name="fl_image_adm" accept="image/*">          
                         </div>
@@ -126,14 +125,15 @@
                                 <div id="radio7"></div>                       
                             </div>
                             <div id="proxima_tela">
-                                <h5 id="botao_proximo">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
+                                <h5 id="botao_proximo" onclick="mudarSecao()">Próximo</h5> <span id="next" class="material-icons-outlined">arrow_forward_ios</span>
+                                
                             </div>
                         </div>
                 </div>
                 <!-- FIM CONTAINER PERFIL ADMINISTRADOR -->
 
                 <!-- INICIO CONTAINER DADOS DE LOCALIZACAO -->
-                <div id="container_dados_localizacao">
+                <div id="container_dados_localizacao" style="display: none;">
                         <div id="subtitulo">
                             <h3><span id="place" class="material-icons-outlined">room</span> Dados de localização</h3>
                         </div>
@@ -181,25 +181,38 @@
                                 <div id="radio7"></div>                       
                             </div>
                             <div id="proxima_tela">
-                                <h5 id="botao_proximo">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
+                                <h5 id="botao_proximo" onclick="mudarSecao()">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
                             </div>
                           </div>
                     </div>
                 <!-- FIM CONTAINER DADOS DE LOCALIZACAO -->
 
                 <!-- INICIO DO CONTAINER DADOS DE PAGAMENTO-->
-                <div id="container_dados_pagamento">
+                <div id="container_dados_pagamento" style="display: none;">
                     <div id="subtitulo">
                         <h3><span id="pay" class="material-icons-outlined">currency_exchange</span> Regras de pagamento</h3>
                     </div>
                     
                     <div id="forma_pagamento">
                         <h4>Forma de pagamento:</h4><br/>
-                        <input id="radio_dinheiro" class="radio_pagamento" type="checkbox" value="sim"/><label for="radio_dinheiro">Dinheiro</label><br />
-                        <input id="radio_credito" class="radio_pagamento" type="checkbox" value="nao"/><label for="">Cartao de crédito</label><br />
-                        <input id="radio_debito" class="radio_pagamento" type="checkbox" value="talvez"/><label for="">Cartão de débito</label><br />
-                        <input id="radio_pix" class="radio_pagamento" type="checkbox" value="quem_sabe"/><label for="">Pix</label><br />
-                        <input id="radio_app" class="radio_pagamento" type="checkbox" value="quem_sabe"/><label for="">Via app</label><br />
+                        <div>
+                            <div id="checkbox_radio">
+                                <input id="radio_dinheiro" class="radio_pagamento" type="checkbox" value="sim"/><label for="radio_dinheiro">Dinheiro</label><br />
+                            </div>
+                            <div id="checkbox_radio">
+                                <input id="radio_credito" class="radio_pagamento" type="checkbox" value="nao"/><label for="">Cartao de crédito</label><br />
+                            </div>
+                            <div id="checkbox_radio">
+                                <input id="radio_debito" class="radio_pagamento" type="checkbox" value="talvez"/><label for="">Cartão de débito</label><br />
+                            </div>
+                            <div id="checkbox_radio">
+                                <input id="radio_pix" class="radio_pagamento" type="checkbox" value="quem_sabe"/><label for="">Pix</label><br />
+                            </div>
+                            <div id="checkbox_radio">
+                                <input id="radio_app" class="radio_pagamento" type="checkbox" value="quem_sabe"/><label for="">Via app</label><br />
+                            </div> 
+                        </div>
+                        
                     </div>
 
                     <div id="bandeiras">
@@ -221,7 +234,7 @@
                             <div id="radio7"></div>                       
                         </div>
                         <div id="proxima_tela">
-                            <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                            <h5 id="botao_proximo" onclick="mudarSecao()">Próximo</h5><span id="next" class="material-icons-outlined">arrow_forward_ios</span>
                         </div>
                       </div>
     
@@ -229,7 +242,7 @@
                 <!-- FIM DO CONTAINER DADOS DE PAGAMENTO -->
 
                 <!-- INICIO CONTAINER REGRAS DE NEGOCIO -->
-                <div id="container_regras_negocio">
+                <div id="container_regras_negocio" style="display: none;">
                     <div id="subtitulo">
                         <h3><span id="buy" class="material-icons-outlined">savings</span> Regras de negócio</h3>
                     </div>
@@ -242,19 +255,47 @@
                         <div id="padrao_personalizada">
                             <h4>Padrão ou personalizada?</h4><br>
                             <input id="radio_padrao" class="radio_pagamento" type="radio" name="" value="sim"/>Padrão<br />
-                            <input id="radio_personalizada" class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Personalizada<br/>
-                            <div id="borda">
-                                
-                                <div id="info_borda"><span id="lixo" class="material-icons-outlined">delete</span>
-                                <h6>Valor do serviço:</h6>
-                                <input id="radio_abaixo100" class="radio_pagamento" type="radio" name="" value="sim"/>Abaixo de R$100,00<br />
-                                <input id="radio_acima100" class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Acima de R$100,00<br/>
-                                <h6>Tolerância:  <input id="tolerancia" type="text"> de antecedência</h6> 
-                                <h6>Taxa sobre o valor do serviço: <input id="taxa" type="text"></h6> <div id="adicionar_taxa"><span class="material-icons-outlined">add</span></div> 
+                            <input id="radio_personalizada" class="radio_pagamento" type="radio" name="webmaster" value="nao"/>Personalizada<br/> 
+                        </div>
+                    </div>
+                        <div class="informacoes">
+                            <div class="container_acoes">
+                                <span id="icone_delecao_regra" class="material-icons-outlined icone_delecao_regra" onclick="deletarRegraCancelamento('container_regra')" >delete</span>
+                                <span id="icone_adicao_regra" class="material-icons-outlined">
+                                    add
+                                </span>
+                            </div>
+                            <div class="container_regra_cancelamento">
+                                 <div class="container_valor_servico">
+                                <h4>Válida para serviços:</h4>
+                                <div class="container_radios_valor">
+                                    <div class="container_radio_valor_servico" id="container_radio_acima_cem">
+                                        <input type="radio" name='valor_servico_regra' id='input_radio_acima_cem_regra'>
+                                        <label class="label_valor_servico" for='input_radio_acima_cem_regra' >Acima de R$ 100,00</label>
+                                    </div>
+                                    <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
+                                        <input type="radio" name='valor_servico_regra' id='input_radio_abaixo_cem_regra' >
+                                        <label class="label_valor_servico" for='input_radio_abaixo_cem_regra'>Abaixo de R$ 100,00</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container_tolerancia">
+                                <h4 class="label_taxa">Tolerância:</h4>
+                                <div class="container_input_tolerancia">
+                                    <p >até <input type="text" class="input_regra" id='input_tempo_tolerancia_regra' value = >h de antecedencia</p>
+                                </div>
+                            </div>
+                            <div class="container_valor_taxa">
+                                <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
+                                <div class="container_input_valor_taxa">
+                                    <p ><input type="text" class="input_regra" id='input_valor_taxa_variada_regra' value=> %</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                           
+                    
+               
                     <div id="informacoes_continuas">
                         <div id="tela_anterior">
                             <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
@@ -270,21 +311,20 @@
                             <div id="radio7"></div>                       
                         </div>
                         <div id="proxima_tela">
-                            <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                            <h5 id="botao_proximo" onclick="mudarSecao()">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
                         </div>
                       </div>
                 </div> 
                 <!-- FIM CONTAINER REGRAS DE NEGOCIO -->
 
                 <!-- INICIO CONTAINER REGRAS DE FUNCIONAMENTO -->
-                <div id="container_funcionamento">
+                <div id="container_funcionamento" style="display: none;">
 
                     <div class="container_secao" id="container_secao_funcionamento">
                         <div id="subtitulo">
                                 <h3><span class="material-icons-outlined">pending_actions</span>Dados funcionamento</h3>
                             </div>
                         <div class="funcionamento">
-                            
                             <h4>Quais dias e em quais horários o estabelecimento funciona?</h4>
                             <div id="container_geral_domingo" class="container_geral_dia_funcionamento" >
                                 <div class="container_item_check">
@@ -413,18 +453,18 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                
-                    <div id="intervalo">
-                        <div id="intervalo_horario">
-                        <h4>Tempo de intervalo entre os horários?</h4>
+                       <div id="intervalo">
+                                <div id="intervalo_horario">
+                                <h4>Tempo de intervalo entre os horários?</h4>
+                                </div>
+                        
+                                <div id="radio_intervalo">
+                                    <input class="radio_horario" type="radio"><h6>Sim</h6>
+                                    <input class="radio_horario" type="radio"><h6>Não</h6>
+                                </div>
                         </div>
-                
-                        <div id="radio_intervalo">
-                            <input class="radio_horario" type="radio"><h6>Sim</h6>
-                            <input class="radio_horario" type="radio"><h6>Não</h6>
-                        </div>
                     </div>
+
                     <div id="informacoes_continuas">
                         <div id="tela_anterior">
                             <span id="previous" class="material-icons-outlined">arrow_back_ios</span>
@@ -437,24 +477,23 @@
                             <div id="radio4"></div> 
                             <div id="radio5"></div> 
                             <div id="radio_funcionamento"></div> 
-                            <div id="radio7"></div>                       
+                            <div id="radio7"></div>                 
+                                            
                         </div>
                         <div id="proxima_tela">
-                            <h5 id="botao_proximo">Próximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
+                            <h5 id="botao_proximo" onclick="mudarSecao()">Proximo</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
                         </div>
-                      </div>
-
                 </div>
-            </div>
+                </div>
                 <!-- FIM CONTAINER FUNCIONAMENTO -->
 
                 <!-- INICIO CONTAINER LOGIN -->
-                <div id="container_login">
+                <div id="container_login" style="display: none;">
                     <div id="subtitulo">
                         <h3><span id="icon_login" class="material-icons-outlined">offline_share</span> Dados de login</h3>
                     </div>
-        
-                    <div id="informacoes">
+                    <div class="login_top">
+                         <div id="informacoes">
                         <div id="campo">
                             <label>Email</label>
                         <input class="input_linha" type="text" id="email">
@@ -485,7 +524,10 @@
                             <div id="proxima_tela">
                                 <h5 id="botao_concluir">Concluir</h5><span id="next"class="material-icons-outlined">arrow_forward_ios</span>
                             </div>
-                          </div>
+                    </div>
+                    </div>
+        
+                   
             </div>
                 <!-- FIM CONTAINER LOGIN -->
             </section> 
@@ -493,3 +535,97 @@
     </main>
 </body>
 </html>
+<script> 
+let numeroSessao = 1;
+const mudarSecao = () => 
+{
+    console.log("teste")
+    if(numeroSessao == 1)
+    {
+        numeroSessao = 2
+        container_estabelecimento.style.display = "inline"
+        container_perfil_adm.style.display = "none"
+        container_dados_localizacao.style.display = "none"
+        container_dados_pagamento.style.display = "none"
+        container_regras_negocio.style.display = "none"
+        container_funcionamento.style.display = "none"
+        container_login.style.display = "none"
+        console.log(numeroSessao)
+        
+    }
+     if(numeroSessao == 2) 
+    {
+        numeroSessao = 3
+        container_estabelecimento.style.display = "none"
+        container_perfil_adm.style.display = "inline"
+        container_dados_localizacao.style.display = "none"
+        container_dados_pagamento.style.display = "none"
+        container_regras_negocio.style.display = "none"
+        container_funcionamento.style.display = "none"
+        container_login.style.display = "none"
+        console.log(numeroSessao)
+    } 
+    else if (numeroSessao == 3)
+    {
+        numeroSessao = 4
+        container_estabelecimento.style.display =  "none"
+        container_perfil_adm.style.display = "none"
+        container_dados_localizacao.style.display = "inline"
+        container_dados_pagamento.style.display = "none"
+        container_regras_negocio.style.display = "none"
+        container_funcionamento.style.display = "none"
+        container_login.style.display = "none"
+        console.log(numeroSessao)
+    }
+    else if (numeroSessao ==4)
+    {
+        numeroSessao = 5
+        container_estabelecimento.style.display =  "none"
+        container_perfil_adm.style.display = "none"
+        container_dados_localizacao.style.display = "none"
+        container_dados_pagamento.style.display = "inline"
+        container_regras_negocio.style.display = "none"
+        container_funcionamento.style.display = "none"
+        container_login.style.display = "none"
+    }
+    else if (numeroSessao == 5)
+    {
+        numeroSessao = 6
+        container_estabelecimento.style.display =  "none"
+        container_perfil_adm.style.display = "none"
+        container_dados_localizacao.style.display = "none"
+        container_dados_pagamento.style.display = "none"
+        container_regras_negocio.style.display = "inline"
+        container_funcionamento.style.display = "none"
+        container_login.style.display = "none"
+    }
+    else if (numeroSessao == 6)
+    {
+        numeroSessao = 7
+        container_estabelecimento.style.display =  "none"
+        container_perfil_adm.style.display = "none"
+        container_dados_localizacao.style.display = "none"
+        container_dados_pagamento.style.display = "none"
+        container_regras_negocio.style.display = "none"
+        container_funcionamento.style.display = "inline"
+        container_login.style.display = "none"
+    }
+    else if (numeroSessao == 7)
+    {
+        numeroSessao = 1;
+        container_estabelecimento.style.display =  "none"
+        container_perfil_adm.style.display = "none"
+        container_dados_localizacao.style.display = "none"
+        container_dados_pagamento.style.display = "none"
+        container_regras_negocio.style.display = "none"
+        container_funcionamento.style.display = "none"
+        container_login.style.display = "inline"
+    }
+};
+const deletarRegraCancelamento = (idRegraCancelamento) =>
+    {
+       const divDeletar = document.getElementById(`${idRegraCancelamento}`)
+       const conteinerRegras = document.getElementById("container_regras_cancelamentos")
+       conteinerRegras.removeChild(divDeletar)
+    };
+</script>

@@ -1,3 +1,5 @@
+"use strict"
+
 const container_estabelecimento = document.getElementById("container_estabelecimento");
 const container_perfil_adm = document.getElementById("container_perfil_adm");
 const container_dados_localizacao = document.getElementById("container_dados_localizacao");
@@ -8,96 +10,66 @@ const container_login = document.getElementById("container_login");
 
 
 
-const proximo = document.getElementById("botao_proximo");
-let numeroSessao = 1
+/******************REGRAS DE NEGOCIO*******************/
 
-mudarSecao = () => 
-{
-    console.log(numeroSessao)
-    if(numeroSessao == 1)
+const criarRegraCancelamento = (acimaCem, tolerancia, taxa) =>
     {
-        numeroSessao = 2
-        container_estabelecimento.style.display = "inline"
-        container_perfil_adm.style.display = "none"
-        container_dados_localizacao.style.display = "none"
-        container_dados_pagamento.style.display = "none"
-        container_regras_negocio.style.display = "none"
-        container_funcionamento.style.display = "none"
-        container_login.style.display = "none"
-        console.log(numeroSessao)
-        
-    }
-    else if(numeroSessao == 2) 
-    {
-        numeroSessao = 3
-        container_estabelecimento.style.display = "none"
-        container_perfil_adm.style.display = "inline"
-        container_dados_localizacao.style.display = "none"
-        container_dados_pagamento.style.display = "none"
-        container_regras_negocio.style.display = "none"
-        container_funcionamento.style.display = "none"
-        container_login.style.display = "none"
-        console.log(numeroSessao)
-    } 
-    else if (numeroSessao == 3)
-    {
-        numeroSessao = 4
-        container_estabelecimento.style.display =  "none"
-        container_perfil_adm.style.display = "none"
-        container_dados_localizacao.style.display = "inline"
-        container_dados_pagamento.style.display = "none"
-        container_regras_negocio.style.display = "none"
-        container_funcionamento.style.display = "none"
-        container_login.style.display = "none"
-        console.log(numeroSessao)
-    }
-    else if (numeroSessao == 4)
-    {
-        numeroSessao = 5
-        container_estabelecimento.style.display =  "none"
-        container_perfil_adm.style.display = "none"
-        container_dados_localizacao.style.display = "none"
-        container_dados_pagamento.style.display = "inline"
-        container_regras_negocio.style.display = "none"
-        container_funcionamento.style.display = "none"
-        container_login.style.display = "none"
-    }
-    else if (numeroSessao == 5)
-    {
-        numeroSessao = 6
-        container_estabelecimento.style.display =  "none"
-        container_perfil_adm.style.display = "none"
-        container_dados_localizacao.style.display = "none"
-        container_dados_pagamento.style.display = "none"
-        container_regras_negocio.style.display = "inline"
-        container_funcionamento.style.display = "none"
-        container_login.style.display = "none"
-    }
-    else if (numeroSessao == 6)
-    {
-        numeroSessao = 7
-        container_estabelecimento.style.display =  "none"
-        container_perfil_adm.style.display = "none"
-        container_dados_localizacao.style.display = "none"
-        container_dados_pagamento.style.display = "none"
-        container_regras_negocio.style.display = "none"
-        container_funcionamento.style.display = "inline"
-        container_login.style.display = "none"
-    }
-    else if (numeroSessao == 7)
-    {
-        numeroSessao = 1;
-        container_estabelecimento.style.display =  "none"
-        container_perfil_adm.style.display = "none"
-        container_dados_localizacao.style.display = "none"
-        container_dados_pagamento.style.display = "none"
-        container_regras_negocio.style.display = "none"
-        container_funcionamento.style.display = "none"
-        container_login.style.display = "inline"
-    }
+        const conteinerRegras = document.getElementById("container_regras_cancelamentos")
+        if(numeroDaRegra == null)
+        {
+            numeroDaRegra = conteinerRegras.childElementCount + 1
+        }
+        else
+        {
+            numeroDaRegra = numeroDaRegra+1
+        }
+        const novaRegra = document.createElement("div") 
+
+        novaRegra.classList.add("container_regra_cancelamento")
+        novaRegra.id = `container_regra${numeroDaRegra}`
+
+        const checkedAcima = acimaCem == null ? '': (acimaCem == true ? 'checked' : '')
+        const checkedAbaixo = acimaCem == null ? '': (acimaCem == true ?  '' : 'checked')
+        const disabled = acimaCem == null ? '': 'disabled'
+        novaRegra.innerHTML = 
+        `
+        <div class="container_acoes">
+        <span id="icone_delecao_regra${numeroDaRegra}" class="material-icons-outlined icone_delecao_regra" onclick="deletarRegraCancelamento('container_regra${numeroDaRegra}')" >delete</span>
+        <span id="icone_adicao_regra" class="material-icons-outlined">
+            add
+        </span>
+    </div>
+    <div class="container_regra_cancelamento">
+         <div class="container_valor_servico">
+        <h4>Válida para serviços:</h4>
+        <div class="container_radios_valor">
+            <div class="container_radio_valor_servico" id="container_radio_acima_cem">
+                <input ${disabled} type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_acima_cem_regra${numeroDaRegra}' ${checkedAcima}>
+                <label class="label_valor_servico" for='input_radio_acima_cem_regra${numeroDaRegra}' >Acima de R$ 100,00</label>
+            </div>
+            <div class="container_radio_valor_servico" id="container_radio_abaixo_cem">
+                <input ${disabled} type="radio" name='valor_servico_regra${numeroDaRegra}' id='input_radio_abaixo_cem_regra${numeroDaRegra}' ${checkedAbaixo}>
+                <label class="label_valor_servico" for='input_radio_abaixo_cem_regra${numeroDaRegra}'>Abaixo de R$ 100,00</label>
+            </div>
+        </div>
+    </div>
+    <div class="container_tolerancia">
+        <h4 class="label_taxa">Tolerância:</h4>
+        <div class="container_input_tolerancia">
+            <p >até <input ${disabled} type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}' >h de antecedencia</p>
+        </div>
+    </div>
+    <div class="container_valor_taxa">
+        <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
+        <div class="container_input_valor_taxa">
+            <p ><input ${disabled} type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}'> %</p>
+        </div>
+    </div>
+</div>
+        `
+    
+    conteinerRegras.appendChild(novaRegra)
 }
-
-proximo.addEventListener("click", mudarSecao);
 
 /******************UPLOAD DE IMAGEM*******************/
 
@@ -129,15 +101,15 @@ photo_estabelecimento.addEventListener('click', () => {
     reader.readAsDataURL(file.files[0]);
 })
 
-file2.addEventListener('change', (event) => {
-    let reader2 = new FileReader();
+    file2.addEventListener('change', (event) =>{
+        let est = new FileReader();
 
-    reader2.onload = () => {
-        photo_estabelecimento.src = reader2.result;
-    }
+        est.onload = () => {
+            photo_estabelecimento.src = est.result;
+        }
 
-    reader2.readAsDataURL(file2.files[0]);
-})
+        est.readAsDataURL(file2.files[0]);
+    })
 
 
 
@@ -261,7 +233,7 @@ const pegar_dados_conta_adm = (id_cidade) =>
     return data
 }
 
-export {pegar_dados_conta_adm}
+// export {pegar_dados_conta_adm}
 
 //click do botao concluir
 
@@ -287,57 +259,5 @@ btn_concluir.addEventListener("click", async ()  => {
 })
 
 
-//DAR IDS PARA OS RADIOS
-//UNIFICAR A CONST EM CONTA-ADMINISTRADORA
 //DAR VALUES PARA OS RADIOS
-//AJUSTAR AS IMG
-
-
-    //     //estabelecimento
-    //     nome: document.getElementById('nomeEstabelecimento').value,
-    //     cnpj: document.getElementById('cnpj').value,
-    //     contato: document.getElementById('contato').value,
-    //     biografia: document.getElementById('biografia').value,
-    //     foto: document.getElementById('img_photo_estabelecimento'.src),
-    //     //adm
-    //     foto: document.getElementById('fl_image').src,
-    //     nome: document.getElementById('nomeAdministrador').value,
-    //     data_de_nascimento: document.getElementById('data_nascimento').value,
-    //     cpf: document.getElementById('cpf').value, 
-    //     //localizacao
-    //     cep: document.getElementById('cep').value,
-    //     bairro: document.getElementById('bairro').value,
-    //     cidade: document.getElementById('cidade').value,
-    //     estado: document.getElementById('estado').value,
-    //     rua: document.getElementById('input_rua').value,
-    //     numero: document.getElementById('input_numero').value,
-    //     complemento: document.getElementById('complemento').value,
-    //     //pagamento
-    //     // dinheiro: document.getElementById('radio_dinheiro'),
-    //     // cartao_credito: document.getElementById('radio_credito'),
-    //     // cartao_debito: document.getElementById('radio_debito'),
-    //     // pix: document.getElementById('radio_pix'),
-    //     // via_app: document.getElementById('radio_app'),
-    //     // bandeira: document.getElementsById('bandeira'),
-    //     //negocio
-    //     radio_sim: document.getElementsById('radio_sim'),
-    //     radio_nao: document.getElementsById('radio_nao'),
-    //     radio_padrao: document.getElementsById('radio_padrao'),
-    //     radio_personalizada: document.getElementsById('radio_personalizada'),
-    //     radio_abaixo100: document.getElementsById('radio_abaixo100'),
-    //     radio_acima100: document.getElementsById('radio_acima100'),
-    //     //funcionamento
-    //     //login
-    //     email: document.getElementById('email').value,
-    //     senha: document.getElementById('senha').value,
-    //     confirmar: document.getElementById('confirmar_senha').value,
-    // };
-
-
-    // let checkbox = document.getElementById('radio_dinheiro');
-    // if(checkbox.ariaChecked) {
-    //     console.log("O cliente marcou o checkbox");
-    // } else {
-    //     console.log("O cliente não marcou o checkbox");
-    // }
 
