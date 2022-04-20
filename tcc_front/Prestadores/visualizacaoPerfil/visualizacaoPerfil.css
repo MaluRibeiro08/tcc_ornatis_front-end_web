@@ -50,6 +50,25 @@ main{
     
 }
 
+#imgEditarBiografia{
+    position: absolute;
+    left: 83%;
+    top: 31%;
+}
+
+.btnEditarBiografia{
+    position: absolute;
+    left: 80%;
+    width: 100px;
+    background: none;
+    border: none;
+    color: #5F9F95;
+}
+
+.btnEditarBiografia:hover{
+    cursor: pointer;
+}
+
 /* ************* SLIDE **/
 
 .slide{
@@ -81,8 +100,8 @@ main{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     font-size: 1.4rem;
     background: #B5C5C1;
@@ -97,7 +116,7 @@ main{
 }
 
 .slick_prev{
-    left: -6%;
+    left: -8%;
 }
 
 /* ************* ENDEREÇO **/

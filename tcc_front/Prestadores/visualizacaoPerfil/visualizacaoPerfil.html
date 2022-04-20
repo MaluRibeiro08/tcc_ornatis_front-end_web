@@ -12,8 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="./scripts/script.js" type="module" defer></script>
-    
+    <script type="text/javascript" src="script.js">
+    </script>
+    <script type="text/javascript" src="visualizacaoPerfil.js"></script>
 
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
@@ -64,16 +65,16 @@
         <!-- ********************* PAGINA INICIO *************************** -->
         <div id="containerInicio">
             <section class="cabecalho">
-                <div class="fundo">
+            <div class="fundo">
 
-                </div>
+            </div>
             </section>
             <section class="conteudo">
                 <div class="titulo">
                     <img src="img/logo_salao.png" alt="" class="imgPerfil">
-                    <h1 id="lblTitulo">Beauty Hair</h1>
+                    <label id="lblTitulo">Beauty Hair</label>
                     <img src="img/imgEstrela.png" alt="" width="15px" height="20px">
-                    <p id="lblPontos">4.5</p>
+                    <label id="lblPontos">4.5</label>
                     <div class="favorito">
                         <img src="img/imgFavorito.png" alt="" width="32px" height="32px">
                     </div>
@@ -111,8 +112,11 @@
                     <div id="separaMenuConteudo" class="alinhar">
                         <div id="frase" class="alinhar">
                             <img src="img/imgAspas.png" alt="" width="50px" id="imgAspa">
-                            <p id="p_biografia">
-                            </p>
+                            <label for="" id="lblBiografia">
+                                Nos empenhamos o máximo que podemos para lhe oferecer o melhor atendimento, pois é isso que você merece!!  Fidelidade, confiança e seriedade em tudo!!
+                            </label>
+                            <img src="img/image81.png" alt="" width="2%" height="2%" id="imgEditarBiografia" href="#modal">
+                            <a class="btnEditarBiografia" role="button" href="#modal">Editar Biografia</a>
                             <img src="img/imgAspas2.png" alt="" width="50px" id="imgAspa2">
                         </div>
 
@@ -150,7 +154,7 @@
                                 referrerpolicy="no-referrer"></script>
     
                                 <!-- out script file -->
-                                <script src="./scripts/script.js" type="module"></script>
+                                <script src="./script.js"></script>
                             </div>
                         </div>
 
@@ -162,9 +166,9 @@
                             </label>
                             <br>
                             </br>
-                            <P id="p_endereco">
+                            <label for="" id="lblEndereco">
                                 Av.Pátria Amada Brasil, 1440
-                            </P>
+                            </label>
                             <div class="chatWhats">
                                 <img src="img/Rectangle 349.png" alt="" width="50px" height="50px">
                             </div>
@@ -176,18 +180,16 @@
                             </label>
                             <div class="alinharRedSociais" id="lblRedSociais">
                                 <img src="img/imgRedesSociais2.png" alt="">
-                                <p id="p_rede_insta"> @salão.BeautyHair1</p>
+                                <label for=""> @salão.BeautyHair</label>
                             </div>
                             <div class="alinharRedSociais">
                                 <img src="img/imgRedesSociais1.png" alt="">
-                                <P id="p_rede_facebook"> @salão.BeautyHair</P>
+                                <label for=""> @salão.BeautyHair</label>
                             </div>
                         </div>
 
                         <div id="separar" class="alinhar">
                             <div class="atendimento">
-
-                                <!-- criar parte do funcionamento -->
                                 <label for="" class="lblTitulo">Horário de atendimento:</label>
                                 <div class="semana">
                                     <div class="diasSemana">
