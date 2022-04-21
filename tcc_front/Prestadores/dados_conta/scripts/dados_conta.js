@@ -24,7 +24,7 @@ import { testeUpdate  } from "./update/update.js";
     const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
 
     let id_cidade = 3106200;
-    const id_empresa = 6;
+    const id_empresa = 30;
 
     testeUpdate(id_empresa, id_cidade)
 
@@ -135,9 +135,17 @@ import { testeUpdate  } from "./update/update.js";
                     contador = contador+1
                 }
             }
-            
 
-            input_observacoes_pagamento.value = informacoes.data.dados_pagamento.observacoes_pagamento
+            if(informacoes.data.dados_pagamento.observacoes_pagamento == 'undefined')
+            {
+                input_observacoes_pagamento.value = ''
+            }
+            else
+            {
+                input_observacoes_pagamento.value = informacoes.data.dados_pagamento.observacoes_pagamento
+            }
+
+            
 
         //INFORMACOES PAGAMENTO
             if(informacoes.data.taxa_cancelamento_empresa == null)
