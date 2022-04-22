@@ -327,7 +327,7 @@ import { testeUpdate  } from "./update/update.js";
                     <div class="container_tolerancia">
                         <h4 class="label_taxa">Tolerância:</h4>
                         <div class="container_input_tolerancia">
-                            <p >até <input ${disabled} type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}'>h de antecedencia</p>
+                            <p >até <input ${disabled} type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}'>h de antecedência</p>
                         </div>
                     </div>
                     <div class="container_valor_taxa">
