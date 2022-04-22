@@ -74,7 +74,7 @@ h6{
 #cor1{
     background-color: var(--verde_padrao);
     width: 100%;
-    height: 30vh;
+    height: 350px;
     position: relative;
 }
 
@@ -110,14 +110,14 @@ h6{
 
 #modal{
     background-color: rgb(255, 255, 255);
-    width: 40%;
+    width: 40vw;
     height: 80vh;
     position: relative;
     margin-top: -300px;
     margin-left: 30%;
     border-radius: 50px;
     justify-content: center;
-    padding-left: 10vw;
+    padding-left: 250px;
     display: flex;
     flex-direction: column;
 }
@@ -138,7 +138,6 @@ input[type='file']{
     flex-direction: column;
     width: 100px;
     height: 100px;
-    margin-top: 10vh;;
 }
 
 #img_photo_funcionario{
@@ -148,28 +147,13 @@ input[type='file']{
     transition: background .3s;
     width: 150px;
     height: 150px;
-    margin-left: 5vw;
-    margin-top: 5vh;
+    margin-left: 150px;
+    margin-top: 30px;
     
 }
 
 #img_photo_funcionario:hover{
     border: 5px solid var(--verde_claro);
-}
-
-button{
-    width: 30%;
-    height: 8%;
-    background-color: var(--verde_claro);
-    margin-left: 90px;
-    margin-top: 2vh;
-    cursor: pointer;
-   
-    
-}
-
-button:hover{
-    border: px solid var(--verde_claro);
 }
 
 .container_horario_funcionamento{
@@ -197,7 +181,7 @@ button:hover{
     height: 100%;
     display: flex;
     flex-direction: column;
-     margin-left: 3vw;
+    margin-left: 70px;
     gap: 10px;
     
 

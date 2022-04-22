@@ -54,11 +54,7 @@
 
 #container_funcionamento_scroll{
     overflow:auto; 
-    height: 30vh;
-    padding-left: 5v;
-    
-    
-   
+    height: 400px;
 }
 
 .container_geral_horarios_funcionamento
@@ -212,12 +208,12 @@ h6{
 #cor1{
     background-color: var(--verde_padrao);
     width: 100%;
-    height: 30vh;
+    height: 400px;
     position: relative;
 }
 
 .input_linha{
-    width: 15vw;
+    width: 500px;
     height: 60px;
     box-shadow: none;
     border: none;
@@ -229,6 +225,7 @@ h6{
 #duvidas_funcionario{
     font-size: 30px;
     color: var(--fonte);
+    cursor: pointer;
 }
 
 #campo{
@@ -254,22 +251,20 @@ h6{
 }
 
 #horario{
-    margin-top: 8vh;
-    
+    margin-top: 100px;  
 }
 
 #modal{
     background-color: rgb(255, 255, 255);
-    width: 45%;
-    height: 55vh;
+    width: 50%;
+    height: 800px;
     position: relative;
     margin-top: -100px;
     padding-top: 40px;
     margin-left: 25%;
     border-radius: 50px;
-    gap: 2vw;
-    padding-left: 5vw;
-
+    gap: 100px;
+    padding-left: 100px;
     display: flex;    
 }
 
@@ -300,7 +295,7 @@ input[type='file']{
     transition: background .3s;
     width: 150px;
     height: 150px;
-    margin-left: 5vw;
+    margin-left: 150px;
     
 }
 
@@ -314,11 +309,31 @@ button{
     border-radius: 20px;
     background-color: var(--verde_claro);
     margin-left: 90px;
-    margin-top: 5vh;
+    margin-top: 50px;
     
 }
 
 button:hover{
-    border: px solid var(--verde_claro);
+    border: 5px solid var(--verde_claro);
 }
 
+#popup{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    right: 0;
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    padding: 15px;
+    border: solid 5px var(--verde_claro);
+    border-radius: 30px;
+    background-color: white;
+    display: none;
+}
+
+#help{
+    font-size: 30px;
+    color: #494343;
+}

@@ -5,6 +5,16 @@ photo_funcionario.addEventListener('click', () => {
     file.click();
 });
 
+//modal deduvida sobre os horarios
+
+function abrir(){
+    document.getElementById('popup').style.display = "block"
+}
+
+function fechar(){
+    document.getElementById('popup').style.display = "none"
+}
+
 //fazer aparecer a imagem quando fizer upload
 
   file.addEventListener('change', (event) => {
@@ -54,10 +64,6 @@ const checkbox_horarios = () =>
         id_dia_semana = id_dia_semana+1
     }
 };
-
-const btn_salvar_funcionario = () =>{
-   salvar_funcionario()
-}
 
 const salvar_funcionario = () => {
     const conta_funcionario =
@@ -170,7 +176,6 @@ const salvar_funcionario = () => {
 
         console.log(conta_funcionario)
     cadastro_funcionario(conta_funcionario);
-    btn_salvar_funcionario.addEventListener("click", salvar_funcionario )
     
     // cadastro_funcionario(horarios);
 
