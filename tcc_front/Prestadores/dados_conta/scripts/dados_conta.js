@@ -2,7 +2,7 @@
 
 import { imagemPreview } from "../../../utils/imagem.js";
 import { testeUpdate  } from "./update/update.js";
-
+import { preencherFormularioEndereco } from "../../../utils/cep.js";
 
 //RADIOS / INPUTS / OUTROS
     const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
@@ -24,7 +24,7 @@ import { testeUpdate  } from "./update/update.js";
     const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
 
     let id_cidade = 3106200;
-    const id_empresa = 30;
+    const id_empresa = 31;
 
     testeUpdate(id_empresa, id_cidade)
 
@@ -445,7 +445,10 @@ import { testeUpdate  } from "./update/update.js";
     btn_editar.addEventListener("click", habilitarEdicao)
 
     btn_salvar.addEventListener("click", async ()  => {
-        const dados = testeUpdate(id_empresa, id_cidade)
+
+        // id_cidade = document.getElementById("id_cidade").value;
+
+        const dados = testeUpdate(id_empresa)
         console.log(dados)
         const options =
         {
@@ -463,10 +466,12 @@ import { testeUpdate  } from "./update/update.js";
 
         // document.formulario_imagem.submit();
         alert("Alterações salvar com sucesso!")
-        // location.reload();   
+        location.reload();   
     })
 
     input_imagem.addEventListener("change", (tratarUploadImagem))
 
     icone_adicao_regra.addEventListener("click", () => {criarRegraCancelamento(null, '', '')})
+
+    document.getElementById("input_cep").addEventListener("keyup", preencherFormularioEndereco);
 

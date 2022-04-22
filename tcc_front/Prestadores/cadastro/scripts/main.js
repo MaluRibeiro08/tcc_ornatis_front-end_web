@@ -2,6 +2,7 @@
 import {mudar_secoes} from "./navegacao_secoes.js"
 import { imagemPreview } from "../../../utils/imagem.js";
 import {prepararDadosParaSalvar} from "./manipulacao_dados_criacao_conta.js";
+import { preencherFormularioEndereco } from "../../../utils/cep.js";
 
 const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
 const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
@@ -14,6 +15,8 @@ const radio_taxa_variada = document.getElementById('input_radio_variada')
 
 const icone_adicao_regra = document.getElementById('icone_adicao_regra')
 let numeroDaRegra = null
+
+const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
 
 
 const tratarUploadImagem = ({target}) =>
@@ -119,20 +122,39 @@ const verificarCorrespondenciaSenha = () =>
     }
 }
 
-// PREVIEW IMAGEM
+// ------------------ PREVIEW IMAGEM
     document.getElementById("input_foto_estabelecimento").addEventListener("change", (tratarUploadImagem))
     document.getElementById("input_foto_administrador").addEventListener("change", (tratarUploadImagem))
 
 
-// NAVEGAÇÃO
+// ----------------- NAVEGAÇÃO
     document.querySelector(".container_seta_anterior").addEventListener("click", () => {mudar_secoes("voltar")})
     document.querySelector(".container_seta_proxima").addEventListener("click", () => 
         {
         
-            console.log(document.querySelector(".container_seta_proxima").classList.contains("concluir"))
+            // console.log(document.querySelector(".container_seta_proxima").classList.contains("concluir"))
             if(document.querySelector(".container_seta_proxima").classList.contains("concluir"))
             {
-                console.log(prepararDadosParaSalvar())
+
+                const dados = prepararDadosParaSalvar()
+                console.log("Dados pegos nos campos sem a preparação para envio " + dados)
+                const options =
+                {
+                    method : 'POST',
+                    body: JSON.stringify(dados), //transforma o produto que era JSON em String, serializa
+                    headers: 
+                    {
+                        'content-type' : 'application/json'
+                    }
+                }
+        
+                console.log("Os seguintes dados serão enviados para a API " + options);
+                 fetch(url, options).then(response => response.json()).then(data => {
+                    console.log(data)})
+        
+                // document.formulario_imagem.submit();
+                // alert("Alterações salvar com sucesso!")
+                // location.reload();   
             }
             else
             {
@@ -141,7 +163,7 @@ const verificarCorrespondenciaSenha = () =>
         }
     )
 
-// DECISOES - RADIOS
+// ------------------ DECISOES - RADIOS
 
     radio_sim_regra_cancelmento.addEventListener("click", ()=>
     {
@@ -166,7 +188,7 @@ const verificarCorrespondenciaSenha = () =>
         abrirContainer("container_regras_cancelamentos");
         abrirContainer("icone_adicao_regra");
 
-        console.log(document.getElementById("container_regras_cancelamentos").childElementCount)
+        // console.log(document.getElementById("container_regras_cancelamentos").childElementCount)
         if (document.getElementById("container_regras_cancelamentos").childElementCount == 0) 
         {
             criarRegraCancelamento(null, '', '')
@@ -188,7 +210,10 @@ const verificarCorrespondenciaSenha = () =>
         fecharContainer("container_valor_intervalo");
     })
 
-
+// ------------------ OUTROS
     document.getElementById("input_confirmacao_senha").addEventListener("keyup", verificarCorrespondenciaSenha)
 
     icone_adicao_regra.addEventListener("click", () => {criarRegraCancelamento(null, '', '')})
+
+    document.getElementById("input_cep").addEventListener("keyup", preencherFormularioEndereco);
+
