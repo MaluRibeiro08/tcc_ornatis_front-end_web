@@ -52,7 +52,7 @@ const input_bairro = document.getElementById("input_bairro");
 const input_rua = document.getElementById("input_rua");
 const input_numero = document.getElementById("input_numero");
 const input_complemento = document.getElementById("input_complemento");
-const input_estado = document.getElementById("input_estado");
+const input_id_cidade = document.getElementById("id_cidade");
 const input_email = document.getElementById("input_email");
 const input_senha = document.getElementById("input_senha");
 const input_imagem = document.getElementById("input_foto_estabelecimento")
@@ -70,7 +70,7 @@ const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 
 
 
-const testeUpdate = (id_empresa, id_cidade) =>
+const testeUpdate = (id_empresa) =>
 {
     const data = {};
     data['acao'] = 'updateContaAdministradora';
@@ -91,12 +91,12 @@ const testeUpdate = (id_empresa, id_cidade) =>
     data['cpf'] = input_cpf.value;
 
     //dados de localização
-    data['cep'] = input_cep.value;
+    data['cep'] = input_cep.value.replace("-", "");
     data['bairro'] = input_bairro.value;
     data['rua'] = input_rua.value;
     data['numero_rua'] = input_numero.value;
     data['complemento'] = input_complemento.value;
-    data['id_cidade'] = id_cidade;
+    data['id_cidade'] = input_id_cidade.value;
 
     //dados de recebimento
     data['dados_formas_pagamento'] = getDadosPagamento();
