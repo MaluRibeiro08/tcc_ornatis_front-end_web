@@ -73,7 +73,7 @@ const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 const prepararDadosParaSalvar = () =>
 {
     const data = {};
-    data['acao'] = 'createContaAdministradora';
+    data['acao'] = 'create';
 
     data['nome_fantasia'] = input_nome_estabelecimento.value;
     data['biografia'] = input_biografia.value;
@@ -90,7 +90,7 @@ const prepararDadosParaSalvar = () =>
     data['cpf'] = input_cpf.value;
 
     //dados de localização
-    data['cep'] = input_cep.value;
+    data['cep'] = input_cep.value.replace("-", "");
     data['bairro'] = input_bairro.value;
     data['rua'] = input_rua.value;
     data['numero_rua'] = input_numero.value;
