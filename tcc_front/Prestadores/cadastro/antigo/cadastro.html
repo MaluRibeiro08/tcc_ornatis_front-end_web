@@ -29,7 +29,7 @@
 
             <section class="sessao2" id="dados"> 
                 <!-- INICIO CONTAINER  ESTABELECIMENTO -->
-                <div id="container_estabelecimento">
+                <div class="container_lateral" id="container_estabelecimento">
                     <div id="subtitulo">
                         <h3><span id="icon_salao" class="material-icons-outlined">storefront </span>Perfil estabelecimento</h3>
                     </div>
@@ -83,7 +83,7 @@
                 <!-- FIM DO CONTAINER ESTABELECIMENTO --> 
 
                 <!-- INICIO CONTAINER PERFIL ADMINISTRADOR -->
-                <div id="container_perfil_adm" style="display: none;">
+                <div class="container_lateral" id="container_perfil_adm" style="display: none;">
                         <div id="subtitulo">
                             <h3> <span id="user1" class="material-icons-outlined">person</span> Perfil Administrador</h3>
                         </div>
@@ -133,7 +133,7 @@
                 <!-- FIM CONTAINER PERFIL ADMINISTRADOR -->
 
                 <!-- INICIO CONTAINER DADOS DE LOCALIZACAO -->
-                <div id="container_dados_localizacao" style="display: none;">
+                <div class="container_lateral" id="container_dados_localizacao" style="display: none;">
                         <div id="subtitulo">
                             <h3><span id="place" class="material-icons-outlined">room</span> Dados de localização</h3>
                         </div>
@@ -156,10 +156,16 @@
                                 <input class="input_linha" type="text" id="estado"> 
                             </div>
                             <div id="rua_numero">
-                                <label>Rua</label> 
-                                <input class="input_linha" type="text" id="input_rua">
-                                <label>Número</label>
-                                <input class="input_linha" type="text" id="input_numero">
+                                <div class="rua">
+                                    <label>Rua</label> 
+                                    <input class="input_linha" type="text" id="input_rua">
+                                </div>
+                                <div class="numero">
+                                    <label>Número</label>
+                                    <input class="input_linha" type="text" id="input_numero">
+                                </div>
+                                
+                                
                             </div>
                             <div id="campo">
                                 <label>Complemento</label>
@@ -188,7 +194,7 @@
                 <!-- FIM CONTAINER DADOS DE LOCALIZACAO -->
 
                 <!-- INICIO DO CONTAINER DADOS DE PAGAMENTO-->
-                <div id="container_dados_pagamento" style="display: none;">
+                <div class="container_lateral" id="container_dados_pagamento" style="display: none;">
                     <div id="subtitulo">
                         <h3><span id="pay" class="material-icons-outlined">currency_exchange</span> Regras de pagamento</h3>
                     </div>
@@ -242,7 +248,7 @@
                 <!-- FIM DO CONTAINER DADOS DE PAGAMENTO -->
 
                 <!-- INICIO CONTAINER REGRAS DE NEGOCIO -->
-                <div id="container_regras_negocio" style="display: none;">
+                <div class="container_lateral" id="container_regras_negocio" style="display: none;">
                     <div id="subtitulo">
                         <h3><span id="buy" class="material-icons-outlined">savings</span> Regras de negócio</h3>
                     </div>
@@ -318,9 +324,10 @@
                 <!-- FIM CONTAINER REGRAS DE NEGOCIO -->
 
                 <!-- INICIO CONTAINER REGRAS DE FUNCIONAMENTO -->
-                <div id="container_funcionamento" style="display: none;">
+                <div class="container_lateral" id="container_funcionamento" style="display: none;">
 
-                    <div class="container_secao" id="container_secao_funcionamento">
+                <div class = "container_lateral"  id="container_secao_funcionamento">
+                    <!-- class="container_secao" -->
                         <div id="subtitulo">
                                 <h3><span class="material-icons-outlined">pending_actions</span>Dados funcionamento</h3>
                             </div>
@@ -488,7 +495,7 @@
                 <!-- FIM CONTAINER FUNCIONAMENTO -->
 
                 <!-- INICIO CONTAINER LOGIN -->
-                <div id="container_login" style="display: none;">
+                <div class = "container_lateral" id="container_login" style="display: none;">
                     <div id="subtitulo">
                         <h3><span id="icon_login" class="material-icons-outlined">offline_share</span> Dados de login</h3>
                     </div>
@@ -528,7 +535,7 @@
                     </div>
         
                    
-            </div>
+                </div>
                 <!-- FIM CONTAINER LOGIN -->
             </section> 
        
@@ -543,7 +550,7 @@ const mudarSecao = () =>
     if(numeroSessao == 1)
     {
         numeroSessao = 2
-        container_estabelecimento.style.display = "inline"
+        container_estabelecimento.style.display = "flex"
         container_perfil_adm.style.display = "none"
         container_dados_localizacao.style.display = "none"
         container_dados_pagamento.style.display = "none"
@@ -557,7 +564,7 @@ const mudarSecao = () =>
     {
         numeroSessao = 3
         container_estabelecimento.style.display = "none"
-        container_perfil_adm.style.display = "inline"
+        container_perfil_adm.style.display = "flex"
         container_dados_localizacao.style.display = "none"
         container_dados_pagamento.style.display = "none"
         container_regras_negocio.style.display = "none"
@@ -570,7 +577,7 @@ const mudarSecao = () =>
         numeroSessao = 4
         container_estabelecimento.style.display =  "none"
         container_perfil_adm.style.display = "none"
-        container_dados_localizacao.style.display = "inline"
+        container_dados_localizacao.style.display = "flex"
         container_dados_pagamento.style.display = "none"
         container_regras_negocio.style.display = "none"
         container_funcionamento.style.display = "none"
@@ -583,7 +590,7 @@ const mudarSecao = () =>
         container_estabelecimento.style.display =  "none"
         container_perfil_adm.style.display = "none"
         container_dados_localizacao.style.display = "none"
-        container_dados_pagamento.style.display = "inline"
+        container_dados_pagamento.style.display = "flex"
         container_regras_negocio.style.display = "none"
         container_funcionamento.style.display = "none"
         container_login.style.display = "none"
@@ -595,7 +602,7 @@ const mudarSecao = () =>
         container_perfil_adm.style.display = "none"
         container_dados_localizacao.style.display = "none"
         container_dados_pagamento.style.display = "none"
-        container_regras_negocio.style.display = "inline"
+        container_regras_negocio.style.display = "flex"
         container_funcionamento.style.display = "none"
         container_login.style.display = "none"
     }
@@ -607,7 +614,7 @@ const mudarSecao = () =>
         container_dados_localizacao.style.display = "none"
         container_dados_pagamento.style.display = "none"
         container_regras_negocio.style.display = "none"
-        container_funcionamento.style.display = "inline"
+        container_funcionamento.style.display = "flex"
         container_login.style.display = "none"
     }
     else if (numeroSessao == 7)
@@ -619,7 +626,7 @@ const mudarSecao = () =>
         container_dados_pagamento.style.display = "none"
         container_regras_negocio.style.display = "none"
         container_funcionamento.style.display = "none"
-        container_login.style.display = "inline"
+        container_login.style.display = "flex"
     }
 };
 const deletarRegraCancelamento = (idRegraCancelamento) =>

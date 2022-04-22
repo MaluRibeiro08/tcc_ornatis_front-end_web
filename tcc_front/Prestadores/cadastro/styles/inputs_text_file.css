@@ -1,0 +1,207 @@
+.container_input, .container_input_checkbox
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    /* background-color: darkorange; */
+}
+
+.container_geral_formas_recebimento, .container_dados_login, .container_regras, .container_funcionamento
+{
+    width: 80%;
+    height: 100%;
+
+    /* background-color: #fff; */
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo_sesao_formas_recebimento
+{
+    color: var(--verde_escuro);
+    margin-bottom: 20px;
+}
+
+.container_formas_recebimento, .container_obs_pagamento
+{
+    width: 100%;
+}
+.container_input_checkbox
+{
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+label
+{
+    /* background-color: olivedrab; */
+
+    width: 100%;
+    font-weight: 800;
+    font-size: 15px;
+}   
+.container_input input
+{
+    width: 100%;
+    height: 40px;
+    
+    background-color: transparent;
+    border: solid 0.5px #7c7979;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+
+    padding-left: 2px;
+    font-size: 1.2em;
+
+    /* background-color: deeppink; */
+}
+#container_inputs_multiplos
+{
+    width: 80%;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.parte1, .parte2
+{
+    display: flex;
+    flex-direction: column;
+    /* gap: 15px; */
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.parte1
+{
+    flex-grow: 2;
+}
+
+.parte2
+{
+    width: 15%;
+}
+
+
+#input_rua, #input_cidade
+{
+    width: 100%;
+}
+
+
+/* ---------------------- INPUT DA IMAGEM ---------------------------- */
+.container_geral_imagem
+{
+    /* background-color: aqua; */
+    width: 160px;
+    height: 160px;
+
+    position: relative;
+    border: solid 1px var(--verde_escuro);
+    border-radius: 80px;
+    clip: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.container_imagem
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 80px;
+    overflow: hidden;
+    border: none;
+
+    /* background-color: darkgreen; */
+}
+
+#img_estabelecimento, #img_administrador
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+}
+
+#labelInputFile
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#labelInputFile:hover
+{
+    cursor: pointer;
+}
+
+#input_foto_estabelecimento, #input_foto_administrador
+{
+    width: 100%;
+    height: 100%;
+
+    /* background-color: darkgoldenrod; */
+    opacity: 0;
+    display: none;
+}
+.container_icone_foto_perfil
+{
+    width: 35px;
+    height: 35px;
+
+    border-radius: 17px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde_padrao);
+}
+.container_dados_foto_perfil
+{
+    width: 80%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* background-color: brown; */
+}
+
+#icone_input_imagem
+{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48;
+    color: var(--fonte);
+}
