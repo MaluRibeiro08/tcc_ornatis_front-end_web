@@ -40,7 +40,7 @@ const mudar_setas = (secao_atual) =>
 
 const mudar_secoes = (tipo_mudanca) =>
 {
-    console.log("você está na secao" + secao_atual)
+    // console.log("você está na secao" + secao_atual)
     if(tipo_mudanca == "avancar")
     {
         document.querySelector(`.secao${secao_atual}`).style.display = 'none';
@@ -69,7 +69,7 @@ const mudar_secoes = (tipo_mudanca) =>
     {
         console.log("Erro ao executar comando de navegação entre secoes de cadastro")
     }
-    console.log("você foi pra secao" + secao_atual)
+    // console.log("você foi pra secao" + secao_atual)
 }
 
 export {mudar_secoes}

@@ -35,21 +35,28 @@ const getDadosRegrasNegocio = () =>
     let arr_taxas_cancelamento = [];
     const quantidade_regras = document.getElementById("container_regras_cancelamentos").childElementCount
     let contador = 1;
+    let numero_regra = 1;
+
     while (contador <= quantidade_regras) 
     {
-        const acima_cem = verificarCheck(`input_radio_acima_cem_regra${contador}`) ? 1 : 0
-        const tempo_tolerancia = document.getElementById(`input_tempo_tolerancia_regra${contador}`).value
-        const porcentagem_cobrada  = document.getElementById(`input_valor_taxa_variada_regra${contador}`).value
-
-        const regra_negocio = 
+        if (document.getElementById(`input_tempo_tolerancia_regra${numero_regra}`) != null) 
         {
-            "valor_acima_de_100" : acima_cem,
-            "porcentagem_sobre_valor_servico" : porcentagem_cobrada,
-            "horas_tolerancia" : tempo_tolerancia
-        }
-        arr_taxas_cancelamento.push(regra_negocio)
+            const acima_cem = verificarCheck(`input_radio_acima_cem_regra${numero_regra}`) ? 1 : 0
+            const tempo_tolerancia = document.getElementById(`input_tempo_tolerancia_regra${numero_regra}`).value
+            const porcentagem_cobrada  = document.getElementById(`input_valor_taxa_variada_regra${numero_regra}`).value
 
-        contador = contador+1
+            const regra_negocio = 
+            {
+                "valor_acima_de_100" : acima_cem,
+                "porcentagem_sobre_valor_servico" : porcentagem_cobrada,
+                "horas_tolerancia" : tempo_tolerancia
+            }
+            arr_taxas_cancelamento.push(regra_negocio)
+
+            contador = contador+1
+        }
+        
+        numero_regra = numero_regra+1;
     }
     return arr_taxas_cancelamento
 }
@@ -74,7 +81,7 @@ const getFuncionamento = (id_empresa) =>
 
                 const hora_inicio = document.getElementById(`1input_hora_inicio${dia_semana_contador}`).value;
                 const hora_termino = document.getElementById(`1input_hora_termino${dia_semana_contador}`).value;
-                console.log( hora_inicio + '   |   ' + hora_termino)
+                // console.log( hora_inicio + '   |   ' + hora_termino)
                 arr_dados_funcionamento.push(
                     {
                         "id_dia_semana" : dia_semana_contador,
