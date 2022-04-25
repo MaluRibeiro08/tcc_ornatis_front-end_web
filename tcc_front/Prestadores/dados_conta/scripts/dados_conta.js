@@ -21,10 +21,10 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
     const btn_salvar = document.getElementById('btn_salvar');
 
     //variavel que guardará o código da cidade
-    const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
+    const url = 'http://localhost/ornatis/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
 
-    let id_cidade = 3106200;
-    const id_empresa = 31;
+    let id_cidade = 3534401;
+    const id_empresa = 3;
 
     testeUpdate(id_empresa, id_cidade)
 
@@ -83,7 +83,7 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
     const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 
     // const carregarDadosConta =   (id_empresa) => fetch(`http://10.107.144.20/ornatis/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
-    const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/ornatis/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
     const preencherFormasPagamento = () =>
     {
         // console.log("teste")
@@ -468,7 +468,7 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
 
         // document.formulario_imagem.submit();
         alert("Alterações salvar com sucesso!")
-        location.reload();   
+        // location.reload();   
     })
 
     input_imagem.addEventListener("change", (tratarUploadImagem))
