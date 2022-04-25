@@ -276,17 +276,13 @@ nav a:hover{
     left: 0%;
     right: 0;
     margin: auto;
-    width: 25vw;
-    height: 20vh;
+    width: 28vw;
+    height: 24vh;
     padding: 30px;
     border: solid 5px var(--fonte);
     border-radius: 30px;
     background-color: var(--cinza_super_claro);
     display: none;
-}
-
-#butons_excluir{
-   
 }
 
 /**EDIÇÕES DO POPUP**/
@@ -369,4 +365,6 @@ button:hover{
     background-color: var(--verde_escuro);
 
 }
+
+/****/
 
