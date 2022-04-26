@@ -16,7 +16,7 @@ const radio_taxa_variada = document.getElementById('input_radio_variada')
 const icone_adicao_regra = document.getElementById('icone_adicao_regra')
 let numeroDaRegra = null
 
-const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/contaAdministradora/'
+const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/'
 
 
 const tratarUploadImagem = ({target}) =>
