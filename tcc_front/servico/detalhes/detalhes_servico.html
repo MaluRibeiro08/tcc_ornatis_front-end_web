@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detalhes_servico.css">
+    <link rel="stylesheet" href="detalhes_funcionario.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
+    <title>Detalhes do serviço</title>
+</head>
+<body>
+    <main>
+        <section id="fundo">
+            <div id="cor1">
+            </div>
+             <div id="modal">
+                  <div id="titulo">
+                       <h1> <span id="add_funcionario" class="material-icons-outlined"><span class="material-symbols-outlined">settings_suggest</span></span>Detalhes do serviço</h1>    
+                  </div>
+                  <section id="dados_servico">
+                    <div id="dados_parte1">
+                    <div id="campo">
+                        <label>Título</label>
+                        <input disabled id="" class="input_linha" type="text">
+                    </div>
+                    <div id="campo">
+                        <label>Preço</label>
+                        <input disabled id="" class="input_linha"  type="text">
+                    </div>
+                    <div id="campo">
+                        <label>Promoção</label>
+                        <input disabled id="" class="input_linha" type="text">
+                    </div>
+                    <div id="campo">
+                        <label>Variações de preço</label>
+                        <input disabled id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                    </div>
+                    <div id="tempo_duração">
+                        <label for="">Tempo de produção</label>
+                        <div id="borda">
+                            <input disabled type="text" class="input_linha_borda" placeholder="    (ex:1h)">
+                        </div>
+                    </div>
+                    <div id="local_atendimento">
+                        <label for="">Local de atendimento</label>
+                        <div id="options_atendimento">
+                            <div>
+                                <input disabled type="radio">
+                                <label for="">Estabelecimento</label>
+                            </div>
+                            <div>
+                                <input disabled type="radio">
+                                <label for="">Domicílio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max_width_servico">
+                        <div class="image_container">
+                            <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                        </div>
+                         <input disabled type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                    </div>
+               </div>
+               <div id="dados_parte2">
+                   <div id="div_dados">
+                       <label for="">Público alvo</label>
+                       <form  action="">
+                        <select disabled class="form_input" name="cars" id="cars">
+                          <optgroup label="Selecione">
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                          </optgroup>
+                        </select>
+                      </form>
+                   </div>
+                   <div id="div_dados">
+                        <label for="">Categoria</label>
+                        <form  action="">
+                            <select disabled class="form_input" name="cars" id="cars">
+                              <optgroup label="Selecione">
+                                <option value="cabelo">Cabelo</option>
+                                <option value="manicure">Manicure</option>
+                                <option value="pedicure">Pedicure</option>
+                                <option value="depilacao">Depilação</option>
+    
+                              </optgroup>
+                            </select>
+                          </form>
+                   </div>
+                    <div id="div_dados">
+                        <label for="">Parte do corpo</label>
+                        <form  action="">
+                            <select disabled class="form_input" name="cars" id="cars">
+                              <optgroup label="Selecione">
+                                <option value="rosto">Rosto</option>
+                                <option value="perna">Perna</option>
+                                <option value="barba">Barba</option>
+                              </optgroup>
+                            </select>
+                          </form>
+                    </div>
+                    <div id="div_dados">
+                        <label for="">Funcionario realizador</label>
+                        <form  action="">
+                            <select disabled class="form_input" name="cars" id="cars">
+                              <optgroup label="Selecione">
+                                <option value="arielly">Arielly</option>
+                                <option value="sara">Sara</option>
+                                <option value="maria">Maria</option>
+                              </optgroup>
+                            </select>
+                          </form>
+                    </div>
+                    <div id="serviço_ativo">
+                        <label for="">Este serviço está ativo para uso?</label>
+                        <div id="options_servico">
+                            <div>
+                                <input disabled type="radio">
+                                <label for="">Sim</label>
+                            </div>
+                            <div>
+                                <input disabled type="radio">
+                                <label for="">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="intervalo">
+                        <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                        <div id="borda">
+                            <input disabled type="text" class="input_linha_borda" placeholder="    (ex:1h)">
+                        </div>
+                    </div>
+                    <button>
+                        <h4>Salvar</h4>
+                    </button>
+               </div>
+           </section>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

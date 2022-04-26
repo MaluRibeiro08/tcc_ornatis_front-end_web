@@ -181,7 +181,15 @@ nav a:hover{
     justify-content: center;
     display: flex;
     border-radius: 0px 0px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
+}
+
+#sub_titulo{
+    font-size: 20px;
+    color: var(--fonte);
 }
 
 #borda{
@@ -259,7 +267,7 @@ nav a:hover{
 /**POPUP**/
 
 #popup_editar{
-    position: fixed;
+    position: fixed; 
     top: 0;
     bottom: 0;
     left: 0%;

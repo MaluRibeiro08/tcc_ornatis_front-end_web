@@ -176,7 +176,15 @@ nav a:hover{
     justify-content: center;
     display: flex;
     border-radius: 0px 0px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
+}
+
+#sub_titulo{
+    font-size: 20px;
+    color: var(--fonte);
 }
 
 #borda{
@@ -206,7 +214,7 @@ nav a:hover{
 #lista_dados_servico{
     display: flex;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 50px;
     gap: 10vw;
 }
 
@@ -242,7 +250,7 @@ nav a:hover{
 #close{
     font-size: 50px;
     color: var(--fonte);
-    padding-left: 250px;
+    padding-left: 800px;
 }
 
 #closeExcluir{
@@ -257,12 +265,12 @@ nav a:hover{
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0%;
+    left: 0;
     right: 0;
     margin: auto;
-    width: 30vw;
+    width: 50vw;
     height: 90vh;
-    padding: 50px;
+    padding: 15px;
     border: solid 5px var(--fonte);
     border-radius: 30px;
     background-color: white;
@@ -276,12 +284,12 @@ nav a:hover{
     left: 0%;
     right: 0;
     margin: auto;
-    width: 28vw;
+    width: 23vw;
     height: 24vh;
     padding: 30px;
     border: solid 5px var(--fonte);
     border-radius: 30px;
-    background-color: var(--cinza_super_claro);
+    background-color:white;
     display: none;
 }
 
@@ -315,6 +323,13 @@ label{
 
 input[type='file']{
     display: none;
+}
+
+.input_linha_borda{
+    background-color: var(--verde_claro);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
 }
 
 .max-width_funcionario{
@@ -356,6 +371,10 @@ button:hover{
     border: 5px solid var(--verde_claro);
 }
 
+#button_editar_servico{
+   margin: 100px;
+}
+
 #btn_salvar_funcionario{
     margin-left: 300px;
 }
@@ -366,5 +385,97 @@ button:hover{
 
 }
 
-/****/
+/**POPUP EDITAR SERVIÇO**/
+
+#dados_parte1{
+    margin-top: 30px;
+}
+#dados_parte2{
+    margin-top: 20px;
+}
+
+#tempo_duração{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#intervalo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#serviço_ativo{
+    margin-top: 50px;
+}
+
+#options_atendimento{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#local_atendimento{
+  margin-top: 50px;
+}
+
+#div_dados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+input[type='file']{
+    display: none;
+}
+
+.max-width_servico{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding-left: 50px;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+#img_photo_servico{
+    background-color:rgb(202, 202, 202);
+    border: 5px solid rgb(202, 202, 202);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s;
+    margin-left: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+#img_photo_servico:hover{
+    border: 5px solid var(--verde_claro);
+    transition: background .3s;
+}
+
+#dados_servico_popup{
+    display: flex;
+    justify-content: space-around;
+}
+/***SELECT FORM**/
+
+
+.form_input{
+   width: 500px;
+   height: 40px;
+   background-color: var(--verde_claro);
+   border-radius: 10px;
+   border: var(--verde_claro);
+}
+
+
+
 

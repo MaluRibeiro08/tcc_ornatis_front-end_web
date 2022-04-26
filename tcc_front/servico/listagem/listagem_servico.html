@@ -43,24 +43,139 @@
      </nav>
      <main>
          <section id="titulo">
-            <div><h1><span id="icon_funcionario" class="material-icons-outlined">contacts</span>Lista de serviços</h1></div>
+            <div><h1><span id="icon_funcionario" class="material-icons-outlined">settings_suggest</span>Lista de serviços</h1></div>
+            <div ><h2 id="sub_titulo">Para mais detalhes clique no nome do serviço</h2></div>
          </section>
          <section id="lista_dados_servico">
              <div id="fun1">
                     <div id="borda">
                         <div class="foto"></div>
                         <div id="dados_servico">
-                            <div id="nome"><h4>Unha</h4></div>
+                            <div id="nome"><a href="../detalhes/detalhes_servico.html"><h4>Unha</h4></a></div> 
                             <div id="horario"><h3>R$ 90,00</h3></div>
                             <div id="editar_excluir">
                                 <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                                 <div id="popup_editar">
                                     <a href="javascript: fecharEditar();" class="aaa"> Editar serviço<span id="close" class="material-icons-outlined">close </span></a>
+                                    <section id="dados_servico_popup">
+                                        <div id="dados_parte1">
+                                        <div id="campo">
+                                            <label>Título</label>
+                                            <input id="" class="input_linha" type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Preço</label>
+                                            <input id="" class="input_linha"  type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Promoção</label>
+                                            <input id="" class="input_linha" type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Variações de preço</label>
+                                            <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                                        </div>
+                                        <div id="tempo_duração">
+                                            <label for="">Tempo de produção</label>
+                                                <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                        </div>
+                                        <div id="local_atendimento">
+                                            <label for="">Local de atendimento</label>
+                                            <div id="options_atendimento">
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Estabelecimento</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Domicílio</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="max_width_servico">
+                                            <div class="image_container">
+                                                <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                                            </div>
+                                             <input type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                                        </div>
+                                   </div>
+                                   <div id="dados_parte2">
+                                       <div id="div_dados">
+                                           <label for="">Público alvo</label>
+                                           <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="feminino">Feminino</option>
+                                                <option value="masculino">Masculino</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                       </div>
+                                       <div id="div_dados">
+                                            <label for="">Categoria</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="cabelo">Cabelo</option>
+                                                    <option value="manicure">Manicure</option>
+                                                    <option value="pedicure">Pedicure</option>
+                                                    <option value="depilacao">Depilação</option>
+                        
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                       </div>
+                                        <div id="div_dados">
+                                            <label for="">Parte do corpo</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="rosto">Rosto</option>
+                                                    <option value="perna">Perna</option>
+                                                    <option value="barba">Barba</option>
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                        </div>
+                                        <div id="div_dados">
+                                            <label for="">Funcionario realizador</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="arielly">Arielly</option>
+                                                    <option value="sara">Sara</option>
+                                                    <option value="maria">Maria</option>
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                        </div>
+                                        <div id="serviço_ativo">
+                                            <label for="">Este serviço está ativo para uso?</label>
+                                            <div id="options_servico">
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Sim</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Não</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="intervalo">
+                                            <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                                                <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                        </div>
+                                        <button id="button_editar_servico">
+                                            <h4>Salvar</h4>
+                                        </button>
+                                   </div>
+                               </section>
                                     
                                 </div>
                                 <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
                                 <div id="popup_excluir">
-                                    <a href="javascript: fecharExcluir();" class="aaa">Excluir funcionário<span id="closeExcluir" class="material-icons-outlined">close </span></a>
+                                    <a href="javascript: fecharExcluir();" class="aaa">Excluir serviço<span id="closeExcluir" class="material-icons-outlined">close </span></a>
                                     <h2>Deseja excluir esse serviço?</h2>
                                     <div id="butons_excluir">
                                         <button id="buttonExcluir">Sim</button>
@@ -73,62 +188,965 @@
                     <div id="borda">
                         <div class="foto"></div>
                         <div id="dados_servico">
-                            <div id="nome"><h4>Progressiva</h4></div>
+                            <div id="nome"><a href="../detalhes/detalhes_servico.html"><h4>Unha</h4></a></div> 
                             <div id="horario"><h3>R$ 90,00</h3></div>
-                            <div id="editar_excluir"><span id="edit" class="material-icons-outlined"> edit </span><span id="delete" class="material-icons-outlined">delete </span></div>
+                            <div id="editar_excluir">
+                                <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
+                                <div id="popup_editar">
+                                    <a href="javascript: fecharEditar();" class="aaa"> Editar serviço<span id="close" class="material-icons-outlined">close </span></a>
+                                    <section id="dados_servico_popup">
+                                        <div id="dados_parte1">
+                                        <div id="campo">
+                                            <label>Título</label>
+                                            <input id="" class="input_linha" type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Preço</label>
+                                            <input id="" class="input_linha"  type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Promoção</label>
+                                            <input id="" class="input_linha" type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Variações de preço</label>
+                                            <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                                        </div>
+                                        <div id="tempo_duração">
+                                            <label for="">Tempo de produção</label>
+                                                <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                        </div>
+                                        <div id="local_atendimento">
+                                            <label for="">Local de atendimento</label>
+                                            <div id="options_atendimento">
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Estabelecimento</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Domicílio</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="max_width_servico">
+                                            <div class="image_container">
+                                                <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                                            </div>
+                                             <input type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                                        </div>
+                                   </div>
+                                   <div id="dados_parte2">
+                                       <div id="div_dados">
+                                           <label for="">Público alvo</label>
+                                           <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="feminino">Feminino</option>
+                                                <option value="masculino">Masculino</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                       </div>
+                                       <div id="div_dados">
+                                            <label for="">Categoria</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="cabelo">Cabelo</option>
+                                                    <option value="manicure">Manicure</option>
+                                                    <option value="pedicure">Pedicure</option>
+                                                    <option value="depilacao">Depilação</option>
+                        
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                       </div>
+                                        <div id="div_dados">
+                                            <label for="">Parte do corpo</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="rosto">Rosto</option>
+                                                    <option value="perna">Perna</option>
+                                                    <option value="barba">Barba</option>
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                        </div>
+                                        <div id="div_dados">
+                                            <label for="">Funcionario realizador</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="arielly">Arielly</option>
+                                                    <option value="sara">Sara</option>
+                                                    <option value="maria">Maria</option>
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                        </div>
+                                        <div id="serviço_ativo">
+                                            <label for="">Este serviço está ativo para uso?</label>
+                                            <div id="options_servico">
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Sim</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Não</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="intervalo">
+                                            <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                                                <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                        </div>
+                                        <button id="button_editar_servico">
+                                            <h4>Salvar</h4>
+                                        </button>
+                                   </div>
+                               </section>
+                                    
+                                </div>
+                                <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
+                                <div id="popup_excluir">
+                                    <a href="javascript: fecharExcluir();" class="aaa">Excluir serviço<span id="closeExcluir" class="material-icons-outlined">close </span></a>
+                                    <h2>Deseja excluir esse serviço?</h2>
+                                    <div id="butons_excluir">
+                                        <button id="buttonExcluir">Sim</button>
+                                        <button id="buttonExcluir">Não</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="borda">
                         <div class="foto"></div>
-                        <div id="dados_servico" >
-                            <div id="nome"><h4>Luzes</h4></div>
+                        <div id="dados_servico">
+                            <div id="nome"><a href="../detalhes/detalhes_servico.html"><h4>Unha</h4></a></div> 
                             <div id="horario"><h3>R$ 90,00</h3></div>
-                            <div id="editar_excluir"><span id="edit" class="material-icons-outlined"> edit </span><span id="delete" class="material-icons-outlined">delete </span></div>
+                            <div id="editar_excluir">
+                                <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
+                                <div id="popup_editar">
+                                    <a href="javascript: fecharEditar();" class="aaa"> Editar serviço<span id="close" class="material-icons-outlined">close </span></a>
+                                    <section id="dados_servico_popup">
+                                        <div id="dados_parte1">
+                                        <div id="campo">
+                                            <label>Título</label>
+                                            <input id="" class="input_linha" type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Preço</label>
+                                            <input id="" class="input_linha"  type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Promoção</label>
+                                            <input id="" class="input_linha" type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Variações de preço</label>
+                                            <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                                        </div>
+                                        <div id="tempo_duração">
+                                            <label for="">Tempo de produção</label>
+                                                <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                        </div>
+                                        <div id="local_atendimento">
+                                            <label for="">Local de atendimento</label>
+                                            <div id="options_atendimento">
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Estabelecimento</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Domicílio</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="max_width_servico">
+                                            <div class="image_container">
+                                                <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                                            </div>
+                                             <input type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                                        </div>
+                                   </div>
+                                   <div id="dados_parte2">
+                                       <div id="div_dados">
+                                           <label for="">Público alvo</label>
+                                           <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="feminino">Feminino</option>
+                                                <option value="masculino">Masculino</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                       </div>
+                                       <div id="div_dados">
+                                            <label for="">Categoria</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="cabelo">Cabelo</option>
+                                                    <option value="manicure">Manicure</option>
+                                                    <option value="pedicure">Pedicure</option>
+                                                    <option value="depilacao">Depilação</option>
+                        
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                       </div>
+                                        <div id="div_dados">
+                                            <label for="">Parte do corpo</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="rosto">Rosto</option>
+                                                    <option value="perna">Perna</option>
+                                                    <option value="barba">Barba</option>
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                        </div>
+                                        <div id="div_dados">
+                                            <label for="">Funcionario realizador</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="arielly">Arielly</option>
+                                                    <option value="sara">Sara</option>
+                                                    <option value="maria">Maria</option>
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                        </div>
+                                        <div id="serviço_ativo">
+                                            <label for="">Este serviço está ativo para uso?</label>
+                                            <div id="options_servico">
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Sim</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Não</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="intervalo">
+                                            <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                                                <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                        </div>
+                                        <button id="button_editar_servico">
+                                            <h4>Salvar</h4>
+                                        </button>
+                                   </div>
+                               </section>
+                                    
+                                </div>
+                                <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
+                                <div id="popup_excluir">
+                                    <a href="javascript: fecharExcluir();" class="aaa">Excluir serviço<span id="closeExcluir" class="material-icons-outlined">close </span></a>
+                                    <h2>Deseja excluir esse serviço?</h2>
+                                    <div id="butons_excluir">
+                                        <button id="buttonExcluir">Sim</button>
+                                        <button id="buttonExcluir">Não</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="borda">
                         <div class="foto"></div>
-                        <div id="dados_servico" >
-                            <div id="nome"><h4>Esmaltação</h4></div>
+                        <div id="dados_servico">
+                            <div id="nome"><a href="../detalhes/detalhes_servico.html"><h4>Unha</h4></a></div> 
                             <div id="horario"><h3>R$ 90,00</h3></div>
-                            <div id="editar_excluir"><span id="edit" class="material-icons-outlined"> edit </span><span id="delete" class="material-icons-outlined">delete </span></div>
+                            <div id="editar_excluir">
+                                <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
+                                <div id="popup_editar">
+                                    <a href="javascript: fecharEditar();" class="aaa"> Editar serviço<span id="close" class="material-icons-outlined">close </span></a>
+                                    <section id="dados_servico_popup">
+                                        <div id="dados_parte1">
+                                        <div id="campo">
+                                            <label>Título</label>
+                                            <input id="" class="input_linha" type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Preço</label>
+                                            <input id="" class="input_linha"  type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Promoção</label>
+                                            <input id="" class="input_linha" type="text">
+                                        </div>
+                                        <div id="campo">
+                                            <label>Variações de preço</label>
+                                            <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                                        </div>
+                                        <div id="tempo_duração">
+                                            <label for="">Tempo de produção</label>
+                                                <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                        </div>
+                                        <div id="local_atendimento">
+                                            <label for="">Local de atendimento</label>
+                                            <div id="options_atendimento">
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Estabelecimento</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Domicílio</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="max_width_servico">
+                                            <div class="image_container">
+                                                <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                                            </div>
+                                             <input type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                                        </div>
+                                   </div>
+                                   <div id="dados_parte2">
+                                       <div id="div_dados">
+                                           <label for="">Público alvo</label>
+                                           <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="feminino">Feminino</option>
+                                                <option value="masculino">Masculino</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                       </div>
+                                       <div id="div_dados">
+                                            <label for="">Categoria</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="cabelo">Cabelo</option>
+                                                    <option value="manicure">Manicure</option>
+                                                    <option value="pedicure">Pedicure</option>
+                                                    <option value="depilacao">Depilação</option>
+                        
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                       </div>
+                                        <div id="div_dados">
+                                            <label for="">Parte do corpo</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="rosto">Rosto</option>
+                                                    <option value="perna">Perna</option>
+                                                    <option value="barba">Barba</option>
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                        </div>
+                                        <div id="div_dados">
+                                            <label for="">Funcionario realizador</label>
+                                            <form  action="">
+                                                <select class="form_input" name="cars" id="cars">
+                                                  <optgroup label="Selecione">
+                                                    <option value="arielly">Arielly</option>
+                                                    <option value="sara">Sara</option>
+                                                    <option value="maria">Maria</option>
+                                                  </optgroup>
+                                                </select>
+                                              </form>
+                                        </div>
+                                        <div id="serviço_ativo">
+                                            <label for="">Este serviço está ativo para uso?</label>
+                                            <div id="options_servico">
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Sim</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio">
+                                                    <label for="">Não</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="intervalo">
+                                            <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                                                <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                        </div>
+                                        <button id="button_editar_servico">
+                                            <h4>Salvar</h4>
+                                        </button>
+                                   </div>
+                               </section>
+                                    
+                                </div>
+                                <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
+                                <div id="popup_excluir">
+                                    <a href="javascript: fecharExcluir();" class="aaa">Excluir serviço<span id="closeExcluir" class="material-icons-outlined">close </span></a>
+                                    <h2>Deseja excluir esse serviço?</h2>
+                                    <div id="butons_excluir">
+                                        <button id="buttonExcluir">Sim</button>
+                                        <button id="buttonExcluir">Não</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
              </div>
 
              <div id="fun2">
-                    <div id="borda">
-                        <div class="foto"><img src="" alt=""></div>
-                        <div id="dados_servico" >
-                            <div id="nome"><h4>Escova</h4></div>
-                            <div id="horario"><h3>R$ 90,00</h3></div>
-                            <div id="editar_excluir"><span id="edit" class="material-icons-outlined"> edit </span><span id="delete" class="material-icons-outlined">delete </span></div>
+                <div id="borda">
+                    <div class="foto"></div>
+                    <div id="dados_servico">
+                        <div id="nome"><a href="../detalhes/detalhes_servico.html"><h4>Unha</h4></a></div> 
+                        <div id="horario"><h3>R$ 90,00</h3></div>
+                        <div id="editar_excluir">
+                            <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
+                            <div id="popup_editar">
+                                <a href="javascript: fecharEditar();" class="aaa"> Editar serviço<span id="close" class="material-icons-outlined">close </span></a>
+                                <section id="dados_servico_popup">
+                                    <div id="dados_parte1">
+                                    <div id="campo">
+                                        <label>Título</label>
+                                        <input id="" class="input_linha" type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Preço</label>
+                                        <input id="" class="input_linha"  type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Promoção</label>
+                                        <input id="" class="input_linha" type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Variações de preço</label>
+                                        <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                                    </div>
+                                    <div id="tempo_duração">
+                                        <label for="">Tempo de produção</label>
+                                            <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                    </div>
+                                    <div id="local_atendimento">
+                                        <label for="">Local de atendimento</label>
+                                        <div id="options_atendimento">
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Estabelecimento</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Domicílio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="max_width_servico">
+                                        <div class="image_container">
+                                            <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                                        </div>
+                                         <input type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                                    </div>
+                               </div>
+                               <div id="dados_parte2">
+                                   <div id="div_dados">
+                                       <label for="">Público alvo</label>
+                                       <form  action="">
+                                        <select class="form_input" name="cars" id="cars">
+                                          <optgroup label="Selecione">
+                                            <option value="feminino">Feminino</option>
+                                            <option value="masculino">Masculino</option>
+                                          </optgroup>
+                                        </select>
+                                      </form>
+                                   </div>
+                                   <div id="div_dados">
+                                        <label for="">Categoria</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="cabelo">Cabelo</option>
+                                                <option value="manicure">Manicure</option>
+                                                <option value="pedicure">Pedicure</option>
+                                                <option value="depilacao">Depilação</option>
+                    
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                   </div>
+                                    <div id="div_dados">
+                                        <label for="">Parte do corpo</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="rosto">Rosto</option>
+                                                <option value="perna">Perna</option>
+                                                <option value="barba">Barba</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                    </div>
+                                    <div id="div_dados">
+                                        <label for="">Funcionario realizador</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="arielly">Arielly</option>
+                                                <option value="sara">Sara</option>
+                                                <option value="maria">Maria</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                    </div>
+                                    <div id="serviço_ativo">
+                                        <label for="">Este serviço está ativo para uso?</label>
+                                        <div id="options_servico">
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Sim</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Não</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="intervalo">
+                                        <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                                            <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                    </div>
+                                    <button id="button_editar_servico">
+                                        <h4>Salvar</h4>
+                                    </button>
+                               </div>
+                           </section>
+                                
+                            </div>
+                            <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
+                            <div id="popup_excluir">
+                                <a href="javascript: fecharExcluir();" class="aaa">Excluir serviço<span id="closeExcluir" class="material-icons-outlined">close </span></a>
+                                <h2>Deseja excluir esse serviço?</h2>
+                                <div id="butons_excluir">
+                                    <button id="buttonExcluir">Sim</button>
+                                    <button id="buttonExcluir">Não</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="borda">
-                        <div class="foto"></div>
-                        <div id="dados_servico" >
-                            <div id="nome"><h4>Selagem</h4></div>
-                            <div id="horario"><h3>R$ 90,00</h3></div>
-                            <div id="editar_excluir"><span id="edit" class="material-icons-outlined"> edit </span><span id="delete" class="material-icons-outlined">delete </span></div>
+                </div>
+                <div id="borda">
+                    <div class="foto"></div>
+                    <div id="dados_servico">
+                        <div id="nome"><a href="../detalhes/detalhes_servico.html"><h4>Unha</h4></a></div> 
+                        <div id="horario"><h3>R$ 90,00</h3></div>
+                        <div id="editar_excluir">
+                            <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
+                            <div id="popup_editar">
+                                <a href="javascript: fecharEditar();" class="aaa"> Editar serviço<span id="close" class="material-icons-outlined">close </span></a>
+                                <section id="dados_servico_popup">
+                                    <div id="dados_parte1">
+                                    <div id="campo">
+                                        <label>Título</label>
+                                        <input id="" class="input_linha" type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Preço</label>
+                                        <input id="" class="input_linha"  type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Promoção</label>
+                                        <input id="" class="input_linha" type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Variações de preço</label>
+                                        <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                                    </div>
+                                    <div id="tempo_duração">
+                                        <label for="">Tempo de produção</label>
+                                            <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                    </div>
+                                    <div id="local_atendimento">
+                                        <label for="">Local de atendimento</label>
+                                        <div id="options_atendimento">
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Estabelecimento</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Domicílio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="max_width_servico">
+                                        <div class="image_container">
+                                            <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                                        </div>
+                                         <input type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                                    </div>
+                               </div>
+                               <div id="dados_parte2">
+                                   <div id="div_dados">
+                                       <label for="">Público alvo</label>
+                                       <form  action="">
+                                        <select class="form_input" name="cars" id="cars">
+                                          <optgroup label="Selecione">
+                                            <option value="feminino">Feminino</option>
+                                            <option value="masculino">Masculino</option>
+                                          </optgroup>
+                                        </select>
+                                      </form>
+                                   </div>
+                                   <div id="div_dados">
+                                        <label for="">Categoria</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="cabelo">Cabelo</option>
+                                                <option value="manicure">Manicure</option>
+                                                <option value="pedicure">Pedicure</option>
+                                                <option value="depilacao">Depilação</option>
+                    
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                   </div>
+                                    <div id="div_dados">
+                                        <label for="">Parte do corpo</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="rosto">Rosto</option>
+                                                <option value="perna">Perna</option>
+                                                <option value="barba">Barba</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                    </div>
+                                    <div id="div_dados">
+                                        <label for="">Funcionario realizador</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="arielly">Arielly</option>
+                                                <option value="sara">Sara</option>
+                                                <option value="maria">Maria</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                    </div>
+                                    <div id="serviço_ativo">
+                                        <label for="">Este serviço está ativo para uso?</label>
+                                        <div id="options_servico">
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Sim</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Não</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="intervalo">
+                                        <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                                            <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                    </div>
+                                    <button id="button_editar_servico">
+                                        <h4>Salvar</h4>
+                                    </button>
+                               </div>
+                           </section>
+                                
+                            </div>
+                            <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
+                            <div id="popup_excluir">
+                                <a href="javascript: fecharExcluir();" class="aaa">Excluir serviço<span id="closeExcluir" class="material-icons-outlined">close </span></a>
+                                <h2>Deseja excluir esse serviço?</h2>
+                                <div id="butons_excluir">
+                                    <button id="buttonExcluir">Sim</button>
+                                    <button id="buttonExcluir">Não</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="borda">
-                        <div class="foto"></div>
-                        <div id="dados_servico" >
-                            <div id="nome"><h4>Hidratação</h4></div>
-                            <div id="horario"><h3>R$ 90,00</h3></div>
-                            <div id="editar_excluir"><span id="edit" class="material-icons-outlined"> edit </span><span id="delete" class="material-icons-outlined">delete </span></div>
+                </div>
+                <div id="borda">
+                    <div class="foto"></div>
+                    <div id="dados_servico">
+                        <div id="nome"><a href="../detalhes/detalhes_servico.html"><h4>Unha</h4></a></div> 
+                        <div id="horario"><h3>R$ 90,00</h3></div>
+                        <div id="editar_excluir">
+                            <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
+                            <div id="popup_editar">
+                                <a href="javascript: fecharEditar();" class="aaa"> Editar serviço<span id="close" class="material-icons-outlined">close </span></a>
+                                <section id="dados_servico_popup">
+                                    <div id="dados_parte1">
+                                    <div id="campo">
+                                        <label>Título</label>
+                                        <input id="" class="input_linha" type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Preço</label>
+                                        <input id="" class="input_linha"  type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Promoção</label>
+                                        <input id="" class="input_linha" type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Variações de preço</label>
+                                        <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                                    </div>
+                                    <div id="tempo_duração">
+                                        <label for="">Tempo de produção</label>
+                                            <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                    </div>
+                                    <div id="local_atendimento">
+                                        <label for="">Local de atendimento</label>
+                                        <div id="options_atendimento">
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Estabelecimento</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Domicílio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="max_width_servico">
+                                        <div class="image_container">
+                                            <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                                        </div>
+                                         <input type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                                    </div>
+                               </div>
+                               <div id="dados_parte2">
+                                   <div id="div_dados">
+                                       <label for="">Público alvo</label>
+                                       <form  action="">
+                                        <select class="form_input" name="cars" id="cars">
+                                          <optgroup label="Selecione">
+                                            <option value="feminino">Feminino</option>
+                                            <option value="masculino">Masculino</option>
+                                          </optgroup>
+                                        </select>
+                                      </form>
+                                   </div>
+                                   <div id="div_dados">
+                                        <label for="">Categoria</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="cabelo">Cabelo</option>
+                                                <option value="manicure">Manicure</option>
+                                                <option value="pedicure">Pedicure</option>
+                                                <option value="depilacao">Depilação</option>
+                    
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                   </div>
+                                    <div id="div_dados">
+                                        <label for="">Parte do corpo</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="rosto">Rosto</option>
+                                                <option value="perna">Perna</option>
+                                                <option value="barba">Barba</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                    </div>
+                                    <div id="div_dados">
+                                        <label for="">Funcionario realizador</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="arielly">Arielly</option>
+                                                <option value="sara">Sara</option>
+                                                <option value="maria">Maria</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                    </div>
+                                    <div id="serviço_ativo">
+                                        <label for="">Este serviço está ativo para uso?</label>
+                                        <div id="options_servico">
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Sim</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Não</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="intervalo">
+                                        <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                                            <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                    </div>
+                                    <button id="button_editar_servico">
+                                        <h4>Salvar</h4>
+                                    </button>
+                               </div>
+                           </section>
+                                
+                            </div>
+                            <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
+                            <div id="popup_excluir">
+                                <a href="javascript: fecharExcluir();" class="aaa">Excluir serviço<span id="closeExcluir" class="material-icons-outlined">close </span></a>
+                                <h2>Deseja excluir esse serviço?</h2>
+                                <div id="butons_excluir">
+                                    <button id="buttonExcluir">Sim</button>
+                                    <button id="buttonExcluir">Não</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="borda">
-                        <div class="foto"></div>
-                        <div id="dados_servico" >
-                            <div id="nome"><h4>Reconstrução</h4></div>
-                            <div id="horario"><h3>R$ 90,00</h3></div>
-                            <div id="editar_excluir"><span id="edit" class="material-icons-outlined"> edit </span><span id="delete" class="material-icons-outlined">delete </span></div>
+                </div>
+                <div id="borda">
+                    <div class="foto"></div>
+                    <div id="dados_servico">
+                        <div id="nome"><a href="../detalhes/detalhes_servico.html"><h4>Unha</h4></a></div> 
+                        <div id="horario"><h3>R$ 90,00</h3></div>
+                        <div id="editar_excluir">
+                            <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
+                            <div id="popup_editar">
+                                <a href="javascript: fecharEditar();" class="aaa"> Editar serviço<span id="close" class="material-icons-outlined">close </span></a>
+                                <section id="dados_servico_popup">
+                                    <div id="dados_parte1">
+                                    <div id="campo">
+                                        <label>Título</label>
+                                        <input id="" class="input_linha" type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Preço</label>
+                                        <input id="" class="input_linha"  type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Promoção</label>
+                                        <input id="" class="input_linha" type="text">
+                                    </div>
+                                    <div id="campo">
+                                        <label>Variações de preço</label>
+                                        <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                                    </div>
+                                    <div id="tempo_duração">
+                                        <label for="">Tempo de produção</label>
+                                            <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                    </div>
+                                    <div id="local_atendimento">
+                                        <label for="">Local de atendimento</label>
+                                        <div id="options_atendimento">
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Estabelecimento</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Domicílio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="max_width_servico">
+                                        <div class="image_container">
+                                            <img src="../../Prestadores/img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_servico">
+                                        </div>
+                                         <input type="file" id="fl_image_servico" name="fl_image_servico" accept="image/*">          
+                                    </div>
+                               </div>
+                               <div id="dados_parte2">
+                                   <div id="div_dados">
+                                       <label for="">Público alvo</label>
+                                       <form  action="">
+                                        <select class="form_input" name="cars" id="cars">
+                                          <optgroup label="Selecione">
+                                            <option value="feminino">Feminino</option>
+                                            <option value="masculino">Masculino</option>
+                                          </optgroup>
+                                        </select>
+                                      </form>
+                                   </div>
+                                   <div id="div_dados">
+                                        <label for="">Categoria</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="cabelo">Cabelo</option>
+                                                <option value="manicure">Manicure</option>
+                                                <option value="pedicure">Pedicure</option>
+                                                <option value="depilacao">Depilação</option>
+                    
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                   </div>
+                                    <div id="div_dados">
+                                        <label for="">Parte do corpo</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="rosto">Rosto</option>
+                                                <option value="perna">Perna</option>
+                                                <option value="barba">Barba</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                    </div>
+                                    <div id="div_dados">
+                                        <label for="">Funcionario realizador</label>
+                                        <form  action="">
+                                            <select class="form_input" name="cars" id="cars">
+                                              <optgroup label="Selecione">
+                                                <option value="arielly">Arielly</option>
+                                                <option value="sara">Sara</option>
+                                                <option value="maria">Maria</option>
+                                              </optgroup>
+                                            </select>
+                                          </form>
+                                    </div>
+                                    <div id="serviço_ativo">
+                                        <label for="">Este serviço está ativo para uso?</label>
+                                        <div id="options_servico">
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Sim</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio">
+                                                <label for="">Não</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="intervalo">
+                                        <label for="">Haverá intervalo entre esse serviço e outro?</label>
+                                            <input type="text" class="input_linha_borda" placeholder="            (ex:1h)">
+                                    </div>
+                                    <button id="button_editar_servico">
+                                        <h4>Salvar</h4>
+                                    </button>
+                               </div>
+                           </section>
+                                
+                            </div>
+                            <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
+                            <div id="popup_excluir">
+                                <a href="javascript: fecharExcluir();" class="aaa">Excluir serviço<span id="closeExcluir" class="material-icons-outlined">close </span></a>
+                                <h2>Deseja excluir esse serviço?</h2>
+                                <div id="butons_excluir">
+                                    <button id="buttonExcluir">Sim</button>
+                                    <button id="buttonExcluir">Não</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
              </div>
 
          </section>
