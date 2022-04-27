@@ -46,3 +46,5 @@ file.addEventListener('change', (event) => {
 
     reader.readAsDataURL(file.files[0]);
 })
+
+

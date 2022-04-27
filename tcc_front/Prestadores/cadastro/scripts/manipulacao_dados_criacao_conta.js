@@ -1,4 +1,4 @@
-"use strict"
+//CONST"use strict"
  
 import { getDadosPagamento, getDadosRegrasNegocio, getFuncionamento } from "./func_info_complexas.js";
 
@@ -125,7 +125,7 @@ const prepararDadosParaSalvar = () =>
         data["intervalo_tempo_padrao_entre_servicos"] = document.getElementById("input_intervalo_padrao").value
     }
     else
-    {
+    { 
         data["intervalo_tempo_padrao_entre_servicos"] = 0
     }
     data['dados_funcionamento'] = getFuncionamento();
