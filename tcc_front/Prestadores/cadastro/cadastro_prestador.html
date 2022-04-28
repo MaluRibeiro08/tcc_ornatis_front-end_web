@@ -64,6 +64,7 @@
                             <div class="container_icone_foto_perfil">
                                 <form enctype="multipart/form-data" name="formulario_imagem_salao" id ="formulario_imagem_salao" action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/" method="POST">
                                     <input type="text" name="acao" hidden value="create">
+                                    <input id="campo_id_empresa_form_img_salao" type="text" name="id_empresa" hidden>
                                     <input type="text" name="envio_form" hidden value="true">
                                     <input name="imagem_perfil_salao" id="input_foto_estabelecimento" class="inputFile" type="file" accept="image/*" />
                                     <label for="input_foto_estabelecimento" id="labelInputFile">
@@ -109,6 +110,7 @@
                             <div class="container_icone_foto_perfil">
                                 <form enctype="multipart/form-data" name="formulario_imagem_administrador" id ="formulario_imagem_administrador" action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/" method="POST">
                                     <input type="text" name="acao" hidden value="create">
+                                    <input id="campo_id_empresa_form_img_adm" type="text" name="id_empresa" hidden>
                                     <input type="text" name="envio_form" hidden value="true">
                                     <input name="imagem_perfil_adm" id="input_foto_administrador" class="inputFile" type="file" accept="image/*" />
                                     <label for="input_foto_administrador" id="labelInputFile">
@@ -466,7 +468,7 @@
                     <div class="bolinha bolinha7"></div>
                 </div>
 
-                <div class="container_seta_navegacao container_seta_proxima" onclick="salvar()">
+                <div class="container_seta_navegacao container_seta_proxima">
                     <span class="label_setas_navegacao" id="texto_seta_proximo">Próxima</span>
                     <span class="material-symbols-outlined seta" id="icone_seta_proximo">navigate_next</span>
                 </div>
@@ -485,22 +487,5 @@
        const divDeletar = document.getElementById(`${idRegraCancelamento}`)
        const conteinerRegras = document.getElementById("container_regras_cancelamentos")
        conteinerRegras.removeChild(divDeletar)
-    }
-    const salvar = async () => 
-    {
-        if(document.querySelector(".container_seta_proxima").classList.contains("concluir"))
-        {
-            console.log(document.formulario_imagem_salao) 
-            document.formulario_imagem_salao.submit()
-            console.log("enviou!!")
-        }
-        setTimeout(3000)
-        if(document.querySelector(".container_seta_proxima").classList.contains("concluir"))
-        {
-            console.log(document.formulario_imagem_administrador) 
-            document.formulario_imagem_administrador.submit()
-            console.log("enviou!!")
-        }
-
     }
 </script>

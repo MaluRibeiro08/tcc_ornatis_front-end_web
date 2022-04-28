@@ -147,11 +147,50 @@ const verificarCorrespondenciaSenha = () =>
                         'content-type' : 'application/json'
                     }
                 }
+
+                let id_empresa_cadastrada = null
         
                 console.log("Os seguintes dados serão enviados para a API " + options);
-                 fetch(url, options).then(response => response.json()).then(data => {
-                    console.log(data)})
-        
+                 fetch(url, options)
+                    .then(
+                            response => response.json()
+                         )
+                    .then(
+                             data => {
+                                console.log(data)
+
+                                console.log(data.data.dados_empresa.lastInsertId)
+                                console.log("envio do fetch")
+
+                                id_empresa_cadastrada = data.data.dados_empresa.lastInsertId
+
+                                document.getElementById("campo_id_empresa_form_img_adm").value = id_empresa_cadastrada
+                                document.getElementById("campo_id_empresa_form_img_salao").value = id_empresa_cadastrada
+                            }
+                    ).then
+                    (
+                        () =>
+                        {
+                            console.log("enviando formulario adm"),
+                            document.getElementById("campo_id_empresa_form_img_adm").value = id_empresa_cadastrada,
+                            console.log(document.getElementById("campo_id_empresa_form_img_adm").value)
+                                    
+                            document.getElementById("formulario_imagem_administrador").submit()
+                        }
+                        
+                    ).then
+                    (
+                        () =>
+                        {
+                            console.log("enviando formulario salao"),
+                            document.getElementById("campo_id_empresa_form_img_salao").value = id_empresa_cadastrada,
+                                    
+                            document.getElementById("formulario_imagem_salao").submit()
+                        }                        
+                    )
+                
+                
+                
                 // document.formulario_imagem.submit();
                 // alert("Alterações salvar com sucesso!")
                 // location.reload();   
