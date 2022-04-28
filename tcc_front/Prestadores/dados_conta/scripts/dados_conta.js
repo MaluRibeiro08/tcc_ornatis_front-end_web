@@ -24,7 +24,7 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
     const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/'
 
     let id_cidade = 3534401;
-    const id_empresa = 3;
+    const id_empresa = 1;
 
     testeUpdate(id_empresa, id_cidade)
 
@@ -94,14 +94,15 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
         const response = await carregarDadosConta(id_empresa);
         // console.log(response)
         const informacoes = await response.json();
-        // console.log(informacoes)
+        console.log(informacoes)
         // console.log(informacoes.data.dados_empresa[0]["nome_fantasia"])
 
         input_id_empresa.value = id_empresa; 
         input_nome_estabelecimento.value = informacoes.data.dados_empresa[0]["nome_fantasia"]; 
         input_cnpj.value = informacoes.data.dados_empresa[0]["cnpj"]; 
         input_contato.value = informacoes.data.dados_empresa[0]["telefone"]; 
-        input_biografia.value = informacoes.data.dados_empresa[0]["biografia"]; 
+        input_biografia.value = informacoes.data.dados_empresa[0]["biografia"];
+        img_foto_perfil.src =  "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_perfil_salao/" + informacoes.data.dados_empresa[0]["imagem_perfil"];
         input_nome_adm.value = informacoes.data.dados_administrador[0]["nome_adm"]; 
         input_data_nascimento.value = informacoes.data.dados_administrador[0]["data_nascimento"];
         input_cpf.value = informacoes.data.dados_administrador[0]["cpf"];
@@ -361,7 +362,7 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
         let inputsHabilitados = teste.map((elemento)=>{
             habilitarInput(elemento)
         })
-
+        document.getElementById("p_exclusao_cadastro").clickab
         // console.log(inputsHabilitados)
     }
     const habilitarInput = (input) =>
@@ -476,6 +477,11 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
     input_imagem.addEventListener("change", (tratarUploadImagem))
 
     icone_adicao_regra.addEventListener("click", () => {criarRegraCancelamento(null, '', '')})
+
+    document.getElementById("p_exclusao_cadastro").addEventListener("click", ()=>
+    {
+        alert("Você vai excluir!")
+    })
 
     document.getElementById("input_cep").addEventListener("keyup", preencherFormularioEndereco);
 
