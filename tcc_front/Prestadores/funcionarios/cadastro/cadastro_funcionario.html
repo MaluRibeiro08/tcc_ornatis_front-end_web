@@ -28,8 +28,8 @@
                         <input id="nome_funcionario" class="input_linha" type="text">
                     </div>
                     <div id="campo">
-                        <label>Login</label> 
-                        <input id="login_funcionario" class="input_linha" type="text" name="search" placeholder=""/>
+                        <label>Código de login</label> 
+                        <input disabled id="login_funcionario" class="input_linha" type="text" name="search" placeholder="Campo preenchido automaticamente"/>
                     </div>
                     <div id="campo">
                         <label>Senha</label> 
@@ -39,7 +39,18 @@
                         <div class="image_container">
                             <img src="../../img/add-photo-icon-isolated-white-background-camera-plus-new-vector-stock-173611946.jpeg" alt="" id="img_photo_funcionario">
                         </div>
-                         <input type="file" id="fl_image_funcionario" name="fl_image_funcionario" accept="image/*">          
+                        <form enctype="multipart/form-data" name="formulario_imagem" id ="formulario_imagem" action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/funcionario/" method="POST">
+                            <input type="text" name="acao" hidden value="createFuncionario">
+                            <input type="text" name="envio_form" hidden value="true">
+                            <input type="text" name="id_funcionario" id="id_funcionario" hidden value="true">
+                            <input type="file" id="fl_image_funcionario" name="foto_perfil" accept="image/*">
+                            <label for="input_foto_estabelecimento" id="labelInputFile">
+                                <span class="material-icons-outlined">
+                                    add_photo_alternate
+                                </span>
+                            </label>
+                        </form>
+                                   
                     </div>
                 </div>
                 <div id="horario">
@@ -47,15 +58,15 @@
                         <label>Horário de trabalho: <div id="popup"> <a href="javascript: fechar();"><span  id="help" class="material-icons-outlined">close </span> 
                             <p><div class="container_geral_horarios_funcionamento">
                             <div class="container_horario_funcionamento">
-                               <p>1-</p> <input class="input_hora_funcionamento" id="1input_hora_inicio_1" type="text" placeholder="início">
+                               <p>1-</p> <input class="input_hora_funcionamento" id="1input_hora_inicio" type="text" placeholder="início">
                                 <p>até</p>
-                                <input class="input_hora_funcionamento" id="1input_hora_termino_1" type="text" placeholder="término">
+                                <input class="input_hora_funcionamento" id="1input_hora_termino" type="text" placeholder="término">
                                 <h2> Início do expediente até o horário de almoço</h2>
                             </div>
                             <div class="container_horario_funcionamento">
-                                <p>2-</p><input class="input_hora_funcionamento" id="2input_hora_inicio_1" type="text" placeholder="início">
+                                <p>2-</p><input class="input_hora_funcionamento" id="2input_hora_inicio" type="text" placeholder="início">
                                 <p>até</p>
-                                <input class="input_hora_funcionamento" id="2input_hora_termino_1" type="text" placeholder="término">
+                                <input class="input_hora_funcionamento" id="2input_hora_termino" type="text" placeholder="término">
                                 <h2> Término do horário de almoço até o fim do expediente</h2>
                             </div> 
                         </div></p></a> </div> 

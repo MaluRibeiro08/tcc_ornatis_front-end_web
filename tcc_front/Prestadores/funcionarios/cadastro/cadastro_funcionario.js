@@ -48,8 +48,15 @@ const input_dia_semana_6 = document.getElementById("input_dia_semana_6")
 const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 const btn_salvar_funcionario = document.getElementById("btn_salvar_funcionario")
 
+const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/funcionario/'
+const id_empresa = 1;
 
 const cadastro_funcionario = (data) =>{
+
+    // console.log("vai comecar")
+    // console.log(data)
+    // console.log("acabou")
+
     const options_funcionario = {
         method: 'POST',
         body: JSON.stringify(data),
@@ -57,42 +64,71 @@ const cadastro_funcionario = (data) =>{
             'content-type': 'application/json',
         },
     };
-    fetch(url, options_funcionario)
+    fetch(url, options_funcionario).then(response => response.json()).then(
+        data => 
+        {
+            console.log("Imprimindo response")
+            console.log(data)
+            console.log("Especificando impressao response")
+            console.log(data.data)
+            const input_id_funcionario = document.getElementById("id_funcionario");
+
+            input_id_funcionario.value = data.data;
+        }
+    ).then
+    (
+        () =>
+        {
+            console.log("enviando formulario adm"),
+
+            console.log(document.getElementById("id_funcionario").value)
+                    
+            document.getElementById("formulario_imagem").submit()
+        }
+    ).then
+    (
+        () =>
+        {
+            console.log("Tudo certo")
+            alert("Funcionário cadastrado com sucesso!!")
+            location.reload()
+        }
+    );
 };
 
 
 
-const salvar_funcionario = () => {
+const get_dados_funcionario = () => 
+{
     const data = {};
-    data['acao'] = 'create';
-        
-            data ['nome_funcionario'] = input_nome_funcionario.value;
-            data ['cod_funcionario'] = input_login_funcionario.value;
-            data ['senha'] = input_senha_funcionario.value;
-            data ['foto_perfil'] = input_foto_funcionario.src;
-            // btn_salvar_funcionario: document.getElementById('btn_salvar_funcionario').value,
-            
-            return data
-    };
+    data['acao'] = 'createFuncionario';
+    data ['nome_funcionario'] = input_nome_funcionario.value;
+    data ['cod_funcionario'] = input_login_funcionario.value;
+    data ['senha'] = input_senha_funcionario.value;
+    data ['id_empresa'] = id_empresa;
+    data["dados_dia_trabalho"] = getDiasTrabalho();
+    
+    return data
+};
 
-    const verificarCheck = (id_elemento) =>  document.getElementById(`${id_elemento}`).checked
+const verificarCheck = (id_elemento) =>  document.getElementById(`${id_elemento}`).checked
 
-const getFuncionamento = () =>
+const getDiasTrabalho = () =>
 {
     let dia_semana_contador = 1;
     let arr_dados_funcionamento = [];
 
     while(dia_semana_contador <= 7)
     {
-        if(verificarCheck(`input_dia_semana${dia_semana_contador}`))
+        if(verificarCheck(`input_dia_semana_${dia_semana_contador}`))
         {
-            if(document.getElementById(`1input_hora_inicio${dia_semana_contador}`).value != null &&
-                document.getElementById(`1input_hora_inicio${dia_semana_contador}`).value != '')
+            if(document.getElementById(`1input_hora_inicio_${dia_semana_contador}`).value != null &&
+                document.getElementById(`1input_hora_inicio_${dia_semana_contador}`).value != '')
             {
                 
 
-                const hora_inicio = document.getElementById(`1input_hora_inicio${dia_semana_contador}`).value;
-                const hora_termino = document.getElementById(`1input_hora_termino${dia_semana_contador}`).value;
+                const hora_inicio = document.getElementById(`1input_hora_inicio_${dia_semana_contador}`).value;
+                const hora_termino = document.getElementById(`1input_hora_termino_${dia_semana_contador}`).value;
                 arr_dados_funcionamento.push(
                     {
                         "id_dia_semana" : dia_semana_contador,
@@ -101,11 +137,11 @@ const getFuncionamento = () =>
                     }
                 )
             }
-            if(document.getElementById(`2input_hora_inicio${dia_semana_contador}`).value != null &&
-                document.getElementById(`2input_hora_inicio${dia_semana_contador}`).value != '')
+            if(document.getElementById(`2input_hora_inicio_${dia_semana_contador}`).value != null &&
+                document.getElementById(`2input_hora_inicio_${dia_semana_contador}`).value != '')
             {
-                const hora_inicio = document.getElementById(`2input_hora_inicio${dia_semana_contador}`).value;
-                const hora_termino = document.getElementById(`2input_hora_termino${dia_semana_contador}`).value;
+                const hora_inicio = document.getElementById(`2input_hora_inicio_${dia_semana_contador}`).value;
+                const hora_termino = document.getElementById(`2input_hora_termino_${dia_semana_contador}`).value;
                 arr_dados_funcionamento.push(
                     {
                         "id_dia_semana" : dia_semana_contador,
@@ -124,6 +160,14 @@ const getFuncionamento = () =>
 
     return arr_dados_funcionamento;
 }
+
+btn_salvar_funcionario.addEventListener("click", 
+    () =>
+    {
+        const dados = get_dados_funcionario();
+        cadastro_funcionario(dados);
+    }
+)
 
         
    
