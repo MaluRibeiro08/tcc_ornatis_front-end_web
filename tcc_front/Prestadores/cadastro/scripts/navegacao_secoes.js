@@ -44,9 +44,11 @@ const mudar_secoes = (tipo_mudanca) =>
     if(tipo_mudanca == "avancar")
     {
         document.querySelector(`.secao${secao_atual}`).style.display = 'none';
+        document.getElementById(`container_titulo${secao_atual}`).style.display = 'none';
 
         const secao_destino = secao_atual+1;
         document.querySelector(`.secao${secao_destino}`).style.display = 'flex';
+        document.getElementById(`container_titulo${secao_destino}`).style.display = 'flex';
         document.querySelector(`.bolinha${secao_destino}`).style.backgroundColor = '#93DCD0';
 
         secao_atual = secao_destino;
@@ -56,10 +58,13 @@ const mudar_secoes = (tipo_mudanca) =>
     else if (tipo_mudanca == "voltar")
     {
         document.querySelector(`.secao${secao_atual}`).style.display = 'none';
+        document.getElementById(`container_titulo${secao_atual}`).style.display = 'none';
+
         document.querySelector(`.bolinha${secao_atual}`).style.backgroundColor = '#d3d3d3';
         
         const secao_destino = secao_atual-1;
         document.querySelector(`.secao${secao_destino}`).style.display = 'flex';
+        document.getElementById(`container_titulo${secao_destino}`).style.display = 'flex';
 
         secao_atual = secao_destino;
         mudar_setas(secao_atual);
