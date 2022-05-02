@@ -5,6 +5,17 @@ import { testeUpdate  } from "./update/update.js";
 import { preencherFormularioEndereco } from "../../../utils/cep.js";
 import { mudancaCheckDiaFuncionamento } from "./funcionamento_dinamizacao.js";
 
+
+//VARIÁVEIS IMPORTANTES:
+    let id_cidade = 3534401;
+    const id_empresa = 58;
+    const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/'
+
+//CHAMADAS IMPORTANTES
+    // const carregarDadosConta =   (id_empresa) => fetch(`http://10.107.144.20/ornatis/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    testeUpdate(id_empresa, id_cidade)
+    
 //RADIOS / INPUTS / OUTROS
     const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
     const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
@@ -20,14 +31,6 @@ import { mudancaCheckDiaFuncionamento } from "./funcionamento_dinamizacao.js";
 
     const btn_editar = document.getElementById('btn_editar');
     const btn_salvar = document.getElementById('btn_salvar');
-
-    //variavel que guardará o código da cidade
-    const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/'
-
-    let id_cidade = 3534401;
-    const id_empresa = 58;
-
-    testeUpdate(id_empresa, id_cidade)
 
 //CONTAINERS   GERAIS
     const container_perfil_estabelecimento = document.getElementById('container_secao_perfil_estabelecimento');
@@ -84,8 +87,7 @@ import { mudancaCheckDiaFuncionamento } from "./funcionamento_dinamizacao.js";
     const input_dia_semana_6 = document.getElementById("input_dia_semana_6")
     const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 
-    // const carregarDadosConta =   (id_empresa) => fetch(`http://10.107.144.20/ornatis/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
-    const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    
     const preencherFormasPagamento = () =>
     {
         // console.log("teste")
