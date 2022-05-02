@@ -193,7 +193,7 @@ const verificarCorrespondenciaSenha = () =>
                 
                 
                 // document.formulario_imagem.submit();
-                // alert("Alterações salvar com sucesso!")
+                alert("Alterações salvar com sucesso!")
                 // location.reload();   
             }
             else
