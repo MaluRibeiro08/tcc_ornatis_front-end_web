@@ -3,6 +3,7 @@ import {mudar_secoes} from "./navegacao_secoes.js"
 import { imagemPreview } from "../../../utils/imagem.js";
 import {prepararDadosParaSalvar} from "./manipulacao_dados_criacao_conta.js";
 import { preencherFormularioEndereco } from "../../../utils/cep.js";
+import { mudancaCheckDiaFuncionamento } from "./funcionamento_dinamizacao.js";
 
 const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
 const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
@@ -92,13 +93,13 @@ const criarRegraCancelamento = (acimaCem, tolerancia, taxa) =>
                     <div class="container_tolerancia">
                         <h4 class="label_taxa">Tolerância:</h4>
                         <div class="container_input_tolerancia">
-                            <p >até <input ${disabled} type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}'>h de antecedência</p>
+                            <p >até <input ${disabled} type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}' maxlength="2" onkeypress="validarDigitacaoNumeros();">h de antecedência</p>
                         </div>
                     </div>
                     <div class="container_valor_taxa">
                         <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
                         <div class="container_input_valor_taxa">
-                            <p ><input ${disabled} type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}'> %</p>
+                            <p ><input ${disabled} type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}' maxlength="2" onkeypress="validarDigitacaoNumeros();"> %</p>
                         </div>
                     </div>
                 </div>
@@ -197,7 +198,7 @@ const verificarCorrespondenciaSenha = () =>
             }
             else
             {
-            mudar_secoes("avancar")
+                mudar_secoes("avancar")
             }
         }
     )

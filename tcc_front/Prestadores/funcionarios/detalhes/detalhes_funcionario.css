@@ -14,7 +14,7 @@
 }
 
 body{
-    background-color: rgb(233, 233, 233);
+    background-color: var(--verde_padrao);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -110,7 +110,8 @@ h6{
     font-size: 25px;
     padding-left: 50px;
     margin-top: 30px;
-   
+    overflow: hidden;
+    overflow: auto;
 }
 
 #add_funcionario{
@@ -130,6 +131,7 @@ h6{
     padding-left: 250px;
     display: flex;
     flex-direction: column;
+    position: fixed;
 }
 
 label{
@@ -214,3 +216,71 @@ input[type='file']{
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+/**RESPONSIVIDADE**/
+
+@media (max-width: 2200px)
+{
+    #informacoes{
+        padding-left: 0px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    #modal{
+        padding-left: 200px;
+        text-overflow: clip;
+    }
+
+    #add_funcionario{
+        font-size: 30px;
+    }
+
+    .input_linha{
+        width: 50%;
+        height: 35px;
+    }
+}
+
+@media (max-width: 1530px){
+
+    #modal{
+        padding-left: 100px;
+        text-overflow: clip;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    #add_funcionario{
+        font-size: 30px;
+    }
+
+    .input_linha{
+        width: 50%;
+        height: 30px;
+    }
+}
+
+@media (max-width: 1300px){
+
+    #modal{
+        margin-left: 30%;
+        padding-left: 30px;
+        text-overflow: clip;
+    }
+
+    #add_funcionario{
+        font-size: 30px;
+    }
+
+    .input_linha{
+        width: 50%;
+        height: 30px;
+    }
+
+}
+

@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 100px;
+    gap: 10px;
 
     /* background-color: aqua; */
 }
@@ -91,8 +91,6 @@
     width: 70px;
     text-align: center;
     padding: 2px;
-   
-
     background-color: transparent;
 
     outline: none;
@@ -148,7 +146,7 @@
 }
 
 body{
-    background-color: rgb(233, 233, 233);
+    background-color: var(--verde_padrao);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -283,6 +281,8 @@ a{
     gap: 100px;
     padding-left: 100px;
     display: flex;    
+    overflow: hidden;
+    overflow: auto;
 }
 
 label{
@@ -354,4 +354,75 @@ button:hover{
 #help{
     font-size: 30px;
     color: #494343;
+}
+
+
+/**RESPONSIVIDADE**/
+@media (max-width: 2309px)
+{
+    h1{
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 2195px)
+{
+    #modal{
+        gap: 0px
+    }
+    .input_linha{
+        width: 300px;
+    }
+    #horario{
+        margin-top: 100px;
+    }
+    h1{
+        font-size: 30px;
+    }
+
+}
+@media (max-width: 1677px)
+{
+    #modal{
+        display: block;
+        width: 650px;
+        margin-top: -400px;
+        height: 110vh;
+        margin-left: 30%;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 1740px)
+{
+    #modal{
+        display: block;
+        width: 650px;
+        margin-top: -400px;
+        height: 110vh;
+        margin-left: 30%;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    #horario{
+        margin-top: 200px;
+    }
+
+}
+
+
+@media (max-width: 950px)
+{
+    
+    #modal{
+        margin-left: 5%;
+    }
 }

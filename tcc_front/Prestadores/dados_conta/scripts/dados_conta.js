@@ -3,7 +3,19 @@
 import { imagemPreview } from "../../../utils/imagem.js";
 import { testeUpdate  } from "./update/update.js";
 import { preencherFormularioEndereco } from "../../../utils/cep.js";
+import { mudancaCheckDiaFuncionamento } from "./funcionamento_dinamizacao.js";
 
+
+//VARIÁVEIS IMPORTANTES:
+    let id_cidade = 3534401;
+    const id_empresa = 58;
+    const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/'
+
+//CHAMADAS IMPORTANTES
+    // const carregarDadosConta =   (id_empresa) => fetch(`http://10.107.144.20/ornatis/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    testeUpdate(id_empresa, id_cidade)
+    
 //RADIOS / INPUTS / OUTROS
     const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
     const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
@@ -19,14 +31,6 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
 
     const btn_editar = document.getElementById('btn_editar');
     const btn_salvar = document.getElementById('btn_salvar');
-
-    //variavel que guardará o código da cidade
-    const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/'
-
-    let id_cidade = 3534401;
-    const id_empresa = 1;
-
-    testeUpdate(id_empresa, id_cidade)
 
 //CONTAINERS   GERAIS
     const container_perfil_estabelecimento = document.getElementById('container_secao_perfil_estabelecimento');
@@ -83,8 +87,7 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
     const input_dia_semana_6 = document.getElementById("input_dia_semana_6")
     const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 
-    // const carregarDadosConta =   (id_empresa) => fetch(`http://10.107.144.20/ornatis/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
-    const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
+    
     const preencherFormasPagamento = () =>
     {
         // console.log("teste")
@@ -217,6 +220,9 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
                 const input_dia_semana = document.getElementById(`input_dia_semana${dia_semana_contador}`)
                 input_dia_semana.checked = true
 
+                const container_dia_semana = document.getElementById(`container_horarios_dia${dia_semana_contador}`)
+                container_dia_semana.style.display = 'flex';
+
                 if(informacoes.data.dados_funcionamento[dia_semana_contador][0]!= null)
                 {
                     // console.log(informacoes.data.dados_funcionamento[1][1])
@@ -332,13 +338,13 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
                     <div class="container_tolerancia">
                         <h4 class="label_taxa">Tolerância:</h4>
                         <div class="container_input_tolerancia">
-                            <p >até <input ${disabled} type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}'>h de antecedência</p>
+                            <p >até <input ${disabled} type="text" class="input_regra" id='input_tempo_tolerancia_regra${numeroDaRegra}' value = '${tolerancia}' maxlength="2" onkeypress="validarDigitacaoNumeros();">h de antecedência</p>
                         </div>
                     </div>
                     <div class="container_valor_taxa">
                         <h4 class="label_taxa" >Taxa sobre o valor do serviço:</h4>
                         <div class="container_input_valor_taxa">
-                            <p ><input ${disabled} type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}'> %</p>
+                            <p ><input ${disabled} type="text" class="input_regra" id='input_valor_taxa_variada_regra${numeroDaRegra}' value='${taxa}' maxlength="2" onkeypress="validarDigitacaoNumeros();"> %</p>
                         </div>
                     </div>
                 </div>
@@ -355,19 +361,53 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
         abrirContainer("btn_salvar")
         abrirContainer("icone_adicao_regra")
         let inputs = document.getElementsByTagName("input");
+
+        let textareas = document.getElementsByTagName("textarea")
         // console.log(typeof(inputs))
         
         const teste = Object.values(inputs)
+        const textarea_obj = Object.values(textareas)
 
-        let inputsHabilitados = teste.map((elemento)=>{
+        let inputsHabilitados = teste.map((elemento)=>
+        {
             habilitarInput(elemento)
         })
-        document.getElementById("p_exclusao_cadastro").clickab
+
+        let textareasHabilitadas = textarea_obj.map((elemento)=>
+        {
+            elemento.readOnly = false
+        })
+        document.getElementById("p_exclusao_cadastro").clickable
         // console.log(inputsHabilitados)
     }
     const habilitarInput = (input) =>
     {
         input.disabled = false
+    }
+
+    const excluirConta = () =>
+    {
+        const data = {};
+        data["acao"] = 'desabilitarEmpresa';
+        data["id_empresa"] = id_empresa;
+
+        const options =
+        {
+            method : 'DELETE',
+            body: JSON.stringify(data), //transforma o produto que era JSON em String, serializa
+            headers: 
+            {
+                'content-type' : 'application/json'
+            }
+        }
+
+        console.log(options);
+         fetch(url, options).then(response => response.json()).then(data => {
+            console.log(data)})
+
+        // document.formulario_imagem.submit();
+        alert("Sua conta foi excluída!")
+        window.location.href = "../home/home.html";   
     }
 
     
@@ -481,6 +521,7 @@ import { preencherFormularioEndereco } from "../../../utils/cep.js";
     document.getElementById("p_exclusao_cadastro").addEventListener("click", ()=>
     {
         alert("Você vai excluir!")
+        excluirConta();
     })
 
     document.getElementById("input_cep").addEventListener("keyup", preencherFormularioEndereco);

@@ -135,6 +135,23 @@ main
     margin-bottom: 30px;
 }
 
+textarea
+{
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 0.5px #3e3e3e solid;
+    width: 80%;
+    outline: none;
+    padding: 10px;
+    font-size: 1.2em;
+    resize: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;    
+    
+}
+
 .container_imagem
 {
     width: 100%;

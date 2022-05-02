@@ -35,6 +35,9 @@ function fechar(){
 
 /***********CONSUMO DE API**********/
 
+const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/funcionario/'
+const id_empresa = 1;
+
 const input_nome_funcionario = document.getElementById('nome_funcionario')
 const input_login_funcionario = document.getElementById('login_funcionario')
 const input_senha_funcionario = document.getElementById('senha_funcionario')
@@ -47,9 +50,6 @@ const input_dia_semana_5 = document.getElementById("input_dia_semana_5")
 const input_dia_semana_6 = document.getElementById("input_dia_semana_6")
 const input_dia_semana_7 = document.getElementById("input_dia_semana_7")
 const btn_salvar_funcionario = document.getElementById("btn_salvar_funcionario")
-
-const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/funcionario/'
-const id_empresa = 1;
 
 const cadastro_funcionario = (data) =>{
 
