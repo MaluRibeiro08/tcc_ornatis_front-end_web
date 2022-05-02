@@ -381,6 +381,14 @@ button:hover{
         font-size: 30px;
     }
 
+    #add_funcionario{
+        font-size: 35px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
 }
 @media (max-width: 1677px)
 {
@@ -395,7 +403,13 @@ button:hover{
     h1{
         font-size: 35px;
     }
+    #add_funcionario{
+        font-size: 35px;
+    }
 
+    label{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1740px)
@@ -412,8 +426,15 @@ button:hover{
         font-size: 35px;
     }
 
+    #add_funcionario{
+        font-size: 35px;
+    }
+
     #horario{
         margin-top: 200px;
+    }
+    label{
+        font-size: 20px;
     }
 
 }

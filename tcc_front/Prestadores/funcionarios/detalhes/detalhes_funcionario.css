@@ -243,6 +243,10 @@ input[type='file']{
         width: 50%;
         height: 35px;
     }
+
+    label{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1530px){
@@ -263,6 +267,10 @@ input[type='file']{
         width: 50%;
         height: 30px;
     }
+
+    label{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1300px){
@@ -280,6 +288,10 @@ input[type='file']{
     .input_linha{
         width: 50%;
         height: 30px;
+    }
+
+    label{
+        font-size: 20px;
     }
 
 }
