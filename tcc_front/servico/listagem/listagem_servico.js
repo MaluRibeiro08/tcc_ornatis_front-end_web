@@ -44,3 +44,7 @@ file.addEventListener('change', (event) => {
 
     reader.readAsDataURL(file.files[0]);
 })
+
+
+/***CONSUMO DE API***/
+

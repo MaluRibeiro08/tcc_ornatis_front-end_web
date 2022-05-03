@@ -55,8 +55,9 @@ h2{
 
 }
 h3{
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Raleway';
+    color: #494343;
 }
 
 h4{
@@ -288,7 +289,7 @@ nav a:hover{
     border: solid 5px var(--fonte);
     border-radius: 30px;
     background-color: white;
-   display: none;
+    display: none;
 }
 
 #popup_excluir{
