@@ -169,10 +169,11 @@ header{
     filter: drop-shadow(2px 3px 4px #494343);
 }
 h1{
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'Raleway';
     color: var(--fonte);
     text-decoration: none;
+    font-weight: 50;
    
 }
 
@@ -260,6 +261,7 @@ a{
 #add_funcionario{
     font-size: 50px;
     color: var(--fonte);
+    font-weight: 50;
 }
 #titulo{
   margin-bottom: 30px;

@@ -299,7 +299,7 @@ import { mudancaCheckDiaFuncionamento } from "./funcionamento_dinamizacao.js";
         }
         else
         {
-            numeroDaRegra = numeroDaRegra+1
+            numeroDaRegra = numeroDaRegra+1 
         }
         const novaRegra = document.createElement("div") 
 

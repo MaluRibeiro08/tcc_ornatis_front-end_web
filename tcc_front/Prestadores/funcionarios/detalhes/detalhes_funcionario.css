@@ -37,9 +37,10 @@ header{
     filter: drop-shadow(2px 3px 4px #494343);
 }
 h1{
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'Raleway';
     color: var(--fonte);
+    font-weight: 50;
    
 }
 

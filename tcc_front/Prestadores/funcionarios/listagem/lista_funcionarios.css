@@ -45,6 +45,7 @@ header{
 }
 h1{
     font-size: 50px;
+    font-weight: 50;
     font-family: 'Raleway';
     color: var(--fonte);
 }
@@ -61,9 +62,10 @@ h3{
 }
 
 h4{
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Raleway';
     color: var(--fonte);
+    font-weight: 50;
 }
 
 h6{
@@ -202,7 +204,7 @@ nav a:hover{
     color: var(--fonte);
 }
 
-#borda{
+#container_borda_funcionario{
     border-radius: 30px;
     width: 900px;
     height: 180px;
@@ -237,7 +239,6 @@ nav a:hover{
     width: 150px;
     height: 150px;
     background-color: #5F9F95;
-    background-image: url("../../img/download.jpg");
     margin-left: 5vw;
     margin-top: 1vh;
     border-radius: 50%;
@@ -249,17 +250,17 @@ nav a:hover{
     justify-content: center;
     flex-direction: column;
     margin-left: 6vw;
-    gap: 10px;
+
 }
 
 #edit{
-    font-size: 50px;
-    color: var(--fonte);
+    font-size: 30px;
+    color: gray;
 }
 
 #delete{
-    font-size: 50px;
-    color: var(--fonte);
+    font-size: 30px;
+    color: gray;
 }
 
 #close{

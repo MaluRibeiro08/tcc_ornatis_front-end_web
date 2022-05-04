@@ -16,8 +16,7 @@
     <header>
         <a href="#" id="linha_menu" onclick="abrir_menu()"> &#9776; </a>
          <div id="logo">
-                 <img src="../../../img/logo (1).svg" alt="">
-          </div>
+                 <img src="../../img/logo (1).svg" alt="">
      </header>
      <nav id="menu">
      
@@ -48,11 +47,11 @@
          </section>
          <section id="lista_dados_funcionario">
              <div id="fun1">
-                <div id="borda">
-                    <div class="foto"></div> 
+                <div id="container_borda_funcionario">
+                    <div> <img  id="foto_funcionario" class="foto" src="../../img/download.jpg" alt=""> </div> 
                     <div id="dados_fun">
                         <div id="nome"><a href="../detalhes/detalhes_funcionario.html"><h4>Arielly Angelo</h4></a></div> 
-                        <div id="horario"><h3>12:00 - 17:00</h3></div>
+                        <div>____________________________________</div>
                         <div id="editar_excluir">
                             <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                               <section class="fundo_popup">
@@ -235,11 +234,11 @@
                           </div>
                     </div>
                 </div>
-                <div id="borda">
-                    <div class="foto"></div>
+                <div id="container_borda_funcionario">
+                    <div> <img  id="foto_funcionario" class="foto" src="../../img/download.jpg" alt=""> </div> 
                     <div id="dados_fun">
                         <div id="nome"><a href="../detalhes/detalhes_funcionario.html"><h4>Arielly Angelo</h4></a></div> 
-                        <div id="horario"><h3>12:00 - 17:00</h3></div>
+                        <div>____________________________________</div>
                         <div id="editar_excluir">
                           <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                             <section class="fundo_popup">
@@ -422,11 +421,11 @@
                         </div>
                     </div>
                 </div>
-                <div id="borda">
-                    <div class="foto"></div>
+                <div id="container_borda_funcionario">
+                    <div> <img  id="foto_funcionario" class="foto" src="../../img/download.jpg" alt=""> </div> 
                     <div id="dados_fun">
                         <div id="nome"><a href="../detalhes/detalhes_funcionario.html"><h4>Arielly Angelo</h4></a></div> 
-                        <div id="horario"><h3>12:00 - 17:00</h3></div>
+                        <div>____________________________________</div>
                         <div id="editar_excluir">
                             <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                             <div id="popup_editar">
@@ -606,11 +605,11 @@
                         </div>
                     </div>
                 </div>
-                <div id="borda">
-                    <div class="foto"></div>
+                <div id="container_borda_funcionario">
+                    <div> <img  id="foto_funcionario" class="foto" src="../../img/download.jpg" alt=""> </div> 
                     <div id="dados_fun">
                         <div id="nome"><a href="../detalhes/detalhes_funcionario.html"><h4>Arielly Angelo</h4></a></div> 
-                        <div id="horario"><h3>12:00 - 17:00</h3></div>
+                        <div>____________________________________</div>
                         <div id="editar_excluir">
                             <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                             <div id="popup_editar">
@@ -783,7 +782,7 @@
                                 <a href="javascript: fecharExcluir();" class="aaa">Excluir funcionário<span id="closeExcluir" class="material-icons-outlined">close </span></a>
                                 <h2>Deseja excluir esse funcionário?</h2>
                                 <div id="butons_excluir">
-                                    <button id="buttonExcluir">Sim</button>
+                                    <button id="buttonExcluir" onclick="excluirFuncionario(id_funcionario)" >Sim</button>
                                     <button id="buttonExcluir">Não</button>
                                 </div>
                             </div>
@@ -793,11 +792,11 @@
              </div>
 
              <div id="fun2">
-                <div id="borda">
-                    <div class="foto"></div>
+                <div id="container_borda_funcionario">
+                    <div> <img  id="foto_funcionario" class="foto" src="../../img/download.jpg" alt=""> </div> 
                     <div id="dados_fun">
                         <div id="nome"><a href="../detalhes/detalhes_funcionario.html"><h4>Arielly Angelo</h4></a></div> 
-                        <div id="horario"><h3>12:00 - 17:00</h3></div>
+                        <div>____________________________________</div>
                         <div id="editar_excluir">
                             <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                             <div id="popup_editar">
@@ -977,11 +976,11 @@
                         </div>
                     </div>
                 </div>
-                <div id="borda">
-                    <div class="foto"></div>
+                <div id="container_borda_funcionario">
+                    <div> <img  id="foto_funcionario" class="foto" src="../../img/download.jpg" alt=""> </div> 
                     <div id="dados_fun">
                         <div id="nome"><a href="../detalhes/detalhes_funcionario.html"><h4>Arielly Angelo</h4></a></div> 
-                        <div id="horario"><h3>12:00 - 17:00</h3></div>
+                        <div>____________________________________</div>
                         <div id="editar_excluir">
                             <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                             <div id="popup_editar">
@@ -1154,18 +1153,18 @@
                                 <a href="javascript: fecharExcluir();" class="aaa">Excluir funcionário<span id="closeExcluir" class="material-icons-outlined">close </span></a>
                                 <h2>Deseja excluir esse funcionário?</h2>
                                 <div id="butons_excluir">
-                                    <button id="buttonExcluir">Sim</button>
+                                    <button id="buttonExcluir" onclick="excluirFuncionario(id_funcionario)">Sim</button>
                                     <button id="buttonExcluir">Não</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="borda">
-                    <div class="foto"></div>
+                <div id="container_borda_funcionario">
+                    <div> <img  id="foto_funcionario" class="foto" src="../../img/download.jpg" alt=""> </div> 
                     <div id="dados_fun">
                         <div id="nome"><a href="../detalhes/detalhes_funcionario.html"><h4>Arielly Angelo</h4></a></div> 
-                        <div id="horario"><h3>12:00 - 17:00</h3></div>
+                        <div>____________________________________</div>
                         <div id="editar_excluir">
                             <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                             <div id="popup_editar">
@@ -1338,18 +1337,18 @@
                                 <a href="javascript: fecharExcluir();" class="aaa">Excluir funcionário<span id="closeExcluir" class="material-icons-outlined">close </span></a>
                                 <h2>Deseja excluir esse funcionário?</h2>
                                 <div id="butons_excluir">
-                                    <button id="buttonExcluir">Sim</button>
+                                    <button id="buttonExcluir" onclick="excluirFuncionario(id_funcionario)">Sim</button>
                                     <button id="buttonExcluir">Não</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="borda">
-                    <div class="foto"></div>
+                <div id="container_borda_funcionario">
+                    <div> <img  id="foto_funcionario" class="foto" src="../../img/download.jpg" alt=""> </div> 
                     <div id="dados_fun">
                         <div id="nome"><a href="../detalhes/detalhes_funcionario.html"><h4>Arielly Angelo</h4></a></div> 
-                        <div id="horario"><h3>12:00 - 17:00</h3></div>
+                        <div>____________________________________</div>
                         <div id="editar_excluir">
                             <a href="javascript: abrirEditar();"><span id="edit" class="material-icons-outlined">edit </span></a>
                             <div id="popup_editar">
@@ -1522,7 +1521,7 @@
                                 <a href="javascript: fecharExcluir();" class="aaa">Excluir funcionário<span id="closeExcluir" class="material-icons-outlined">close </span></a>
                                 <h2>Deseja excluir esse funcionário?</h2>
                                 <div id="butons_excluir">
-                                    <button id="buttonExcluir">Sim</button>
+                                    <button id="buttonExcluir" onclick="excluirFuncionario(id_funcionario)" >Sim</button>
                                     <button id="buttonExcluir">Não</button>
                                 </div>
                             </div>
