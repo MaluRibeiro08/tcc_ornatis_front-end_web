@@ -42,6 +42,7 @@ h1{
     font-size: 50px;
     font-family: 'Raleway';
     color: var(--fonte);
+    font-weight: 30;
 }
 
 h2{
@@ -50,14 +51,17 @@ h2{
 
 }
 h3{
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Raleway';
+    color: rgb(121, 121, 121);
+    
 }
 
 h4{
     font-size: 40px;
     font-family: 'Raleway';
     color: var(--fonte);
+    font-weight: 30;
 }
 
 h6{
@@ -253,12 +257,12 @@ nav a:hover{
    cursor: pointer;
 }
 #edit{
-    font-size: 50px;
+    font-size: 30px;
     color: var(--fonte);
 }
 
 #delete{
-    font-size: 50px;
+    font-size: 30px;
     color: var(--fonte);
 }
 
