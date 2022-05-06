@@ -257,13 +257,15 @@ novo_funcionario.innerHTML =
                                       </div>
                                   </div>
                               </section>
-                              
+
+                                /**POP UP DE EXCLUSÃO**/
+
                               <a href="javascript: abrirExcluir();"><span id="delete" class="material-icons-outlined">delete </span></a>
                               <div id="popup_excluir">
                                   <a href="javascript: fecharExcluir();" class="aaa">Excluir funcionário<span id="closeExcluir" class="material-icons-outlined">close </span></a>
                                   <h2>Deseja excluir esse funcionário?</h2>
                                   <div id="butons_excluir">
-                                      <button id='buttonExcluir${id_funcionario}' >Sim</button>
+                                      <button id='buttonExcluir${id_funcionario}' onclick='excluirFuncionario(id_funcionario)' >Sim</button>
                                       <button id="buttonExcluir">Não</button>
                                   </div>
                               </div>
@@ -285,7 +287,7 @@ novo_funcionario.innerHTML =
                 const options =
                 {
                     method : 'DELETE',
-                    body: JSON.stringify(data), //transforma o produto que era JSON em String, serializa
+                    body: JSON.stringify(data),
                     headers: 
                     {
                         'content-type' : 'application/json'
@@ -295,11 +297,120 @@ novo_funcionario.innerHTML =
                     console.log(data)})
         
                 // document.formulario_imagem.submit();
-                alert("Seu funcionario foi excluído!")
-                // window.location.href = "../listagem/lista_funcionarios.html";   
+                alert("Seu funcionario foi excluído!") 
             }
 
 /**ação editar funcionário**/
+
+/**CONSTS**/
+
+const input_editar_nome = document.getElementById("nome_funcionario")
+const input_editar_email = document.getElementById("email_funcionario")
+const input_editar_senha = document.getElementById("senha_funcionario")
+const input_editar_imagem = document.getElementById("fl_image_funcionario")
+const input_id_funcionario = document.getElementById("id_funcionario")
+
+
+/**fetch para requisição do B-E**/
+
+
+const url = `http://10.107.144.8/tcc_ornatis_back-end/api-ornatis/rotas/adm/funcionario/`;
+
+const testeDadosFuncionario = async () =>
+{
+    
+    {
+        const data = {};
+        data["acao"] = 'ListarFuncionarios';
+        data["id_funcionario"] = id_funcionario;
+
+        const options =
+        {
+            method : 'POST',
+            body: JSON.stringify(data), 
+            headers: 
+            {
+                'content-type' : 'application/json'
+            }
+        }
+
+        console.log(options);
+         fetch(url, options).then(response => response.json()).then(data => {
+            console.log(data)})
+    }
+}
+testeDadosFuncionario();
+
+
+/**preencher campos (inputs) com as informacoes**/
+
+const preencherCampos = async (id_funcionario) =>
+    {
+        /**CONSTS**/
+    
+        //PEGANDO OS CAMPOS  do POPUP DO FUNCIONARIO ESPECIFICO
+        const input_editar_nome = document.getElementById(`nome_funcionario${id_funcionario}`)
+        const input_editar_email = document.getElementById(`email_funcionario${id_funcionario}`)
+        const input_editar_senha = document.getElementById(`senha_funcionario${id_funcionario}`)
+        const input_editar_imagem = document.getElementById(`fl_image_funcionario${id_funcionario}`) 
+        const input_id_funcionario = document.getElementById(`id_funcionario${id_funcionario}`)
+
+        //PEGANDO OS DADOS DO FUNCIONARIO ESPECIFICO
+        //fazer requisicao dos dados especificos do funcionario
+        const response = await fetch(`http://10.107.144.8/tcc_ornatis_back-end/api-ornatis/rotas/adm/funcionario/?id_empresa=${id_empresa}&acao=listarDetalhesFuncionario`)
+        const informacoes = await response.json();
+
+        console.log(informacoes)
+
+        //PEGANDO AS IFNROMACOES TRAZIDAS E COLOCANDO ELAS NOS CAMPOS DO POPUP
+        input_id_funcionario.value = id_funcionario; 
+        input_editar_nome.value = informacoes.data.dados_funcionario[0]["nome_funcionario"]; 
+        input_editar_email.value = informacoes.data.dados_funcionario[0]["cod_funcionario"]; 
+        input_editar_senha.value = informacoes.data.dados_funcionario[0]["senha"]; 
+        input_editar_imagem.src =  "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/" + informacoes.data.dados_funcionario[0]["foto_perfil"];
+
+        /**FUNCIONAMENTO**/
+
+        while(dia_semana_contador <= 7)
+        {
+            if(informacoes.data.dados_funcionamento[dia_semana_contador] != null)
+            {
+                const input_dia_semana = document.getElementById(`input_dia_semana${id_funcionario}`)
+                input_dia_semana.checked = true
+
+                const container_dia_semana = document.getElementById(`container_horarios_dia${id_funcionario}`)
+                container_dia_semana.style.display = 'flex';
+
+                if(informacoes.data.dados_funcionamento[dia_semana_contador][0]!= null)
+                {
+                  
+
+                    const primeiro_input_hora_inicio = document.getElementById(`1input_hora_inicio${dia_semana_contador}${id_funcionario}`)
+                    primeiro_input_hora_inicio.value = informacoes.data.dados_funcionamento[dia_semana_contador][0].hora_inicio
+                    const primeiro_input_hora_termino = document.getElementById(`1input_hora_termino${dia_semana_contador}${id_funcionario}`)
+                    primeiro_input_hora_termino.value = informacoes.data.dados_funcionamento[dia_semana_contador][0].hora_termino
+                }
+                if(informacoes.data.dados_funcionamento[dia_semana_contador][1]!= null)
+                {
+                  
+                    const segundo_input_hora_inicio = document.getElementById(`2input_hora_inicio${id_funcionario}`)
+                    segundo_input_hora_inicio.value = informacoes.data.dados_funcionamento[dia_semana_contador][1].hora_inicio
+                    const segundo_input_hora_termino = document.getElementById(`2input_hora_termino${id_funcionario}`)
+                    segundo_input_hora_termino.value = informacoes.data.dados_funcionamento[dia_semana_contador][1].hora_termino
+                }
+                else
+                {
+                    console.log("só um horário nesse dia")
+                }
+            }
+            dia_semana_contador = dia_semana_contador+1;
+        }        
+      
+    }
+
+/**config da edição que o usuario esta fazendo**/
+
+/**requisição para salvar os dados que foram editados(testeUpdate)**/
 
         
 
