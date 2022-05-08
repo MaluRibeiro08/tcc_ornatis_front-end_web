@@ -12,7 +12,7 @@ body
   max-width: 100vw;
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 header
@@ -76,6 +76,18 @@ h1
   /* background-color: brown; */
 }
 
+.container_aviso_sem_funcionario
+{
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: yellow; */
+}
+
 .container_funcionario
 {
   display: flex;
@@ -136,13 +148,14 @@ h1
 {
   display: flex;
   align-items: center;
+  gap: 20px;
   /* background-color: slateblue; */
 }
 
-.botao_acao
+.container_acoes_funcionario> .botao_acao
 { 
-  font-size: 30px;
-  font-weight: 800;
+  font-size: 35px;
+  font-weight: bold;
   color: var(--fonte);
 }
 
@@ -167,6 +180,7 @@ h1
   justify-content: center;
 
   padding-bottom: 20px;
+  padding-top: 20px;
 
   position: absolute;
 
@@ -176,10 +190,12 @@ h1
 
 }
 
+/* --------- MODAL EDICAO ---------------- */
+
 .modal_edicao
 {
   width: 60%;
-  height: 80%;
+  max-height: 80%;
 
   display: flex;
   flex-direction: column;
@@ -232,13 +248,14 @@ h1
 #fechar_modal_edicao
 {
   color: red;
+  cursor: pointer;
 }
 
-.container_titulo_modal
-{
-  width: 100%;
+/* .container_titulo_modal
+{ */
+  /* width: 100%; */
   /* background-color: steelblue; */
-}
+/* } */
 .titulo_modal
 {
   font-size: 30px;
@@ -277,7 +294,49 @@ h1
   flex-grow: 1;
   max-height: 100%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 30px;
+
   /* background-color: skyblue; */
+}
+
+.botoes_acao_edicao
+{
+  width: 70%;
+  height: auto;
+  /* background-color: cadetblue; */
+}
+
+button
+{
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 3px;
+
+  border: none;
+  border-radius: 5px;
+  color: var(--fonte);
+  background-color: var(--verde_claro); 
+
+  /* font-weight: bold; */
+  font-size: 20px;
+  color: black;
+}
+
+button:hover{
+  transition: 0.7s;
+  background-color: var(--verde_escuro); 
+  color: white;
 }
 
 
@@ -296,7 +355,7 @@ h1
 }
 .container_input
 {
-  width: 100%;
+  width: 100%;;
 }
 
 .container_input input
@@ -309,6 +368,7 @@ h1
   border-left: none;
   border-right: none;
   outline: none;
+  margin-top: 5px;
   padding-left: 2px;
   font-size: 1.2em;
   /* background-color: aquamarine; */
@@ -322,6 +382,85 @@ label
 }
 
 
+/* ---------- MODAL EXCLUSAO --------------- */
+
+.modal_exclusao
+{
+  width: 600px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 50px;
+  background-color: white;
+
+  /* background-color: yellow; */
+}
+
+.container_titulo_modal
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: tomato; */
+
+}
+.container_titulo_modal > h5
+{
+  font-family: 'Megrim';
+  font-size: 30px;
+  font-weight: 600;
+
+  color: var(--verde_escuro);
+}
+
+.container_questionamento
+{
+  width: 100%;
+  flex-grow: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 25px;
+
+  /* background-color: darkcyan; */
+}
+
+.container_botoes_acoes_funcionario
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: darkgreen; */
+}
+
+.container_botoes_acoes_funcionario > button
+{
+  width: 30%;
+}
+
+.container_botoes_acoes_funcionario > #botao_nao_exclusao_funcionario
+{
+  background-color: rgb(238, 153, 153);
+}
+.container_botoes_acoes_funcionario > #botao_nao_exclusao_funcionario:hover
+{
+  background-color: red;
+}
 /* ------------- ICONE PRINCIPAL  ---------------- */
 
 .material-symbols-outlined 

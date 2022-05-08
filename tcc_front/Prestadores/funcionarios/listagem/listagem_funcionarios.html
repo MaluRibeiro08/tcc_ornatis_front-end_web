@@ -13,10 +13,9 @@
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
-
     <script src="./scripts/dias_trabalho_dinamizacao.js" type="module" defer></script>
     <script src="./scripts/modais.js" type="module" defer></script>
+    <!-- <script src="../../../utils/imagem.js"></script> -->
 
     <title>Lista de Funcioanrios</title>
 </head>
@@ -29,7 +28,10 @@
         </div>
 
         <div class="container_listagem_funcionarios">
-            <div class="container_funcionario">
+            <div class="container_aviso_sem_funcionario" style="display: none;">
+                <h2 id="texto_sem_funcionario"> Nao há funcionários cadastrados!</h2>
+            </div>
+            <!-- <div class="container_funcionario">
                 <div class="container_foto_funcionario">
                     <img class="foto_funcionario" src="./pexels-photo-5905902.jpeg" alt="">
                 </div>
@@ -37,8 +39,8 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar1">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar_1">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -50,8 +52,8 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar_12">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -63,8 +65,8 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar_16">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -76,8 +78,21 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar_513">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="container_funcionario">
+                <div class="container_foto_funcionario">
+                    <img class="foto_funcionario" src="./pexels-photo-5905902.jpeg" alt="">
+                </div>
+
+                <div class="container_informacoes_funcionario">
+                    <h2 class="nome_funcionario">Funcionário Testes</h2>
+                    <div class="container_acoes_funcionario">
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -89,8 +104,8 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -102,8 +117,8 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -115,8 +130,8 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -128,8 +143,8 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -141,8 +156,8 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
             </div>
@@ -154,28 +169,15 @@
                 <div class="container_informacoes_funcionario">
                     <h2 class="nome_funcionario">Funcionário Testes</h2>
                     <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_editar" id="btn_editar">edit</span>
+                        <span class="material-symbols-outlined botao_acao"  name="btn_deletar" id="btn_deletar">delete</span>
                     </div>
                 </div>
-            </div>
-            <div class="container_funcionario">
-                <div class="container_foto_funcionario">
-                    <img class="foto_funcionario" src="./pexels-photo-5905902.jpeg" alt="">
-                </div>
-
-                <div class="container_informacoes_funcionario">
-                    <h2 class="nome_funcionario">Funcionário Testes</h2>
-                    <div class="container_acoes_funcionario">
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('editar')" id="btn_editar">edit</span>
-                        <span class="material-symbols-outlined botao_acao" onclick="tratar_click_botao_acao('deletar')" id="btn_deletar">delete</span>
-                    </div>
-                </div>
-            </div>
+            </div> -->
 
         </div>
         <div class="container_modais" id="container_modais">
-            <div class="modal_edicao" id="modal_edicao">
+            <div class="modal_edicao" id="modal_edicao" style="display: none;">
                 <div class="container_cabecalho_modal">
                     <div class="container_titulo_modal">
                         <span class="material-symbols-outlined" id="icone_modal">edit</span>
@@ -193,14 +195,14 @@
                         <div class="container_dados_foto_perfil">
                             <div class="container_geral_imagem">
                                 <div class="container_imagem">
-                                    <img id="img_funcionario" src="../img/person.svg">
+                                    <img id="img_funcionario" src="">
                                 </div>
                                 <div class="container_icone_foto_perfil">
-                                    <form enctype="multipart/form-data" name="formulario_imagem" id ="formulario_imagem" action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/" method="POST">
-                                        <input type="text" name="acao" hidden value="updateContaAdministradora">
+                                    <form enctype="multipart/form-data" name="formulario_imagem" id ="formulario_imagem" action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/funcionario/" method="POST">
+                                        <input type="text" name="acao" hidden value="updateFuncionario">
                                         <input type="text" name="envio_form" hidden value="true">
-                                        <input type="text" name="id_empresa" id="id_empresa" hidden value="true">
-                                        <input name="imagem_perfil" id="input_foto_funcionario" class="inputFile" type="file" accept="image/*" disabled/>
+                                        <input type="text" name="id_funcionario" id="input_id_funcionario_form" hidden value="true">
+                                        <input name="foto_perfil" id="input_foto_funcionario" class="inputFile" type="file" accept="image/*"/>
                                         <label for="input_foto_funcionario" id="labelInputFile">
                                             <span class="material-symbols-outlined" id="icone_input_imagem">
                                                 add_photo_alternate
@@ -212,19 +214,20 @@
                         </div>
 
                         <div class="container_informacoes_gerais">
+                            <input type="text" id="input_id_funcionario_editado" hidden>
                             <div class="container_input">
-                                <label class= "lable_input" for="input_nome_funcioanrio">Nome funcionário::</label>
-                                <input disabled id="input_nome_funcioanrio" class="input" type="text" disabled>
+                                <label class= "lable_input" for="input_nome_funcioanrio">Nome funcionário</label>
+                                <input id="input_nome_funcioanrio" class="input" type="text">
                             </div>
                             <div class="container_input">
                                 <label class= "lable_input" for="input_cod_funcioanrio">Código do funcionário</label>
-                                <input disabled id="input_cod_funcioanrio" class="input" type="text" disabled>
+                                <input id="input_cod_funcioanrio" class="input" type="text" disabled>
                             </div>
 
                         </div>
 
                         <div class="botoes_acao_edicao">
-
+                            <button id="botao_salvar_edicao">Salvar</button>
                         </div>
                     </div>
 
@@ -370,22 +373,46 @@
                 
             </div>
 
+            <div class="modal_exclusao" id="modal_exclusao" style="display: none;">
+                <div class="container_titulo_modal">
+                    <h5 class="titulo_modal_exclusao">Excluir Funcionário</h5>
+                </div>
+                <div class="container_questionamento">
+                    <p>Deseja apagar funcionário?</p>
+                </div>
+                <div class="container_botoes_acoes_funcionario">
+                    <input type="text" id="id_funcionario_excluir" hidden>
+                    <button id="botao_sim_exclusao_funcionario">Sim!</button>
+                    <button id="botao_nao_exclusao_funcionario">Não!</button>
+                </div>
+            </div>
         </div>
     </main>
+    <!-- <script>
+   
+        const tratar_click_botao_acao = (acao) =>
+        {
+            if(acao == "editar")
+            {
+                abrirModalEdicao(1);
+                // document.getElementById(`modal_edicao`).style.display = 'flex';
+                // document.getElementById("container_modais").style.display = "flex";
+            }
+            else if (acao == "deletar")
+            {
+                document.getElementById("container_modais").style.display = "flex";
+                document.getElementById("modal_exclusao").style.display = "flex";
+            }
+     
+        }
+        
+        const abrirModalEdicao = (id) =>
+        {
+            // fetch.....
+
+            // document.getElementById(`modal_edicao`).style.display = 'flex';
+            // document.getElementById("container_modais").style.display = "flex";
+        }   
+    </script> -->
 </body>
 </html>
-<script>
-    const tratar_click_botao_acao = (acao) =>
-    {
-        if(acao == "editar")
-        {
-            document.getElementById(`modal_edicao`).style.display = 'flex';
-            document.getElementById("container_modais").style.display = "flex";
-        }
-        else if (acao == "deletar")
-        {
-            document.getElementById("container_modais").style.display = "flex";
-        }
-
-    }
-</script>
