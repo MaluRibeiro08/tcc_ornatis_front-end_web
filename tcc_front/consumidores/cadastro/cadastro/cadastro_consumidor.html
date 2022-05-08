@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro_consumidor.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+    <title>Cadastro consumidor</title>
+</head>
+<body>
+    <main>
+       <section class="container_logo">
+           <div class="titulo">
+                <h1>CADASTRO</h1>
+           </div>
+           <div class="img">
+                <img id="img_consumidor" src="../../../Prestadores/img/image 425.png" alt="">
+           </div>
+       </section>
+       <section class="container_informacoes">
+           <div class="subtitulo">
+           <h2> <span id="dados" class="material-symbols-outlined">person</span>Dados pessoais</h2>
+           </div>
+            <div id="campo">
+                <label for="">Nome</label>
+                <input type="text" class="input_linha">
+            </div>
+            <div id="campo">
+                <label for="">Data de nascimento</label><span class="material-symbols-outlined">calendar_month</span>
+                <input type="text" class="input_linha" placeholder="dd/mm/yyyy">
+            </div>
+            <div id="campo">
+                <label for="">CPF</label>
+                <input type="text" class="input_linha">
+            </div>
+            <div id="campo">
+                <label for="">Telefone</label>
+                <input type="text" class="input_linha">
+            </div>
+            <div id="campo_genero">
+                <div id="titulo_genero">
+                     <label for="">Gênero</label>
+                </div>
+                <div id="radio_genero">
+                    <input class="radio_genero_font" type="radio"><label for="">Feminino</label>
+                    <input class="radio_genero_font" type="radio"><label for="">Masculino</label>
+                    <input class="radio_genero_font" type="radio"><label for="">Outro</label>
+                </div>
+               
+            </div>
+        <div class="container_navegacao_entre_secoes">
+                
+        <div class="container_seta_navegacao container_seta_anterior" style="visibility: hidden;">
+            <span class="material-symbols-outlined seta" id="seta_anterior">navigate_before</span>
+            <span class="label_setas_navegacao" id="span_seta_anterior">Anterior</span>
+
+        </div>
+
+        <div class="container_bolinha_indicador_navegacao">
+            <div class="bolinha bolinha1" style="background-color: #93DCD0;"></div>
+            <div class="bolinha bolinha2"></div>
+            <div class="bolinha bolinha3"></div>
+        </div>
+
+        <div class="container_seta_navegacao container_seta_proxima">
+            <span class="label_setas_navegacao" id="texto_seta_proximo">Próxima</span>
+            <span class="material-symbols-outlined seta" id="icone_seta_proximo">navigate_next</span>
+        </div>
+
+    </div>
+       </section>
+       
+    </main>
+</body>
+</html>
