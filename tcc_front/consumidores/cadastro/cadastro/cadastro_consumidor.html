@@ -23,36 +23,46 @@
            </div>
        </section>
        <section class="container_informacoes">
-           <div class="subtitulo">
-           <h2> <span id="dados" class="material-symbols-outlined">person</span>Dados pessoais</h2>
+           
+           <div class="container_dados_pessoais">
+            <div class="subtitulo">
+            <h2> <span id="dados" class="material-symbols-outlined">person</span>Dados pessoais</h2>
+            </div>
+            <div id="campo">
+                    <label for="">Nome</label>
+                    <input type="text" class="input_linha">
+                </div>
+                <div id="campo">
+                    <label for="">Data de nascimento</label><span class="material-symbols-outlined">calendar_month</span>
+                    <input type="text" class="input_linha" placeholder="dd/mm/yyyy">
+                </div>
+                <div id="campo">
+                    <label for="">CPF</label>
+                    <input type="text" class="input_linha">
+                </div>
+                <div id="campo">
+                    <label for="">Telefone</label>
+                    <input type="text" class="input_linha">
+                </div>
+                <div id="campo_genero">
+                    <div id="titulo_genero">
+                        <label for="">Gênero</label><br>
+                    </div>
+                    <div id="radio_genero">
+                        <input class="radio_genero_font" type="radio"><label for="">Feminino</label>
+                        <input class="radio_genero_font" type="radio"><label for="">Masculino</label>
+                        <input class="radio_genero_font" type="radio"><label for="">Outro</label>
+                    </div>
+                </div>
            </div>
-            <div id="campo">
-                <label for="">Nome</label>
-                <input type="text" class="input_linha">
-            </div>
-            <div id="campo">
-                <label for="">Data de nascimento</label><span class="material-symbols-outlined">calendar_month</span>
-                <input type="text" class="input_linha" placeholder="dd/mm/yyyy">
-            </div>
-            <div id="campo">
-                <label for="">CPF</label>
-                <input type="text" class="input_linha">
-            </div>
-            <div id="campo">
-                <label for="">Telefone</label>
-                <input type="text" class="input_linha">
-            </div>
-            <div id="campo_genero">
-                <div id="titulo_genero">
-                     <label for="">Gênero</label>
-                </div>
-                <div id="radio_genero">
-                    <input class="radio_genero_font" type="radio"><label for="">Feminino</label>
-                    <input class="radio_genero_font" type="radio"><label for="">Masculino</label>
-                    <input class="radio_genero_font" type="radio"><label for="">Outro</label>
-                </div>
-               
-            </div>
+           <div class="container_dados_cabelo">
+           </div>
+           <div class="container_dados_localizacao">
+           </div>
+           <div class="container_dados_login">
+
+           </div>
+           <!-- /**NAVEGACAO ENTRE CONTAINERS**/ -->
         <div class="container_navegacao_entre_secoes">
                 
         <div class="container_seta_navegacao container_seta_anterior" style="visibility: hidden;">
@@ -72,7 +82,7 @@
             <span class="material-symbols-outlined seta" id="icone_seta_proximo">navigate_next</span>
         </div>
 
-    </div>
+        </div>
        </section>
        
     </main>

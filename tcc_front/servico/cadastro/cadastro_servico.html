@@ -26,35 +26,35 @@
                 <div id="dados_parte1">
                 <div id="campo">
                     <label>Título</label>
-                    <input id="" class="input_linha" type="text">
+                    <input id="titulo_servico" class="input_linha" type="text">
                 </div>
                 <div id="campo">
                     <label>Preço</label>
-                    <input id="" class="input_linha"  type="text">
+                    <input id="preco_servico" class="input_linha"  type="text">
                 </div>
                 <div id="campo">
                     <label>Promoção</label>
-                    <input id="" class="input_linha" type="text">
+                    <input id="promocao_servico" class="input_linha" type="text">
                 </div>
                 <div id="campo">
-                    <label>Variações de preço</label>
-                    <input id="" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
+                    <label>Detalhes</label>
+                    <input id="detalhes_servico" class="input_linha" placeholder="(ex: cabelo médio R$20)" type="text">
                 </div>
                 <div id="tempo_duração">
                     <label for="">Tempo de produção</label>
                     <div id="borda">
-                        <input type="text" class="input_linha_borda" placeholder="    (ex:1h)">
+                        <input id="tempo_producao_servico" type="text" class="input_linha_borda" placeholder="    (ex:1h)">
                     </div>
                 </div>
                 <div id="local_atendimento">
                     <label for="">Local de atendimento</label>
                     <div id="options_atendimento">
                         <div>
-                            <input type="radio">
+                            <input id="estabelecimento_servico" type="radio">
                             <label for="">Estabelecimento</label>
                         </div>
                         <div>
-                            <input type="radio">
+                            <input id="domicilio_servico" type="radio">
                             <label for="">Domicílio</label>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                    <label for="">Público alvo</label>
                    <form  action="">
                     <select class="form_input" name="cars" id="cars">
-                      <optgroup label="Selecione">
+                      <optgroup id="publico_alvo" label="Selecione">
                         <option value="feminino">Feminino</option>
                         <option value="masculino">Masculino</option>
                       </optgroup>
@@ -82,12 +82,11 @@
                     <label for="">Categoria</label>
                     <form  action="">
                         <select class="form_input" name="cars" id="cars">
-                          <optgroup label="Selecione">
+                          <optgroup id="categoria" label="Selecione">
                             <option value="cabelo">Cabelo</option>
                             <option value="manicure">Manicure</option>
                             <option value="pedicure">Pedicure</option>
                             <option value="depilacao">Depilação</option>
-
                           </optgroup>
                         </select>
                       </form>
@@ -96,7 +95,7 @@
                     <label for="">Parte do corpo</label>
                     <form  action="">
                         <select class="form_input" name="cars" id="cars">
-                          <optgroup label="Selecione">
+                          <optgroup id="parte_do_corpo" label="Selecione">
                             <option value="rosto">Rosto</option>
                             <option value="perna">Perna</option>
                             <option value="barba">Barba</option>
@@ -108,7 +107,7 @@
                     <label for="">Funcionario realizador</label>
                     <form  action="">
                         <select class="form_input" name="cars" id="cars">
-                          <optgroup label="Selecione">
+                          <optgroup id="funcionario_realizador"label="Selecione">
                             <option value="arielly">Arielly</option>
                             <option value="sara">Sara</option>
                             <option value="maria">Maria</option>
@@ -120,11 +119,11 @@
                     <label for="">Este serviço está ativo para uso?</label>
                     <div id="options_servico">
                         <div>
-                            <input type="radio">
+                            <input id="servico_ativo" type="radio">
                             <label for="">Sim</label>
                         </div>
                         <div>
-                            <input type="radio">
+                            <input id="servico_desativo" type="radio">
                             <label for="">Não</label>
                         </div>
                     </div>
@@ -132,10 +131,10 @@
                 <div id="intervalo">
                     <label for="">Haverá intervalo entre esse serviço e outro?</label>
                     <div id="borda">
-                        <input type="text" class="input_linha_borda" placeholder="    (ex:1h)">
+                        <input id="intervalo_servico" type="text" class="input_linha_borda" placeholder="    (ex:1h)">
                     </div>
                 </div>
-                <button>
+                <button id="salvar_servico">
                     <h4>Salvar</h4>
                 </button>
            </div>
