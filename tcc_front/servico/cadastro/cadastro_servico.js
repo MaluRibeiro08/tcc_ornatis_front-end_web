@@ -18,6 +18,23 @@ photo_servico.addEventListener('click', () => {
     reader.readAsDataURL(file.files[0]);
 })
 
+// const getCategorias = async () => {
+//     const response = await fetch('http://10.107.144.22/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/?acao=listarEspecialidades');
+//     const categorias = await response.json();
+
+//     console.log(categorias)
+
+//     return getCategorias;
+// }
+
+// const categorias = getCategorias();
+// console.log(categorias);
+
+// //colocar os ids nos selects
+// option.value = categoria[0].id
+// option.text = categorias[0].nome_categoria
+
+
 /**CONSUMO**/
 
 //const
@@ -27,7 +44,7 @@ const input_preco = document.getElementById('preco_servico')
 const input_promocao = document.getElementById('promocao_servico')
 const input_detalhes = document.getElementById('detalhes_servico')
 const input_tempo_producao = document.getElementById('tempo_producao_servico')
-const image_funcionario = document.getElementById('fl_image_servico')
+const image_servico = document.getElementById('fl_image_servico')
 const radio_estabelecimento = document.getElementById('estabelecimento_servico')
 const radio_domicilio = document.getElementById('domicilio_servico')
 const select_publico_alvo = document.getElementById('publico_alvo')
@@ -62,6 +79,9 @@ const cadastro_servico = (data) =>{
         }
     );
 };
+
+
+
 const get_dados_servico = () => 
 {
     const data = {};
@@ -71,22 +91,39 @@ const get_dados_servico = () =>
     data ['desconto'] = input_promocao.value;
     data ['detalhes'] = input_detalhes.value;
     data ['tempo_duracao'] = input_tempo_producao.value;
-    data ['imagem_servico'] = image_funcionario.value;
+    data ['imagem_servico'] = image_servico.value;
     data ['id_tipo_atendimento'] = radio_estabelecimento.value;
     data ['id_tipo_atendimento'] = radio_domicilio.value;
+    data ['intervalo'] = input_intervalo.value;
+
+    //verificando campo que foi selecionado do select
+
+   
     
     return data
-};
+};  
+
+
+
 
 btn_salvar_servico.addEventListener("click", 
     () =>
     {
-        const dados = get_dados_funcionario();
-        cadastro_funcionario(dados);
+        const dados = get_dados_servico();
+        cadastro_servico(dados);
     }
 )
 
+ 
 
+$('.publico_alvo').change(function () {
+    let n = $('.publico_alvo').val();
+  
+    //Operador lógico
+    if (n == 5) {
+      console.log('A 5ª opção foi selecionada!');
+    }
+  });
 
 
 

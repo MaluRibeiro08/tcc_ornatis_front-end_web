@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastro_servico.css">
     <script src="cadastro_servico.js" defer></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,63 +71,48 @@
                <div id="div_dados">
                    <label for="">Público alvo</label>
                    <form  action="">
-                    <select class="form_input" name="cars" id="cars">
-                      <optgroup id="publico_alvo" label="Selecione">
-                        <option value="feminino">Feminino</option>
-                        <option value="masculino">Masculino</option>
-                      </optgroup>
+                    <select id="publico_alvo" class="form_input" >
+                        <option value="1">Feminino</option>
+                        <option value="2">Masculino</option>
+                        <option value="3">Outro</option>
+                        <option value="4">Prefiro não informar</option>
                     </select>
                   </form>
                </div>
                <div id="div_dados">
                     <label for="">Categoria</label>
-                    <form  action="">
-                        <select class="form_input" name="cars" id="cars">
-                          <optgroup id="categoria" label="Selecione">
-                            <option value="cabelo">Cabelo</option>
-                            <option value="manicure">Manicure</option>
-                            <option value="pedicure">Pedicure</option>
-                            <option value="depilacao">Depilação</option>
-                          </optgroup>
+                    <form action="">
+                        <select id="categoria" class="form_input" >
+                            <option value="1">Depilação</option>
+                            <option value="2">Maquiagem</option>
+                            <option value="3">Esmaltação</option>
+                            <option value="4">Peeling</option>
+                            <option value="5">Hidratação</option>
                         </select>
                       </form>
                </div>
                 <div id="div_dados">
                     <label for="">Parte do corpo</label>
-                    <form  action="">
-                        <select class="form_input" name="cars" id="cars">
-                          <optgroup id="parte_do_corpo" label="Selecione">
-                            <option value="rosto">Rosto</option>
-                            <option value="perna">Perna</option>
-                            <option value="barba">Barba</option>
-                          </optgroup>
+                    <form action="">
+                        <select id="parte_do_corpo" class="form_input" >
+                            <option value="1">Mãos</option>
+                            <option value="2">Pés</option>
+                            <option value="3">Pernas</option>
+                            <option value="4">Cabelo</option>
+                            <option value="5">Rosto</option>
                         </select>
                       </form>
                 </div>
                 <div id="div_dados">
                     <label for="">Funcionario realizador</label>
                     <form  action="">
-                        <select class="form_input" name="cars" id="cars">
-                          <optgroup id="funcionario_realizador"label="Selecione">
-                            <option value="arielly">Arielly</option>
-                            <option value="sara">Sara</option>
-                            <option value="maria">Maria</option>
-                          </optgroup>
+                        <select id="funcionario_realizador" class="form_input" >
+                          <optgroup label="Selecione">
+                            <option value="">Arielly</option>
+                            <option value="">Sara</option>
+                            <option value="">Maria</option>
                         </select>
                       </form>
-                </div>
-                <div id="serviço_ativo">
-                    <label for="">Este serviço está ativo para uso?</label>
-                    <div id="options_servico">
-                        <div>
-                            <input id="servico_ativo" type="radio">
-                            <label for="">Sim</label>
-                        </div>
-                        <div>
-                            <input id="servico_desativo" type="radio">
-                            <label for="">Não</label>
-                        </div>
-                    </div>
                 </div>
                 <div id="intervalo">
                     <label for="">Haverá intervalo entre esse serviço e outro?</label>
