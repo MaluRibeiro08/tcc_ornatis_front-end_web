@@ -18,26 +18,43 @@ photo_servico.addEventListener('click', () => {
     reader.readAsDataURL(file.files[0]);
 })
 
-// const getCategorias = async () => {
-//     const response = await fetch('http://10.107.144.22/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/?acao=listarEspecialidades');
-//     const categorias = await response.json();
-
-//     console.log(categorias)
-
-//     return getCategorias;
-// }
-
-// const categorias = getCategorias();
-// console.log(categorias);
-
-// //colocar os ids nos selects
-// option.value = categoria[0].id
-// option.text = categorias[0].nome_categoria
-
 
 /**CONSUMO**/
 
-//const
+const getCategorias = async () => {
+    const response = await fetch('http://10.107.144.22/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/?acao=listarEspecialidades&id_empresa=1');
+
+    const informacoes = await response.json();
+    const categorias = informacoes.data
+
+    // console.log(categorias)
+
+    return categorias;
+}
+
+const carregar_select_categorias = async () =>
+{
+    const categorias = await getCategorias();
+    console.log(categorias[0]);
+    console.log(categorias[0].id_especialidade);
+
+    // console.log(categorias[1]);
+    // console.log(categorias[1].id_especialidade);
+    option.valor = categorias[1].id_especialidade;
+    option.texto = categorias[1].nome_especialidade;
+    option.valor = categorias[2].id_especialidade;
+    option.texto = categorias[2].nome_especialidade;
+    option.valor = categorias[3].id_especialidade;
+    option.texto = categorias[3].nome_especialidade;
+    option.valor = categorias[4].id_especialidade;
+    option.texto = categorias[4].nome_especialidade;
+}
+
+carregar_select_categorias();
+
+
+/**CONST**/
+
 
 const input_titulo = document.getElementById('titulo_servico')
 const input_preco = document.getElementById('preco_servico')
@@ -56,7 +73,6 @@ const radio_servico_desativo = document.getElementById('servico_desativo')
 const input_intervalo = document.getElementById('intervalo_servico')
 const btn_salvar_servico = document.getElementById('salvar_servico')
 
-//get de informacoes
 
 
 
@@ -81,6 +97,7 @@ const cadastro_servico = (data) =>{
 };
 
 
+//get de informacoes
 
 const get_dados_servico = () => 
 {
@@ -96,35 +113,43 @@ const get_dados_servico = () =>
     data ['id_tipo_atendimento'] = radio_domicilio.value;
     data ['intervalo'] = input_intervalo.value;
 
-    //verificando campo que foi selecionado do select
-
-   
-    
     return data
 };  
 
 
+// VALIDANDO SELECTS
+ 
+function valida() { console.log("dados chegando")
+    var slctpublico = document.getElementById("publico_alvo");
+    var slctcategoria = document.getElementById("categoria");
+    var slctpartedocorpo = document.getElementById("parte_do_corpo");
+    var slctfuncionario = document.getElementById("funcionario_realizador");
+
+
+    if (slctpublico.options[slctpublico.selectedIndex].value == "" ){
+            alert("Selecione um publico antes de prosseguir");
+    }
+    if (slctcategoria.options[slctcategoria.selectedIndex].value == "" ){
+        alert("Selecione uma categoria antes de prosseguir");
+    }
+    if (slctpartedocorpo.options[slctpartedocorpo.selectedIndex].value == "" ){
+        alert("Selecione uma parte do corpo antes de prosseguir");
+    }
+    if (slctfuncionario.options[slctfuncionario.selectedIndex].value == "" ){
+        alert("Selecione um funcionário antes de prosseguir");
+    }
+
+}   
 
 
 btn_salvar_servico.addEventListener("click", 
     () =>
     {
+        valida()
         const dados = get_dados_servico();
         cadastro_servico(dados);
     }
 )
-
- 
-
-$('.publico_alvo').change(function () {
-    let n = $('.publico_alvo').val();
-  
-    //Operador lógico
-    if (n == 5) {
-      console.log('A 5ª opção foi selecionada!');
-    }
-  });
-
 
 
 
