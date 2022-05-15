@@ -1,0 +1,29 @@
+/* FIREFOX */
+.container_carrossel {
+  scrollbar-width: thin;
+  scrollbar-color: var(--verde_padrao) rgb(235, 232, 232);
+}
+  
+/* CHROME EDGE SAFARI OPERA */
+.container_carrossel::-webkit-scrollbar {
+  width: 1px;
+}
+
+.container_carrossel::-webkit-scrollbar-track {
+  background: 235, 232, 232;
+}
+
+.container_carrossel::-webkit-scrollbar-thumb {
+  background-color: var(--verde_padrao);
+  border-radius: 7px;
+  border: 6px solid white;
+}
+
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
