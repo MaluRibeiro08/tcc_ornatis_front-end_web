@@ -553,6 +553,7 @@ main
     gap: 5px;
     /* background-color: royalblue; */
 }
+
 .container_conteudo_secao
 {
     width: 100%;
@@ -563,6 +564,7 @@ main
     gap: 10px;
     /* background-color: springgreen; */
 }
+
 .container_rede
 {
     width: 100%;
@@ -729,6 +731,7 @@ main
 {
     /* background-color: silver; */
 }
+
 .container_horario_temino
 {
     flex-grow: 1;
@@ -741,8 +744,8 @@ main
 
     /* background-color: green; */
 }
-/* ----------- FUNCIONÁRIOS ---------- */
 
+/* ----------- FUNCIONÁRIOS ---------- */
 .container_primario_funcionarios
 {
     width: 50%;
@@ -889,6 +892,264 @@ main
 
     /* background-color: navy; */
 }
+
+/* -------- FORMAS DE RECEBIMENTO ------- */
+
+.container-primario-formas-pagamento
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    /* background-color: coral; */
+}
+
+.container-primario-formas-pagamento>.container_titulo_secao
+{
+    /* background-color: rosybrown; */
+}
+
+.container_conteudo_secao_formas_pagamento
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 5px;
+
+    /* background-color: white;     */
+}
+.container_forma_pagamento
+{
+    min-width: 200px;
+    width: 40%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    /* background-color: rebeccapurple; */
+}
+
+.container_icone_forma_pagamento
+{
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: blue; */
+}
+
+.container_icone_forma_pagamento > i
+{
+    color: var(--verde_escuro);
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.container_icone_forma_pagamento >.icone_pix
+{
+    height: 25px;
+    width: auto;
+    max-width: 30px;
+}
+
+.container_icone_forma_pagamento > .icone_cell
+{
+    font-weight: 800;
+}
+
+.container_nome_forma_pagamento
+{
+    width: calc(100% - 30px);
+    height:40px;
+
+    display: flex;
+    align-items: center;
+
+    /* background-color: springgreen; */
+}
+
+/* ------ REGRAS DE NEGÓCIO ------ */
+
+.container-primario-regras-cancelamento
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    /* background-color: white; */
+}
+
+.container_titulo_secao
+{
+    /* background-color: purple; */
+}
+
+.container_conteudo_regras_cancelamento
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: seagreen; */
+}
+
+.taxa_unica_nula
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    /* justify-content: center; */
+    /* background-color: yellow; */
+}
+
+.taxa_unica_nula > span
+{
+    color: var(--verde_escuro);
+}
+
+.regras_variadas
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: rgb(168, 25, 89); */
+}
+
+.container_geral_regras
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    /* background-color: pink; */
+}
+
+.container_categoria_regas,  .container_explicacoes
+{
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: start;
+
+    margin-bottom: 30px;
+    /* background-color: yellow; */
+}
+
+.container_explicacoes
+{
+    font-size: 15px ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.container_titulo_categoria_regras
+{
+    width: 170px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    text-align: right;
+    padding-right: 10px;
+
+    /* background-color: rgb(163, 36, 13); */
+}
+
+.container_regras
+{
+    width:calc(70% - 170px);
+    max-height: 145px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    border-left: solid 2px var(--verde_escuro);
+    padding-left: 5px;
+    
+    gap: 8px;
+
+    /* background-color: slateblue; */
+}
+.categoria_regra
+{
+    font-weight: bolder;
+}
+
+.legenda_explicacao_taxas
+{
+    width: 100%;
+    /* background-color: red; */
+}
+
+.container_regra
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+    gap: 2px;
+
+    /* background-color: rgb(231, 12, 122); */
+}
+
+.separador_taxa
+{
+    width: 0;
+    height: 100%;
+    border-left: solid 1px var(--verde_escuro);
+
+}
+.container_valor_taxa
+{
+    width: 100px;
+    /* background-color: green; */
+}
+
+.container_antecedencia
+{
+    width: 100px;
+    /* background-color: blue; */
+}
+
+.separador_taxa, .container_valor_taxa, .container_antecedencia
+{
+    padding: 5px;
+}
+
+
+
 /* C ------ FOOTER ------- */
 footer
 {
