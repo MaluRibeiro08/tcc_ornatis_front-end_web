@@ -286,8 +286,8 @@ main
     align-items: center;
     justify-content: center;
 
-    gap: 15px;
-    background-color: rgb(191, 134, 223);
+    gap: 70px;
+    /* background-color: rgb(191, 134, 223); */
 }
 
 
@@ -295,7 +295,7 @@ main
 .container-primario-biografia
 {
     width: 100%;
-    background-color: yellow;
+    /* background-color: yellow; */
 
     display: flex;
 }
@@ -357,7 +357,7 @@ main
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(51, 51, 51, 0.944);
+    /* background-color: rgba(51, 51, 51, 0.944); */
 }
 
 .container_aviso_falta_foto
@@ -374,13 +374,13 @@ main
     color:var(--fonte);
 
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.195);
+    background-color: rgba(0, 0, 0, 0.036);
 }
 
 .container_aviso_falta_foto > h4
 {
     font-size: 2em;
-    font-weight: 200;;
+    font-weight: 200;
 }
 
 .container_botao_adicionar
@@ -530,17 +530,17 @@ main
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background-color: royalblue;
+    /* background-color: royalblue; */
 }
 
 .container_titulo_secao
 {
-    background-color: teal;
+    /* background-color: teal; */
 }
 
 .campo_endereco
 {
-    background-color: rgb(147, 180, 70);
+    /* background-color: rgb(147, 180, 70); */
 }
 
 /*  ------- REDES SOCIAIS ---------- */
@@ -551,7 +551,7 @@ main
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background-color: royalblue;
+    /* background-color: royalblue; */
 }
 .container_conteudo_secao
 {
@@ -561,7 +561,7 @@ main
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: springgreen;
+    /* background-color: springgreen; */
 }
 .container_rede
 {
@@ -573,12 +573,13 @@ main
     justify-content: start;
     align-items: center;
     gap:10px;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .container_rede input
 {
-    width: 100%;
+    width: 40%;
+    max-width: 350px;
     height: 40px;
     
     background-color: transparent;
@@ -594,11 +595,307 @@ main
     /* background-color: deeppink; */
 }
 
+
+/* ----------FUNCIONAMENTO E FUNCIONARIOS -------------*/
+
+.container-primario-funcionamento-funcionarios
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+
+    gap: 5px;
+
+    /* background-color: crimson; */
+}
+
+/* FUNCIONAMENTO */
+.container_primario_funcionamento
+{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    /* background-color: tomato; */
+}
+
+.container_titulo_secao
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container_geral_horarios_funcionamento
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    gap: 20px;
+
+    /* background-color: blue; */
+}
+
+.container_dia_semana
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+    /* background-color: violet; */
+}
+
+.container_dia
+{
+    width: 55px;
+    height: 100%;
+
+    /* background-color: yellow; */
+}
+
+.circulo_dia
+{
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px;
+    border-radius: 21px;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--verde_padrao);
+}
+
+.container_horarios
+{
+    width: calc(100% - 55px);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 10px;
+    align-items: flex-start;
+    /* background-color: steelblue; */
+}
+
+.container_horario
+{
+    width: fit-content;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+
+    /* background-color: yellow; */
+}
+
+.container_horario_inicio
+{
+    flex-grow: 1;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    /* background-color: tomato; */
+}
+
+.separador_horarios
+{
+    /* background-color: silver; */
+}
+.container_horario_temino
+{
+    flex-grow: 1;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    /* background-color: green; */
+}
+/* ----------- FUNCIONÁRIOS ---------- */
+
+.container_primario_funcionarios
+{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    
+    /* background-color: darkgoldenrod; */
+}
+
+.container_conteudo_secao_funcionarios
+{
+    width: 100%;
+    min-height: 120px;
+    max-height: 460px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    overflow-y: auto;
+
+    border-radius: 2px;
+
+    padding: 8px;
+
+    background-color: rgba(0, 0, 0, 0.059);;
+}
+
+.container_icone_adicao_funcionario
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    /* background-color: yellow; */
+}
+
+.circulo_icone_adicao
+{
+    height: 25px;
+    width: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+    /* background-color: rgba(48, 199, 25, 0.529); */
+}
+
+.container_aviso_sem_funcionarios
+{
+    width: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: turquoise; */
+}
+
+.container_funcionarios
+{
+    width: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+
+    padding: 10px;
+
+    gap: 15px;
+
+    /* background-color: red; */
+}
+
+.card_funcionario
+{
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--verde_padrao);
+    background-color: white;
+    border-radius: 5px;
+
+    padding: 8px;
+    gap: 20px;
+    /* background-color: seagreen; */
+}
+
+.container_img_funcionario
+{
+    max-width: 50px;
+    max-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    /* background-color: salmon; */
+}
+
+.container_img_funcionario > img
+{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 25px;
+
+    object-fit: cover;
+}
+
+.container_nome_funcionario
+{
+    flex-grow: 1;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    font-size: 18px;
+
+    /* background-color: navy; */
+}
 /* C ------ FOOTER ------- */
 footer
 {
     width: 100%;
     height: 170px;
+
+    margin-top: 50px;
     background-color: rgb(147, 180, 70);
 }
 
