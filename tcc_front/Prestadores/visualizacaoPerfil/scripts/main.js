@@ -185,7 +185,7 @@ const criarElementoRegraCancelamento = (acimaCem, tolerancia, taxa) =>
     else
     {
         document.getElementById("container_regras_abaixo_cem").appendChild(novaRegra)
-        document.querySelector(".container_regras_acima_cem").style.display = "flex"
+        document.querySelector(".container_regras_abaixo_cem").style.display = "flex"
 
     }
 }
