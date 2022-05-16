@@ -48,6 +48,7 @@ const carregar_select_categorias = async () =>
     option.texto = categorias[3].nome_especialidade;
     option.valor = categorias[4].id_especialidade;
     option.texto = categorias[4].nome_especialidade;
+    
 }
 
 carregar_select_categorias();
