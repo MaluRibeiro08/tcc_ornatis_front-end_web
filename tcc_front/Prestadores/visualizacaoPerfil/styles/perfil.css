@@ -226,7 +226,7 @@ main
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    /* justify-content: center; */
 
     gap: 60px;
 
@@ -310,9 +310,54 @@ main
 {
     background-color: var(--cinza_claro);
 }
+.link_nao_selecionado
+{
+    background-color: transparent;
+}
 
 /* B.2.2 ------- CONTEUDO LATERAL --------  */
 
+/* ---- CONTAINERS GERAL ------  */
+
+.container-global-conteudo
+{
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: red; */
+}
+
+.container_primario_secao
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_avisos
+{
+    width: 90%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    font-size: 25px;
+
+    background-color: rgba(0, 0, 0, 0.075);
+}
 .container-fixo-geral-lateral-conteudo
 {
     height: 100%;
@@ -427,7 +472,7 @@ main
     font-weight: 200;
 }
 
-.container_botao_adicionar
+.container_botao_adicionar_foto_salao
 {
     height: 100%;
     width: 50px;
@@ -439,7 +484,7 @@ main
     /* background-color: darkgoldenrod; */
 }
 
-.container_botao_adicionar > .icone_adicao_imagem
+.container_botao_adicionar_foto_salao > .icone_adicao_imagem
 {
     width: 45px;
     height: 45px;
@@ -455,7 +500,7 @@ main
     color: var(--fonte);
 }
 
-.container_botao_adicionar > .icone_adicao_imagem:hover
+.container_botao_adicionar_foto_salao > .icone_adicao_imagem:hover
 {
     transform: scale(1.1);
     background-color: var(--verde_escuro);
@@ -622,10 +667,10 @@ main
     /* background-color: pink; */
 }
 
-.container_rede input
+.container_rede input, .container_rede a
 {
-    width: 40%;
-    max-width: 350px;
+    width: 50%;
+    max-width: 400px;
     height: 40px;
     
     background-color: transparent;
@@ -637,6 +682,11 @@ main
 
     padding-left: 2px;
     font-size: 1.2em;
+
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
 
     /* background-color: deeppink; */
 }
@@ -728,7 +778,16 @@ main
     font-size: 15px;
     font-weight: bold;
     color: white;
-    background-color: var(--verde_padrao);
+}
+
+.circulo_dia_nao_funciona
+{
+    background-color: var(--cinza_claro);
+}
+
+.dia_semana_funciona
+{
+    background-color: #5f9f96da;
 }
 
 .container_horarios
@@ -849,7 +908,8 @@ main
     justify-content: center;
 
     padding: 5px;
-    /* background-color: rgba(48, 199, 25, 0.529); */
+    color: white;
+    background-color: var(--verde_escuro);
 }
 
 .container_aviso_sem_funcionarios
@@ -881,6 +941,9 @@ main
 
     /* background-color: red; */
 }
+.container_funcionarios:hover, .container_icone_adicao_funcionario:hover{
+    cursor: pointer;
+}
 
 .card_funcionario
 {
@@ -898,6 +961,9 @@ main
     padding: 8px;
     gap: 20px;
     /* background-color: seagreen; */
+}
+.card_funcionario:hover{
+    cursor: auto;
 }
 
 .container_img_funcionario
