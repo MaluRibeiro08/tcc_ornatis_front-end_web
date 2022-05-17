@@ -99,16 +99,16 @@ label{
 #sou_prestador{
     text-decoration: none;
     color: #000000;
-    cursor: not-allowed;
 }
 
 #sou_consumidor{
     text-decoration: none;
     color: #000000;
+    cursor: not-allowed;
 }
 .header{
-    background-color: white;
-    border: solid  rgb(182, 182, 182);
+    background-color: var(--cinza_claro);
+    opacity: 70%;
     width: 40%;
     height: 50px;
     border-top-left-radius: 7px;
@@ -118,21 +118,21 @@ label{
     
   }
 
+  .header:hover{
+    border: 1px solid linear-gradient( var(--verde_claro),var(--verde_padrao));
+    background-image:linear-gradient( var(--verde_claro),var(--verde_padrao));
+     transform: 1.5; 
+  }
+
   .header2{
-    background-color: var(--cinza_claro);
-    opacity: 70%;
+    background-color: white;
+    border: solid  rgb(182, 182, 182);
     width: 40%;
     height: 50px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     padding-left: 5%;
     padding-top: 4%;
-  }
-
-  .header2:hover{
-    border: 1px solid linear-gradient( var(--verde_claro),var(--verde_padrao));
-    background-image:linear-gradient( var(--verde_claro),var(--verde_padrao));
-    transform: 1.5; 
   }
 
   .main{
@@ -226,7 +226,6 @@ label{
     margin-left: 130px;
     margin-top: 100px;
     cursor: pointer;
-
 }
 
 #entrar:hover{
@@ -234,4 +233,3 @@ label{
     background-image:linear-gradient( var(--verde_claro),var(--verde_padrao));
     transform: 1.5;
 }
-
