@@ -40,14 +40,14 @@ const carregar_select_categorias = async () =>
 
     // console.log(categorias[1]);
     // console.log(categorias[1].id_especialidade);
-    option.valor = categorias[1].id_especialidade;
-    option.texto = categorias[1].nome_especialidade;
-    option.valor = categorias[2].id_especialidade;
-    option.texto = categorias[2].nome_especialidade;
-    option.valor = categorias[3].id_especialidade;
-    option.texto = categorias[3].nome_especialidade;
-    option.valor = categorias[4].id_especialidade;
-    option.texto = categorias[4].nome_especialidade;
+    // option.valor = categorias[1].id_especialidade;
+    // option.texto = categorias[1].nome_especialidade;
+    // option.valor = categorias[2].id_especialidade;
+    // option.texto = categorias[2].nome_especialidade;
+    // option.valor = categorias[3].id_especialidade;
+    // option.texto = categorias[3].nome_especialidade;
+    // option.valor = categorias[4].id_especialidade;
+    // option.texto = categorias[4].nome_especialidade;
     
 }
 

@@ -114,7 +114,7 @@ main{
 }
 
 .input_linha{
-    width: 600px;
+    width: 500px;
     height: 60px;
     box-shadow: none;
     border: none;
@@ -149,18 +149,16 @@ main{
     margin-top: 150px;
 }
 
-#tempo_duração{
+
+#tempo_duracao{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  
 }
 
 #intervalo{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin-top: 50px;
 }
 
@@ -182,7 +180,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 input[type='file']{
@@ -221,9 +219,9 @@ button{
     height: 70px;
     border-radius: 20px;
     background-color: var(--verde_claro);
-    margin-left: 150px;
+    margin-left: 120px;
     margin-top: 200px;
-    
+   
 }
 
 button:hover{
@@ -239,6 +237,84 @@ button:hover{
    background-color: var(--verde_claro);
    border-radius: 10px;
    border: var(--verde_claro);
+}
+
+
+@media (max-width: 2245px)
+{
+    .input_linha{
+        width: 400px;
+    }
+
+}
+
+@media (max-width: 1860px){
+    #rotulo_verde{
+        width: 30%;
+    }
+
+    
+}
+@media (max-width: 1850px){
+   
+    #dados_parte2{
+        margin-top: 0px;
+     }
+}
+
+@media (max-width: 1430px){
+  
+    #rotulo_verde{
+        width: 100%;
+        height: 10vh;
+        border-radius: 0px 0px 0px 0px;
+        padding-top: 10px;
+        position: fixed;
+    }
+    .form_input{
+        width: 500px;
+        height: 40px;
+     }
+
+   #foto{
+        display: none;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #dados_servico{
+        gap: 100px;
+    }
+
+    #dados_parte1{
+        margin-top: 150px;
+     }
+    button{
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 1850px) {
+    
+    .form_input{
+        width: 300px;
+        height: 40px;
+     }
+
+     
+}
+
+@media (max-width: 927px) {
+
+    #dados_servico{
+       display: block;
+    }
+    
+     
 }
 
 
