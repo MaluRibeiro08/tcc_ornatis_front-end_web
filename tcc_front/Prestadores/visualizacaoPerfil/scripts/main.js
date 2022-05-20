@@ -166,7 +166,7 @@ const criarElementoRegraCancelamento = (acimaCem, tolerancia, taxa) =>
     novaRegra.innerHTML = 
     `
         <div class="container_valor_taxa">
-            <p class="valor_taxa">R$ ${taxa},00</p>
+            <p class="valor_taxa">${taxa} %</p>
         </div>
 
         <div class="separador_taxa">
