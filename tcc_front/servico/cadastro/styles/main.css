@@ -1,0 +1,665 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* ---------- BODY ---------- */
+body
+{
+  max-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: hidden; */
+}
+
+
+/* ------------- HEADER ---------------  */
+header
+{
+  min-height: 100px;
+  height: 100px;
+  box-shadow: 2px 3px 10px 0px #00000040;
+
+  border-radius: 0px 0px 10px 10px;
+
+  z-index: 1;
+
+  /* background-color: blue; */
+}
+
+
+/* ---------- MAIN -------------- */
+main
+{
+  flex-grow: 1;
+  width: 100%;
+
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  /* background-color: yellow; */
+}
+
+
+/* ---------- CEBAÇALHO SECUNDARIO ------------- */
+.container_titulo_principal
+{
+  width: 100%;
+  min-height: 150px;
+  background-color: #f1f1f1;
+  border-radius: 0px 0px 45px 45px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+h1
+{
+  font-family: Raleway;
+}
+
+.container_geral_formulario_servicos
+{
+  width: 100%;
+  flex-grow: 1;
+  padding: 30px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: brown; */
+}
+
+
+/* ---------- FORMULARIO ------------ */
+
+.container_formulario_servico
+{
+  width: 70%;
+  height: fit-content;
+  
+  padding: 20px;
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 60px;
+  
+  /* background-color: turquoise; */
+}
+
+.container_secao_informacoes
+{
+  width: 100%;
+  height:fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 100px;
+
+  /* background-color: slateblue; */
+}
+
+.container_secundario
+{
+  height: fit-content;
+  width: calc(50% - 40px);
+  
+  /* background-color: palevioletred; */
+}
+
+/* ----------- IMAGEM SERVIÇO ------------ */
+
+.container_geral_imagem_servico
+{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: red; */
+}
+
+.container_imagem_servico
+{
+  width: 450px;
+  max-height: 250px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
+}
+
+
+.container_imagem_servico > .input_imagem_servico
+{
+  display: none;
+  /* background-color: yellow; */
+}
+
+.container_imagem_servico > .container_bordinha_imagem
+{
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius:20px;
+  border: solid 1px var(--fonte);
+
+  /* background-color: violet; */
+}
+
+.container_imagem_servico > .container_bordinha_imagem > span
+{
+  font-size: 4em;
+}
+
+.container_imagem_servico > .container_bordinha_imagem:hover
+{
+  cursor: pointer;
+}
+
+label > img
+{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+/* ---------- TITULO SERVICO ---------- */
+
+
+.container_titulo_servico > .container_input
+{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  /* background-color: seagreen; */
+}
+
+#input_titulo_servico
+{
+  width: 100%;
+  font-size: 2em;
+}
+
+
+/* ------------- PRECO e INTERVALO -------------- */
+
+.borda_card_form
+{
+  height: 100px;
+
+  border: solid 1px black;
+  border-radius: 10px;
+  padding:25px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 60px; */
+
+  /* background-color: tomato; */
+}
+
+.borda_card_form > .container_input
+{
+  /* width: 100%; */
+
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: chartreuse; */
+}
+
+#input_desconto, #input_duracao_servico, #input_intervalo
+{
+  /* width: 50%; */
+  text-align: center;
+}
+
+
+.container_input > p
+{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: start;
+
+  gap: 8px;
+  /* background-color: sandybrown; */
+}
+
+
+/* ---------- PUBLICO ALVO -------- */
+
+.container_publico_alvo > .container_input
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: darkgoldenrod; */
+}
+
+
+/* ------------ LOCAL DE ATENDIMENTO ------------- */
+.container_local_atendimento
+{
+  /* background-color: yellow; */
+}
+
+.container_local_atendimento > .container_input
+{
+  /* background-color: springgreen; */
+}
+
+.container_local_atendimento > .container_input_checkbox
+{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 10px;
+  gap: 10px;
+  /* background-color: red; */
+}
+
+.container_item_check
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  /* background-color: teal; */
+}
+
+.container_item_check > label
+{
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+
+
+/* ---------- ESPECIALIDADE E PARTE DO CORPO -------------- */
+
+.container_especialidades_partes_corpo
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  /* background-color: orangered; */
+}
+.container_especialidades, .container_partes_corpo
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* background-color: purple; */
+}
+
+.container_especialidades > .container_input, .container_partes_corpo > .container_input
+{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 10px;
+  
+  /* background-color: red; */
+}
+
+
+/* --------------------- FUNCIONARIOS ------------------ */
+
+
+.container_primario_funcionarios
+{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 20px;
+
+  
+  /* background-color: darkgoldenrod; */
+}
+
+.container_conteudo_secao_funcionarios
+{
+  width: 100%;
+  min-height: 120px;
+  max-height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  overflow-y: auto;
+
+  border-radius: 2px;
+
+  padding: 8px;
+
+  background-color: rgba(0, 0, 0, 0.059);;
+}
+
+.container_icone_adicao_funcionario
+{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  /* background-color: yellow; */
+}
+
+.circulo_icone_adicao
+{
+  height: 25px;
+  width: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+  color: white;
+  background-color: var(--verde_escuro);
+}
+
+.container_aviso_sem_funcionarios
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: turquoise; */
+}
+
+.container_funcionarios
+{
+  width: 100%; 
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+
+  padding: 10px;
+
+  gap: 15px;
+
+  /* background-color: red; */
+}
+.container_funcionarios:hover, .container_icone_adicao_funcionario:hover{
+  cursor: pointer;
+}
+
+.card_funcionario
+{
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--verde_padrao);
+  background-color: white;
+  border-radius: 5px;
+
+  padding: 8px;
+  gap: 20px;
+  /* background-color: seagreen; */
+}
+.card_funcionario:hover{
+  cursor: auto;
+}
+
+.container_img_funcionario
+{
+  max-width: 50px;
+  max-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  /* background-color: salmon; */
+}
+
+.container_img_funcionario > img
+{
+  width: 50px;
+  height: 50px;
+
+  border-radius: 25px;
+
+  object-fit: cover;
+}
+
+.container_nome_funcionario
+{
+  flex-grow: 1;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  font-size: 18px;
+
+  /* background-color: navy; */
+}
+
+
+
+/* --------------------- OBSERVACOES E DETALHES  ------------------ */
+
+.borda_campo_observacoes
+{
+  width: 100%;
+}
+
+.borda_campo_observacoes > .container_input
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #3e3e3e; */
+}
+
+textarea
+{
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 0.5px #3e3e3e solid;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    font-size: 1.2em;
+    resize: none;
+}
+
+/* ---------------- BOTAO SALVAR -------------- */
+
+
+.container_botoes
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: brown; */
+}
+
+.botoes_acao_criacao
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: yellow; */
+}
+
+button
+{
+  width: 30%;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 3px;
+
+  border: none;
+  border-radius: 5px;
+  color: var(--fonte);
+  background-color: var(--verde_claro); 
+
+  /* font-weight: bold; */
+  font-size: 20px;
+  color: black;
+}
+
+button:hover{
+  transition: 0.7s;
+  background-color: var(--verde_escuro); 
+  color: white;
+}
+
+
+#btn_salvar_funcionario{
+  margin-left: 300px;
+  height: 50px;
+}
+
+/* ----------- INPUTS ----------- */
+
+.container_input
+{
+  gap: 10px;
+}
+
+label
+{
+  /* width: 100%; */
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.container_input input, select
+{
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  border: solid 0.5px var(--fonte);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  padding-left: 5px;
+  font-size: 1.2em;
+  /* background-color: aquamarine;  */
+}
+
+
+/* ----------- SELECT ------- */
+
+select
+{
+  background-color: transparent;
+  border: solid 0.5px var(--fonte);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  padding-left: 5px;
+  font-size: 1.1em; 
+}
+
+
+
+/* ------------------ icones ------------------ */
+
+.material-symbols-outlined
+{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 48;
+  color: var(--fonte);
+}
+
+#icone
+{
+    font-size: 60px;
+}
