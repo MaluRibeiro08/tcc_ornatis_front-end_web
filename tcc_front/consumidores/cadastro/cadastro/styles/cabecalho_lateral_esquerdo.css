@@ -1,0 +1,67 @@
+
+.container_geral_cabecalho_lateral
+{
+    width: 40%;
+    height: 100%; 
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: rgb(178, 201, 26); */
+}
+
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1
+{
+    font-family: 'Megrim';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4em;
+}
+
+#container_titulo_cabecalho_lateral
+{
+    border-right: solid 1px black;
+}
+
+.container_imagens_cabecalho_lateral
+{
+    flex-grow: 1;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    /* background-color: darkgreen; */
+}
+
+.imagens_cabecalho_lateral
+{
+    width: 100%;
+    height: 70%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    /* background-color: darkviolet; */
+}
+
+#img_prestador
+{
+    position: absolute;
+}
+
+.imagens_cabecalho_lateral > img{
+    width: 70%;
+}

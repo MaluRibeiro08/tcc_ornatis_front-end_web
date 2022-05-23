@@ -1,0 +1,29 @@
+/* FIREFOX */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--verde_padrao) rgb(235, 232, 232);
+  }
+  
+  /* CHROME EDGE SAFARI OPERA */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: 235, 232, 232;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--verde_padrao);
+    border-radius: 10px;
+    border: 3px solid 235, 232, 232;
+  }
+
+  body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
