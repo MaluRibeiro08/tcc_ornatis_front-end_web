@@ -328,8 +328,8 @@ label > img
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 25px;
   /* background-color: orangered; */
 }
 .container_especialidades, .container_partes_corpo
@@ -356,6 +356,8 @@ label > img
   
   /* background-color: red; */
 }
+
+
 
 
 /* --------------------- FUNCIONARIOS ------------------ */
@@ -409,7 +411,7 @@ label > img
   /* background-color: yellow; */
 }
 
-.circulo_icone_adicao
+.circulo_icone_adicao, a
 {
   height: 25px;
   width: 25px;
@@ -662,4 +664,12 @@ select
 #icone
 {
     font-size: 60px;
+}
+
+
+/* ------------- CAR FUNCIONARIO -------------- */
+
+.funcionario_selecionado
+{
+  background-color: pink;
 }

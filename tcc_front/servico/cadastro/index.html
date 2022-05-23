@@ -10,10 +10,17 @@
 
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
 
-    
+
+
+     <!-- SCRIPTS -->
+     <script   src="./scripts/main.js" type="module" defer></script>
+
+    <!-- MASCRA DOS INPUTS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://plentz.github.io/jquery-maskmoney/javascripts/jquery.maskMoney.min.js" type="text/javascript"></script>
 
     <title>Cadastrar Serviço</title>
 </head>
@@ -29,12 +36,15 @@
         </div>
 
         <div class="container_geral_formulario_servicos">
-            <div class="container_formulario_servico">
+            <div class="container_formulario_servico" method="post" enctype="multipart/form-data">
                 <div class="container_secao_informacoes container_geral_imagem_servico">
-                    <diV class="container_imagem_servico">
-                        <label class="container_bordinha_imagem" for="input_imagem_servico"><img src="" alt="" style="display: none;"><span class="material-symbols-outlined">add_photo_alternate</span></label>
+                    <form class="container_imagem_servico">
+                        <label class="container_bordinha_imagem" for="input_imagem_servico"><img id="imagem_servico" src="" alt="" style="display: none;"><span class="material-symbols-outlined" id="icone_add_imagem_servico">add_photo_alternate</span></label>
                         <input class="input_imagem_servico" id="input_imagem_servico" type="file">
-                    </diV>
+                        <input type="text" name="acao" id="acao" hidden value="createServico">
+                        <input type="text" name="envio_form" value="true" hidden>
+                        <input type="text" name="id_servico" hidden>
+                    </form>
                 </div>
                 
                 <div class=" container_secao_informacoes container_titulo_servico">
@@ -48,7 +58,7 @@
                     <div class="container_secundario borda_card_form container_geral_preco">
                         <div class="container_input">
                             <label class= "lable_input" for="input_preco_servico">Preço:</label>
-                            <p>R$ <input  id="input_preco_servico" class="input" type="text" maxlength="8"></p>
+                            <p>R$ <input  id="input_preco_servico" class="input dinheiro" maxlength="8"></p>
                         </div>
                         <div class="container_input">
                             <label class= "lable_input" for="input_desconto">Desconto:</label>
@@ -59,11 +69,11 @@
                     <div class="container_secundario borda_card_form container_geral_tempo">
                         <div class="container_input">
                             <label class= "lable_input" for="input_duracao_servico">Duração:</label>
-                            <p><input  id="input_duracao_servico" class="input" type="text" maxlength="100"> min</p>
+                            <p><input  id="input_duracao_servico" class="input" onkeypress="validarDigitacaoNumeros();" maxlength="3"> min</p>
                         </div>
                         <div class="container_input">
                             <label class= "lable_input" for="input_intervalo">Intervalo:</label>
-                            <p><input  id="input_intervalo" class="input" type="text" maxlength="100">min</p>
+                            <p><input  id="input_intervalo" class="input" onkeypress="validarDigitacaoNumeros();" maxlength="3">min</p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +85,7 @@
                             <label class= "lable_input" for="input_publico_alvo">Público-alvo:</label>
                             <!-- <input  id="input_publico_alvo" class="input" type="text" maxlength="100"> -->
                             <select name="publico_alvo" id="select_publico_alvo">
-                                <option value="null" selected disabled>Selecione</option>
+                                <!-- <option value="null" selected disabled>Selecione</option> -->
                                 <option value="feminino">Feminino</option>
                                 <option value="masculino">Masculino</option>
                                 <option value="ambos">Ambos</option>
@@ -110,10 +120,10 @@
                                 <!-- <input  id="input_ especialidade" class="input" type="text" maxlength="100"> -->
                                 <select name="especialidade" id="select_especialidade">
                                     <option value="null" selected disabled>Selecione</option>
-                                    <option value="unhas">Unhas</option>
-                                    <option value="maquiagem">Maquiagem</option>
-                                    <option value="depilacao">Depilação</option>
-                                    <option value="sobrancelha">Sobrancelha</option>
+                                    <!-- <option value="unhas">Unhas</option> -->
+                                    <!-- <option value="maquiagem">Maquiagem</option> -->
+                                    <!-- <option value="depilacao">Depilação</option> -->
+                                    <!-- <option value="sobrancelha">Sobrancelha</option> -->
                                 </select>
                             </div>
                         </div>
@@ -124,10 +134,10 @@
                                 <!-- <input  id="input_ parte_corpo" class="input" type="text" maxlength="100"> -->
                                 <select name="parte_corpo" id="select_parte_corpo">
                                     <option value="null" selected disabled>Selecione</option>
-                                    <option value="pernas">Pernas</option>
-                                    <option value="maos">Mãos</option>
-                                    <option value="pes">Pés</option>
-                                    <option value="labios">Lábios</option>
+                                    <!-- <option value="pernas">Pernas</option> -->
+                                    <!-- <option value="maos">Mãos</option> -->
+                                    <!-- <option value="pes">Pés</option> -->
+                                    <!-- <option value="labios">Lábios</option> -->
                                 </select>
                             </div>
                         </div>
@@ -142,9 +152,9 @@
                             <div class="container_conteudo_secao_funcionarios">
                                 <div class="container_icone_adicao_funcionario">
                                     <div class="circulo_icone_adicao">
-                                        <span class="material-symbols-rounded">
-                                            add
-                                        </span>
+                                       <a href="../../Prestadores/visualizacaoPerfil/index.html#link_container_funcionarios"> <span class="material-symbols-rounded">
+                                        add
+                                    </span></a>
                                     </div>
                                     
                                 </div>
@@ -154,68 +164,68 @@
                                     </p>                               
                                 </div>
                                 <div class="container_funcionarios" id="container_funcionarios">
-                                    <div class="card_funcionario">
+                                    <!-- <div class="card_funcionario">
                                         <div class="container_img_funcionario">
                                             <img src="./imgs/funcionario.jpeg" alt="Foto Funcionario">
                                         </div>
                                         <div class="container_nome_funcionario">
                                             <p>Carla Aparecida da Silva</p>
-                                        </div>
+                                        </div> -->
 
                                     </div>
 
-                                    <div class="card_funcionario">
+                                    <!-- <div class="card_funcionario">
                                         <div class="container_img_funcionario">
                                             <img src="./imgs/funcionario.jpeg" alt="Foto Funcionario">
                                         </div>
                                         <div class="container_nome_funcionario">
                                             <p>Carla Aparecida da Silva</p>
-                                        </div>
+                                        </div> -->
 
                                     </div>
-                                    <div class="card_funcionario">
+                                    <!-- <div class="card_funcionario">
                                         <div class="container_img_funcionario">
                                             <img src="./imgs/funcionario.jpeg" alt="Foto Funcionario">
                                         </div>
                                         <div class="container_nome_funcionario">
                                             <p>Carla Aparecida da Silva</p>
-                                        </div>
+                                        </div> -->
 
                                     </div>
-                                    <div class="card_funcionario">
+                                    <!-- <div class="card_funcionario">
                                         <div class="container_img_funcionario">
                                             <img src="./imgs/funcionario.jpeg" alt="Foto Funcionario">
                                         </div>
                                         <div class="container_nome_funcionario">
                                             <p>Carla Aparecida da Silva</p>
-                                        </div>
+                                        </div> -->
 
                                     </div>
-                                    <div class="card_funcionario">
+                                    <!-- <div class="card_funcionario">
                                         <div class="container_img_funcionario">
                                             <img src="./imgs/funcionario.jpeg" alt="Foto Funcionario">
                                         </div>
                                         <div class="container_nome_funcionario">
                                             <p>Carla Aparecida da Silva</p>
-                                        </div>
+                                        </div> -->
 
                                     </div>
-                                    <div class="card_funcionario">
+                                    <!-- <div class="card_funcionario">
                                         <div class="container_img_funcionario">
                                             <img src="./imgs/funcionario.jpeg" alt="Foto Funcionario">
                                         </div>
                                         <div class="container_nome_funcionario">
                                             <p>Carla Aparecida da Silva</p>
-                                        </div>
+                                        </div> -->
 
                                     </div>
-                                    <div class="card_funcionario">
+                                    <!-- <div class="card_funcionario">
                                         <div class="container_img_funcionario">
                                             <img src="./imgs/funcionario.jpeg" alt="Foto Funcionario">
                                         </div>
                                         <div class="container_nome_funcionario">
                                             <p>Carla Aparecida da Silva</p>
-                                        </div>
+                                        </div> -->
 
                                     </div>
 
@@ -238,7 +248,7 @@
 
                 <div class="container_secao_informacoes container_botoes">
                     <div class="botoes_acao_criacao">
-                        <button id="botao_salvar_criacao">Salvar</button>
+                        <button id="botao_salvar_criacao" type="button">Salvar</button>
                     </div>
                 </div>
             </div>
@@ -251,6 +261,32 @@
         
     </footer>
 
+    <script>
+
+        jQuery(function() 
+        {
+            
+            jQuery("#input_preco_servico").maskMoney({
+                thousands:'.', 
+                decimal:','
+            })
+        
+        });
+
+        const validarDigitacaoNumeros = (evt) =>
+        {
+            var evento = evt || window.event;
+            var tecla = evento.keyCode;
+            tecla = String.fromCharCode( tecla );
+
+            var regex = /^[0-9.]+$/;
+            if( !regex.test(tecla) ) 
+            {
+                evento.returnValue = false;
+                if(evento.preventDefault) evento.preventDefault();
+            }
+        }
+    </script>
 
 </body>
 </html>
