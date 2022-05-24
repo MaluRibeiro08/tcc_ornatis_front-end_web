@@ -9,7 +9,7 @@ const mudar_setas = (secao_atual) =>
     {
         document.querySelector(".container_seta_anterior").style.visibility = 'hidden';
     }
-    else if (secao_atual == 7)
+    else if (secao_atual == 4)
     {
         document.getElementById("texto_seta_proximo").innerText = "Concluir cadastro!"
         document.getElementById("icone_seta_proximo").innerText = "done"
@@ -19,7 +19,7 @@ const mudar_setas = (secao_atual) =>
     {
         document.querySelector(".container_seta_anterior").style.visibility = 'visible';
     }
-    else if (secao_atual != 7)
+    else if (secao_atual != 4)
     {
         document.getElementById("texto_seta_proximo").innerText = "Próxima"
         document.getElementById("icone_seta_proximo").innerText = "navigate_next"
