@@ -160,18 +160,6 @@ const tratarUploadImagem = ({target}) =>
     document.getElementById("icone_add_imagem_servico").style.display = "none";
 };
 
-const getEspecialidade = () =>
-{
-
-    return "id_especialidade";
-}
-
-const getParteCorpo = () =>
-{
-
-    return 'id_parteCorpo';
-}
-
 const getFuncionarios = () => 
 {
     return "obj_funcionarios";
