@@ -51,13 +51,13 @@ const construirSelect = (id_elemento_select, opcoes, assunto) =>
     
 }
 
-
 const criar_card_funcionario = (elemento) =>
 {
     const container_mae = document.querySelector("#container_funcionarios")
     const novoCard = document.createElement("div")
 
     novoCard.classList.add("card_funcionario")
+    novoCard.id = `${elemento["id_funcionario"]}`
 
     novoCard.innerHTML = 
     `
@@ -83,7 +83,6 @@ const criarListaFuncionarios = async (id_empresa) =>
     })    
 }
 
-
 const definirSelecaoFuncionario = (alvo) =>
 {
     if(alvo.classList.contains("funcionario_selecionado"))
@@ -93,9 +92,9 @@ const definirSelecaoFuncionario = (alvo) =>
     else
     {
         alvo.classList.add("funcionario_selecionado")
-
     }
 }
+
 const construirTelaCadastro = async(id_empresa) =>
 {
     //ESPECIALIDADES E PARTES DO CORPO
@@ -147,10 +146,7 @@ const construirTelaCadastro = async(id_empresa) =>
         })
 
 }
-
 construirTelaCadastro(2);
-
-
 
 const tratarUploadImagem = ({target}) =>
 {
@@ -162,7 +158,25 @@ const tratarUploadImagem = ({target}) =>
 
 const getFuncionarios = () => 
 {
-    return "obj_funcionarios";
+   const arr_funcionarios_existentes = Array.prototype.slice.call(document.getElementById("container_funcionarios").children);
+   
+   const arr_funcionarios_selecionados = [];
+
+   let contador = 0;
+   while (contador < arr_funcionarios_existentes.length) 
+   {
+       if (arr_funcionarios_existentes[contador].classList.contains("funcionario_selecionado"))
+       {
+           arr_funcionarios_selecionados.push
+           (
+               {"id_funcionario":arr_funcionarios_existentes[contador].id}
+           )
+       }
+        console.log(arr_funcionarios_selecionados)
+        contador = contador+1;
+   }
+
+    return arr_funcionarios_selecionados;
 }
 
 const getGeneros = () =>
