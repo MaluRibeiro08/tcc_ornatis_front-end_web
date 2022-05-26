@@ -420,6 +420,7 @@ label > img
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 
   padding: 5px;
   color: white;
