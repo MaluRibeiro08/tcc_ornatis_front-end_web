@@ -62,7 +62,7 @@ const criar_card_funcionario = (elemento) =>
     novoCard.innerHTML = 
     `
         <div class="container_img_funcionario">
-            <img src=""${url_imagem_funcionario}${elemento["foto_perfil"]}"" alt="Foto Funcionario">
+            <img src="${url_imagem_funcionario}${elemento["foto_perfil"]}" alt="Foto Funcionario">
         </div>
         <div class="container_nome_funcionario">
             <p>${elemento["nome_funcionario"]}</p>
