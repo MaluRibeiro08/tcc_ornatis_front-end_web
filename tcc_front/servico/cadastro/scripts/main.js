@@ -199,7 +199,33 @@ const getGeneros = () =>
 
 const getTiposAtendimentos = () =>
 {
-    return "tipos"
+    const arr_tipos_atendimento = [];
+
+    const id_local_2 = "input_opcao_local2"
+    const id_local_1 = "input_opcao_local1"
+
+    if(document.getElementById(id_local_2).checked)
+    {
+
+        const ultima_letra_l = id_local_2.lastIndexOf("l")
+        const ultimoCaracter = id_local_2.length
+        
+        const id_tipo_atendimento = id_local_2.substring(ultima_letra_l+1, ultimoCaracter)
+
+       arr_tipos_atendimento.push({"id_tipo_atendimento": id_tipo_atendimento});
+    }
+    if(document.getElementById(id_local_1).checked)
+    {
+
+        const ultima_letra_l = id_local_1.lastIndexOf("l")
+        const ultimoCaracter = id_local_1.length
+        
+        const id_tipo_atendimento = id_local_1.substring(ultima_letra_l+1, ultimoCaracter)
+
+       arr_tipos_atendimento.push({"id_tipo_atendimento": id_tipo_atendimento});
+    }
+    
+    return arr_tipos_atendimento;
 }
 
 const pegarDadosServico = (id_empresa) =>
