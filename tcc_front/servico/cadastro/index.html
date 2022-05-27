@@ -36,14 +36,14 @@
         </div>
 
         <div class="container_geral_formulario_servicos">
-            <div class="container_formulario_servico" method="post" enctype="multipart/form-data">
+            <div class="container_formulario_servico">
                 <div class="container_secao_informacoes container_geral_imagem_servico">
-                    <form class="container_imagem_servico">
+                    <form class="container_imagem_servico" id="formulario_imagem_servico" enctype="multipart/form-data" action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/" method="post">
+                        <input type="file" name="imagem_servico" class="input_imagem_servico" id="input_imagem_servico">
                         <label class="container_bordinha_imagem" for="input_imagem_servico"><img id="imagem_servico" src="" alt="" style="display: none;"><span class="material-symbols-outlined" id="icone_add_imagem_servico">add_photo_alternate</span></label>
-                        <input class="input_imagem_servico" id="input_imagem_servico" type="file">
                         <input type="text" name="acao" id="acao" hidden value="createServico">
                         <input type="text" name="envio_form" value="true" hidden>
-                        <input type="text" name="id_servico" hidden>
+                        <input type="text" name="id_servico"  id="id_servico" hidden>
                     </form>
                 </div>
                 

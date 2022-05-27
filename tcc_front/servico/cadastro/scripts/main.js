@@ -7,6 +7,7 @@ import { listarFuncionarios } from "./funcionarios.js";
 const id_empresa = 2;
 let arr_especialidades_partes_corpo = {};
 const url_imagem_funcionario = 'http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/'
+const url_servico = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/'
 
 
 
@@ -232,8 +233,8 @@ const pegarDadosServico = (id_empresa) =>
 {
     const data = {};
     data['acao'] = 'createServico';
-    data ['"id_empresa"'] = id_empresa;
-    data ['nome_servico'] = document.getElementById('input_titulo_servico').value;
+    data['id_empresa'] = id_empresa;
+    data['nome_servico'] = document.getElementById('input_titulo_servico').value;
     data['tempo_duracao'] = document.getElementById('input_duracao_servico').value;
     data['desconto'] = document.getElementById('input_desconto').value;
     data['intervalo'] = document.getElementById('input_intervalo').value;
@@ -246,16 +247,52 @@ const pegarDadosServico = (id_empresa) =>
     data['generos'] = getGeneros();
     data['tipos_atendimento'] = getTiposAtendimentos();
 
-
-    console.log(data);
     return data
 }
 
 const salvarServico = (id_empresa) =>
 {
-    const informacoes_servico = pegarDadosServico();
+    const data = pegarDadosServico(id_empresa);
 
-    console.log(informacoes_servico);
+    console.log(data)
+
+    const options_servico = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'content-type': 'application/json',
+        },
+    };
+    fetch(url_servico, options_servico).then(response => response.json()).then(
+        data => 
+        {
+            console.log("Imprimindo response")
+            console.log(data)
+            console.log("Especificando impressao response")
+            console.log(data.data)
+            const input_id_servico = document.getElementById("id_servico");
+
+            input_id_servico.value = data.data;
+        }
+    )
+    .then
+    (
+        () =>
+        {
+            console.log("enviando formulario adm"),
+            console.log(document.getElementById("formulario_imagem_servico")),
+                    
+            document.getElementById("formulario_imagem_servico").submit()
+        }
+    ).then
+    (
+        () =>
+        {
+            console.log("Tudo certo")
+            alert("Serviço cadastrado com sucesso!!")
+            location.reload()
+        }
+    );
 }
 
 
