@@ -190,5 +190,16 @@ select
   font-size: 1.1em; 
 }
 
+/* ----------- input tipo cabelo ------- */
+
+.input_tipo_cabelo{
+    background-color: #5F9F95;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+
+
 
 

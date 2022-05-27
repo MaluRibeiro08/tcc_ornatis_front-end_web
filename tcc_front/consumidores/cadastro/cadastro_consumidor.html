@@ -32,7 +32,7 @@
             </div>
             <div class="container_imagens_cabecalho_lateral">
                 <div class="imagens_cabecalho_lateral">
-                    <img src="../../../Prestadores/img/image 425.png" class="img_prestador" id="img_prestador">
+                    <img src="../../Prestadores/img/image 425.png" class="img_prestador" id="img_prestador">
                 </div>
             </div>
         </div>
@@ -43,11 +43,11 @@
             <!-- CONTAINER DO TITULO DA SECAO DE CADASTRO -->
             <div class="container_titulo_cabecalho_lateral" id="container_titulo_secao_lateral">
                 <div class="container_titulo" id="container_titulo1">
-                    <span class="material-symbols-outlined" id="icone">store</span>
+                    <span class="material-symbols-outlined" id="icone">person</span>
                     <h2>Dados Pessoais </h2>
                 </div>
                 <div class="container_titulo" id="container_titulo2" style="display: none;">
-                    <span class="material-symbols-outlined" id="icone">person</span>
+                    <span class="material-symbols-outlined" id="icone">face </span>
                     <h2>Dados do cabelo </h2>
                 </div>
                 <div class="container_titulo" id="container_titulo3" style="display: none;">
@@ -55,7 +55,7 @@
                     <h2>Dados de localização</h2>
                 </div>
                 <div class="container_titulo" id="container_titulo4" style="display: none;">
-                    <span class="material-symbols-outlined" id="icone">paid</span>
+                    <span class="material-symbols-outlined" id="icone">login</span></span>
                     <h2>Dados de login</h2>
                 </div>
                 
@@ -65,11 +65,11 @@
             <div class="container_geral_secoes_cadastro">
             
                 <!-- SECAO DADOS DE DADOS PESSOAIS -->
-                <div class="container_secao secao1" id="container_dados_pessoais" style="display: none;">
+                <div class="container_secao secao1" id="container_dados_pessoais" >
 
                     <div class="container_input">
                         <label class= "lable_input" for="input_nome_adm">Nome:</label>
-                        <input  id="input_nome_adm" class="input" type="text">
+                        <input  id="input_nome_consumidor" class="input" type="text">
                     </div>
 
                     <div class="container_input">
@@ -83,46 +83,46 @@
                     </div>
                     <div class="container_input">
                         <label class= "lable_input" for="input_data_nascimento">Telefone:</label>
-                        <input  id="input_data_nascimento" class="input" >
+                        <input  id="input_telefone" class="input" >
                     </div>
                     <div id="campo_genero">
                         <div id="titulo_genero">
                             <label for="">Gênero</label><br>
                         </div>
                         <div id="radio_genero">
-                            <input class="radio_genero_font" type="radio"><label for="">Feminino</label>
-                            <input class="radio_genero_font" type="radio"><label for="">Masculino</label>
-                            <input class="radio_genero_font" type="radio"><label for="">Outro</label>
+                            <input id="radio_feminino" class="radio_genero_font" type="radio"><label for="">Feminino</label>
+                            <input id="radio_masculino" class="radio_genero_font" type="radio"><label for="">Masculino</label>
+                            <input id="radio_outro" class="radio_genero_font" type="radio"><label for="">Outro</label>
                         </div>
                     </div>
                 </div>
 
                 <!-- SECAO DADOS DO CABELO -->
-                <div class="container_secao secao3" id="container_dados_cabelo"  style="display: none;">
+                <div class="container_secao secao2" id="container_dados_cabelo"  style="display: none;">
                     <div id="container_comprimento">
                         <label for="">Comprimento</label>
                         <div id="container_comprimento_display">
                             <div id="imagem_comprimento">
-                            <img src="../../../Prestadores/img/Captura de Tela 2022-05-23 às 09.52.09.png" width="300px" alt="">
+                            <img src="../../Prestadores/img/Captura de Tela 2022-05-23 às 09.52.09.png" width="300px" alt="">
                         </div>
                         <div id="radios_comprimento">
                             <div>
-                                <input type="radio"><label for="">1</label>
+                                <input id="tamanho1" type="radio"><label for="">1</label>
                             </div>
                             <div>
-                                <input type="radio"><label for="">2</label>
+                                <input id="tamanho2" type="radio"><label for="">2</label>
                             </div>
                             <div>
-                                <input type="radio"><label for="">3</label>
+                                <input id="tamanho3" type="radio"><label for="">3</label>
                             </div>
                             <div>
-                                <input type="radio"><label for="">4</label>
+                                <input id="tamanho4" type="radio"><label for="">4</label>
                             </div>
                             <div>
-                                <input type="radio"><label for="">5</label>
+                                <input id="tamanho5" type="radio"><label for="">5</label>
                             </div>
                             <div>
-                                <input class="padding" type="radio"><label for="">Nenhuma das opções</label>
+                                <input id="sem_tamanho" class="padding" type="radio"><label for="">Nenhuma das opções</label>
                             </div>
                             
                            
@@ -132,19 +132,19 @@
                     </div>
                     <div id="container_tipo_cabelo">
                         <div class="tipo_cabelo" id="liso">
-                            <img src="../../../Prestadores/img/Ellipse 24.png" alt="">
+                            <input id="tipo_liso" type="image" class="input_tipo_cabelo" src="../../Prestadores/img/Ellipse 24.png">
                             <label class="label_tipo_cabelo" for="">Liso</label>
                         </div>
                         <div class="tipo_cabelo" id="ondulado">
-                            <img src="../../../Prestadores/img/Ellipse 25.png" alt="">
+                            <input id="tipo_ondulado" type="image" class="input_tipo_cabelo" src="../../Prestadores/img/Ellipse 25.png">
                             <label  for="">Ondulado</label>
                         </div>
                         <div class="tipo_cabelo" id="cacheado">
-                            <img src="../../../Prestadores/img/Ellipse 26.png" alt="">
+                            <input id="tipo_cacheado" type="image" class="input_tipo_cabelo" src="../../Prestadores/img/Ellipse 26.png">
                             <label class="label_tipo_cabelo" for="">Cacheado</label>
                         </div>
                         <div class="tipo_cabelo" id="crespo">
-                            <img src="../../../Prestadores/img/Ellipse 27.png" alt="">
+                            <input type="image" class="input_tipo_cabelo" src="../../Prestadores/img/Ellipse 27.png">
                             <label class="label_tipo_cabelo" for="">Crespo</label>
                         </div>
                     </div>
@@ -154,10 +154,10 @@
                             <input  id="input_publico_alvo" class="input" type="text" maxlength="100">
                             <select name="publico_alvo" id="select_publico_alvo">
                                 <option value="null" selected disabled>Selecione a cor do seu cabelo</option> 
-                                <option value="feminino">Preto</option>
-                                <option value="masculino">Loiro</option>
-                                <option value="ambos">Castanho</option>
-                                <option value="ambos">Raivo</option>
+                                <option value="Preto">Preto</option>
+                                <option value="Loiro">Loiro</option>
+                                <option value="Castanho">Castanho</option>
+                                <option value="Ruivo">Ruivo</option>
                             </select>
                         </div>
                     </div>
@@ -167,7 +167,7 @@
                 </div>
 
                 <!-- SECAO DADOS DE LOCALIZAÇÃO -->
-                <div class="container_secao secao4" id="container_dados-localizacao" style="display: none;"> 
+                <div class="container_secao secao3" id="container_dados-localizacao" style="display: none;"> 
                     <div class="container_input">
                         <label class= "lable_input" for="input_cep">CEP</label>
                         <input  id="input_cep" class="input" type="text">
@@ -208,7 +208,7 @@
                 </div>
 
                 <!-- SECAO DADOS DE LOGIN-->
-                <div class="container_secao secao5" id="conatiner_dados_login"  >
+                <div class="container_secao secao4" id="conatiner_dados_login" style="display: none;" >
                     <div class="container_dados_login">
                         <div class="container_dados_foto_perfil">
                             <div class="container_geral_imagem">
