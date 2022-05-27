@@ -456,7 +456,7 @@ label > img
 
   /* background-color: red; */
 }
-.container_funcionarios:hover, .container_icone_adicao_funcionario:hover{
+.icone_adicao_funcionario:hover{
   cursor: pointer;
 }
 
@@ -478,7 +478,7 @@ label > img
   /* background-color: seagreen; */
 }
 .card_funcionario:hover{
-  cursor: auto;
+  cursor: pointer;
 }
 
 .container_img_funcionario
