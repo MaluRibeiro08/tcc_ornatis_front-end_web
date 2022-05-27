@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="./styles/imagem.css">
     <link rel="stylesheet" href="./styles/inputs_dias_trabalho.css">
 
+    <!-- SERVICOS -->
+    <link rel="stylesheet" href="./styles/servicos/servicos.css">
+    <link rel="stylesheet" href="./styles/servicos/scrollbars_filtros_especialidades.css">
+
     <script src="https://kit.fontawesome.com/a757f2d5f7.js" crossorigin="anonymous"></script>
 
     <script src="./scripts/main.js" type="module" defer></script>
@@ -98,7 +102,7 @@
 
             <div class="container-fixo-geral-lateral-conteudo">
 
-                <div class="container-global-conteudo container-global-conteudo-inicio" id="container-global-conteudo-inicio">
+                <div class="container-global-conteudo container-global-conteudo-inicio" id="container-global-conteudo-inicio" style="display: none;">
 
                     <div class="container-primario-biografia">
                         <div class="container_aspas">
@@ -648,10 +652,194 @@
                     </div>
                 </div>
 
-                <div class="container-global-conteudo container-global-conteudo-servicos" id="container-global-conteudo-servicos"  style="display: none;">
+                <div class="container-global-conteudo container-global-conteudo-servicos" id="container-global-conteudo-servicos"  >
                     <div class="container_primario_secao container_primario_servicos">
-                        <div class="container_avisos">
+                        <div class="container_avisos" style="display: none;">
                             <p class="aviso_problema_secao">Não foi possível carregar seus serviços :(</p>
+                        </div>
+
+                        <div class="container_cabecalho_listagem_servicos">
+                            <div class="container_barra_pesquisa_servicos">
+                                <div class="barra_pesquisa">
+                                    <span class="material-symbols-outlined">search</span>
+                                    <input class="input_barra_pesquisa" type="text" placeholder="O que você está procurando?">
+                                </div>
+                            </div>
+                            <div class="container_filtros">
+                                <div class="container_filtro" id="filtro_especialidade_X">
+                                    <span>Cabelos</span>
+                                </div>
+                                <div class="container_filtro" id="filtro_especialidade_X">
+                                    <span>Barba</span>
+                                </div>
+                                <div class="container_filtro" id="filtro_especialidade_X">
+                                    <span>Unhas</span>
+                                </div>
+                                <div class="container_filtro" id="filtro_especialidade_X">
+                                    <span>Maquiagem</span>
+                                </div>
+                                <div class="container_filtro" id="filtro_especialidade_X">
+                                    <span>Depilação</span>
+                                </div>
+                                <div class="container_filtro" id="filtro_especialidade_X">
+                                    <span>Peeling</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="container_geral_listagem_servicos">
+
+                            <div class="container_listagem_especialidade">
+                                <div class="container_titulo_especialidade">
+                                    <h2>Maquiagem</h2>
+                                </div>
+
+                                <div class="container_listagem">
+
+                                    <div class="card_servico">
+                                            <div class="container_informacoes_servico">
+                                                <h4 class="nome_servico">Lorem ipsum dolor sit amet, consectetur tincidunt.</h4>
+                                                <div class="container_duracao_servico">
+                                                    <p>Duração:</p>
+                                                    <p class="duracao_servico">35 min</p>
+                                                </div>
+                                            </div>
+                                            <div class="container_preco_servico">
+                                                <p>R$ 39,99</p>
+                                            </div>
+                                            <div class="container_acoes_servico">
+                                                <span class="material-symbols-outlined">event</span>
+                                            </div>
+                                    </div>
+
+
+                                    <div class="card_servico">
+                                        <div class="container_informacoes_servico">
+                                            <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                            <div class="container_duracao_servico">
+                                                <p>Duração:</p>
+                                                <p class="duracao_servico">35 min</p>
+                                            </div>
+                                        </div>
+                                        <div class="container_preco_servico">
+                                            <p>R$ 39,99</p>
+                                        </div>
+                                        <div class="container_acoes_servico">
+                                            <span class="material-symbols-outlined">event</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card_servico">
+                                        <div class="container_informacoes_servico">
+                                            <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                            <div class="container_duracao_servico">
+                                                <p>Duração:</p>
+                                                <p class="duracao_servico">35 min</p>
+                                            </div>
+                                        </div>
+                                        <div class="container_preco_servico">
+                                            <p>R$ 39,99</p>
+                                        </div>
+                                        <div class="container_acoes_servico">
+                                            <span class="material-symbols-outlined">event</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card_servico">
+                                        <div class="container_informacoes_servico">
+                                            <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                            <div class="container_duracao_servico">
+                                                <p>Duração:</p>
+                                                <p class="duracao_servico">35 min</p>
+                                            </div>
+                                        </div>
+                                        <div class="container_preco_servico">
+                                            <p>R$ 39,99</p>
+                                        </div>
+                                        <div class="container_acoes_servico">
+                                            <span class="material-symbols-outlined">event</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                            <div class="container_listagem_especialidade">
+                                <div class="container_titulo_especialidade">
+                                    <h2>Maquiagem</h2>
+                                </div>
+
+                                <div class="container_listagem">
+                                    
+                                    <div class="card_servico">
+                                            <div class="container_informacoes_servico">
+                                                <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                                <div class="container_duracao_servico">
+                                                    <p>Duração:</p>
+                                                    <p class="duracao_servico">35 min</p>
+                                                </div>
+                                            </div>
+                                            <div class="container_preco_servico">
+                                                <p>R$ 39,99</p>
+                                            </div>
+                                            <div class="container_acoes_servico">
+                                                <span class="material-symbols-outlined">event</span>
+                                            </div>
+                                    </div>
+
+
+                                    <div class="card_servico">
+                                        <div class="container_informacoes_servico">
+                                            <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                            <div class="container_duracao_servico">
+                                                <p>Duração:</p>
+                                                <p class="duracao_servico">35 min</p>
+                                            </div>
+                                        </div>
+                                        <div class="container_preco_servico">
+                                            <p>R$ 39,99</p>
+                                        </div>
+                                        <div class="container_acoes_servico">
+                                            <span class="material-symbols-outlined">event</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card_servico">
+                                        <div class="container_informacoes_servico">
+                                            <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                            <div class="container_duracao_servico">
+                                                <p>Duração:</p>
+                                                <p class="duracao_servico">35 min</p>
+                                            </div>
+                                        </div>
+                                        <div class="container_preco_servico">
+                                            <p>R$ 39,99</p>
+                                        </div>
+                                        <div class="container_acoes_servico">
+                                            <span class="material-symbols-outlined">event</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card_servico">
+                                        <div class="container_informacoes_servico">
+                                            <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                            <div class="container_duracao_servico">
+                                                <p>Duração:</p>
+                                                <p class="duracao_servico">35 min</p>
+                                            </div>
+                                        </div>
+                                        <div class="container_preco_servico">
+                                            <p>R$ 39,99</p>
+                                        </div>
+                                        <div class="container_acoes_servico">
+                                            <span class="material-symbols-outlined">event</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -738,6 +926,7 @@
             </div>
         </div>
     </footer>
+
     <div class="container_modais" id="container_modais" style="display: none;">
 
         <div class="modal_criacao" id="modal_criacao"  style="display: none;" >
