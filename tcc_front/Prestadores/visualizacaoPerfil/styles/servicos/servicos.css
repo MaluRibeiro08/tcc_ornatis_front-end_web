@@ -1,0 +1,68 @@
+.container_primario_servicos
+{
+    background-color: yellow;
+}
+
+.container_cabecalho_listagem_servicos
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+    background-color: aqua;
+}
+
+.container_barra_pesquisa_servicos
+{
+    width: 100%;
+  
+    background-color: orange;
+}
+
+.barra_pesquisa
+{
+    width: 100%;
+    min-height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    gap: 10px;
+
+    border-radius: 7px;
+
+    background-color: #F1F1F1;
+}
+
+.input_barra_pesquisa
+{
+    flex-grow: 1;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 3px;
+    font-size: 1.3em;
+    background-color: transparent;
+}
+
+.barra_pesquisa > span
+{
+    font-size: 1.5em;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48;
+    color: var(--verde_escuro);
+}
+
