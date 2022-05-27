@@ -181,7 +181,20 @@ const getFuncionarios = () =>
 
 const getGeneros = () =>
 {
-    return "generos";
+    const arr_generos = [];
+    if(document.getElementById("select_publico_alvo").value == "todos")
+    {
+        arr_generos.push({"id_genero":1});
+        arr_generos.push({"id_genero":2});
+        
+    }
+    else
+    {
+        arr_generos.push({"id_genero":document.getElementById("select_publico_alvo").value});
+    }
+   
+    console.log(arr_generos);
+    return arr_generos;
 }
 
 const getTiposAtendimentos = () =>
