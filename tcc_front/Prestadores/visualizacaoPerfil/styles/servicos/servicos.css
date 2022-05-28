@@ -10,7 +10,9 @@
 
 .filtro_selecionado
 {
-    background-color: var(--verde_claro);
+    background-color: var(--verde_padrao);
+    font-weight: 700;
+    color: white;
 }
 /* --------- BARRA DE PESQUISA --------- */
 
