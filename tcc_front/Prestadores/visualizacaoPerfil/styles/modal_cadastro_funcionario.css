@@ -65,14 +65,14 @@
   /* background-color: royalblue; */
 }
 
-#icone_modal, #fechar_modal_criacao, #fechar_modal_cadastro_imagem
+#icone_modal, #fechar_modal_criacao, #fechar_modal_cadastro_imagem, #fechar_modal_cadastro_servico
 {
   font-size: 40px;
   font-weight: 800;
   color:  var(--verde_escuro);
 }
 
-#fechar_modal_criacao, #fechar_modal_cadastro_imagem
+#fechar_modal_criacao, #fechar_modal_cadastro_imagem, #fechar_modal_cadastro_servico
 {
   color: red;
   cursor: pointer;
