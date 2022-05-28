@@ -8,7 +8,7 @@ const criar_container_especialidade = (id_especialidade, nome_especialidade) =>
     const container_especialidade = document.createElement("div");
 
     container_especialidade.classList.add("container_listagem_especialidade");
-    container_especialidade.id = `container_listagem_especialidade_${id_especialidade}`;
+    container_especialidade.classList.add(`container_listagem_especialidade_${id_especialidade}`);
 
     container_especialidade.innerHTML = 
     `
@@ -16,7 +16,7 @@ const criar_container_especialidade = (id_especialidade, nome_especialidade) =>
             <h2>${nome_especialidade}</h2>
         </div>
 
-        <div class="container_listagem_especialidade${id_especialidade}">            
+        <div  class="container_listagem" id="container_listagem_especialidade_${id_especialidade}">            
             
         </div>
 
