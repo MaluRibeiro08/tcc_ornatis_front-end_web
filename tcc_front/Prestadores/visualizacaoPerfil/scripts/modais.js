@@ -14,6 +14,7 @@ const fecharModal = () =>
 {
     document.getElementById(`modal_criacao`).style.display = 'none';
     document.getElementById(`modal_cadastro_imagem_salao`).style.display = 'none';
+    document.getElementById(`container_modal_cadastro_servico`).style.display = 'none';
     document.getElementById("container_modais").style.display = "none";
 }
 
@@ -28,6 +29,12 @@ const abrirModal = (flag) =>
     {
         document.getElementById(`modal_cadastro_imagem_salao`).style.display = 'flex';
         document.getElementById("container_modais").style.display = "flex";
+    }
+    else if (flag == "cadastrar_servico")
+    {
+
+        document.getElementById(`container_modal_cadastro_servico`).style.display = 'flex';
+        document.getElementById(`container_modais`).style.display = 'flex';
     }
     
 }
