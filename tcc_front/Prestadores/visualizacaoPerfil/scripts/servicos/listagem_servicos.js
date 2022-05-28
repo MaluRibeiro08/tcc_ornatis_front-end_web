@@ -8,7 +8,7 @@ const criar_container_especialidade = (id_especialidade, nome_especialidade) =>
     const container_especialidade = document.createElement("div");
 
     container_especialidade.classList.add("container_listagem_especialidade");
-    container_especialidade.classList.add(`container_listagem_especialidade_${id_especialidade}`);
+    container_especialidade.id = `container_listagem_especialidade_${id_especialidade}`;
 
     container_especialidade.innerHTML = 
     `
@@ -16,15 +16,16 @@ const criar_container_especialidade = (id_especialidade, nome_especialidade) =>
             <h2>${nome_especialidade}</h2>
         </div>
 
-        <div  class="container_listagem" id="container_listagem_especialidade_${id_especialidade}">            
+        <div  class="container_listagem" id="listagem_especialidade_${id_especialidade}">            
             
         </div>
 
     `;
 
     container_mae.appendChild(container_especialidade)
-    
-    return document.getElementById(`container_listagem_especialidade_${id_especialidade}`)
+    console.log(document.getElementById(`listagem_especialidade_${id_especialidade}`))
+
+    return document.getElementById(`listagem_especialidade_${id_especialidade}`)
 }
 
 
@@ -170,7 +171,7 @@ const listarServicosSalao = async (id_empresa) =>
             const nome_especialidade_do_servico = servicos[contador].nome_especialidade;
 
             //VERIFICANDO SE HÁ UM CONTAINER PRA ESPECIALIDADE DO SERVICO
-            const container_servicos_especialidade = document.getElementById(`container_listagem_especialidade_${id_especialidade_do_servico}`)
+            const container_servicos_especialidade = document.getElementById(`listagem_especialidade_${id_especialidade_do_servico}`)
             if(container_servicos_especialidade == null) // se não tiver, cria e coloca dentro
             {
                 criar_filtro_especialidade(id_especialidade_do_servico, nome_especialidade_do_servico);
