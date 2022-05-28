@@ -1,3 +1,13 @@
+/* --------- aviso de problemas com a listagem ---------- */
+
+.container_avisos > a
+{
+    font-size: 0.8em;
+    margin-top: 20px;
+    text-decoration-color: var(--verde_escuro);
+    color: var(--verde_escuro);
+}
+
 /* --------- BARRA DE PESQUISA --------- */
 
 .container_primario_servicos

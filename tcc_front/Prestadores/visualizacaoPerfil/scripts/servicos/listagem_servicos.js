@@ -62,30 +62,40 @@ const listarServicosSalao = async (id_empresa) =>
 {
     const servicos = await getServicosPorEmpresa(id_empresa);
 
-    //listando servicos
+    console.log(servicos)
 
     let contador =0;
-    while (contador < servicos.length) 
+    if (servicos.length != 0 && servicos != null) 
     {
-        const id_especialidade_do_servico = servicos[contador].id_especialidade;
-        const nome_especialidade_do_servico = servicos[contador].nome_especialidade;
-
-        //VERIFICANDO SE HÁ UM CONTAINER PRA ESPECIALIDADE DO SERVICO
-        const container_servicos_especialidade = document.getElementById(`container_listagem_especialidade${id_especialidade_do_servico}`)
-        if(container_servicos_especialidade == null) // se não tiver, cria e coloca dentro
+        while (contador < servicos.length) 
         {
-            const container_especialidade = criar_container_especialidade(id_especialidade_do_servico, nome_especialidade_do_servico);
-            const card_servico = criar_card_servico(servicos[contador]);
-            container_especialidade.appendChild(card_servico)
-        }
-        else //se tiver, coloca o servico dentro
-        {
-            const card_servico = criar_card_servico(servicos[contador]);
-            container_servicos_especialidade.appendChild(card_servico)        
+            const id_especialidade_do_servico = servicos[contador].id_especialidade;
+            const nome_especialidade_do_servico = servicos[contador].nome_especialidade;
+
+            //VERIFICANDO SE HÁ UM CONTAINER PRA ESPECIALIDADE DO SERVICO
+            const container_servicos_especialidade = document.getElementById(`container_listagem_especialidade${id_especialidade_do_servico}`)
+            if(container_servicos_especialidade == null) // se não tiver, cria e coloca dentro
+            {
+                const container_especialidade = criar_container_especialidade(id_especialidade_do_servico, nome_especialidade_do_servico);
+                const card_servico = criar_card_servico(servicos[contador]);
+                container_especialidade.appendChild(card_servico)
+            }
+            else //se tiver, coloca o servico dentro
+            {
+                const card_servico = criar_card_servico(servicos[contador]);
+                container_servicos_especialidade.appendChild(card_servico)        
+            }
+
+            contador = contador+1;
         }
 
-        contador = contador+1;
+        const container_avisos = document.getElementById("container_aviso_servicos");
+        container_avisos.style.display = "none"; //tirando aviso de "sem serviços"
+        document.getElementById("container_cabecalho_listagem_servicos").style.display = "flex"; //mostrando a barra de pesquisa e filtragem
+
     }
+
+    
 }
 
 export {listarServicosSalao}
