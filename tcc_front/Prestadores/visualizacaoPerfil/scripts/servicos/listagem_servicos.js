@@ -1,6 +1,6 @@
 "use strict"
 
-import {  getServicosPorEmpresa} from "./servicos.js";
+import {getServicosPorEmpresa, setarDisponibilidadeServico} from "./servicos.js";
 
 const criar_container_especialidade = (id_especialidade, nome_especialidade) =>
 {
@@ -36,6 +36,7 @@ const criar_card_servico = (servico) =>
 
     card_servico.classList.add("card_servico");
     card_servico.id = `id_servico${servico.id_servico}`;
+    const servico_disponivel_pra_uso = servico.ativo_para_uso == 1 ? "checked" : "";
 
     card_servico.innerHTML = 
     `
@@ -50,7 +51,11 @@ const criar_card_servico = (servico) =>
             <p>R$ ${servico.preco.toString().replace(".", ",")}</p>
         </div>
         <div class="container_acoes_servico">
-            <span class="material-symbols-outlined">event</span>
+            <label class="switch">
+                <input type="checkbox" class="switch_ativacao_servico" id="check_servico_${servico.id_servico}" ${servico_disponivel_pra_uso}>
+                <span class="slider round"></span>
+            </label>
+           <!-- <span class="material-symbols-outlined">event</span> -->
         </div>
     `;
 
@@ -126,6 +131,12 @@ const alterarFiltragemServicosPorEspecialidade = (id_especialidade) =>
 }
 }
 
+const mudarEstadoServico = (id_alvo) =>
+{
+    const id_servico = id_alvo.substring(id_alvo.lastIndexOf("_")+1, id_alvo.length);
+    setarDisponibilidadeServico(id_servico);
+}
+
 const listarServicosSalao = async (id_empresa) =>
 {
     const servicos = await getServicosPorEmpresa(id_empresa);
@@ -162,6 +173,15 @@ const listarServicosSalao = async (id_empresa) =>
         container_avisos.style.display = "none"; //tirando aviso de "sem serviços"
         document.getElementById("container_cabecalho_listagem_servicos").style.display = "flex"; //mostrando a barra de pesquisa e filtragem
 
+        const arr_switches = Array.prototype.slice.call(document.getElementsByClassName("switch_ativacao_servico"))
+        arr_switches.map(
+            (elemento)=>
+            {
+                elemento.addEventListener("click", (evento)=>{mudarEstadoServico(evento.target.id)})
+            }
+        )
+        
+        
     }
 
     
