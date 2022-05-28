@@ -1,0 +1,288 @@
+/* --------- MODAL EDICAO ---------------- */
+
+.modal_edicao
+{
+  width: 60%;
+  max-height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  background-color: white;
+  
+  /* background-color: springgreen; */
+}
+
+.container_cabecalho_modal
+{
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+
+
+  justify-content: space-between;
+
+  /* background-color: aquamarine; */
+}
+
+.container_titulo_modal
+{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: royalblue; */
+}
+
+#icone_modal, #fechar_modal_edicao
+{
+  font-size: 40px;
+  font-weight: 800;
+  color:  var(--verde_escuro);
+}
+
+#fechar_modal_edicao
+{
+  color: red;
+  cursor: pointer;
+}
+
+/* .container_titulo_modal
+{ */
+  /* width: 100%; */
+  /* background-color: steelblue; */
+/* } */
+.titulo_modal
+{
+  font-size: 30px;
+  font-weight: 700;
+  color:  var(--verde_escuro);
+}
+
+/* FOTO EM OUTRO ARQUIVO CSS */
+
+
+.container_conteudo
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  overflow-y: hidden;
+  padding: 30px;
+  /* background-color: coral; */
+
+}
+
+.parte_conteudo2
+{
+  flex-grow: 3;
+  max-height: 100%;
+
+  /* background-color: pink; */
+}
+
+.parte_conteudo1
+{
+  flex-grow: 1;
+  max-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 30px;
+
+  /* background-color: skyblue; */
+}
+
+.botoes_acao_edicao
+{
+  width: 70%;
+  height: auto;
+  /* background-color: cadetblue; */
+}
+
+button
+{
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 3px;
+
+  border: none;
+  border-radius: 5px;
+  color: var(--fonte);
+  background-color: var(--verde_claro); 
+
+  /* font-weight: bold; */
+  font-size: 20px;
+  color: black;
+}
+
+button:hover{
+  transition: 0.7s;
+  background-color: var(--verde_escuro); 
+  color: white;
+}
+
+
+.container_informacoes_gerais
+{
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 35px;
+
+  /* background-color: darkblue; */
+}
+.container_input
+{
+  width: 100%;;
+}
+
+.container_input input
+{
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  border: solid 0.5px var(--fonte);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  margin-top: 5px;
+  padding-left: 2px;
+  font-size: 1.2em;
+  /* background-color: aquamarine; */
+}
+
+label
+{
+  width: 100%;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+
+/* ---------- MODAL EXCLUSAO --------------- */
+
+.modal_exclusao
+{
+  width: 600px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 50px;
+  background-color: white;
+
+  /* background-color: yellow; */
+}
+
+.container_titulo_modal
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: tomato; */
+
+}
+.container_titulo_modal > h5
+{
+  font-family: 'Megrim';
+  font-size: 30px;
+  font-weight: 600;
+
+  color: var(--verde_escuro);
+}
+
+.container_questionamento
+{
+  width: 100%;
+  flex-grow: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 25px;
+
+  /* background-color: darkcyan; */
+}
+
+.container_botoes_acoes_funcionario
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: darkgreen; */
+}
+
+.container_botoes_acoes_funcionario > button
+{
+  width: 30%;
+}
+
+.container_botoes_acoes_funcionario > #botao_nao_exclusao_funcionario
+{
+  background-color: rgb(238, 153, 153);
+}
+.container_botoes_acoes_funcionario > #botao_nao_exclusao_funcionario:hover
+{
+  background-color: red;
+}
+/* ------------- ICONE PRINCIPAL  ---------------- */
+
+.material-symbols-outlined 
+{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 48;
+  color: black;
+}
+
+#icone
+{
+  font-size: 60px;
+}
+
