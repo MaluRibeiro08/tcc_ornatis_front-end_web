@@ -4,7 +4,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
 import { getEspecialidades, getParteCorpoPorEspecialidade, getPartesCorpo } from "./servico_cia.js";
 import { listarFuncionarios } from "./funcionarios.js";
 
-const id_empresa = 2;
+const id_empresa = 3;
 let arr_especialidades_partes_corpo = {};
 const url_imagem_funcionario = 'http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/'
 const url_servico = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/'
@@ -147,7 +147,7 @@ const construirTelaCadastro = async(id_empresa) =>
         })
 
 }
-construirTelaCadastro(2);
+construirTelaCadastro(id_empresa);
 
 const tratarUploadImagem = ({target}) =>
 {
@@ -290,7 +290,7 @@ const salvarServico = (id_empresa) =>
         {
             console.log("Tudo certo")
             alert("Serviço cadastrado com sucesso!!")
-            location.reload()
+            // location.reload()
         }
     );
 }
