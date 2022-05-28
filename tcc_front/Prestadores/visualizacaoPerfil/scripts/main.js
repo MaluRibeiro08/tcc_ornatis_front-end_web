@@ -4,11 +4,14 @@ import { carregarInformacoesPerfil, carregarRedesSociais, updateRedesSociais, ca
 import {abrirModal, fecharModal, tratarUploadImagem } from "./modais.js";
 import { salvarDadosFuncionario } from "./funcionarios.js";
 import { mudarVisualizacaoSecao } from "./navegacao_secoes.js";
+import { listarServicosSalao} from "./servicos/listagem_servicos.js";
 
-const id_empresa = 60;
+const id_empresa = 3;
 const url_imagem_salao = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_perfil_salao/";
 const url_imagem_espaco_estabelecimento = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_espaco_estabelecimento/";
 const url_imagem_funcionario = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/";
+
+let servicos_carregados = false;
 
 const preencherAbaInicio = async (id_empresa) =>
 {
@@ -490,6 +493,11 @@ arr.map((elemento)=>
     {
         elemento.addEventListener("click", () =>
         {
+            if(elemento.id == "link_servicos" && servicos_carregados == false)
+            {
+                listarServicosSalao(id_empresa)
+                servicos_carregados = true;
+            }
             mudarVisualizacaoSecao(elemento)
         })
 
