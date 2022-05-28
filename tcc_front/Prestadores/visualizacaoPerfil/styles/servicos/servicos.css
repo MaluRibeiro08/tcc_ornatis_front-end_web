@@ -260,6 +260,8 @@
 
     display: flex;
     align-items: center;
+    flex-direction: column;
+    gap: 5px;
     justify-content: center;
 
     font-style: normal;
@@ -268,6 +270,27 @@
     line-height: 29px;
 
     /* background-color: crimson; */
+}
+
+.container_preco_servico > .container_desconto
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 15px;
+}
+
+.container_desconto>.preco_sem_desconto
+{
+    color: gray;
+    /* text-decoration: line-through; */
+}
+
+.container_desconto>.desconto_valor_servico
+{
+    color: red;
 }
 
 .container_acoes_servico

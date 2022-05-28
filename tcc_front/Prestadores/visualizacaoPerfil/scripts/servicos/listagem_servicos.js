@@ -38,17 +38,35 @@ const criar_card_servico = (servico) =>
     card_servico.id = `id_servico${servico.id_servico}`;
     const servico_disponivel_pra_uso = servico.ativo_para_uso == 1 ? "checked" : "";
 
+    //VERIFICANDO DESCONTO
+    let preco_servico_tratado = parseFloat(servico.preco).toFixed(2);
+    let situacao_desconto = 'style="display: none;"'
+
+    if(servico.desconto != 0 && servico.desconto != null)
+    {
+        preco_servico_tratado = (servico.preco - (servico.preco * (servico.desconto/100))).toFixed(2);
+        situacao_desconto = "";
+    }
+
+    console.log(servico.preco)
+
     card_servico.innerHTML = 
     `
         <div class="container_informacoes_servico">
-        <h4 class="nome_servico">${servico.nome_servico}</h4>
-        <div class="container_duracao_servico">
-            <p>Duração:</p>
-            <p class="duracao_servico">${servico.tempo_duracao} min</p>
-        </div>
+            <h4 class="nome_servico">${servico.nome_servico}</h4>
+            <div class="container_duracao_servico">
+                <p>Duração:</p>
+                <p class="duracao_servico">${servico.tempo_duracao} min</p>
+            </div>
         </div>
         <div class="container_preco_servico">
-            <p>R$ ${servico.preco.toString().replace(".", ",")}</p>
+                                            
+            <p>R$ ${preco_servico_tratado.toString().replace(".", ",")}</p>
+            <div class="container_desconto" ${situacao_desconto}>
+                <P class="preco_sem_desconto"> R$ ${parseFloat(servico.preco).toFixed(2).toString().replace(".", ",")} | </P>
+                <P class="desconto_valor_servico">-${servico.desconto}%</P>
+            </div>
+            
         </div>
         <div class="container_acoes_servico">
             <label class="switch">
