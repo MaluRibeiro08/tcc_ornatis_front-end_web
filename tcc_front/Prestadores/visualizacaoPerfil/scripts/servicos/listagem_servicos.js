@@ -8,7 +8,7 @@ const criar_container_especialidade = (id_especialidade, nome_especialidade) =>
     const container_especialidade = document.createElement("div");
 
     container_especialidade.classList.add("container_listagem_especialidade");
-    container_especialidade.id = `container_listagem_especialidade${id_especialidade}`;
+    container_especialidade.id = `container_listagem_especialidade_${id_especialidade}`;
 
     container_especialidade.innerHTML = 
     `
@@ -24,7 +24,7 @@ const criar_container_especialidade = (id_especialidade, nome_especialidade) =>
 
     container_mae.appendChild(container_especialidade)
     
-    return document.getElementById(`container_listagem_especialidade${id_especialidade}`)
+    return document.getElementById(`container_listagem_especialidade_${id_especialidade}`)
 }
 
 
@@ -57,6 +57,74 @@ const criar_card_servico = (servico) =>
     return(card_servico)
 }
 
+const criar_filtro_especialidade = (id_especialidade, nome_especialidade) =>
+{
+    const container_mae = document.getElementById("container_filtros");
+    const container_filtro_especialidade = document.createElement("div");
+
+    container_filtro_especialidade.classList.add("container_filtro");
+    // container_filtro_especialidade.classList.add("filtro_selecionado");
+    container_filtro_especialidade.id = `filtro_especialidade_${id_especialidade}`;
+
+    container_filtro_especialidade.innerHTML = 
+    `
+        <span>${nome_especialidade}</span>
+    `;
+
+    container_filtro_especialidade.addEventListener("click", (evento)=>
+    {
+        alterarFiltragemServicosPorEspecialidade(id_especialidade)
+    })
+
+    container_mae.appendChild(container_filtro_especialidade);
+}
+
+const alterarFiltragemServicosPorEspecialidade = (id_especialidade) =>
+{
+    const campo_filtro = document.getElementById(`filtro_especialidade_${id_especialidade}`);
+
+    //VERIFICANDO SE ESTAREI FILTRANDO OU "DESFILTRANDO"
+    if (campo_filtro.classList.contains("filtro_selecionado")) 
+    {
+        //TIRA A SELEÇÃO DO FILTRO
+            campo_filtro.classList.remove("filtro_selecionado")
+
+        //SELECIONA TODOS OS CONTAINERS DE LISTAGEM
+            const arr_container_listagens_especialidades = Array.prototype.slice.call(document.getElementsByClassName("container_listagem_especialidade"))
+
+        //DEIXA TODOS OS CONTAINERS VISIVEIS
+            arr_container_listagens_especialidades.map(
+                (elemento)=>
+                {
+                    elemento.style.display = "flex";
+                }
+            )
+    }
+    else
+    {
+        //TIRANDO OUTROS POSSÍVEIS FILTROS
+            const arr_container_listagens_especialidades = Array.prototype.slice.call(document.getElementsByClassName("container_listagem_especialidade"))
+            arr_container_listagens_especialidades.map((elemento)=> elemento.style.display = "flex")
+    
+            const arr_container_filtros_especialidades = Array.prototype.slice.call(document.getElementsByClassName("container_filtro"))
+            arr_container_filtros_especialidades.map((elemento)=> elemento.classList.remove("filtro_selecionado"))
+    
+        //ESTABELECENDO FLTRAGEM
+            //ESTABELECE A SELEÇÃO DO FILTRO
+                campo_filtro.classList.add("filtro_selecionado")
+
+            //SELECIONA TODOS OS CONTAINERS QUE NÃO NÃO DIZEM RESPEITO AO FILTRO E ESCONDE-OS
+                const arr_containers_especialidades_nao_desejadas = arr_container_listagens_especialidades.filter(
+                    (elemento) =>
+                    {
+                        const id_elemento = elemento.id
+                        const id_especialidade_elemento = id_elemento.substring(id_elemento.lastIndexOf("_")+1, id_elemento.length)
+                        return id_especialidade_elemento != id_especialidade
+                    }
+                )
+                arr_containers_especialidades_nao_desejadas.map((elemento)=> elemento.style.display = "none")
+}
+}
 
 const listarServicosSalao = async (id_empresa) =>
 {
@@ -73,9 +141,10 @@ const listarServicosSalao = async (id_empresa) =>
             const nome_especialidade_do_servico = servicos[contador].nome_especialidade;
 
             //VERIFICANDO SE HÁ UM CONTAINER PRA ESPECIALIDADE DO SERVICO
-            const container_servicos_especialidade = document.getElementById(`container_listagem_especialidade${id_especialidade_do_servico}`)
+            const container_servicos_especialidade = document.getElementById(`container_listagem_especialidade_${id_especialidade_do_servico}`)
             if(container_servicos_especialidade == null) // se não tiver, cria e coloca dentro
             {
+                criar_filtro_especialidade(id_especialidade_do_servico, nome_especialidade_do_servico);
                 const container_especialidade = criar_container_especialidade(id_especialidade_do_servico, nome_especialidade_do_servico);
                 const card_servico = criar_card_servico(servicos[contador]);
                 container_especialidade.appendChild(card_servico)
