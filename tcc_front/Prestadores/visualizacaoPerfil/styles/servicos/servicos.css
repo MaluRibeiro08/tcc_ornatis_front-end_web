@@ -8,6 +8,10 @@
     color: var(--verde_escuro);
 }
 
+.filtro_selecionado
+{
+    background-color: var(--verde_claro);
+}
 /* --------- BARRA DE PESQUISA --------- */
 
 .container_primario_servicos
