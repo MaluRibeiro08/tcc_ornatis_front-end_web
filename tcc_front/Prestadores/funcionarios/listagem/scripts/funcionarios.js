@@ -6,7 +6,7 @@ const listarFuncionarios = async (id_empresa) =>
     const response = await carregarFuncionarios(id_empresa);
     const informacoes = await response.json();
     
-    return informacoes;
+    return informacoes.data;
 }
 
 const listarDetalhesFuncionario = async (id_funcionario) =>
