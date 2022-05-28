@@ -5,6 +5,7 @@ import {abrirModal, fecharModal, tratarUploadImagem } from "./modais.js";
 import { salvarDadosFuncionario } from "./funcionarios.js";
 import { mudarVisualizacaoSecao } from "./navegacao_secoes.js";
 import { listarServicosSalao} from "./servicos/listagem_servicos.js";
+import { construirTelaCadastro } from "./servicos/cadastro/main.js";
 
 const id_empresa = 3;
 const url_imagem_salao = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_perfil_salao/";
@@ -455,6 +456,18 @@ document.querySelector(".container_icone_adicao_funcionario").addEventListener("
 document.querySelector(".circulo_icone_adicao").addEventListener("click", () =>
 {
     abrirModal("cadastrar_funcionario");
+})
+
+document.querySelector(".icone_add_servico").addEventListener("click", () =>
+{
+    abrirModal("cadastrar_servico");
+    construirTelaCadastro(id_empresa);
+    
+})
+
+document.getElementById("fechar_modal_cadastro_servico").addEventListener("click", () =>
+{
+    fecharModal()
 })
 
 document.getElementById("fechar_modal_criacao").addEventListener("click", () =>
