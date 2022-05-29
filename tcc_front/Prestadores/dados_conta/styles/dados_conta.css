@@ -135,6 +135,10 @@ main
     justify-content: center;
     margin-bottom: 30px;
 }
+.container_obs_pagamento
+{
+    width: 100%;
+}
 
 textarea
 {
