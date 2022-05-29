@@ -101,6 +101,7 @@ main
 .container_conteudo_secoes
 {
     height: auto;
+    /* max-height: 90vh;  CASO QUEIRAM COM O HEADER*/
     width: 60%;
     
 
@@ -225,11 +226,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 {
     width: 100%;
     height: 100%;
+    /* max-height: 70%; CASO QUEIRAM COM O HEADER */
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    /* justify-content: flex-start;
+    overflow-y: auto; CASO QUEIRAM COM O HEADER */
     gap: 35px;
     /* background-color: darkgrey; */
 }
