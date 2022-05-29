@@ -461,11 +461,11 @@ const getTiposAtendimentos = () =>
     return arr_tipos_atendimento;
 }
 
-const pegarDadosServico = (id_empresa) =>
+const pegarDadosEditadosServico = (id_servico) =>
 {
     const data = {};
-    data['acao'] = 'createServico';
-    data['id_empresa'] = id_empresa;
+    data['acao'] = 'updateServico';
+    data['id_servico'] = id_servico;
     data['nome_servico'] = document.getElementById('input_titulo_servico').value;
     data['tempo_duracao'] = document.getElementById('input_duracao_servico').value;
     data['desconto'] = document.getElementById('input_desconto').value;
@@ -495,6 +495,7 @@ const setarDadosServicoCampos = (dados) =>
         document.getElementById("input_imagem_servico").src = `${url_imagem_servico}${dados["dados_servico"][0]["imagem_servico"]}`
     }
     
+    document.getElementById("id_servico").value = dados["dados_servico"][0]["id_servico"]
     document.getElementById('input_titulo_servico').value = dados["dados_servico"][0]["nome_servico"];
     document.getElementById('input_duracao_servico').value = dados["dados_servico"][0]["tempo_duracao"];
     document.getElementById('input_desconto').value = dados["dados_servico"][0]["desconto"];
@@ -589,4 +590,4 @@ document.getElementById("input_imagem_servico").addEventListener("change", (trat
 
 
 document.getElementById('select_especialidade').addEventListener('input', (evento) => reorganizarOpcoesSelectPartesCorpo(evento.target.value))
-export {listarServicosSalao, construirTelaCadastro, pegarDadosServico, setarDadosServicoCampos}
+export {listarServicosSalao, construirTelaCadastro, pegarDadosEditadosServico, setarDadosServicoCampos}

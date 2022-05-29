@@ -113,44 +113,30 @@ const salvarServico = (data) =>
     console.log("vamos salvar o serviço cujos dados são:")
     console.log(data)
 
-    // console.log(data)
 
-    // const options_servico = {
-    //     method: 'POST',
-    //     body: JSON.stringify(data),
-    //     headers: {
-    //         'content-type': 'application/json',
-    //     },
-    // };
-    // fetch(url_servico, options_servico).then(response => response.json()).then(
-    //     data => 
-    //     {
-    //         console.log("Imprimindo response")
-    //         console.log(data)
-    //         console.log("Especificando impressao response")
-    //         console.log(data.data)
-    //         const input_id_servico = document.getElementById("id_servico");
-
-    //         input_id_servico.value = data.data;
-    //     }
-    // )
-    // .then
-    // (
-    //     () =>
-    //     {
-    //         console.log("enviando formulario adm"),
-    //         console.log(document.getElementById("formulario_imagem_servico")),
-                    
-    //         document.getElementById("formulario_imagem_servico").submit()
-    //     }
-    // ).then
-    // (
-    //     () =>
-    //     {
-    //         console.log("Tudo certo")
-    //         alert("Serviço cadastrado com sucesso!!")
-    //         // location.reload()
-    //     }
-    // );
+    const options_servico = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'content-type': 'application/json',
+        },
+    };
+    fetch(url, options_servico).then(response => response.json()).then(
+        data => 
+        {
+            console.log("Imprimindo response")
+            console.log(data)
+            console.log("Especificando impressao response")
+            console.log(data.data)
+        }
+    ).then
+    (
+        () =>
+        {
+            console.log("Tudo certo")
+            alert("Serviço cadastrado com sucesso!!")
+            location.reload()
+        }
+    );
 }
 export {getServicosPorEmpresa, getDetalhesServico, setarDisponibilidadeServico, getEspecialidades, getParteCorpoPorEspecialidade, getPartesCorpo, excluirServico, salvarServico}

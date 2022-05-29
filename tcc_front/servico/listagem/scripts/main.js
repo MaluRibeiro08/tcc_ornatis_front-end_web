@@ -1,5 +1,5 @@
 "use strict"
-import { listarServicosSalao, construirTelaCadastro, pegarDadosServico} from "./manipulacao_campos_servico.js";
+import { listarServicosSalao, construirTelaCadastro, pegarDadosEditadosServico} from "./manipulacao_campos_servico.js";
 import { fecharModal, tratarUploadImagem } from "./modais.js";
 import { excluirServico, salvarServico  } from './servico.js';
 
@@ -18,7 +18,8 @@ document.getElementById("fechar_modal_edicao").addEventListener("click", fecharM
 
 document.getElementById("botao_salvar_edicao_servico").addEventListener('click', () =>
 {
-    const data = pegarDadosServico(id_empresa)
+    document.getElementById("formulario_imagem_servico").submit();
+    const data = pegarDadosEditadosServico(document.getElementById('id_servico').value)
     salvarServico(data);
 })
 
