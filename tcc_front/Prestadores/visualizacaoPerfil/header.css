@@ -32,6 +32,20 @@ header
     /* background-color: yellow; */
 }
 
+
+.item_header:hover > a
+{
+    padding-bottom: 5px;
+    border-bottom: solid 1px black;
+    transition: 0.4s;
+}
+
+#item_header_atual
+{
+    padding-bottom: 5px;
+    border-bottom: solid 1px black;
+    /* color: blue; */
+}
 .item_header > a
 {
     text-decoration: none;
@@ -123,6 +137,7 @@ header .container_opcoes_perfil_submenu
 
     margin-top: 5px;
     padding: 10px;
+    
 
     /* background-color: pink; */
 }
