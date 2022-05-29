@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/modais_geral.css">
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="./styles/modal_edicao_servico.css">
+
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
+
+    <script src="./scripts/main.js" type="module" defer></script>
+
+    <title>Lista de Serviços</title>
+</head>
+<body>
+    <header></header>
+    <main id="main">
+        <div class="container_titulo_principal">
+            <span class="material-symbols-outlined" id="icone">list_alt</span>
+            <h1 class="titulo_pagina">Lista de Serviços</h1>
+        </div>
+        <div class="container_aviso_sem_servico" id="container_aviso_sem_servico" style="display: none;">
+            <h2 id="texto_sem_servico"> Não há serviços cadastrados!</h2>
+            <a href="../cadastro/index.html" target="_blank">Cadastre um agora mesmo! :)</a>
+        </div>
+
+        <div class="container_geral_conteudo">
+            <div class="container_filtros" id="container_filtros">
+                <!-- <div class="container_filtro" id="filtro_especialidade_X">
+                    <span>Cabelos</span>
+                </div> -->
+            </div>
+    
+            <div class="container_listagem_servicos" id="container_geral_listagem_servicos">
+    
+                <!-- <div class="container_listagem_especialidade" id="container_listagem_especialidade3">
+                    <div class="container_titulo_especialidade">
+                        <h2>Maquiagem</h2>
+                    </div>
+    
+                    <div class="container_listagem">
+    
+                        <div class="card_servico">
+                            <div class="container_informacoes_servico">
+                                <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                <div class="container_duracao_servico">
+                                    <p>Duração:</p>
+                                    <p class="duracao_servico">35 min</p>
+                                </div>
+                            </div>
+                            <div class="container_preco_servico">
+                                
+                                <p>R$ 39,99</p>
+                                <div class="container_desconto">
+                                    <P class="preco_sem_desconto">130,00</P>
+                                    <P class="desconto_valor_servico">-5%</P>
+                                </div>
+                                
+                            </div>
+                            <div class="container_acoes_servico">
+                                <span class="material-symbols-outlined">delete</span>
+                                <span class="material-symbols-outlined">edit</span>
+                            </div>
+                        </div>
+    
+                        <div class="card_servico">
+                            <div class="container_informacoes_servico">
+                                <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                <div class="container_duracao_servico">
+                                    <p>Duração:</p>
+                                    <p class="duracao_servico">35 min</p>
+                                </div>
+                            </div>
+                            <div class="container_preco_servico">
+                                
+                                <p>R$ 39,99</p>
+                                <div class="container_desconto">
+                                    <P class="preco_sem_desconto">130,00</P>
+                                    <P class="desconto_valor_servico">-5%</P>
+                                </div>
+                                
+                            </div>
+                            <div class="container_acoes_servico">
+                                <span class="material-symbols-outlined">delete</span>
+                                <span class="material-symbols-outlined">edit</span>
+                            </div>
+                        </div>
+    
+                        <div class="card_servico">
+                            <div class="container_informacoes_servico">
+                                <h4 class="nome_servico">Esmaltação Francesinha - Mão</h4>
+                                <div class="container_duracao_servico">
+                                    <p>Duração:</p>
+                                    <p class="duracao_servico">35 min</p>
+                                </div>
+                            </div>
+                            <div class="container_preco_servico">
+                                
+                                <p>R$ 39,99</p>
+                                <div class="container_desconto">
+                                    <P class="preco_sem_desconto">130,00</P>
+                                    <P class="desconto_valor_servico">-5%</P>
+                                </div>
+                                
+                            </div>
+                            <div class="container_acoes_servico">
+                                <span class="material-symbols-outlined">delete</span>
+                                <span class="material-symbols-outlined">edit</span>
+                            </div>
+                        </div>
+    
+                        
+                        
+                    </div>
+    
+                </div> -->
+    
+            
+            </div>
+            
+        </div>
+       
+    </main>
+</body>
+
+<div class="container_modais" id="container_modais">
+    <div class="modal_edicao" id="modal_edicao" style="display: none;">
+        <div class="container_cabecalho_modal">
+            <div class="container_titulo_modal">
+                <span class="material-symbols-outlined" id="icone_modal">edit</span>
+                <h3 class="titulo_modal">Editar Serviço</h3>
+            </div>
+            <div class="container_botao_cancelar">
+                <span class="material-symbols-outlined" id="fechar_modal_edicao">cancel</span>
+            </div>
+            
+        </div>
+
+        <div class="container_conteudo">
+
+            <div class="container_formulario_servico">
+                <div class="container_secao_informacoes container_geral_imagem_servico">
+                    <form class="container_imagem_servico" id="formulario_imagem_servico" enctype="multipart/form-data" action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/" method="post">
+                        <input type="file" name="imagem_servico" class="input_imagem_servico" id="input_imagem_servico">
+                        <label class="container_bordinha_imagem" for="input_imagem_servico"><img id="imagem_servico" src="" alt="" style="display: none;"><span class="material-symbols-outlined" id="icone_add_imagem_servico">add_photo_alternate</span></label>
+                        <input type="text" name="acao" id="acao" hidden value="createServico">
+                        <input type="text" name="envio_form" value="true" hidden>
+                        <input type="text" name="id_servico"  id="id_servico" hidden>
+                    </form>
+                </div>
+                
+                <div class=" container_secao_informacoes container_titulo_servico">
+                    <div class="container_input">
+                        <label class= "lable_input" for="input_titulo_servico">Nome do serviço</label>
+                        <input  id="input_titulo_servico" class="input" type="text" maxlength="50">
+                    </div>
+                </div>
+
+                <div class="container_secao_informacoes  container_geral_preco_tempo">
+                    <div class="container_secundario borda_card_form container_geral_preco">
+                        <div class="container_input">
+                            <label class= "lable_input" for="input_preco_servico">Preço:</label>
+                            <p>R$ <input  id="input_preco_servico" class="input dinheiro" maxlength="8"></p>
+                        </div>
+                        <div class="container_input">
+                            <label class= "lable_input" for="input_desconto">Desconto:</label>
+                            <p><input  id="input_desconto" class="input" type="text" maxlength="3"> %</p>
+                        </div>
+                    </div>
+
+                    <div class="container_secundario borda_card_form container_geral_tempo">
+                        <div class="container_input">
+                            <label class= "lable_input" for="input_duracao_servico">Duração:</label>
+                            <p><input  id="input_duracao_servico" class="input" onkeypress="validarDigitacaoNumeros();" maxlength="3"> min</p>
+                        </div>
+                        <div class="container_input">
+                            <label class= "lable_input" for="input_intervalo">Intervalo:</label>
+                            <p><input  id="input_intervalo" class="input" onkeypress="validarDigitacaoNumeros();" maxlength="3">min</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container_secao_informacoes container_publico_local">
+
+                    <div class="container_secundario container_publico_alvo" id="container_publico_alvo">
+                        <div class="container_input">
+                            <label class= "lable_input" for="input_publico_alvo">Público-alvo:</label>
+                            <!-- <input  id="input_publico_alvo" class="input" type="text" maxlength="100"> -->
+                            <select name="publico_alvo" id="select_publico_alvo">
+                                <!-- <option value="null" selected disabled>Selecione</option> -->
+                                <option value="1">Feminino</option>
+                                <option value="2">Masculino</option>
+                                <option value="todos">Todos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="container_secundario container_local_atendimento">
+
+                        <label class= "lable_input" for="input_local_atendimento">Local de Atendimento:</label>
+
+                        <div class="container_input_checkbox">
+                            <div class="container_item_check">
+                                <input  id="input_opcao_local1" class="input" type="checkbox" name="check_estabelecimento">
+                                <label class= "lable_input" for="input_opcao_local1">Estabelecimento</label>      
+                            </div>
+                            <div class="container_item_check">
+                                <input  id="input_opcao_local2" class="input" type="checkbox" name="check_domicilio_cliente" >
+                                <label class= "lable_input" for="input_opcao_local2">Domicilio da Cliente</label>      
+                            </div>     
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container_secao_informacoes container_especilidades_funcionarios">
+                    <div class="container_secundario container_especialidades_partes_corpo">
+                        <div class="container_especialidades">
+                            <div class="container_input">
+                                <label class= "lable_input" for="input_especialidade">Especialidade:</label>
+                                <!-- <input  id="input_ especialidade" class="input" type="text" maxlength="100"> -->
+                                <select name="especialidade" id="select_especialidade">
+                                    <option value="null" selected disabled>Selecione</option>
+
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div class="container_partes_corpo">
+                            <div class="container_input">
+                                <label class= "lable_input" for="input_parte_corpo">Parte do corpo:</label>
+                                <!-- <input  id="input_ parte_corpo" class="input" type="text" maxlength="100"> -->
+                                <select name="parte_corpo" id="select_parte_corpo">
+                                    <option value="null" selected disabled>Selecione</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container_secundario">
+                        <div class="container_primario_funcionarios_cadastro_servico">
+                            <div class="container_titulo_secao">
+                                    <label class="lable_input">Funcionários que executam o serviço:</label>
+                            </div>
+
+                            <div class="container_conteudo_secao_funcionarios_cadastro_servico">
+                                <div class="container_icone_adicao_funcionario">
+                                    <div class="circulo_icone_adicao">
+                                       <a href="../../Prestadores/visualizacaoPerfil/index.html#link_container_funcionarios"> <span class="material-symbols-rounded">
+                                        add
+                                    </span></a>
+                                    </div>
+                                    
+                                </div>
+                                <div id="container_aviso_sem_funcionarios" class="container_aviso_sem_funcionarios" style="display: none;">
+                                    <p class="aviso_sem_funcionario">
+                                        Nenhum funcionário cadastrado :|
+                                    </p>                               
+                                </div>
+                                <div class="container_funcionarios" id="container_funcionarios_cadastro_servico">
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="container_secao_informacoes container_geral_detalhes">
+                        <div class="borda_campo_observacoes">
+                            <div class="container_input">
+                                <label class= "lable_input" for="input_observacoes">Descrição, detalhes:</label>
+                                <textarea id="input_observacoes" class="input" maxlength = 100 ></textarea>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="container_secao_informacoes container_botoes">
+                    <div class="botoes_acao_criacao">
+                        <button id="botao_salvar_criacao_servico" type="button">Salvar</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+    <div class="modal_exclusao" id="modal_exclusao" style="display: none;">
+        <div class="container_titulo_modal">
+            <h5 class="titulo_modal">Excluir Serviço</h5>
+        </div>
+        <div class="container_questionamento">
+            <p>Deseja apagar o serviço?</p>
+        </div>
+        <div class="container_botoes_acoes_servico">
+            <input type="text" id="id_servico_excluir" hidden>
+            <button id="botao_sim_exclusao_servico">Sim!</button>
+            <button id="botao_nao_exclusao_servico">Não!</button>
+        </div>
+    </div>
+</div>
+</html>
