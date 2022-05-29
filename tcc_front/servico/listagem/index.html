@@ -193,9 +193,9 @@
                             <!-- <input  id="input_publico_alvo" class="input" type="text" maxlength="100"> -->
                             <select name="publico_alvo" id="select_publico_alvo">
                                 <!-- <option value="null" selected disabled>Selecione</option> -->
-                                <option value="1">Feminino</option>
-                                <option value="2">Masculino</option>
-                                <option value="todos">Todos</option>
+                                <option id="option_genero_1" value="1">Feminino</option>
+                                <option id="option_genero_2" value="2">Masculino</option>
+                                <option id="option_todos_generos" value="todos">Todos</option>
                             </select>
                         </div>
                     </div>
@@ -251,14 +251,14 @@
                             </div>
 
                             <div class="container_conteudo_secao_funcionarios_cadastro_servico">
-                                <div class="container_icone_adicao_funcionario">
+                                <!-- <div class="container_icone_adicao_funcionario">
                                     <div class="circulo_icone_adicao">
                                        <a href="../../Prestadores/visualizacaoPerfil/index.html#link_container_funcionarios"> <span class="material-symbols-rounded">
                                         add
                                     </span></a>
                                     </div>
                                     
-                                </div>
+                                </div> -->
                                 <div id="container_aviso_sem_funcionarios" class="container_aviso_sem_funcionarios" style="display: none;">
                                     <p class="aviso_sem_funcionario">
                                         Nenhum funcionário cadastrado :|
@@ -284,7 +284,7 @@
 
                 <div class="container_secao_informacoes container_botoes">
                     <div class="botoes_acao_criacao">
-                        <button id="botao_salvar_criacao_servico" type="button">Salvar</button>
+                        <button id="botao_salvar_edicao_servico" type="button">Salvar</button>
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@ const id_empresa = 1;
 //EVENTOS
 document.getElementById("fechar_modal_edicao").addEventListener("click", fecharModal)
 
-document.getElementById("botao_salvar_edicao").addEventListener('click', () =>
+document.getElementById("botao_salvar_edicao_servico").addEventListener('click', () =>
 {
     const data = pegarDadosServico(id_empresa)
     salvarServico(data);
