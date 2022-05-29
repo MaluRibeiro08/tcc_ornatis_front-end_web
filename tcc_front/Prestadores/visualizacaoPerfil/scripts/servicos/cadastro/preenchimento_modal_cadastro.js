@@ -6,6 +6,7 @@ import { listarFuncionarios } from "../../funcionarios.js";
 
 let id_empresa = null; //recebemos na chamada da função de construirTelaCadastro
 let arr_especialidades_partes_corpo = {};
+let informacoes_base_carregadas = false;
 const url_imagem_funcionario = 'http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/'
 const url_servico = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/'
 
@@ -98,6 +99,8 @@ const definirSelecaoFuncionario = (alvo) =>
 
 const construirTelaCadastro = async(id_empresa_recebido) =>
 {
+    if(informacoes_base_carregadas == true){return ''} //para a execucao
+
     id_empresa = id_empresa_recebido;
     //ESPECIALIDADES E PARTES DO CORPO
         const arr_especialidades =  await getEspecialidades();
@@ -147,6 +150,7 @@ const construirTelaCadastro = async(id_empresa_recebido) =>
             )
         })
 
+    informacoes_base_carregadas = true;
 }
 // construirTelaCadastro(id_empresa);
 
@@ -291,11 +295,25 @@ const salvarServico = (id_empresa) =>
         {
             console.log("Tudo certo")
             alert("Serviço cadastrado com sucesso!!")
-            // location.reload()
+            limparCamposCadastroServico();
+
         }
     );
 }
 
+const limparCamposCadastroServico = () =>
+{
+    document.getElementById('input_titulo_servico').value = "";
+    document.getElementById('input_duracao_servico').value = "";
+    document.getElementById('input_desconto').value = "";
+    document.getElementById('input_intervalo').value = "";
+    document.getElementById('input_preco_servico').value = "";
+    document.getElementById('input_observacoes').value = "";
+    document.getElementById("select_especialidade").value = "";
+    document.getElementById("select_parte_corpo").value = "";
+    document.getElementById("imagem_servico").src = "";
+
+}
 
 const reorganizarOpcoesSelectPartesCorpo = (opcao_escolhida) =>
 {
@@ -331,4 +349,4 @@ document.getElementById("input_imagem_servico").addEventListener("change", (trat
 
 document.getElementById('select_especialidade').addEventListener('input', (evento) => reorganizarOpcoesSelectPartesCorpo(evento.target.value))
 
-export {construirTelaCadastro}
+export {construirTelaCadastro, limparCamposCadastroServico}

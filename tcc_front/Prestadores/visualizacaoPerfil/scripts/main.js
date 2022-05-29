@@ -5,9 +5,9 @@ import {abrirModal, fecharModal, tratarUploadImagem } from "./modais.js";
 import { salvarDadosFuncionario } from "./funcionarios.js";
 import { mudarVisualizacaoSecao } from "./navegacao_secoes.js";
 import { listarServicosSalao} from "./servicos/listagem_servicos.js";
-import { construirTelaCadastro } from "./servicos/cadastro/preenchimento_modal_cadastro.js";
+import { construirTelaCadastro, limparCamposCadastroServico } from "./servicos/cadastro/preenchimento_modal_cadastro.js";
 
-const id_empresa = 2;
+const id_empresa = 1;
 const url_imagem_salao = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_perfil_salao/";
 const url_imagem_espaco_estabelecimento = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_espaco_estabelecimento/";
 const url_imagem_funcionario = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/";
@@ -468,6 +468,7 @@ document.querySelector(".icone_add_servico").addEventListener("click", () =>
 document.getElementById("fechar_modal_cadastro_servico").addEventListener("click", () =>
 {
     fecharModal()
+    limparCamposCadastroServico()
 })
 
 document.getElementById("fechar_modal_criacao").addEventListener("click", () =>
