@@ -487,8 +487,10 @@ const setarDadosServicoCampos = (dados) =>
     document.getElementById('input_duracao_servico').value = dados["dados_servico"][0]["tempo_duracao"];
     document.getElementById('input_desconto').value = dados["dados_servico"][0]["desconto"];
     document.getElementById('input_intervalo').value = dados["dados_servico"][0]["intervalo"];
-    document.getElementById('input_preco_servico').value = dados["dados_servico"][0]["preco"];
     document.getElementById('input_observacoes').value = dados["dados_servico"][0]["detalhes"];
+
+    const preco_servico_tratado = parseFloat(dados["dados_servico"][0]["preco"]).toFixed(2).toString().replace(".", ",");
+    document.getElementById('input_preco_servico').value = preco_servico_tratado;
 
     //ESPECIALIDADE
         const id_especialidade = dados["dados_servico_especialidade"][0]["id_especialidade"];

@@ -15,6 +15,10 @@
 
     <script src="./scripts/main.js" type="module" defer></script>
 
+    <!-- MASCRA DOS INPUTS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://plentz.github.io/jquery-maskmoney/javascripts/jquery.maskMoney.min.js" type="text/javascript"></script>
+
     <title>Lista de Serviços</title>
 </head>
 <body>
@@ -126,6 +130,33 @@
         </div>
        
     </main>
+    <script>
+
+        jQuery(function() 
+        {
+            
+            jQuery("#input_preco_servico").maskMoney({
+                thousands:'.', 
+                decimal:','
+            })
+        
+        });
+
+        const validarDigitacaoNumeros = (evt) =>
+        {
+            var evento = evt || window.event;
+            var tecla = evento.keyCode;
+            tecla = String.fromCharCode( tecla );
+
+            var regex = /^[0-9.]+$/;
+            if( !regex.test(tecla) ) 
+            {
+                evento.returnValue = false;
+                if(evento.preventDefault) evento.preventDefault();
+            }
+        }
+    </script>
+
 </body>
 
 <div class="container_modais" id="container_modais">
@@ -169,7 +200,7 @@
                         </div>
                         <div class="container_input">
                             <label class= "lable_input" for="input_desconto">Desconto:</label>
-                            <p><input  id="input_desconto" class="input" type="text" maxlength="3"> %</p>
+                            <p><input  id="input_desconto" class="input" type="text" onkeypress="validarDigitacaoNumeros();" maxlength="3"> %</p>
                         </div>
                     </div>
 
