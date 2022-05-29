@@ -1,0 +1,157 @@
+/* ---------- GERAL -----------  */
+.container_modais
+{
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  position: absolute;
+
+  z-index: 2;
+
+  background-color: rgba(3, 3, 3, 0.451);
+
+  display: none;
+
+}
+
+/* --------- GERAL ---------------- */
+
+.container_titulo_modal
+{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: royalblue; */
+}
+
+#icone_modal, #fechar_modal_edicao
+{
+  font-size: 40px;
+  font-weight: 800;
+  color:  var(--verde_escuro);
+}
+
+#fechar_modal_edicao
+{
+  color: red;
+  cursor: pointer;
+}
+
+
+.titulo_modal
+{
+  font-size: 30px;
+  font-weight: 700;
+  color:  var(--verde_escuro);
+  /* background-color: red; */
+}
+
+/* FOTO EM OUTRO ARQUIVO CSS */
+
+/* ---------- MODAL EXCLUSAO --------------- */
+
+.modal_exclusao
+{
+  width: 600px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 50px;
+  background-color: white;
+
+  /* background-color: yellow; */
+}
+
+.container_titulo_modal
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: tomato; */
+
+}
+.container_titulo_modal > h5
+{
+  font-family: 'Megrim';
+  font-size: 30px;
+  font-weight: 600;
+
+  color: var(--verde_escuro);
+}
+
+.container_questionamento
+{
+  width: 100%;
+  flex-grow: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 25px;
+
+  /* background-color: darkcyan; */
+}
+
+.container_botoes_acoes_servico
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: darkgreen; */
+}
+
+.container_botoes_acoes_servico > button
+{
+  width: 30%;
+}
+
+.container_botoes_acoes_servico > #botao_nao_exclusao_servico
+{
+  background-color: rgb(238, 153, 153);
+}
+.container_botoes_acoes_servico > #botao_nao_exclusao_servico:hover
+{
+  background-color: red;
+}
+
+
+/* ------------- ICONE PRINCIPAL  ---------------- */
+
+.material-symbols-outlined 
+{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 48;
+  color: black;
+}
+
+#icone
+{
+  font-size: 60px;
+}
+

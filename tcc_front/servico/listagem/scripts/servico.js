@@ -76,4 +76,27 @@ const getPartesCorpo = async () =>
     return informacoes.data;
 }
 
-export {getServicosPorEmpresa, setarDisponibilidadeServico, getEspecialidades, getParteCorpoPorEspecialidade, getPartesCorpo}
+const excluirServico = async (id_servico) =>
+{
+    console.log("vamos apagar o servico " + id_servico)
+
+    const data = {};
+    data["acao"] = 'desabilitarServico';
+    data["id_servico"] = id_servico;
+
+    const options =
+    {
+        method : 'DELETE',
+        body: JSON.stringify(data), //transforma o produto que era JSON em String, serializa
+        headers: 
+        {
+            'content-type' : 'application/json'
+        }
+    }
+
+    console.log(options);
+    fetch(url, options).then(response => response.json()).then(data => {
+    console.log(data)})
+
+}
+export {getServicosPorEmpresa, setarDisponibilidadeServico, getEspecialidades, getParteCorpoPorEspecialidade, getPartesCorpo, excluirServico}

@@ -1,6 +1,7 @@
 "use strict"
 
-import { getServicosPorEmpresa} from "./servico.js";
+import { getServicosPorEmpresa, excluirServico} from "./servico.js";
+import { abrirModalEdicao, abrirModalExclusao } from "./modais.js";
 
 
 let id_empresa = null;
@@ -143,8 +144,8 @@ const criar_card_servico = (servico) =>
             
         </div>
         <div class="container_acoes_servico">
-            <span class="material-symbols-outlined" id="delete_${servico.id_servico}">delete</span>
-            <span class="material-symbols-outlined">edit</span>
+            <span class="material-symbols-outlined botao_exclusao" id="delete_${servico.id_servico}">delete</span>
+            <span class="material-symbols-outlined botao_edicao" id="edit_${servico.id_servico}">edit</span>
         </div>
     `;
 
@@ -191,6 +192,26 @@ const listarServicosSalao = async (id_empresa) =>
             (elemento)=>
             {
                 elemento.addEventListener("click", (evento)=>{mudarEstadoServico(evento.target.id)})
+            }
+        )
+
+        const arr_bototoes_exclusao  =  Array.prototype.slice.call(document.getElementsByClassName("botao_exclusao"))
+        arr_bototoes_exclusao.map
+        (
+            (botao) => 
+            {
+                botao.addEventListener("click", 
+                (evento) => abrirModalExclusao(botao.id.substring(botao.id.lastIndexOf("_")+1, botao.id.length)))
+            }
+        )
+
+        const arr_bototoes_edicao  =  Array.prototype.slice.call(document.getElementsByClassName("botao_edicao"))
+        arr_bototoes_edicao.map
+        (
+            (botao) => 
+            {
+                botao.addEventListener("click", 
+                (evento) => abrirModalEdicao(botao.id.substring(botao.id.lastIndexOf("_")+1, botao.id.length)))
             }
         )
         
