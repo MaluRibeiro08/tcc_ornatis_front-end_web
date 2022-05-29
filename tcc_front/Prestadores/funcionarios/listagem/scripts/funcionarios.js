@@ -150,7 +150,7 @@ const deletarFuncionario = (id_funcionario) =>
 
     // document.formulario_imagem.submit();
     // alert("Funcionario excluído com sucesso!")
-    location.reload();
+    // location.reload();
 
 }
 

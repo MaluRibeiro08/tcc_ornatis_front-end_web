@@ -19,6 +19,7 @@ const criar_card_funcionario = (elemento) =>
     const novoCard = document.createElement("div")
 
     novoCard.classList.add("container_funcionario")
+    novoCard.id = `card_${elemento.id_funcionario}`
 
     novoCard.innerHTML = 
     `
@@ -43,7 +44,13 @@ const criarListaFuncionarios = async (id_empresa) =>
 {
     const dados = await listarFuncionarios(id_empresa);
 
-    dados.data.map((elemento) =>
+    if(dados == null || dados.length == 0)
+    {
+        return console.log("nenhum funcionario")
+    }
+
+    document.querySelector(".container_aviso_sem_funcionario").style.display = "none";
+    dados.map((elemento) =>
     {
         criar_card_funcionario(elemento)
     })
@@ -210,6 +217,8 @@ const tratar_click_botao_card_funcionario = (alvo) =>
 
         // console.log(id_funcionario);
         deletarFuncionario(id_funcionario)
+        fecharModal()
+        document.getElementById(`card_${id_funcionario}`).style.display = "none"
     })
 
     document.getElementById("input_foto_funcionario").addEventListener("change", (tratarUploadImagem))
