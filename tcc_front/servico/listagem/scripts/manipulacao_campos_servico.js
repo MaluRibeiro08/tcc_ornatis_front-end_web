@@ -379,7 +379,7 @@ const tratarUploadImagem = ({target}) =>
 
 const getFuncionarios = () => 
 {
-   const arr_funcionarios_existentes = Array.prototype.slice.call(document.getElementById("container_funcionarios").children);
+   const arr_funcionarios_existentes = Array.prototype.slice.call(document.getElementById("container_funcionarios_cadastro_servico").children);
    
    const arr_funcionarios_selecionados = [];
 
@@ -553,12 +553,18 @@ const reorganizarOpcoesSelectPartesCorpo = (opcao_escolhida) =>
     const elementos = document.getElementsByClassName("options_partes_corpos")
     const arr_options = [...elementos]
     arr_options.map((elemento)=> elemento.disabled = true)
+    let selecionado = false;
 
     //DISPONIBILIZANDO OS NECESSÁRIOS
     arr_especialidades_partes_corpo[opcao_escolhida].map(
         (elemento)=>
         {
-            document.getElementById(`option_parte_corpo${elemento.id_parte_corpo}`).disabled = false;
+            document.getElementById(`option_parte_corpo_${elemento.id_parte_corpo}`).disabled = false;
+            if(selecionado == false)
+            {
+                document.getElementById(`option_parte_corpo_${elemento.id_parte_corpo}`).selected = true;
+                selecionado = true;
+            }
         }
 
     )
