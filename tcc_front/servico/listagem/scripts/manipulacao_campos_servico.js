@@ -2,7 +2,7 @@
 
 import { abrirModalEdicao, abrirModalExclusao } from "./modais.js";
 import { imagemPreview } from "../../../utils/imagem.js";
-import { getServicosPorEmpresa, getEspecialidades, getParteCorpoPorEspecialidade, getPartesCorpo} from "./servico.js";
+import { getServicosPorEmpresa, getEspecialidades, getParteCorpoPorEspecialidade, getPartesCorpo, setarDisponibilidadeServico} from "./servico.js";
 import { listarFuncionarios } from "./funcionarios.js";
 
 
@@ -292,12 +292,24 @@ const criar_card_servico = (servico) =>
             
         </div>
         <div class="container_acoes_servico">
-            <span class="material-symbols-outlined botao_exclusao" id="delete_${servico.id_servico}">delete</span>
-            <span class="material-symbols-outlined botao_edicao" id="edit_${servico.id_servico}">edit</span>
+            <div class="container_icones_acao_padrao">
+                <span class="material-symbols-outlined botao_exclusao" id="delete_${servico.id_servico}">delete</span>
+                <span class="material-symbols-outlined botao_edicao" id="edit_${servico.id_servico}">edit</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" class="switch_ativacao_servico" id="check_servico_${servico.id_servico}" ${servico_disponivel_pra_uso}>
+                <span class="slider round"></span>
+            </label>
         </div>
     `;
 
     return(card_servico)
+}
+
+const mudarEstadoServico = (id_alvo) =>
+{
+    const id_servico = id_alvo.substring(id_alvo.lastIndexOf("_")+1, id_alvo.length);
+    setarDisponibilidadeServico(id_servico);
 }
 
 const listarServicosSalao = async (id_empresa) =>

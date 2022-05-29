@@ -351,10 +351,10 @@ h1
 .container_acoes_servico
 {
     height: 100%;
-    width: 100px;
+    width: 150px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
 
@@ -365,7 +365,7 @@ h1
     /* background-color: palevioletred; */
 }
 
-.container_acoes_servico > span
+.container_icones_acao_padrao > span
 {
     font-size: 1.5em;
     font-variation-settings:
@@ -376,7 +376,7 @@ h1
     color: var(--fonte);
 }
 
-.container_acoes_servico > span:hover
+.container_icones_acao_padrao > span:hover
 {
     cursor: pointer;
     transition: 0.5s;
