@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
     <title>Login Prestador</title>
 </head>
+
 <body>
     <section>
         <div id="coluna_lateral"></div>
-        <div id="informacoes_login">
-            <div class="modal_container" id="modal">
-                <div class="corpoModal card">
-                    <div id="container_header">
-                         <div class="header">
-                            <a id="sou_prestador" href="">Sou prestador</a>
+        <div class="modal_container" id="modal">
+            <div class="corpoModal card">
+                <div id="container_header">
+                    <div class="header">
+                        <a id="sou_prestador" href="">Sou prestador</a>
+                    </div>
+                    <div class="header2">
+                        <a id="sou_consumidor" href="../login/consumidor/loginConsumirdor.html">Sou consumidor</a>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="logo">
+                        <img src="../Prestadores/img/logo (1).svg" alt="" width="260px" height="60px">
+                    </div>
+                    <div class="informacoes">
+                        <div id="campo">
+                            <label for="">Login</label>
+                            <input type="text" class="input_linha">
                         </div>
-                        <div class="header2">
-                            <a id="sou_consumidor" href="../login/consumidor/loginConsumirdor.html">Sou consumidor</a>
-                          </div>
-                    </div>                    
-                    <div class="main">
-                        <div class="logo">
-                            <img src="../Prestadores/img/logo (1).svg" alt="" width="260px" height="60px">
+                        <div id="campo">
+                            <label for="">Senha</label>
+                            <input type="password" class="input_linha">
                         </div>
-                        <div class="informacoes">
-                            <div id="campo">
-                                <label for="">Login</label>
-                                <input type="text" class="input_linha">
-                            </div>
-                            <div id="campo">
-                                <label for="">Senha</label>
-                                <input type="password" class="input_linha">
-                            </div>
-                            <div>
-                                <a href="esqueci_minha_senha/esqueci_senha.html">Esqueci minha senha</a>
-                            </div>
-                            <div id="ntc">
-                                <p>Não tem uma conta?</p><a href="../Prestadores/cadastro/cadastro_prestador.html">Cadastre-se</a>
-                            </div>
-                            <button id="entrar">
-                                Entrar
-                            </button>
-                            </div>
+                        <div>
+                            <a href="esqueci_minha_senha/esqueci_senha.html">Esqueci minha senha</a>
+                        </div>
+                        <div id="ntc">
+                            <p>Não tem uma conta?</p><a
+                                href="../Prestadores/cadastro/cadastro_prestador.html">Cadastre-se</a>
+                        </div>
+                        <button id="entrar">
+                            Entrar
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
 </body>
+
 </html>
