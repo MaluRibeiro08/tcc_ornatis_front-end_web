@@ -88,12 +88,6 @@ label {
 
 /****************** Modal *********************/
 
- .corpoModal {
-    /* background-color: white; */
-    /* width: 45%;
-    height: 70%;  */
-} 
-
 #container_header {
     display: flex;
     gap: 10px;
@@ -172,6 +166,7 @@ label {
 }
 
 .informacoes {
+    /* width: 90%; */
     padding-top: 10%;
     padding-bottom: 5%;
 }
@@ -207,14 +202,14 @@ label {
 }
 
 .input_linha {
-    width: 400px;
     height: 35px;
     box-shadow: none;
     border: none;
     border-bottom: 1px #000000 solid;
-    font-size: 20px;
-    margin-bottom: 40px;
-    width: 90%;
+    font-size: 1.2rem;
+    color: var(--fonte);
+    margin-bottom: 45px;
+    width: 100%;
 }
 
 #campo {
