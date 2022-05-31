@@ -23,187 +23,118 @@ body{
     user-select: none;
 }
 
-/* HEADER E FONTES */
+/*FONTES */
 
-header{
-    width: 100%;
-    height: 10vh;
-    background-color: white;
-    filter: drop-shadow(2px 3px 4px #494343);
-}
 
 h1{
     font-size: 50px;
     font-family: 'Megrim';
-    color: var(--verde_padrao);
+    color: var(--fonte);
+    font-weight: 1;
     margin-left: 3vw;
 }
 
 h2{
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Raleway';
-
+    color: var(--verde_escuro);
 }
 h3{
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Raleway';
+    color: var(--verde_escuro);
 }
 
 h4{
-    font-size: 40px;
+    font-size: 15px;
     font-family: 'Raleway';
-    color: var(--fonte);
+    color: black;
+}
+h5{
+    font-size:  40px;
+    font-family: 'Megrim';
+    color: var(--verde_escuro);
 }
 
 h6{
     font-size: 30px;
     font-family: 'Raleway';
-    color: var(--fonte);
+    color: black;
 
 }
-
-/* MENU HAMBURGUER E ICONES */
-
-#user{
-    font-size: 50px;
-    color: var(--fonte);
-}
-
-#notification{
-    font-size: 40px;
-    padding-left: 20px;
-}
-
-a{
-    text-decoration: none; 
-    font-family: 'Raleway';
-    font-size: 60px;
-    color:black;
-}
-
-nav{
-    height: 100%;
-    width: 0px;
-    background-color: var(--verde_padrao);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    overflow: hidden;
-    transition: width 0.3s;
-   
-}
-
-nav a{
-    color: white;
-    font-size: 30px;
-    display: inline;
-    display: block;
-    padding: 12px 10px 12px 32px;
-    padding-top: 3vh;
-    padding-left: 3vw;
-   
-}
-
-nav a:hover{
-    background-color: var(--verde_escuro);
-
-}
-
-#linha_menu{
-    color: var(--verde_padrao);
-    padding-left: 30px;
-}
-
-#close_menu{
-    font-size: 50px;
-}
-
-#header_ornatis{
-    display: flex;
-}
-
-#logo{
-    margin-left: 45%;
-    margin-top: -3vh
-}
-
-#menu_hamburguer{
-    margin-left: 50px ;
-    color: var(--verde_escuro);
-    margin-top: 20px;
-    text-decoration:none;
-    
-}
-
-#menu_hamburguer:hover{
-    text-decoration:underline;
-   
-}
-
-#info_menu{
-    padding-left: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-#notification{
-    font-size: 40px;
-    padding-left: 20px;
-}
-
-#circulo_menu{
-    width: 6vw;
-    height: 12vh;
-    background-color: var(--cinza_claro);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 /* MAIN */
 
-#sessao1{
-    background-color: var(--cinza_claro);
-    width: 100%;
-    height: 20vh;
-
-}
-
-
-
-#sessao2{
-    background-color: yellow;
+.container_dia_agenda{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    height: 15vh;
-
+    flex-direction: column;
+    border: var(--verde_escuro) solid 1px;    
+    border-top: none;
+    border-bottom: none;
 }
 
-#acessos{
-   
-  
+#dia1{
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
 }
 
-#sessao3{
-    background-color: greenyellow;
-    width: 100%;
-    height: 35vh;
-
+#dia3{
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
 }
 
-footer{
+
+.agenda_servico{
+    width: 450px;
+    height: 60px;
+    margin-top: 20px;
     background-color: var(--verde_claro);
-    width: 100%;
-    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
 
+}
+
+#container_agenda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+#container_compromissos{
+    margin-top: 100px;
+}
+
+/* DESTAQUES */
+
+#container_destaques{
+margin-top: 100px;
+}
+
+.modal_cinza{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(231, 230, 230);
+    padding: 70px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+
+}
+
+#container_modais{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px ;
 }

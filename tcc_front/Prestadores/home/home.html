@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="home.css"> -->
 
     <!-- HEADER -->
+
     <link rel="stylesheet" href="../../utils/styles/header.css">
     <link rel="stylesheet" href="../../global.css">
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -21,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
 
     <title>Home</title>
 
@@ -29,7 +31,7 @@
     <header id="header">
 
         <div class="item_header" >
-            <a id="item_header_atual" href="../home/home.html">Home</a>
+            <a href="../home/home.html">Home</a>
         </div>
 
         <div class="item_header" >
@@ -41,7 +43,7 @@
         </div>
 
         <div class="item_header">
-            <a href="../visualizacaoPerfil/index.html">Meu Perfil</a>
+            <a id="item_header_atual" href="../visualizacaoPerfil/index.html">Meu Perfil</a>
         </div>
 
         <div class="container_perfil_header item_header" >
@@ -69,85 +71,113 @@
         </div>
 
     </header>
-    <!-- <header>
-        <a href="#" id="linha_menu" onclick="abrir_menu()"> &#9776; </a>
-         <div id="logo">
-                 <img src="../../../img/logo (1).svg" alt="">
-          </div>
-     </header>
-     <nav id="menu">
-     
-         <a href="#" id="close_menu" onclick="fechar_menu()">&times; </a> 
-         
-         <div id="info_menu">
-             <div id="circulo_menu"> <span id="user" class="material-icons-outlined">person</span></div> 
-             <h4>Meu Perfil <span id="notification" class="material-icons-outlined">notifications</span></h4>
-             <div id="linha_informações">____________________________________</div><br>
-     
-          </div>
-         <a href="#">Histórico</a>
-         <a href="#">Sobre o app</a>
-         <a href="#">Dívidas</a>
-         <a href="#">Sair</a>
-         <li><a href="#">Listas<span>&#9662;</span></a> 
-             <ul class="submenu">
-                 <li><a href="">Serviços</a></li>
-                 <li><a href="">Agendamentos</a></li>
-                 <li><a href="">Produtos</a></li>
-             </ul>
-         </li>
-     </nav> -->
      <main>
-         <section id="sessao1">
-             <div id="agendamentos">
-                
-
-             </div>
-         </section>
-
-         <section id="sessao2">
-             <div id="acessos">
-                 <div>
-                     <h4>Perfi </h4>
-                 </div>
-                 <div>
-                    <span id="user" class="material-icons-outlined">person</span>
-                 </div>
-             </div>
-             <div id="acessos">
-                <div>
-                    <h4>Estatística</h4>
+       <section id="container_compromissos">
+            <div id="title_compromisso"><h1>MEUS COMPROMISSOS:</h1></div>
+            <div id="container_agenda" >
+                <div class="container_dia_agenda" id="dia1">
+                    <div class="dia_semana">
+                        <h2>qui</h2>
+                    </div>
+                    <div class="dia_mes">
+                        <h3>30</h3>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
                 </div>
-                <div>
-                    <span  id="user" class="material-icons-outlined">signal_cellular_alt </span>
+                <div class="container_dia_agenda" id="dia2">
+                    <div class="dia_semana">
+                        <h2>qui</h2>
+                    </div>
+                    <div class="dia_mes">
+                        <h3>30</h3>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
+                </div>
+                <div class="container_dia_agenda" id="dia3">
+                    <div class="dia_semana">
+                        <h2>qui</h2>
+                    </div>
+                    <div class="dia_mes">
+                        <h3>30</h3>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
+                    <div class="agenda_servico">
+                        <h4>Progressiva e escova</h4>
+                        <h4>13:00</h4>
+                    </div>
                 </div>
             </div>
-            <div id="acessos">
-                <div>
-                    <h4>Agenda</h4>
+       </section>
+       <section id="container_destaques">
+            <div id="title_compromisso"><h1>Meus destaques:</h1></div>
+            <div id="container_modais">
+                <div class="modal_cinza">
+                    <div>
+                        <h6>Famosinhos</h6>
+                    </div>
+                    <div class="ranking_famosinhos">
+                        <h5>1-</h5><h4>Progressiva</h4>
+                        <h5>2-</h5><h4>Unha em gel decoradas com glitter</h4>
+                        <h5>3-</h5><h4>Selagem para cabelo afro</h4>
+                    </div>
                 </div>
-                <div>
-                    <span id="user" class="material-icons-outlined">event_note</span>
+                <div class="modal_cinza">
+                    <div>
+                        <h6>Em promoção</h6>
+                    </div>
+                    <div class="ranking_promocao">
+                        <h5>1-</h5><h4>Progressiva</h4>
+                        <h5>2-</h5><h4>Unha em gel decoradas com glitter</h4>
+                        <h5>3-</h5><h4>Selagem para cabelo afro</h4>
+                    </div>
+                </div>
+                <div class="modal_cinza">
+                    <div>
+                         <h6>Meu rendimento</h6>
+                    </div>
+                    <div class="valores">
+                        <h4>Hoje</h4>
+                        <h5>150,00</h5>
+                        <h4>Este mês</h4>
+                        <h5>15,000.00</h5>
+                    </div>
+                    
                 </div>
             </div>
-            <div id="acessos">
-                <div>
-                    <h4>Feedbacks</h4>
-                </div>
-                <div>
-                    <span  id="user" class="material-icons-outlined">insert_comment</span>
-                </div>
-            </div>
-         </section> 
-         <section id="sessao3">
-             <div id="add_propriedades">
+            
 
-             </div>
-         </section>
+       </section>
      </main>
-     <footer>
-
-     </footer>
+     
     
 </body>
 </html>

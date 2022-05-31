@@ -43,30 +43,35 @@ const sem_cabelo = document.getElementById('sem_tamanho');
     const data = {};
     data['acao'] = 'createConsumidor';
 
-    // <!-- SECAO DADOS DE DADOS PESSOAIS -->
+    // <!-- SECTION DADOS DE DADOS PESSOAIS -->
     data['nome_consumidor'] = input_nome_consumidor.value;
     data['data_nascimento'] = input_data_nascimento.value
     data['cpf_coonsumidor'] = input_cpf.value;
     data['telefone'] = input_telefone.value;
 
-    // <!-- SECAO DADOS DO CABELO -->
+    // <!-- SECTION DADOS DO CABELO -->
+    //testar check do tamanho do cabelo
+    //testar qual select foi clicado
+    //fazer arrays para check e select 
     data['1'] = tamanho_cabelo1.value;
     data['2'] = tamanho_cabelo2.value;
     data['3'] = tamanho_cabelo3.value;
     data['4'] = tamanho_cabelo4.value;
     data['5'] = tamanho_cabelo5.value;
 
-    //<!-- SECAO DADOS DE LOCALIZAÇÃO -->
+    //<!-- SECTION DADOS DE LOCALIZAÇÃO -->
     data['cep'] = input_cep.value;
     data['bairro'] = input_bairro.value;
     data['numero'] = input_numero.value;
     data['rua'] = input_rua.value;
     data['complemento'] = input_complemento.value;
     data['id_cidade'] = id_cidade.value;
+    //via cep
     data['0'] = input_estado.value;
 
-    //<!-- SECAO DADOS DE LOGIN-->
+    //<!-- SECTION DADOS DE LOGIN-->
 
+    //add foto 
     data['email_consumidor'] = input_email.value;
     data['senha_consumidor'] = input_senha.value;
 
