@@ -207,6 +207,7 @@ label {
     border: none;
     border-bottom: 1px #000000 solid;
     font-size: 1.2rem;
+    font-family: 'Raleway';
     color: var(--fonte);
     margin-bottom: 45px;
     width: 100%;
