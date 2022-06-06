@@ -97,7 +97,6 @@ label {
 #sou_prestador {
     text-decoration: none;
     color: #000000;
-    cursor: not-allowed;
 }
 
 #sou_consumidor {
@@ -105,34 +104,44 @@ label {
     color: #000000;
 }
 
-.header {
+.header{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid rgba(227, 227, 227, 0.412);
+    border-bottom: none;
+    min-width: fit-content;
+    padding: 10px;
+    height: 50px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+
+    background-color: rgba(227, 227, 227, 0.412);
+}
+
+.header_selecionado
+{
     background-color: white;
-    border: solid rgb(182, 182, 182);
-    width: 50%;
-    height: 50px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    border: none;
+    cursor: not-allowed;
+    caret-color: var(--verde_padrao);
 }
 
-.header2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cinza_claro);
-    opacity: 70%;
-    width: 55%;
-    height: 50px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+.header_selecionado > a
+{
+    cursor: not-allowed;
+    caret-color: var(--verde_padrao);
+}
+.header_selecionado:hover
+{
+    transform: none;
+    transition: none;
+    background-color: white;
 }
 
-.header2:hover {
-    border: 1px solid linear-gradient(var(--verde_claro), var(--verde_padrao));
-    background-image: linear-gradient(var(--verde_claro), var(--verde_padrao));
-    transform: 1.5;
+.header_nao_selecioando:hover {
+    background-color: var(--verde_claro);
+    transition: 0.7s;
 }
 
 .main {
@@ -146,7 +155,7 @@ label {
     border-bottom-left-radius: 40px;
     width: 160%;
     height: auto;
-    border: solid rgb(182, 182, 182);
+    /* border: 1px solid rgb(182, 182, 182); */
     opacity: 1;
     padding: 10%;
 }
@@ -239,5 +248,5 @@ label {
 #entrar:hover {
     border: 1px solid linear-gradient(var(--verde_claro), var(--verde_padrao));
     background-image: linear-gradient(var(--verde_claro), var(--verde_padrao));
-    transform: 1.5;
+    transition: 1s;
 }
