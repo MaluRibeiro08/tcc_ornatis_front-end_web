@@ -15,7 +15,7 @@ import { mudancaCheckDiaFuncionamento } from "./funcionamento_dinamizacao.js";
     // const carregarDadosConta =   (id_empresa) => fetch(`http://10.107.144.20/ornatis/api-ornatis/rotas/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
     const carregarDadosConta =   (id_empresa) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/?id_empresa=${id_empresa}&acao=carregarDadosConta`)
     testeUpdate(id_empresa, id_cidade)
-    
+
 //RADIOS / INPUTS / OUTROS
     const radio_sim_regra_cancelmento = document.getElementById('input_radio_sim_cancelamento')
     const radio_nao_regra_cancelmento = document.getElementById('input_radio_nao_cancelamento')
