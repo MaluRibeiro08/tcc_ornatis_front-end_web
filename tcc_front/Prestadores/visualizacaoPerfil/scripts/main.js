@@ -7,7 +7,7 @@ import { mudarVisualizacaoSecao } from "./navegacao_secoes.js";
 import { listarServicosSalao} from "./servicos/listagem_servicos.js";
 import { construirTelaCadastro, limparCamposCadastroServico } from "./servicos/cadastro/preenchimento_modal_cadastro.js";
 
-const id_empresa = 1;
+const id_empresa = 4
 const url_imagem_salao = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_perfil_salao/";
 const url_imagem_espaco_estabelecimento = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_espaco_estabelecimento/";
 const url_imagem_funcionario = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/";
@@ -248,6 +248,7 @@ const preencherFuncionamento = (dadosFuncionamento) =>
         if(dadosFuncionamento[dia_semana_contador] != null)
         {
             const circulo_dia = document.getElementById(`circulo_dia_${dia_semana_contador}`)
+            console.log(`circulo_dia_${dia_semana_contador}`)
             circulo_dia.classList.add("dia_semana_funciona");
             circulo_dia.classList.remove("circulo_dia_nao_funciona")
 

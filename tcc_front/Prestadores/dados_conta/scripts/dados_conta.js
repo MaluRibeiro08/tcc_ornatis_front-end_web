@@ -8,7 +8,7 @@ import { mudancaCheckDiaFuncionamento } from "./funcionamento_dinamizacao.js";
 
 //VARIÁVEIS IMPORTANTES:
     let id_cidade = 3534401;
-    const id_empresa = 58;
+    const id_empresa = 1;
     const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/'
 
 //CHAMADAS IMPORTANTES

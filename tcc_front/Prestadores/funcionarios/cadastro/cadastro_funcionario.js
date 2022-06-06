@@ -36,7 +36,7 @@ function fechar(){
 /***********CONSUMO DE API**********/
 
 const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/funcionario/'
-const id_empresa = 1;
+const id_empresa = 5;
 
 const input_nome_funcionario = document.getElementById('nome_funcionario')
 const input_login_funcionario = document.getElementById('login_funcionario')
