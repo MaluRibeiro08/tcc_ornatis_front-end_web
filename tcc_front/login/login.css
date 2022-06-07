@@ -94,15 +94,11 @@ label {
 
 }
 
-#sou_prestador {
+.sou_prestador, .sou_consumidor {
     text-decoration: none;
     color: #000000;
 }
 
-#sou_consumidor {
-    text-decoration: none;
-    color: #000000;
-}
 
 .header{
     display: flex;

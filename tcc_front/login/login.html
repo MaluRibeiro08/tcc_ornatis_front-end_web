@@ -12,7 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+
+        <script src="./scripts/main.js" defer></script>
+
     <title>Login Prestador</title>
+
 </head>
 
 <body>
@@ -21,11 +25,11 @@
         <div class="modal_container" id="modal">
             <div class="corpoModal card">
                 <div id="container_header">
-                    <div class="header header_nao_selecionado">
-                        <a id="sou_prestador" href="">Sou prestador</a>
+                    <div class="header header_selecionado" id='header_prestador'>
+                        <p class="sou_prestador" id="item_prestador">Sou prestador</p>
                     </div>
-                    <div class="header  header_selecionado">
-                        <a id="sou_consumidor" href="">Sou consumidor</a>
+                    <div class="header  header_nao_selecionado" id="header_consumidor">
+                        <p class="sou_consumidor" id='item_consumidor'>Sou consumidor</p>
                     </div>
                 </div>
                 <div class="main">
