@@ -94,13 +94,27 @@
                             <label for="">Gênero</label><br>
                         </div>
                         <div id="radio_genero">
-                            <input id="radio_feminino" name="radio_genero_font" class="radio_genero_font" type="radio"><label
-                                for="radio_feminino">Feminino</label>
-                            <input id="radio_masculino" name="radio_genero_font" class="radio_genero_font" type="radio"><label
-                                for="radio_masculino">Masculino</label>
-                            <input id="radio_outro" name="radio_genero_font" class="radio_genero_font" type="radio"><label for="radio_outro">Outro</label>
-                            <input id="radio_prefiro_nao_informar" name="radio_genero_font" class="radio_genero_font" type="radio"><label
-                            for="radio_prefiro_nao_informar">Prefiro não informar</label>
+                            <div>
+
+                                <input id="radio_feminino" name="radio_genero_font" class="radio_genero_font"
+                                    type="radio"><label for="radio_feminino">Feminino</label>
+                            </div>
+                            <div>
+
+                                <input id="radio_masculino" name="radio_genero_font" class="radio_genero_font"
+                                    type="radio"><label for="radio_masculino">Masculino</label>
+                            </div>
+                            <div>
+
+                                <input id="radio_outro" name="radio_genero_font" class="radio_genero_font"
+                                    type="radio"><label for="radio_outro">Outro</label>
+                            </div>
+                            <div>
+
+                                <input id="radio_prefiro_nao_informar" name="radio_genero_font"
+                                    class="radio_genero_font" type="radio"><label
+                                    for="radio_prefiro_nao_informar">Prefiro não informar</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,7 +145,8 @@
                                     <input id="tamanho5" name="comprimento" type="radio"><label for="tamanho5">5</label>
                                 </div>
                                 <div>
-                                    <input id="sem_tamanho" name="comprimento" class="padding" type="radio"><label for="sem_tamanho">Nenhuma das
+                                    <input id="sem_tamanho" name="comprimento" class="padding" type="radio"><label
+                                        for="sem_tamanho">Nenhuma das
                                         opções</label>
                                 </div>
 
@@ -142,23 +157,23 @@
                     </div>
                     <div id="container_tipo_cabelo">
                         <div class="tipo_cabelo" id="liso">
-                            <input id="tipo_liso" type="image" class="input_tipo_cabelo"
+                            <input id="tipo_liso" value="1" type="image" class="input_tipo_cabelo"
                                 src="../../Prestadores/img/Ellipse 24.png">
-                            <label class="label_tipo_cabelo" for="">Liso</label>
+                            <label class="label_tipo_cabelo" id="label_liso" for="">Liso</label>
                         </div>
                         <div class="tipo_cabelo" id="ondulado">
-                            <input id="tipo_ondulado" type="image" class="input_tipo_cabelo"
+                            <input id="tipo_ondulado" value="2" type="image" class="input_tipo_cabelo"
                                 src="../../Prestadores/img/Ellipse 25.png">
-                            <label for="">Ondulado</label>
+                            <label class="label_tipo_cabelo" id="label_ondulado" for="">Ondulado</label>
                         </div>
                         <div class="tipo_cabelo" id="cacheado">
                             <input id="tipo_cacheado" type="image" class="input_tipo_cabelo"
                                 src="../../Prestadores/img/Ellipse 26.png">
-                            <label class="label_tipo_cabelo" for="">Cacheado</label>
+                            <label class="label_tipo_cabelo" id="label_cacheado" for="">Cacheado</label>
                         </div>
                         <div class="tipo_cabelo" id="crespo">
                             <input type="image" class="input_tipo_cabelo" src="../../Prestadores/img/Ellipse 27.png">
-                            <label class="label_tipo_cabelo" for="">Crespo</label>
+                            <label class="label_tipo_cabelo" id="label_crespo" for="">Crespo</label>
                         </div>
                     </div>
                     <div id="container_cor_cabelo">

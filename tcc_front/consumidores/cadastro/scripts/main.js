@@ -3,6 +3,11 @@ import { mudar_secoes } from "./navegacao_secoes.js";
 import { prepararDadosParaSalvar } from "./consumo.js";
 import { preencherFormularioEndereco } from "../../../utils/cep.js";
 
+const div_liso = document.getElementById("liso")
+const div_ondulado = document.getElementById("ondulado")
+const div_cacheado = document.getElementById("cacheado")
+const div_crespo = document.getElementById("crespo")
+
 const url = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/consumidor/conta/'
 
 const verificarCorrespondenciaSenha = () => {
@@ -15,6 +20,26 @@ const verificarCorrespondenciaSenha = () => {
     else {
         campo_confirmacao_senha.style.borderBottom = "solid 0.5px red"
     }
+}
+
+const desmarcarTipoCabelo = () => 
+{
+    document.getElementById("label_liso").style.fontWeight = "normal"
+    document.getElementById("label_ondulado").style.fontWeight = "normal"
+    document.getElementById("label_cacheado").style.fontWeight = "normal"
+    document.getElementById("label_crespo").style.fontWeight = "normal"
+
+}
+
+const destacarTipoCabelo = (tipo_cabelo_escolhido) => {
+
+    desmarcarTipoCabelo()
+
+    console.log(tipo_cabelo_escolhido)
+    document.getElementById(tipo_cabelo_escolhido).style.fontWeight = "bold"
+    document.getElementById(tipo_cabelo_escolhido).classList.add("tipo_cabelo_escolhido")
+    
+
 }
 
 
@@ -89,3 +114,8 @@ document.querySelector(".container_seta_proxima").addEventListener("click", () =
 document.getElementById("input_confirmacao_senha").addEventListener("keyup", verificarCorrespondenciaSenha)
 
 document.getElementById("input_cep").addEventListener("keyup", preencherFormularioEndereco);
+
+div_liso.addEventListener('click', () => { destacarTipoCabelo('label_liso') })
+div_ondulado.addEventListener('click', () => { destacarTipoCabelo('label_ondulado') })
+div_cacheado.addEventListener('click', () => { destacarTipoCabelo('label_cacheado') })
+div_crespo.addEventListener('click', () => { destacarTipoCabelo('label_crespo') })
