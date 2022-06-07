@@ -119,7 +119,7 @@ const salvarDadosFuncionario = (id_empresa, id_funcionario) =>
         {
             console.log("Tudo certo")
             alert("Funcionário cadastrado com sucesso!!")
-            location.reload()
+            // location.reload()
         }
     );
 }

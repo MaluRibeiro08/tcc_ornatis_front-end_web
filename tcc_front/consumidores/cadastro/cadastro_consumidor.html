@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +16,16 @@
     <link rel="stylesheet" href="./styles/secao_dados_funcionamento.css">
     <link rel="stylesheet" href="./styles/secao_regras_cancelamento.css">
 
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script src="scripts/main.js" type="module" defer></script>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
 
     <title>Cadastro Consumidor</title>
 </head>
+
 <body>
     <main>
         <!-- CONTAINER DA PARTE LATERAL ESQUERDA -->
@@ -58,89 +61,99 @@
                     <span class="material-symbols-outlined" id="icone">login</span></span>
                     <h2>Dados de login</h2>
                 </div>
-                
+
             </div>
 
             <!-- CONTAINER DAS SESSOES DE CADASTRO -->
             <div class="container_geral_secoes_cadastro">
-            
+
                 <!-- SECAO DADOS DE DADOS PESSOAIS -->
-                <div class="container_secao secao1" id="container_dados_pessoais" >
+                <div class="container_secao secao1" id="container_dados_pessoais">
 
                     <div class="container_input">
-                        <label class= "lable_input" for="input_nome_adm">Nome:</label>
-                        <input  id="input_nome_consumidor" class="input" type="text">
+                        <label class="lable_input" for="input_nome_adm">Nome:</label>
+                        <input id="input_nome_consumidor" class="input" type="text">
                     </div>
 
                     <div class="container_input">
-                        <label class= "lable_input" for="input_data_nascimento">Data de nascimento:</label>
-                        <input  id="input_data_nascimento" class="input" type="date" max="2004-01-01" min="1915-01-01">
+                        <label class="lable_input" for="input_data_nascimento">Data de nascimento:</label>
+                        <input id="input_data_nascimento" class="input" type="date" max="2004-01-01" min="1915-01-01">
                     </div>
 
                     <div class="container_input">
-                        <label class= "lable_input" for="input_cpf">CPF:</label>
-                        <input  id="input_cpf" class="input" type="text" maxlength="11" onkeypress="validarDigitacaoNumeros();">
+                        <label class="lable_input" for="input_cpf">CPF:</label>
+                        <input id="input_cpf" class="input" type="text" maxlength="11"
+                            onkeypress="validarDigitacaoNumeros();">
                     </div>
                     <div class="container_input">
-                        <label class= "lable_input" for="input_data_nascimento">Telefone:</label>
-                        <input  id="input_telefone" class="input" >
+                        <label class="lable_input" for="input_data_nascimento">Telefone:</label>
+                        <input id="input_telefone" class="input">
                     </div>
                     <div id="campo_genero">
                         <div id="titulo_genero">
                             <label for="">Gênero</label><br>
                         </div>
                         <div id="radio_genero">
-                            <input id="radio_feminino" class="radio_genero_font" type="radio"><label for="">Feminino</label>
-                            <input id="radio_masculino" class="radio_genero_font" type="radio"><label for="">Masculino</label>
-                            <input id="radio_outro" class="radio_genero_font" type="radio"><label for="">Outro</label>
+                            <input id="radio_feminino" name="radio_genero_font" class="radio_genero_font" type="radio"><label
+                                for="radio_feminino">Feminino</label>
+                            <input id="radio_masculino" name="radio_genero_font" class="radio_genero_font" type="radio"><label
+                                for="radio_masculino">Masculino</label>
+                            <input id="radio_outro" name="radio_genero_font" class="radio_genero_font" type="radio"><label for="radio_outro">Outro</label>
+                            <input id="radio_prefiro_nao_informar" name="radio_genero_font" class="radio_genero_font" type="radio"><label
+                            for="radio_prefiro_nao_informar">Prefiro não informar</label>
                         </div>
                     </div>
                 </div>
 
                 <!-- SECAO DADOS DO CABELO -->
-                <div class="container_secao secao2" id="container_dados_cabelo"  style="display: none;">
+                <div class="container_secao secao2" id="container_dados_cabelo" style="display: none;">
                     <div id="container_comprimento">
                         <label for="">Comprimento</label>
                         <div id="container_comprimento_display">
                             <div id="imagem_comprimento">
-                            <img src="../../Prestadores/img/Captura de Tela 2022-05-23 às 09.52.09.png" width="300px" alt="">
+                                <img src="../../Prestadores/img/Captura de Tela 2022-05-23 às 09.52.09.png"
+                                    width="300px" alt="">
+                            </div>
+                            <div id="radios_comprimento">
+                                <div>
+                                    <input id="tamanho1" name="comprimento" type="radio"><label for="tamanho1">1</label>
+                                </div>
+                                <div>
+                                    <input id="tamanho2" name="comprimento" type="radio"><label for="tamanho2">2</label>
+                                </div>
+                                <div>
+                                    <input id="tamanho3" name="comprimento" type="radio"><label for="tamanho3">3</label>
+                                </div>
+                                <div>
+                                    <input id="tamanho4" name="comprimento" type="radio"><label for="tamanho4">4</label>
+                                </div>
+                                <div>
+                                    <input id="tamanho5" name="comprimento" type="radio"><label for="tamanho5">5</label>
+                                </div>
+                                <div>
+                                    <input id="sem_tamanho" name="comprimento" class="padding" type="radio"><label for="sem_tamanho">Nenhuma das
+                                        opções</label>
+                                </div>
+
+
+                            </div>
                         </div>
-                        <div id="radios_comprimento">
-                            <div>
-                                <input id="tamanho1" type="radio"><label for="">1</label>
-                            </div>
-                            <div>
-                                <input id="tamanho2" type="radio"><label for="">2</label>
-                            </div>
-                            <div>
-                                <input id="tamanho3" type="radio"><label for="">3</label>
-                            </div>
-                            <div>
-                                <input id="tamanho4" type="radio"><label for="">4</label>
-                            </div>
-                            <div>
-                                <input id="tamanho5" type="radio"><label for="">5</label>
-                            </div>
-                            <div>
-                                <input id="sem_tamanho" class="padding" type="radio"><label for="">Nenhuma das opções</label>
-                            </div>
-                            
-                           
-                        </div>
-                        </div>
-                        
+
                     </div>
                     <div id="container_tipo_cabelo">
                         <div class="tipo_cabelo" id="liso">
-                            <input id="tipo_liso" type="image" class="input_tipo_cabelo" src="../../Prestadores/img/Ellipse 24.png">
+                            <input id="tipo_liso" type="image" class="input_tipo_cabelo"
+                                src="../../Prestadores/img/Ellipse 24.png">
                             <label class="label_tipo_cabelo" for="">Liso</label>
                         </div>
                         <div class="tipo_cabelo" id="ondulado">
-                            <input id="tipo_ondulado" type="image" class="input_tipo_cabelo" src="../../Prestadores/img/Ellipse 25.png">
-                            <label  for="">Ondulado</label>
+                            <input id="tipo_ondulado" type="image" class="input_tipo_cabelo"
+                                src="../../Prestadores/img/Ellipse 25.png">
+                            <label for="">Ondulado</label>
                         </div>
                         <div class="tipo_cabelo" id="cacheado">
-                            <input id="tipo_cacheado" type="image" class="input_tipo_cabelo" src="../../Prestadores/img/Ellipse 26.png">
+                            <input id="tipo_cacheado" type="image" class="input_tipo_cabelo"
+                                src="../../Prestadores/img/Ellipse 26.png">
                             <label class="label_tipo_cabelo" for="">Cacheado</label>
                         </div>
                         <div class="tipo_cabelo" id="crespo">
@@ -151,94 +164,102 @@
                     <div id="container_cor_cabelo">
                         <div class="container_input">
                             <label for="">Cor</label>
-                            <input  id="input_publico_alvo" class="input" type="text" maxlength="100">
+                            <input id="input_publico_alvo" class="input" type="text" maxlength="100">
                             <select name="publico_alvo" id="select_publico_alvo">
-                                <option value="null" selected disabled>Selecione a cor do seu cabelo</option> 
-                                <option value="Preto">Preto</option>
-                                <option value="Loiro">Loiro</option>
-                                <option value="Castanho">Castanho</option>
-                                <option value="Ruivo">Ruivo</option>
+                                <option value="null" selected disabled>Selecione a cor do seu cabelo</option>
+                                <option value="preto">Preto</option>
+                                <option value="loiro">Loiro</option>
+                                <option value="ruivo">Ruivo</option>
+                                <option value="castanho">Castanho</option>
+                                <option value="grisalho">Grisalho</option>
+                                <option value="colorido">Colorido</option>
                             </select>
                         </div>
                     </div>
-                        
-                   
+
+
 
                 </div>
 
                 <!-- SECAO DADOS DE LOCALIZAÇÃO -->
-                <div class="container_secao secao3" id="container_dados-localizacao" style="display: none;"> 
+                <div class="container_secao secao3" id="container_dados-localizacao" style="display: none;">
                     <div class="container_input">
-                        <label class= "lable_input" for="input_cep">CEP</label>
-                        <input  id="input_cep" class="input" type="text">
+                        <label class="lable_input" for="input_cep">CEP</label>
+                        <input id="input_cep" class="input" type="text">
                     </div>
                     <div class="container_input">
-                        <label class= "lable_input" for="input_bairro">Bairro</label>
-                        <input  id="input_bairro" class="input" type="text">
+                        <label class="lable_input" for="input_bairro">Bairro</label>
+                        <input id="input_bairro" class="input" type="text">
                     </div>
                     <div class="container_input" id="container_inputs_multiplos">
                         <div class="parte1">
-                            <label class= "lable_input" for="input_rua">Rua:</label>
-                            <input  id="input_rua" class="input" type="text">
-                        </div> 
-                        <div class="parte2">
-                            <label class= "lable_input" for="input_numero">N°:</label>
-                            <input  id="input_numero" class="input" type="text">  
+                            <label class="lable_input" for="input_rua">Rua:</label>
+                            <input id="input_rua" class="input" type="text">
                         </div>
-                        
+                        <div class="parte2">
+                            <label class="lable_input" for="input_numero">N°:</label>
+                            <input id="input_numero" class="input" type="text">
+                        </div>
+
                     </div>
                     <div class="container_input">
-                        <label class= "lable_input" for="input_complemento">Complemento</label>
-                        <input  id="input_complemento" class="input" type="text" maxlength="100">
+                        <label class="lable_input" for="input_complemento">Complemento</label>
+                        <input id="input_complemento" class="input" type="text" maxlength="100">
                     </div>
                     <div class="container_input" id="container_inputs_multiplos">
                         <div class="parte1">
-                            <label class= "lable_input" for="input_cidade">Cidade:</label>
-                            <input  id="input_cidade" class="input" type="text">
-                            <input  id="id_cidade" class="input" type="text" hidden>
-                        </div> 
-                        <div class="parte2">
-                            <label class= "lable_input" for="input_estado">UF:</label>
-                            <input  id="input_estado" class="input" type="text">  
+                            <label class="lable_input" for="input_cidade">Cidade:</label>
+                            <input id="input_cidade" class="input" type="text">
+                            <input id="id_cidade" class="input" type="text" hidden>
                         </div>
-                        
+                        <div class="parte2">
+                            <label class="lable_input" for="input_estado">UF:</label>
+                            <input id="input_estado" class="input" type="text">
+                        </div>
+
                     </div>
 
-                    
+
                 </div>
 
                 <!-- SECAO DADOS DE LOGIN-->
-                <div class="container_secao secao4" id="conatiner_dados_login" style="display: none;" >
+                <div class="container_secao secao4" id="conatiner_dados_login" style="display: none;">
                     <div class="container_dados_login">
                         <div class="container_dados_foto_perfil">
                             <div class="container_geral_imagem">
                                 <div class="container_imagem">
-                                    <img id="img_administrador"><span id="icone_foto_perfil_adm" class="material-symbols-outlined">person</span>
+                                    <img id="img_administrador"><span id="icone_foto_perfil_adm"
+                                        class="material-symbols-outlined">person</span>
                                 </div>
                                 <div class="container_icone_foto_perfil">
-                                    <form enctype="multipart/form-data" name="formulario_imagem_administrador" id ="formulario_imagem_administrador" action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/" method="POST">
+                                    <form enctype="multipart/form-data" name="formulario_imagem_administrador"
+                                        id="formulario_imagem_administrador"
+                                        action="http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/contaAdministradora/"
+                                        method="POST">
                                         <input type="text" name="acao" hidden value="create">
                                         <input id="campo_id_empresa_form_img_adm" type="text" name="id_empresa" hidden>
                                         <input type="text" name="envio_form" hidden value="true">
-                                        <input name="imagem_perfil_adm" id="input_foto_administrador" class="inputFile" type="file" accept="image/*" />
+                                        <input name="imagem_perfil_adm" id="input_foto_administrador" class="inputFile"
+                                            type="file" accept="image/*" />
                                         <label for="input_foto_administrador" id="labelInputFile">
-                                            <span class="material-symbols-outlined" id="icone_input_imagem">add_photo_alternate</span>
+                                            <span class="material-symbols-outlined"
+                                                id="icone_input_imagem">add_photo_alternate</span>
                                         </label>
                                     </form>
                                 </div>
                             </div>
                         </div>
                         <div class="container_input">
-                            <label class= "lable_input" for="input_email">Email:</label>
-                            <input  id="input_email" class="input" type="text">
+                            <label class="lable_input" for="input_email">Email:</label>
+                            <input id="input_email" class="input" type="text">
                         </div>
                         <div class="container_input">
-                            <label class= "lable_input" for="input_senha">Senha:</label>
-                            <input  id="input_senha" class="input" type="password">
+                            <label class="lable_input" for="input_senha">Senha:</label>
+                            <input id="input_senha" class="input" type="password">
                         </div>
                         <div class="container_input">
-                            <label class= "lable_input" for="input_confirmacao_senha">Confirmação de senha:</label>
-                            <input  id="input_confirmacao_senha" class="input" type="password">
+                            <label class="lable_input" for="input_confirmacao_senha">Confirmação de senha:</label>
+                            <input id="input_confirmacao_senha" class="input" type="password">
                         </div>
                     </div>
                 </div>
@@ -247,7 +268,7 @@
 
             <!-- CONTAINER DA NAVEGACAO ENTRE AS SESSOES DE CADASTRO -->
             <div class="container_navegacao_entre_secoes">
-                
+
                 <div class="container_seta_navegacao container_seta_anterior" style="visibility: hidden;">
                     <span class="material-symbols-outlined seta" id="seta_anterior">navigate_before</span>
                     <span class="label_setas_navegacao" id="span_seta_anterior">Anterior</span>
@@ -271,22 +292,21 @@
         </div>
 
     </main>
-    
+
 </body>
+
 </html>
 <script>
-    
-    const validarDigitacaoNumeros = (evt) =>
-    {
+
+    const validarDigitacaoNumeros = (evt) => {
         var evento = evt || window.event;
         var tecla = evento.keyCode;
-        tecla = String.fromCharCode( tecla );
+        tecla = String.fromCharCode(tecla);
 
         var regex = /^[0-9.]+$/;
-        if( !regex.test(tecla) ) 
-        {
+        if (!regex.test(tecla)) {
             evento.returnValue = false;
-            if(evento.preventDefault) evento.preventDefault();
+            if (evento.preventDefault) evento.preventDefault();
         }
     }
 </script>

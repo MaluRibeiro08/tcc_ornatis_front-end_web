@@ -7,7 +7,7 @@ import { mudarVisualizacaoSecao } from "./navegacao_secoes.js";
 import { listarServicosSalao} from "./servicos/listagem_servicos.js";
 import { construirTelaCadastro, limparCamposCadastroServico } from "./servicos/cadastro/preenchimento_modal_cadastro.js";
 
-const id_empresa = 4
+const id_empresa = 6
 const url_imagem_salao = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_perfil_salao/";
 const url_imagem_espaco_estabelecimento = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_espaco_estabelecimento/";
 const url_imagem_funcionario = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/";

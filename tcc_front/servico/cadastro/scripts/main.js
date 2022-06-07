@@ -4,7 +4,7 @@ import { imagemPreview } from "../../../utils/imagem.js";
 import { getEspecialidades, getParteCorpoPorEspecialidade, getPartesCorpo } from "./servico_cia.js";
 import { listarFuncionarios } from "./funcionarios.js";
 
-const id_empresa = 3;
+const id_empresa = 6;
 let arr_especialidades_partes_corpo = {};
 const url_imagem_funcionario = 'http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/'
 const url_servico = 'http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/adm/servico/'

@@ -4,7 +4,7 @@ import { fecharModal, tratarUploadImagem } from "./modais.js";
 import { excluirServico, salvarServico  } from './servico.js';
 
 
-const id_empresa = 1;
+const id_empresa = 5;
 
 //AO INICIAR A PÁGINA, A LISTAGEM É FEITA E OS DADOS-BASE DO MODAL SÃO CARREDADOS
     listarServicosSalao(id_empresa);
