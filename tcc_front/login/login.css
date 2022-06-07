@@ -226,7 +226,7 @@ label {
     flex-direction: column;
 }
 
-#entrar {
+#btn_entrar {
     width: 40%;
     height: 100%;
     padding: 3%;
@@ -241,7 +241,7 @@ label {
 
 }
 
-#entrar:hover {
+#btn_entrar:hover {
     border: 1px solid linear-gradient(var(--verde_claro), var(--verde_padrao));
     background-image: linear-gradient(var(--verde_claro), var(--verde_padrao));
     transition: 1s;
