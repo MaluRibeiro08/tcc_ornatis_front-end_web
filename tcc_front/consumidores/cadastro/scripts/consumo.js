@@ -63,6 +63,8 @@ const prepararDadosParaSalvar = () => {
         data["id_genero"] = 4
     }
 
+    data["id_tipo_cabelo"] = document.querySelector(".tipo_cabelo_escolhido").value
+
 
     // <!-- SECTION DADOS DO CABELO -->
     //testar check do tamanho do cabelo
