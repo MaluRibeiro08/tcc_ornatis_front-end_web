@@ -31,7 +31,7 @@ const criar_card_agendamento = (agendamento) =>
 {
     if(document.getElementById(`${agendamento["data_agendamento"]}`) != null)
     {
-        console.log("vamos criar o card pq o container já existe")
+        //console.log("vamos criar o card pq o container já existe")
 
         const container_mae = document.getElementById(agendamento["data_agendamento"])
         const novo_agendamento = document.createElement("div")
@@ -79,7 +79,7 @@ const criar_card_agendamento = (agendamento) =>
     }
     else
     {
-        console.log('deu problema,não foi encontrado o container do dia desse agendamento')
+        //console.log('deu problema,não foi encontrado o container do dia desse agendamento')
     }
 }
 
@@ -106,7 +106,7 @@ const criar_container_dia = (id_container_dia) =>
 
     container_mae.appendChild(novo_container_dia)
 
-    console.log("criando container do dia" + id_container_dia)
+    //console.log("criando container do dia" + id_container_dia)
 }
 
 const criar_lista_agendamentos = (arr_agendamentos) =>
@@ -118,8 +118,8 @@ const criar_lista_agendamentos = (arr_agendamentos) =>
         const agendamento = arr_agendamentos[contador_agendamentos];
         if(document.getElementById(`${agendamento["data_agendamento"]}`) == null)
         {
-            console.log("teste - sem container para esse dia")
-            console.log(agendamento)
+            //console.log("teste - sem container para esse dia")
+            //console.log(agendamento)
             criar_container_dia(agendamento["data_agendamento"]);
             criar_card_agendamento(agendamento);
         }
@@ -128,9 +128,14 @@ const criar_lista_agendamentos = (arr_agendamentos) =>
             criar_card_agendamento(agendamento);
         }
         // criar_card_agendamento(agendamento)
-        // console.log(agendamento["data_agendamento"])
+        // //console.log(agendamento["data_agendamento"])
         contador_agendamentos = contador_agendamentos+1;
     }
 }
 
-export {carregarAgendamentosConsumidor, criar_lista_agendamentos}
+const agendar = (id_servico) =>
+{
+    console.log(id_servico)
+}
+
+export {carregarAgendamentosConsumidor, criar_lista_agendamentos, agendar}

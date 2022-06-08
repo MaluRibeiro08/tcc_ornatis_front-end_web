@@ -235,14 +235,14 @@
                     <div class="container_barra_pesquisa">
                         <div class="barra_pesquisa">
                             <span class="material-symbols-outlined">search</span>
-                            <input class="input_barra_pesquisa" type="text" placeholder="O que você está procurando?">
-                            <span class="material-symbols-outlined" style="display: none;">close</span>
+                            <input class="input_barra_pesquisa" id="input_barra_pesquisa" type="text" placeholder="O que você está procurando?">
+                            <span class="material-symbols-outlined" id="icone_limpar_pesquisa" style="display: none;">close</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container_geral_tratamento_pesquisa">
+            <div class="container_geral_tratamento_pesquisa" id="container_geral_tratamento_pesquisa">
                 <div class="container_geral_indicacao_saloes">
                     <div class="container_titulo_container">
                         <p class="titulo_container">Salões próximos a você</p>
@@ -270,88 +270,89 @@
                         </div>  
                     </div>
                 </div>
+
                 <div class="container_geral_categorias">
                     <div class="container_titulo_container">
                         <p class="titulo_container">Categorias</p>
                     </div>
-                    <div class="container_categorias">
+                    <div class="container_categorias" id="">
                         <div class="linha_categorias">
 
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria" id="1">Depilação</p>
+                            <div class="container_categoria" id="1">
+                                <div class="container_info_filtro 1">
+                                    <p class="nome_categoria" id="categoria_1">Depilação</p>
                                 </div>
-                                <div class="container_fundo_filtro">
-                                    <img src="./res/imgs_categorias/categoria_depilacao.png" alt="">
+                                <div class="container_fundo_filtro 1">
+                                    <img class="1" src="./res/imgs_categorias/categoria_depilacao.png" alt="">
                                 </div>
                             </div>
     
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria_invalida">Barba</p>
+                            <div class="container_categoria" id="0">
+                                <div class="container_info_filtro 0">
+                                    <p class="nome_categoria" id="categoria_0">Barba</p>
                                 </div>
                                 <div class="container_fundo_filtro">
                                     <img src="./res/imgs_categorias/categoria_barba_dois.png" alt="">
                                 </div>
                             </div>
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria" id="2">Maquiagem</p>
+                            <div class="container_categoria" id="2">
+                                <div class="container_info_filtro 2">
+                                    <p class="nome_categoria" id="categoria_2">Maquiagem</p>
                                 </div>
-                                <div class="container_fundo_filtro">
-                                    <img src="./res/imgs_categorias/categoria_maquiagem.png" alt="">
-                                </div>
-                            </div>
-    
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria" id="3">Esmaltação</p>
-                                </div>
-                                <div class="container_fundo_filtro">
-                                    <img src="./res/imgs_categorias/categoria_esmaltacao_dois.png" alt="">
+                                <div class="container_fundo_filtro 2">
+                                    <img class="2" src="./res/imgs_categorias/categoria_maquiagem.png" alt="">
                                 </div>
                             </div>
     
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria" id="4">Peeling</p>
+                            <div class="container_categoria" id="3">
+                                <div class="container_info_filtro 3">
+                                    <p class="nome_categoria" id="categoria_3">Esmaltação</p>
                                 </div>
-                                <div class="container_fundo_filtro">
-                                    <img src="./res/imgs_categorias/categoria_peeling.png" alt="">
+                                <div class="container_fundo_filtro 3">
+                                    <img class="3" src="./res/imgs_categorias/categoria_esmaltacao_dois.png" alt="">
+                                </div>
+                            </div>
+    
+                            <div class="container_categoria" id="4">
+                                <div class="container_info_filtro 4">
+                                    <p class="nome_categoria" id="categoria_4">Peeling</p>
+                                </div>
+                                <div class="container_fundo_filtro 4">
+                                    <img class="4" src="./res/imgs_categorias/categoria_peeling.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="linha_categorias">
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria" id="5">Hidratação</p>
+                            <div class="container_categoria" id="5">
+                                <div class="container_info_filtro 5">
+                                    <p class="nome_categoria" id="categoria_5">Hidratação</p>
                                 </div>
-                                <div class="container_fundo_filtro">
-                                    <img src="./res/imgs_categorias/categoria_hidratacao.png" alt="">
-                                </div>
-                            </div>
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria" id="6">Corte</p>
-                                </div>
-                                <div class="container_fundo_filtro">
-                                    <img src="./res/imgs_categorias/categoria_corte_dois.png" alt="">
+                                <div class="container_fundo_filtro 5">
+                                    <img class="5" src="./res/imgs_categorias/categoria_hidratacao.png" alt="">
                                 </div>
                             </div>
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria" id="7">Design</p>
+                            <div class="container_categoria" id="6">
+                                <div class="container_info_filtro 6">
+                                    <p class="nome_categoria" id="categoria_6">Corte</p>
                                 </div>
-                                <div class="container_fundo_filtro">
-                                    <img src="./res/imgs_categorias/categoria_sobrancelha.png" alt="">
+                                <div class="container_fundo_filtro 6">
+                                    <img class="6" src="./res/imgs_categorias/categoria_corte_dois.png" alt="">
                                 </div>
                             </div>
-                            <div class="container_categoria">
-                                <div class="container_info_filtro">
-                                    <p class="nome_categoria" id="7">Tintura</p>
+                            <div class="container_categoria" id="9">
+                                <div class="container_info_filtro 9">
+                                    <p class="nome_categoria" id="categoria_9">Design</p>
                                 </div>
-                                <div class="container_fundo_filtro">
-                                    <img src="./res/imgs_categorias/categoria_tintura.png" alt="">
+                                <div class="container_fundo_filtro 9">
+                                    <img class="9" src="./res/imgs_categorias/categoria_sobrancelha.png" alt="">
+                                </div>
+                            </div>
+                            <div class="container_categoria" id="7">
+                                <div class="container_info_filtro 7">
+                                    <p class="nome_categoria" id="categoria_7">Tintura</p>
+                                </div>
+                                <div class="container_fundo_filtro 7">
+                                    <img class="7" src="./res/imgs_categorias/categoria_tintura.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -361,9 +362,18 @@
                 </div>
             </div>
 
-            <div class="container_geral_listagem_resultante" style="display: none;">
+            <div class="container_geral_listagem_resultante" id="container_geral_listagem_resultante" style="display: none;">
+                
+                <div class="aviso_sem_servicos" id="aviso_sem_servicos">
+                    <p>Nenhum serviço encontrado para essa categoria :(</p>
+                    <span class="material-symbols-outlined icone_sem_servicos">clear_all</span>
+                </div>
+                <div class="container_listagem" id="container_listagem">
 
-                <div class="container_item_listagem">
+                </div>
+
+
+                <!-- <div class="container_item_listagem">
                     <div class="container_cabecalho">
                         <h6 class="nome_salao_servico">
                             BeautyHair
@@ -392,10 +402,13 @@
                                 <span class="desconto"> -5%</span>
                             </div>
                         </div>
+                        <div class="container_acoes_item_listagem">
+                            <span class="material-symbols-outlined">event</span>
+                        </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="container_item_listagem">
+                <!-- <div class="container_item_listagem">
                     <div class="container_cabecalho">
                         <h6 class="nome_salao_servico">
                             BeautyHair
@@ -425,7 +438,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+            
             </div>
 
         </div>

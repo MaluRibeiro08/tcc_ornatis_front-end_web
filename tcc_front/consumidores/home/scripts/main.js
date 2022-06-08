@@ -1,6 +1,8 @@
 "use strict"
 
 import { carregarAgendamentosConsumidor, criar_lista_agendamentos } from "./agendamentos.js";
+import {organizarPesquisaPorEspecialidade} from "./pesquisa.js";
+import { agendar } from "./agendamentos.js";
 
 const id_consumidor = 1;
 
@@ -19,17 +21,36 @@ const carregar_home = async (id_consumidor) =>
 
             criar_lista_agendamentos(agendamentos);
 
-            console.log(agendamentos)
+            // console.log(agendamentos)
         }
         else
         {
-            console.log("não há agendamentos")
+            // console.log("não há agendamentos")
         }
-
-        // let contador_agendamentos = 0;
-        // while
-        // console.log(agendamentos)
+        
 
 }
 
 carregar_home(id_consumidor);
+
+
+
+
+// ----------------- EVENTOS
+
+//BUSCA DE SERVICOS POR FILTRO
+    const elementos_filtros = document.getElementsByClassName("container_categoria")
+    const arr_filtros = [...elementos_filtros]
+
+    arr_filtros.map(
+        (filtro) =>
+        {
+            console.log("oi")
+            filtro.addEventListener("click", 
+                ()=>
+                {
+                    organizarPesquisaPorEspecialidade(filtro.id, document.getElementById(`categoria_${filtro.id}`).textContent)
+                }
+            )
+        }
+    )

@@ -245,7 +245,7 @@ main
     /* background-color: pink; */
 }
 
-.aviso_sem_agendamentos
+.aviso_sem_agendamentos, .aviso_sem_servicos
 {
     width: 100%;
     height: 100px;
@@ -262,7 +262,7 @@ main
     /* background-color: brown; */
 }
 
-.aviso_sem_agendamentos>.icone_agenda
+.aviso_sem_agendamentos>.icone_agenda, .aviso_sem_servicos>.icone_sem_servicos
 {
     font-size: 2em;
     color: var(--fonte);
@@ -665,6 +665,12 @@ main
     color: var(--verde_escuro);
 }
 
+#icone_limpar_pesquisa:hover
+{
+    color: red;
+    cursor: pointer;
+}
+
 .container_geral_tratamento_pesquisa
 {
     width: 90%;
@@ -874,6 +880,55 @@ main
     
     /* background-color: aqua; */
 }
+
+.container_listagem
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+    /* background-color: rebeccapurple; */
+}
+
+.container_acoes_item_listagem
+{
+    height: 100%;
+    min-width: fit-content;
+
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+.container_acoes_item_listagem> span
+{
+    font-size: 2rem;
+    color: var(--fonte);
+
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48;
+}
+
+.container_acoes_item_listagem> span:hover
+{
+    cursor: pointer;
+    text-shadow: 3px 3px var(--cinza_claro);
+    font-size: 2.2rem;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
 
 .container_item_listagem
 {
