@@ -8,7 +8,6 @@ main
 {
     max-width: 100vw;
     height: 100%;
-    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -24,8 +23,7 @@ main
 .container_geral_chamariz
 {
     width: 100%;
-    height: 50vh;
-    max-height: 80vh;
+    height: 60vh;
 
 
     display: flex;
@@ -33,12 +31,15 @@ main
     align-items: center;
     justify-content: center;
 
-    background-color: aquamarine;
+    overflow: hidden;
+
+    /* background-color: red; */
 }
 
 .container_chamariz
 {
     width: 100%;
+    max-height: 100%;
     height: 100%;
 
     display: flex;
@@ -48,7 +49,7 @@ main
 
     margin-top: 70px;
 
-    background-color: red;
+    background: linear-gradient(100.09deg, #C9E9E3 31.65%, #93DCD0 98.88%);
 }
 
 .container_textos_chamariz
@@ -61,46 +62,99 @@ main
     align-items: flex-end;
     justify-content: center;
 
-    gap: 40px;
+    gap: 50px;
 
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 }
 
 .container_titulo_chamariz
 {
     width: 100%;
-    
-    flex-grow: 2;
 
     display: flex;
     align-items:center;
     justify-content: flex-end;
 
-    background-color: blue;
+    /* background-color: blue; */
 }
-.container_texto_secundario_chamariz
+
+.titulo_chamariz
+{
+    font-size: 110px;
+    text-shadow: -5px 5px var(--verde_escuro);
+    font-family: "Megrim";
+    color: var(--verde_escuro);
+
+    /* background-color: yellow; */
+}
+
+/* .container_texto_secundario_chamariz
 {
     width: 100%;
-    
-    flex-grow: 1;
-    
+        
     display: flex;
     align-items:center;
     justify-content: flex-end;
 
     background-color: darkgoldenrod;
 }
+
+.container_texto_secundario_chamariz
+{
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 32px;
+    color: #FFFFFF;
+} */
+
 .container_aviso_chamariz
 {
     width: 100%;
-    
-    flex-grow: 1;
-    
+        
     display: flex;
     align-items:center;
     justify-content: flex-end;
+    gap: 15px;
     
-    background-color: teal;
+    /* background-color: teal; */
+}
+
+.aviso_chamariz
+{
+    text-align: end;
+    font-size: 15px;
+}
+
+.container_icone
+{
+    height: 100%;
+    /* background-color: red; */
+}
+
+.container_icone > img
+{
+    transform: rotate(180deg);
+}
+
+.container_texto_aviso_chamariz
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+
+}
+.aviso_chamariz
+{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
 }
 
 .container_imagem_chamariz
@@ -113,8 +167,9 @@ main
     flex-direction: column;
     align-items:flex-end ;
     justify-content: end;
+
     
-    background-color: burlywood;
+    /* background-color: burlywood; */
 }
 
 .container_imagem_chamariz > img
@@ -124,9 +179,12 @@ main
     width: auto;
 
 
+
     object-fit: fill;
-    background-color: pink;
+    /* background-color: pink; */
 }
+
+
 
 /* ------------ AGENDA -------  */
 .container_agenda
