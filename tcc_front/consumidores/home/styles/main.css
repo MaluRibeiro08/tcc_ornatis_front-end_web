@@ -15,7 +15,7 @@ main
     justify-content: flex-start;
 
 
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
 }
 
 
@@ -555,7 +555,7 @@ main
     
     gap: 50px;
 
-    background-color: green;
+    /* background-color: green; */
 }
 
 /* --------- BARRA DE PESQUISA --------- */
@@ -660,7 +660,7 @@ main
 
     gap: 20px;
 
-    background-color: purple;
+    /* background-color: purple; */
 }
 
 .container_geral_indicacao_saloes
@@ -673,7 +673,7 @@ main
     justify-content: center;
     gap: 20px;
 
-    background-color: peru;
+    /* background-color: peru; */
 }
 
 .container_titulo_container
@@ -685,7 +685,7 @@ main
     align-items: flex-start;
     justify-content: center;
     
-    background-color: teal;
+    /* background-color: teal; */
 }
 
 .container_titulo_container > .titulo_container
@@ -712,7 +712,7 @@ main
     overflow-y: hidden;
     overflow-x: scroll;
 
-    background-color: tomato;
+    /* background-color: tomato; */
 }
 
 .container_salao
@@ -741,10 +741,75 @@ main
 
 .container_geral_categorias
 {
-    background-color: brown;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    /* background-color: brown; */
 }
 
+.container_categorias
+{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    /* background-color: gold; */
+}
+.container_categoria
+{
+    height: 60px;
+    width: 170px;  
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding-left: 8px;
+    
+    background: linear-gradient(89.06deg, #F4F2F2 6.51%, #C9E9E3 45.97%, #93DCD0 81.34%);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.container_fundo_filtro
+{
+    height: 100%;
+    width: 30%;
+    width: fit-content;
+
+    /* background-color: red; */
+}
+
+.container_fundo_filtro > img
+{
+    max-height: 100%;
+    height: 100%;
+
+    object-fit: scale-down;
+}
+.container_info_filtro
+{
+    height: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+    /* background-color: violet; */
+}
 .container_geral_listagem_resultante
 {
-    background-color: aqua;
+    /* background-color: aqua; */
 }
