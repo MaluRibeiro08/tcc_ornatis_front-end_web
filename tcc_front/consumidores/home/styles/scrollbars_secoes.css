@@ -14,9 +14,9 @@
 }
 
 .container_listagem_indicacao_saloes::-webkit-scrollbar-thumb {
-  background-color: var(--verde_padrao);
+  background-color: var(--cinza_claro);
   border-radius: 7px;
-  border: 6px solid white;
+  border: 7px solid white;
 }
 
 body{
