@@ -737,6 +737,11 @@ main
 
 }
 
+.container_salao:hover
+{
+    cursor: pointer;
+}
+
 .container_salao > img
 {
     max-height: 100%;
@@ -801,6 +806,15 @@ main
     
     background: linear-gradient(89.06deg, #F4F2F2 6.51%, #C9E9E3 45.97%, #93DCD0 81.34%);
     border-radius: 10px 10px 0px 0px;
+}
+
+.container_categoria:hover
+{
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    background: linear-gradient(89.06deg, #F4F2F2 6.51%, #C9E9E3 45.97%, #7dd2c4 81.34%);
+
+    border-radius: 0px 0px 15px 15px;
 }
 
 .container_fundo_filtro
