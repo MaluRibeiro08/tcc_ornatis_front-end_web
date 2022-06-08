@@ -541,8 +541,114 @@ main
 }
 
 /* ---------- PESQUISA E LISTAGEM --------- */
+
 .container_geral_pesquisa
 {
     width: 100%;
     background-color: green;
+}
+
+/* --------- BARRA DE PESQUISA --------- */
+
+.container_primario_servicos
+{
+    /* background-color: yellow; */
+}
+
+.container_cabecalho_listagem_servicos
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+    /* background-color: aqua; */
+}
+
+.container_barra_pesquisa_servicos
+{
+    width: 100%;
+
+    /* background-color: orange; */
+}
+
+.container_barra_pesquisa
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    /* background-color: red; */
+}
+
+.container_barra_pesquisa > .icone_add_servico, .icone_config_servico:first-child
+{
+    
+    font-size: 2.5em;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48;
+    color: var(--fonte);
+}
+
+.container_barra_pesquisa > .icone_add_servico:hover, .icone_config_servico:first-child:hover
+{
+    cursor: pointer;
+    transform: rotate(90deg) scale(1.1);
+    color: var(--verde_escuro);
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48;
+    transition: 0.7s;
+}
+
+.barra_pesquisa
+{
+    flex-grow: 1;
+    min-height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    gap: 10px;
+
+    border-radius: 7px;
+
+    background-color: #F1F1F1;
+}
+
+.input_barra_pesquisa
+{
+    flex-grow: 1;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 3px;
+    font-size: 1.3em;
+    background-color: transparent;
+}
+
+.barra_pesquisa > span
+{
+    font-size: 1.5em;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48;
+    color: var(--verde_escuro);
 }
