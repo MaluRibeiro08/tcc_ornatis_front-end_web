@@ -1,0 +1,94 @@
+/* FIREFOX */
+.container_listagem_indicacao_saloes {
+  scrollbar-width: thin;
+  scrollbar-color: var(--verde_padrao) rgb(235, 232, 232);
+}
+  
+/* CHROME EDGE SAFARI OPERA */
+.container_listagem_indicacao_saloes::-webkit-scrollbar {
+  width: 1px;
+}
+
+.container_listagem_indicacao_saloes::-webkit-scrollbar-track {
+  background: 235, 232, 232;
+}
+
+.container_listagem_indicacao_saloes::-webkit-scrollbar-thumb {
+  background-color: var(--verde_padrao);
+  border-radius: 7px;
+  border: 6px solid white;
+}
+
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* --------- SCROLLBAR DA LISTAGEM DE FUNCIONÁRIOS --------- */
+
+/* FIREFOX */
+.container_conteudo_secao_funcionarios {
+  scrollbar-width: thin;
+  scrollbar-color: var(--verde_padrao) rgb(235, 232, 232);
+}
+  
+/* CHROME EDGE SAFARI OPERA */
+.container_conteudo_secao_funcionarios::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container_conteudo_secao_funcionarios::-webkit-scrollbar-track {
+  background: 235, 232, 232;
+}
+
+.container_conteudo_secao_funcionarios::-webkit-scrollbar-thumb {
+  background-color: var(--verde_padrao);
+  border-radius: 7px;
+  border: 6px solid var(--verde_claro);
+}
+
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* --------- SCROLLBAR DA LISTAGEM DE FUNCIONÁRIOS CADASTRO DE SERVIÇOS --------- */
+
+/* FIREFOX */
+.container_conteudo_secao_funcionarios_cadastro_servico {
+  scrollbar-width: thin;
+  scrollbar-color: var(--verde_padrao) rgb(235, 232, 232);
+}
+  
+/* CHROME EDGE SAFARI OPERA */
+.container_conteudo_secao_funcionarios_cadastro_servico::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container_conteudo_secao_funcionarios_cadastro_servico::-webkit-scrollbar-track {
+  background: 235, 232, 232;
+}
+
+.container_conteudo_secao_funcionarios_cadastro_servico::-webkit-scrollbar-thumb {
+  background-color: var(--verde_padrao);
+  border-radius: 7px;
+  border: 6px solid var(--verde_claro);
+}
+
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
