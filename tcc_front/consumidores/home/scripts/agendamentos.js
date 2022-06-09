@@ -1,6 +1,7 @@
 "use strict"
-
+import { getUrlImagemServico } from "./servicos.js";
 const carregarAgendamentosConsumidor =   (id_consumidor) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/consumidor/agendamento/?id_consumidor=${id_consumidor}&acao=listarAgendamentos`)
+
 
 
 const getMesExtenso = (dataNumerica) =>
@@ -133,15 +134,36 @@ const criar_lista_agendamentos = (arr_agendamentos) =>
     }
 }
 
-const agendar = (id_servico) =>
+const agendar = (servico) =>
 {
     //COMPLETAR MODAL
-        
+        //VERIFICANDO DESCONTO
+        let preco_servico_tratado = parseFloat(servico.preco).toFixed(2);
+        let situacao_desconto = 'none'
+
+        if(servico.desconto != 0 && servico.desconto != null)
+        {
+            preco_servico_tratado = (servico.preco - (servico.preco * (servico.desconto/100))).toFixed(2);
+            situacao_desconto = "flex";
+        }
+
+    document.getElementById("id_servico_modal_cadastro_agendamento").value = servico.id_servico;
+    document.getElementById("nome_salao_modal_cadastro_agendamento").textContent = servico.nome_fantasia
+    document.getElementById("localizacao_salao_modal_cadastro_agendamento").textContent = `${servico.nome_cidade}-${servico.sigla_estado}`
+    document.getElementById("imagem_item_modal_cadastro_agendamento").src = `${getUrlImagemServico()+'/'+servico.imagem_servico}`
+    document.getElementById("nome_item_modal_cadastro_agendamento").textContent = servico.nome_servico
+    document.getElementById("categoria_parte-corpo_modal_cadastro_agendamento").textContent = `${servico.nome_especialidade + " - " + servico.nome_parte_corpo}`
+    document.getElementById("duracao_modal_cadastro_agendamento").textContent = servico.tempo_duracao+ " min"
+    document.getElementById("preco_final_modal_cadastro_agendamento").textContent = preco_servico_tratado.toString().replace(".", ",")
+    document.getElementById("container_desconto_modal_cadastro_agendamento").style.display = situacao_desconto
+    document.getElementById("preco_original_modal_cadastro_agendamento").textContent = parseFloat(servico.preco).toFixed(2).toString().replace(".", ",")
+    document.getElementById("desconto_modal_cadastro_agendamento").textContent = ' -' + servico.desconto + "%";
+
     //ABRIR MODAL
         document.getElementById("container_modais").style.display = "flex"
 
     
-    console.log(id_servico)
+    console.log(servico)
 }
 
 export {carregarAgendamentosConsumidor, criar_lista_agendamentos, agendar}
