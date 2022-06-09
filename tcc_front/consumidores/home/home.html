@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/modais.css">
     <link rel="stylesheet" href="./styles/scrollbars_secoes.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Raleway&display=swap" rel="stylesheet">
@@ -448,5 +449,293 @@
 
     </main>
     <footer></footer>
+    <div class="container_modais" id="container_modais" >
+        <div class="modal_criacao_agendamento" id="modal_criacao_agendamento" >
+
+            <div class="container_cabecalho_modal">
+                <div class="container_titulo_modal">
+                    <h5 class="titulo_modal">Agende sua transformação!</h5>
+                </div>
+                <div class="container_botao_cancelar">
+                    <span class="material-symbols-outlined" id="fechar_modal">cancel</span>
+                </div>
+            </div>
+
+            <div class="container_conteudo_modal">
+
+                <div class="container_card_servico">
+                    <div class="container_servico">
+                        <div class="container_servico_modal_agendamento">
+                            <div class="container_cabecalho">
+                                <h6 class="nome_salao_servico">
+                                    BeautyHair
+                                </h6>
+                                <span class="localizacao_salao">Carapicuíba-SP</span>
+                            </div>
+                            <div class="container_informacoes_gerais">
+                                <div class="container_imagem_item">
+                                    <img src="./res/imgs_aleatorias/unhas1.jpg" alt="" class="imagem_item">
+                                </div>
+                                <div class="container_informacoes">
+                                    <h5 class="nome_item">Limpeza de sobrancelhas bonitas</h5>
+                                    <p class="categoria_parte-corpo">Maquiagem - Olhos</p>
+                                    <div class="container_duracao">
+                                        <span class="material-symbols-outlined">schedule</span>
+                                        <p class="duracao">30min</p>
+                                    </div>
+                                </div>
+                                <div class="container_valores">
+                                    <div class="container_preco_final">
+                                        <span class="cifrao">R$ </span>
+                                        <p class="preco_final">30,00</p>
+                                    </div>
+                                    <div class="container_desconto">
+                                        <span class="preco_original">35,00 </span> 
+                                        <span class="desconto"> -5%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="container_demais_infos">
+
+                    <div class="container_geral_funcionarios">
+                        <div class="container_primario_funcionarios_cadastro_servico">
+                            <div class="container_titulo_secao">
+                                <h3>Escolha o funcionário:</h3>
+                            </div>
+    
+                            <div class="container_conteudo_secao_funcionarios_cadastro_servico">
+                                <div id="container_aviso_sem_funcionarios" class="container_aviso_sem_funcionarios" style="display: none;">
+                                    <p class="aviso_sem_funcionario">Erro ao buscar funcionários :|</p>                               
+                                </div>
+                                <div class="container_funcionarios" id="container_funcionarios_cadastro_servico">
+
+                                    <div class="card_funcionario">
+                                        <div class="container_img_funcionario">
+                                            <img src="./res/img_logo_salao/logo-salao.png" class="foto_funcionario" alt="Foto Funcionario">
+                                        </div>
+
+                                        <div class="container_informacoes_funcionario">
+
+                                            <div class="container_nome_funcionario">
+                                                <p>Joana</p>
+                                            </div>
+
+                                            <div class="container_dias_semana">
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">T</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">D</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="card_funcionario">
+                                        <div class="container_img_funcionario">
+                                            <img src="./res/img_logo_salao/logo-salao.png" class="foto_funcionario" alt="Foto Funcionario">
+                                        </div>
+
+                                        <div class="container_informacoes_funcionario">
+
+                                            <div class="container_nome_funcionario">
+                                                <p>Fabiana</p>
+                                            </div>
+
+                                            <div class="container_dias_semana">
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">T</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">D</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="card_funcionario">
+                                        <div class="container_img_funcionario">
+                                            <img src="./res/img_logo_salao/logo-salao.png" class="foto_funcionario" alt="Foto Funcionario">
+                                        </div>
+
+                                        <div class="container_informacoes_funcionario">
+
+                                            <div class="container_nome_funcionario">
+                                                <p>Fabiana</p>
+                                            </div>
+
+                                            <div class="container_dias_semana">
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">T</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">D</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="card_funcionario">
+                                        <div class="container_img_funcionario">
+                                            <img src="./res/img_logo_salao/logo-salao.png" class="foto_funcionario" alt="Foto Funcionario">
+                                        </div>
+
+                                        <div class="container_informacoes_funcionario">
+
+                                            <div class="container_nome_funcionario">
+                                                <p>Marcela</p>
+                                            </div>
+
+                                            <div class="container_dias_semana">
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">T</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">D</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="card_funcionario">
+                                        <div class="container_img_funcionario">
+                                            <img src="./res/img_logo_salao/logo-salao.png" class="foto_funcionario" alt="Foto Funcionario">
+                                        </div>
+
+                                        <div class="container_informacoes_funcionario">
+
+                                            <div class="container_nome_funcionario">
+                                                <p>Marcela</p>
+                                            </div>
+
+                                            <div class="container_dias_semana">
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">T</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">Q</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">S</p>
+                                                <p class="dia_semana">D</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="container_formulario_agendamento">
+
+                        <div class="container_titulo_secao">
+                            <h3>Finalize seu agendamento:</h3>
+                        </div>
+                        
+                        <div class="container_inputs_formulario">
+
+                            <div class="container_trio_data_hora">
+
+                                <div class="container_input">
+                                    <label class="lable_input" for="input_data_agendamento">Data:</label>
+                                    <input id="input_data_agendamento" class="input" type="date">
+                                </div>
+
+                                <div class="container_input">
+                                    <label class="lable_input" for="input_hora_inicio">Hora:</label>
+                                    <input id="input_hora_inicio" class="input" type="time">
+                                </div>
+
+                                <div class="container_input">
+                                    <label class="lable_input" for="input_hora_termino">Término:</label>
+                                    <input id="input_hora_termino" class="input" type="time">
+                                </div>
+
+                            </div>
+
+                            <div class="container_observacoes">
+                                <div class="container_input">
+                                    <label class="lable_input" for="input_observacoes_agendamento">Observações:</label>
+                                    <input id="input_observacoes_agendamento" class="input" type="text">
+                                </div>
+                            </div>
+
+                            <div class="container_infos_pagamento_tipo-atendimento">
+                                
+                                <div class="container_tipo_atendimento">
+                                    <div class="container_titulo_e_radios container_verificacao_taxa_cancelamento">
+                                        <h4>Tipo de atendimento: </h4>
+                                        <div class="container_radios_tipo_atendimento">
+                                            <div class="container_radio container_radio_tipo_atendimento" id="container_radio_estabelecimento">
+                                                <input  type="radio" name="tipo_atendimento" id="input_radio_estabelecimento">
+                                                <label class="label_radio label_simples" for="input_radio_estabelecimento">No estabelecimento</label>
+                                            </div>
+                                            <div class="container_radio container_radio_tipo_atendimento" id="container_radio_domicilio">
+                                                <input  type="radio" name="tipo_atendimento" id="input_radio_domicilio">
+                                                <label class="label_radio label_simples" for="input_radio_domicilio">Em meu domicílio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="container_forma_pagamento">
+                                    <div class="container_titulo_e_radios container_formas_pagamento">
+                                        <h4 class="titulo_sesao_formas_pagamento">Como pagará pelo serviço?</h4>
+                                        <div>
+                                            <div class="container_radio container_radio_forma_pagamento">
+                                                <input  id="input_forma_pagamento3" class="input" type="radio" name="input_radio_forma_pagamento" id="check_dinheiro" >
+                                                <label class= "lable_input label_simples" for="input_forma_pagamento3">Dinheiro</label>      
+                                            </div>
+                                            <div class="container_radio container_radio_forma_pagamento">
+                                                <input  id="input_forma_pagamento2" class="input" type="radio" name="input_radio_forma_pagamento" id="check_cartao_debito" >
+                                                <label class= "lable_input label_simples" for="input_forma_pagamento2">Cartão de débito</label>      
+                                            </div>
+                                            <div class="container_radio container_radio_forma_pagamento">
+                                                <input  id="input_forma_pagamento1" class="input" type="radio" name="input_radio_forma_pagamento" id="check_cartao_credito" >
+                                                <label class= "lable_input label_simples" for="input_forma_pagamento1">Cartão de crédito</label>      
+                                            </div>
+                                            <div class="container_radio container_radio_forma_pagamento">
+                                                <input  id="input_forma_pagamento5" class="input" type="radio" name="input_radio_forma_pagamento" id="check_pix" >
+                                                <label class= "lable_input label_simples" for="input_forma_pagamento5">Pix</label>      
+                                            </div>
+                                            <div class="container_radio container_radio_forma_pagamento">
+                                                <input  id="input_forma_pagamento4" class="input" type="radio" name="input_radio_forma_pagamento" id="check_via_app" checked >
+                                                <label class= "lable_input label_simples" for="input_forma_pagamento4">Via app</label>      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="container_botoes">
+                    <div class="botoes_acao_criacao">
+                        <button id="btn_salvar_agendamento" type="button">Salvar</button>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+    </div>
 </body>
 </html>

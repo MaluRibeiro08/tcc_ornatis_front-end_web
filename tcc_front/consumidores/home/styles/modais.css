@@ -1,0 +1,597 @@
+.container_modais
+{
+  background-color: rgba(3, 3, 3, 0.451);
+  display: flex;
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  z-index: 3;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.modal_criacao_agendamento
+{
+  width: 80%;
+  max-height: 90%;
+  min-height: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  background-color: white;
+  
+  /* background-color: springgreen; */
+}
+
+.container_cabecalho_modal
+{
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+
+
+  justify-content: space-between;
+
+  /* background-color: aquamarine; */
+}
+
+.container_titulo_modal
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: tomato; */
+}
+
+.titulo_modal
+{
+    font-family: 'Megrim';
+    font-size: 30px;
+    font-weight: 600;
+    color:  var(--verde_escuro);
+}
+
+#fechar_modal
+{
+  color: red;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#fechar_modal:hover
+{
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.material-symbols-outlined 
+{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 48;
+  color: black;
+}
+
+.container_conteudo_modal
+{
+    width: 100%;
+    flex-grow: 1;
+    max-height: calc(100%-10%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+
+    overflow-y: auto;
+
+    padding: 0px 20px 0px 20px;
+
+	gap:40px;
+
+    
+    padding-bottom: 20px;
+    /* background-color: royalblue; */
+}   
+
+
+/* ---------- SERVICO ---------- */
+.container_servico_modal_agendamento
+{
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    padding: 10px 15px 60px 15px;
+
+    border-bottom: solid 1px var(--verde_padrao);
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    /* background-color: #F1F1F1; */
+    /* border-radius: 10px; */
+
+    /* background-color: red; */
+}
+
+.container_card_servico, .container_servico
+{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    /* background-color: rebeccapurple; */
+}
+
+.container_servico_modal_agendamento img
+{
+    width: 90px;
+    height: 90px;
+}
+
+.container_demais_infos
+{
+    width: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+	padding-left: 30px;
+	padding-right: 30px;
+    gap: 60px;
+    /* background-color: yellowgreen; */
+}
+
+.container_demais_infos h3
+{
+	font-family: 'Megrim';
+	color: var(--verde_escuro);
+	font-size: 1.4rem;
+}
+/* --------- FUNCIONARIOS -------  */
+
+/* .foto_funcionario
+{
+    height: 20px;
+    width: 20px;
+} */
+
+.container_geral_funcionarios
+{
+    width: 30%;
+    min-width: fit-content;
+    max-height: 70%;
+
+    overflow: hidden;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    /* background-color: orange; */
+}
+
+.container_primario_funcionarios_cadastro_servico
+{
+  width: 100%;
+  max-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+
+  gap: 20px;
+
+  
+  /* background-color: darkgoldenrod; */
+}
+
+.container_primario_funcionarios_cadastro_servico > .container_conteudo_secao_funcionarios_cadastro_servico
+{
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  overflow-y: auto;
+
+  border-radius: 5px;
+
+  padding: 8px;
+
+  background-color: rgba(0, 0, 0, 0.059);;
+}
+
+.container_aviso_sem_funcionarios
+{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: turquoise; */
+}
+
+.container_funcionarios
+{
+  width: 100%; 
+  min-height: 100%;
+  max-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  
+
+  padding: 10px;
+
+  gap: 15px;
+
+  /* background-color: red; */
+}
+
+.card_funcionario
+{
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--verde_padrao);
+  background-color: white;
+  border-radius: 5px;
+
+  padding: 8px;
+  gap: 20px;
+  /* background-color: seagreen; */
+}
+
+.card_funcionario:hover{
+  cursor: pointer;
+}
+
+.container_img_funcionario
+{
+  max-width: 50px;
+  max-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  /* background-color: salmon; */
+}
+
+.container_img_funcionario > img
+{
+  width: 50px;
+  height: 50px;
+
+  border-radius: 25px;
+
+  object-fit: cover;
+}
+
+.container_informacoes_funcionario
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_nome_funcionario
+{
+  flex-grow: 1;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  margin-bottom: 5px;
+  /* background-color: navy; */
+}
+
+.container_dias_semana
+{
+    width: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+
+    font-size: 14px;
+
+    /* background-color: aquamarine; */
+}
+
+.container_dias_semana > p
+{
+    width: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    padding: 4px;
+
+    /* background-color: pink; */
+}
+
+/* --------- FORMULARIO ----------- */
+
+.container_formulario_agendamento
+{
+    flex-grow: 1;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+	
+    /* background-color: rebeccapurple; */
+}
+
+.container_titulo_secao
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    /* background-color: pink; */
+}
+
+.container_inputs_formulario
+{
+  	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	padding-bottom: 20px;
+
+	gap: 20px;
+
+    /* background-color: tomato; */
+}
+
+
+.container_trio_data_hora
+{
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	/* background-color: antiquewhite; */
+}
+
+.container_input, .container_input_checkbox
+{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+	/* background-color: red; */
+}
+
+label
+{
+    /* background-color: olivedrab; */
+
+    width: 100%;
+    font-weight: 800;
+    font-size: 15px;
+}   
+
+.label_simples
+{
+    font-weight: normal;
+    font-size: 15px;
+	font-size: 1.1em;
+}
+
+.container_input input
+{
+    width: 100%;
+    height: 40px;
+    
+    background-color: transparent;
+    border: solid 0.5px #7c7979;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+
+    padding-left: 2px;
+    font-size: 1.1em;
+
+    /* background-color: deeppink; */
+}
+
+.container_observacoes
+{
+	width: 100%;
+
+	/* background-color: palevioletred; */
+}
+
+.container_infos_pagamento_tipo-atendimento
+{
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-start;
+	/* background-color: yellow; */
+}
+
+.container_titulo_e_radios
+{
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+
+	gap: 8px;
+	
+	margin-bottom: 10px;
+}
+.container_tipo_atendimento
+{
+	flex-grow: 1;
+
+	/* background-color: sienna; */
+}
+
+.container_forma_pagamento
+{
+	flex-grow: 1;
+	/* background-color: slateblue; */
+}
+
+.container_radio
+{
+	font-size: 1em;
+	margin-top: 10px;
+}
+
+.container_input_checkbox
+{
+	/* background-color: aqua; */
+}
+
+
+/* ------------ botoes ----------- */
+.container_botoes
+{
+    width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	padding: 15px 0px 15px 0px;
+    /* background-color: green; */
+	
+}
+
+.botoes_acao_criacao
+{
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	/* background-color: yellow; */
+}
+
+button
+{
+  width: 30%;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 3px;
+
+  border: none;
+  border-radius: 5px;
+  color: var(--fonte);
+  background-color: var(--verde_claro); 
+
+  /* font-weight: bold; */
+  font-size: 20px;
+  color: black;
+}
+
+button:hover{
+  transition: 0.7s;
+  background-color: var(--verde_escuro); 
+  color: white;
+}
+
+
+#btn_salvar_funcionario{
+  margin-left: 300px;
+  height: 50px;
+}

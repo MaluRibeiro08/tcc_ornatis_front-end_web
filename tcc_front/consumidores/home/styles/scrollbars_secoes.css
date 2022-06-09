@@ -60,3 +60,36 @@ body{
   user-select: none;
 }
 
+
+
+/* --------- MODAL DE CADASTRO DE AGENDAMENTO ----------- */
+
+/* FIREFOX */
+.container_conteudo_modal {
+  scrollbar-width: thin;
+  scrollbar-color: var(--verde_padrao) rgb(235, 232, 232);
+}
+  
+/* CHROME EDGE SAFARI OPERA */
+.container_conteudo_modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container_conteudo_modal::-webkit-scrollbar-track {
+  background: 235, 232, 232;
+}
+
+.container_conteudo_modal::-webkit-scrollbar-thumb {
+  background-color: var(--verde_padrao);
+  border-radius: 7px;
+  border: 6px solid var(--verde_claro);
+}
+
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
