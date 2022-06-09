@@ -4,7 +4,7 @@ import { carregarAgendamentosConsumidor, criar_lista_agendamentos } from "./agen
 import {organizarPesquisaPorEspecialidade} from "./pesquisa.js";
 import { determinarHoraTermino, salvarAgendamento} from "./agendamentos.js";
 
-const id_consumidor = 3;
+const id_consumidor = 1;
 
 
 const carregar_home = async (id_consumidor) =>
