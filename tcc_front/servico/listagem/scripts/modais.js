@@ -6,7 +6,7 @@ import { setarDadosServicoCampos } from './manipulacao_campos_servico.js';
 // import { listarDetalhesFuncionario, listarFuncionarios, salvarDadosFuncionario, deletarFuncionario} from "./funcionarios.js";
 
 
-const id_empresa = 1;
+const id_empresa = 5;
 const url_imagem = 'http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/'
 
 const tratarUploadImagem = ({target}) =>

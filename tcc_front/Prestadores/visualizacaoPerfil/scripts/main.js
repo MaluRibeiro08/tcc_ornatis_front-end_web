@@ -7,9 +7,9 @@ import { mudarVisualizacaoSecao } from "./navegacao_secoes.js";
 import { listarServicosSalao} from "./servicos/listagem_servicos.js";
 import { construirTelaCadastro, limparCamposCadastroServico } from "./servicos/cadastro/preenchimento_modal_cadastro.js";
 
-const id_empresa = 6
+const id_empresa = 5
 const url_imagem_salao = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_perfil_salao/";
-const url_imagem_espaco_estabelecimento = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_espaco_estabelecimento/";
+const url_imagem_espaco_estabelecimento = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagens_salao/";
 const url_imagem_funcionario = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/";
 
 let servicos_carregados = false;
@@ -35,6 +35,7 @@ const preencherAbaInicio = async (id_empresa) =>
 
         //IMAGENS ESPAÇO SALÃO
             const fotos_estabelecimento = informacoes.data.imagens_estabelecimento;
+            console.log("imprimindo as fotos")
             console.log(fotos_estabelecimento)
             preencherImagensSalao(fotos_estabelecimento);
 
@@ -90,12 +91,14 @@ const preencherAbaInicio = async (id_empresa) =>
 
 const preencherImagensSalao = (fotos_estabelecimento) =>
 {
+    console.log("Chamou a funcao")
     if(fotos_estabelecimento == "Nenhuma imagem de estabelecimento encontrada")
     {
-
+        console.log("Não tem imagens")
     }
     else
     {
+        console.log("tem imagens")
         document.querySelector(".container_aviso_falta_foto").style.display = "none";
         document.querySelector(".container_carrossel").style.display = "flex";
 

@@ -4,7 +4,7 @@ import {imagemPreview} from '../../../../utils/imagem.js';
 import { listarDetalhesFuncionario, listarFuncionarios, salvarDadosFuncionario, deletarFuncionario} from "./funcionarios.js";
 
 
-const id_empresa = 6;
+const id_empresa = 5;
 const url_imagem = 'http://localhost/tcc_ornatis_back-end/api-ornatis/upload/foto_perfil_funcionario/'
 
 const tratarUploadImagem = ({target}) =>
