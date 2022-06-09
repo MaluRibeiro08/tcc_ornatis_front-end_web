@@ -135,6 +135,12 @@ const criar_lista_agendamentos = (arr_agendamentos) =>
 
 const agendar = (id_servico) =>
 {
+    //COMPLETAR MODAL
+        
+    //ABRIR MODAL
+        document.getElementById("container_modais").style.display = "flex"
+
+    
     console.log(id_servico)
 }
 

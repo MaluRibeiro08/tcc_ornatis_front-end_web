@@ -35,7 +35,6 @@ carregar_home(id_consumidor);
 
 
 
-
 // ----------------- EVENTOS
 
 //BUSCA DE SERVICOS POR FILTRO
@@ -54,3 +53,6 @@ carregar_home(id_consumidor);
             )
         }
     )
+
+// FECHAR MODAL
+document.getElementById("fechar_modal").addEventListener("click", () => document.getElementById("container_modais").style.display = "none")
