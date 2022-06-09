@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
-    <script src="home.js" defer></script>
+    <script src="home.js" type="module" defer></script>
+
+    <link rel="stylesheet" href="./agenda.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,71 +73,27 @@
         </div>
 
     </header>
+
      <main>
        <section id="container_compromissos">
             <div id="title_compromisso"><h1>MEUS COMPROMISSOS:</h1></div>
-            <div id="container_agenda" >
-                <div class="container_dia_agenda" id="dia1">
-                    <div class="dia_semana">
-                        <h2>qui</h2>
-                    </div>
-                    <div class="dia_mes">
-                        <h3>30</h3>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
+            <div class="container_agenda">
+
+            <div class="container_titulo">
+                <!-- <h2 class="titulo_secao">Meus Compromissos</h2> -->
+            </div>
+
+            <div class="container_geral_listagem_agendamentos">
+                <div class="aviso_sem_agendamentos" id="aviso_sem_agendamentos">
+                    <p>Nenhum compromisso marcado ;)</p>
+                    <span class="material-symbols-outlined icone_agenda">event_busy</span>
                 </div>
-                <div class="container_dia_agenda" id="dia2">
-                    <div class="dia_semana">
-                        <h2>qui</h2>
-                    </div>
-                    <div class="dia_mes">
-                        <h3>30</h3>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
-                </div>
-                <div class="container_dia_agenda" id="dia3">
-                    <div class="dia_semana">
-                        <h2>qui</h2>
-                    </div>
-                    <div class="dia_mes">
-                        <h3>30</h3>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
-                    <div class="agenda_servico">
-                        <h4>Progressiva e escova</h4>
-                        <h4>13:00</h4>
-                    </div>
+
+                <div class="lista_agendamentos" id="lista_agendamentos" style="display: none;">
+                    
                 </div>
             </div>
+        </div>
        </section>
        <section id="container_destaques">
             <div id="title_compromisso"><h1>MEUS DESTAQUES:</h1></div>
