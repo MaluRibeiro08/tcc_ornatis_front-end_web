@@ -500,7 +500,7 @@
                     
                 </div>
 
-                <div class="container_demais_infos">
+                <div class="container_demais_infos" id="container_demais_infos">
 
                     <div class="container_geral_funcionarios">
                         <div class="container_primario_funcionarios_cadastro_servico">
@@ -513,8 +513,7 @@
                                     <p class="aviso_sem_funcionario">Erro ao buscar funcionários :|</p>                               
                                 </div>
                                 <div class="container_funcionarios" id="container_funcionarios_cadastro_servico">
-
-                                    <div class="card_funcionario">
+                                    <!-- <div class="card_funcionario">
                                         <div class="container_img_funcionario">
                                             <img src="./res/img_logo_salao/logo-salao.png" class="foto_funcionario" alt="Foto Funcionario">
                                         </div>
@@ -632,7 +631,7 @@
                                             </div>
                                         </div>
                                         
-                                    </div>
+                                    </div> -->
 
                                 </div>
                             </div>
@@ -646,22 +645,23 @@
                         </div>
                         
                         <div class="container_inputs_formulario">
+                            <input type="hidden" id="id_funcionario_escolhido_cadastro_agendamento" name="id_funcionario_escolhido_cadastro_agendamento">
 
                             <div class="container_trio_data_hora">
 
                                 <div class="container_input">
                                     <label class="lable_input" for="input_data_agendamento">Data:</label>
-                                    <input id="input_data_agendamento" class="input" type="date">
+                                    <input id="input_data_agendamento" class="input input_limpavel" type="date">
                                 </div>
 
                                 <div class="container_input">
                                     <label class="lable_input" for="input_hora_inicio">Hora:</label>
-                                    <input id="input_hora_inicio" class="input" type="time">
+                                    <input id="input_hora_inicio" class="input input_limpavel" type="time">
                                 </div>
 
                                 <div class="container_input">
                                     <label class="lable_input" for="input_hora_termino">Término:</label>
-                                    <input id="input_hora_termino" class="input" type="time">
+                                    <input id="input_hora_termino" disabled class="input input_limpavel" type="time">
                                 </div>
 
                             </div>
@@ -669,7 +669,7 @@
                             <div class="container_observacoes">
                                 <div class="container_input">
                                     <label class="lable_input" for="input_observacoes_agendamento">Observações:</label>
-                                    <input id="input_observacoes_agendamento" class="input" type="text">
+                                    <input id="input_observacoes_agendamento" class="input input_limpavel" type="text">
                                 </div>
                             </div>
 
@@ -680,11 +680,11 @@
                                         <h4>Tipo de atendimento: </h4>
                                         <div class="container_radios_tipo_atendimento">
                                             <div class="container_radio container_radio_tipo_atendimento" id="container_radio_estabelecimento">
-                                                <input  type="radio" name="tipo_atendimento" id="input_radio_estabelecimento">
+                                                <input  type="radio" name="tipo_atendimento" id="input_radio_estabelecimento" value="1">
                                                 <label class="label_radio label_simples" for="input_radio_estabelecimento">No estabelecimento</label>
                                             </div>
                                             <div class="container_radio container_radio_tipo_atendimento" id="container_radio_domicilio">
-                                                <input  type="radio" name="tipo_atendimento" id="input_radio_domicilio">
+                                                <input  type="radio" name="tipo_atendimento" id="input_radio_domicilio" value="2">
                                                 <label class="label_radio label_simples" for="input_radio_domicilio">Em meu domicílio</label>
                                             </div>
                                         </div>
@@ -696,23 +696,23 @@
                                         <h4 class="titulo_sesao_formas_pagamento">Como pagará pelo serviço?</h4>
                                         <div>
                                             <div class="container_radio container_radio_forma_pagamento">
-                                                <input  id="input_forma_pagamento3" class="input" type="radio" name="input_radio_forma_pagamento" id="check_dinheiro" >
+                                                <input  id="input_forma_pagamento3" class="input" type="radio" value="3" name="input_radio_forma_pagamento" id="check_dinheiro" >
                                                 <label class= "lable_input label_simples" for="input_forma_pagamento3">Dinheiro</label>      
                                             </div>
                                             <div class="container_radio container_radio_forma_pagamento">
-                                                <input  id="input_forma_pagamento2" class="input" type="radio" name="input_radio_forma_pagamento" id="check_cartao_debito" >
+                                                <input  id="input_forma_pagamento2" class="input" type="radio" value="2" name="input_radio_forma_pagamento" id="check_cartao_debito" >
                                                 <label class= "lable_input label_simples" for="input_forma_pagamento2">Cartão de débito</label>      
                                             </div>
                                             <div class="container_radio container_radio_forma_pagamento">
-                                                <input  id="input_forma_pagamento1" class="input" type="radio" name="input_radio_forma_pagamento" id="check_cartao_credito" >
+                                                <input  id="input_forma_pagamento1" class="input" type="radio" value="1" name="input_radio_forma_pagamento" id="check_cartao_credito" >
                                                 <label class= "lable_input label_simples" for="input_forma_pagamento1">Cartão de crédito</label>      
                                             </div>
                                             <div class="container_radio container_radio_forma_pagamento">
-                                                <input  id="input_forma_pagamento5" class="input" type="radio" name="input_radio_forma_pagamento" id="check_pix" >
+                                                <input  id="input_forma_pagamento5" class="input" type="radio" value="5" name="input_radio_forma_pagamento" id="check_pix" >
                                                 <label class= "lable_input label_simples" for="input_forma_pagamento5">Pix</label>      
                                             </div>
                                             <div class="container_radio container_radio_forma_pagamento">
-                                                <input  id="input_forma_pagamento4" class="input" type="radio" name="input_radio_forma_pagamento" id="check_via_app" checked >
+                                                <input  id="input_forma_pagamento4" class="input" type="radio" value="4" name="input_radio_forma_pagamento" id="check_via_app" checked >
                                                 <label class= "lable_input label_simples" for="input_forma_pagamento4">Via app</label>      
                                             </div>
                                         </div>

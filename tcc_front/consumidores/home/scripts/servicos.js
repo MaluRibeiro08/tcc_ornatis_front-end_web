@@ -1,10 +1,11 @@
 "use strict"
-import { agendar } from "./agendamentos.js"
+import { abrirFormularioAgendamento } from "./agendamentos.js"
 const pesquisarServicosPorEspecialidade =  (id_especialidade) => fetch(`http://localhost/tcc_ornatis_back-end/api-ornatis/rotas/consumidor/servico/?id_especialidade=${id_especialidade}&acao=listarServicosPorEspecialidade`)
 
 const url_imagem_servico = "http://localhost/tcc_ornatis_back-end/api-ornatis/upload/imagem_servico/"
 
 const getUrlImagemServico = () => {return url_imagem_servico;}
+
 const criarListaServicos = (arr_servicos) =>
 {
 
@@ -94,7 +95,7 @@ const criarListaServicos = (arr_servicos) =>
                 () => 
                 {
                     // window.open("/tcc_front/consumidores/cadastro/cadastro_consumidor.html", '_blank')
-                    agendar(servico)
+                    abrirFormularioAgendamento(servico)
                 }
             )
 

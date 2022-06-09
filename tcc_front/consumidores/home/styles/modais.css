@@ -377,6 +377,16 @@
     /* background-color: pink; */
 }
 
+.dia_semana_trabalha
+{
+  background-color: var(--verde_padrao);
+}
+
+.funcionario_selecionado
+{
+  background-color: var(--verde_claro);
+}
+
 /* --------- FORMULARIO ----------- */
 
 .container_formulario_agendamento
